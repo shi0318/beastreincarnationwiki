@@ -10,7 +10,7 @@ export const SITE = {
     'Beast of Reincarnation wiki: confirmed August 4, 2026 release on PC, PS5 & Xbox Series X|S, Game Freak\'s Emma & Koo story, hybrid combat system, and clearly labeled pre-release previews.',
   locale: 'en_US',
   twitter: '@borwiki',
-  email: 'hello@beastreincarnationwiki.com',
+  email: 'nmlkareem161@gmail.com',
 } as const;
 
 export type Category = 'boss' | 'enemies' | 'exploration' | 'combat' | 'beginner';
