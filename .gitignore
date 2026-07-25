@@ -1,0 +1,18 @@
+# dependencies
+node_modules/
+
+# build output
+dist/
+.astro/
+
+# 备份 / 环境 / 编辑器
+*.bak
+.env
+.env.*
+!.env.example
+.idea/
+.vscode/
+.DS_Store
+
+# logs
+npm-debug.log*

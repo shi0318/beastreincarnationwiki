@@ -1,0 +1,93 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import JsonLd from '../components/JsonLd.astro';
+import { SITE, GAME_FACTS } from '../data/site';
+
+const path = '/disclaimer/';
+const title = 'Disclaimer & Editorial Policy';
+const description =
+  'How Beast of Reincarnation Wiki handles official facts, pre-release speculation, affiliate independence, and post-launch corrections.';
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: title,
+    url: new URL(path, SITE.url).href,
+    description,
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.url },
+      { '@type': 'ListItem', position: 2, name: 'Disclaimer', item: new URL(path, SITE.url).href },
+    ],
+  },
+];
+---
+
+<BaseLayout title={title} description={description} path={path}>
+  <JsonLd slot="head" schema={schema} />
+
+  <section class="mx-auto max-w-3xl px-4 py-16">
+    <nav aria-label="Breadcrumb" class="mb-6 text-xs text-ash-400">
+      <ol class="flex flex-wrap items-center gap-1.5">
+        <li><a href="/" class="hover:text-ember-400">Home</a></li>
+        <li aria-hidden="true">/</li>
+        <li class="text-ash-300">Disclaimer</li>
+      </ol>
+    </nav>
+
+    <h1 class="font-display text-3xl font-bold leading-tight text-ash-50 md:text-4xl">
+      Disclaimer & Editorial Policy
+    </h1>
+    <p class="mt-4 text-lg leading-relaxed text-ash-300">
+      This page explains how we separate confirmed Steam information from pre-release guide outlines,
+      and how we will revise content after Beast of Reincarnation launches on {GAME_FACTS.releaseDate}.
+    </p>
+
+    <div class="prose mt-10 max-w-none">
+      <h2>Unofficial fan resource</h2>
+      <p>
+        {SITE.name} is an unofficial, fan-made website. We are not affiliated with, sponsored by, or
+        endorsed by {GAME_FACTS.developer}, {GAME_FACTS.publisher}, Steam, Valve, or any related rights holder.
+        All trademarks remain the property of their respective owners.
+      </p>
+
+      <h2>Official facts vs speculation</h2>
+      <p>
+        Confirmed release, systems, pricing, language, and hardware details are drawn from the official
+        Steam listing and labeled <strong>Official</strong>. Strategy pages written before launch are labeled
+        <strong>Speculation</strong>, shown with a pre-release notice, and currently set to <code>noindex</code>
+        so they are not presented as verified walkthroughs.
+      </p>
+
+      <h2>What we will not claim before launch</h2>
+      <ul>
+        <li>Exact frame data, damage numbers, or drop tables as verified facts</li>
+        <li>Hands-on boss clears we have not performed</li>
+        <li>Map routes, puzzles, or item locations as final unless officially shown</li>
+      </ul>
+
+      <h2>After launch</h2>
+      <p>
+        When the game is out, we will re-test and rewrite preview guides against the final build, update
+        source labels, restore indexing only for verified pages, and refresh dates so readers can see what
+        changed.
+      </p>
+
+      <h2>Corrections</h2>
+      <p>
+        If you spot an error in a confirmed fact or a misleading pre-release claim, please
+        <a href="/contact/">contact us</a>. We prioritize corrections to official data first.
+      </p>
+
+      <h2>External links</h2>
+      <p>
+        Links to Steam or other official sources are provided for verification. We do not control third-party
+        pages and their content may change without notice.
+      </p>
+    </div>
+  </section>
+</BaseLayout>
