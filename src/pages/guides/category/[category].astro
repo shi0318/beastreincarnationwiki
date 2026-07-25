@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import JsonLd from '../../../components/JsonLd.astro';
 import GuideCard from '../../../components/GuideCard.astro';
-import { SITE, CATEGORIES, type Category } from '../../../data/site';
+import { SITE, CATEGORIES, GAME_FACTS, type Category } from '../../../data/site';
 
 export async function getStaticPaths() {
   const guides = await getCollection('guides');
@@ -19,26 +19,23 @@ export async function getStaticPaths() {
         });
       return { params: { category: cat }, props: { cat, items } };
     })
-    // 没有文章的分类不生成页面，避免空页被索引
     .filter((p) => p.props.items.length > 0);
 }
 
 const { cat, items } = Astro.props;
 const meta = CATEGORIES[cat];
 
-// 分类页当前仅聚合发售前 preview 内容，全为 preview 时不索引，避免空壳页拖累权重。
-// 发售后某分类出现已核实(非 preview)攻略即自动恢复可索引。
 const allPreview = items.every((g) => g.data.preview);
 
 const path = `/guides/category/${cat}/`;
-const title = meta.label;
-const description = `${meta.blurb} Every ${meta.label} guide for Beast of Reincarnation, updated with official details ahead of launch.`;
+const title = `${meta.label} Pre-Release Outlines`;
+const description = `${meta.blurb} Provisional ${meta.label.toLowerCase()} notes for Beast of Reincarnation ahead of the ${GAME_FACTS.releaseDate} launch.`;
 
 const schema = [
   {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
-    name: `${meta.label} | ${SITE.name}`,
+    name: title,
     description,
     url: new URL(path, SITE.url).href,
     isPartOf: { '@type': 'WebSite', name: SITE.name, url: SITE.url },
@@ -94,6 +91,14 @@ const schema = [
       <p class="mt-3 max-w-2xl text-lg leading-relaxed text-ash-300">
         {meta.blurb}
       </p>
+      {
+        allPreview && (
+          <p class="mt-4 max-w-2xl rounded-lg border border-ember-700/50 bg-ember-950/30 px-4 py-3 text-sm text-ember-100">
+            All pages in this category are pre-release speculation and currently noindex. Prefer the
+            <a href="/game-info/" class="underline hover:text-white">confirmed game info</a> until launch.
+          </p>
+        )
+      }
     </div>
   </section>
 
@@ -109,6 +114,7 @@ const schema = [
             imageAlt={guide.data.imageAlt}
             category={guide.data.category}
             source={guide.data.source}
+            date={guide.data.updateDate ?? guide.data.publishDate}
           />
         ))
       }

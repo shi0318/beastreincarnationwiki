@@ -1,44 +1,51 @@
 ---
-title: "Waterfall Grotto — Hidden Grotto Walkthrough & Secrets"
-description: "Explore the Waterfall Grotto in Beast of Reincarnation: how to reach the hidden entrance, solve the light-crystal puzzle, and claim the grotto's rare relic."
-heading: "Waterfall Grotto: Secrets & Puzzle Solution"
+title: "Waterfall Grotto - Pre-Release Secret Notes"
+description: "Pre-release notes on hidden-area expectations in Beast of Reincarnation: how official world fantasy suggests optional secrets, and what to verify before publishing a real grotto walkthrough."
+heading: "Waterfall Grotto: Pre-Release Secret Notes"
 category: exploration
 keyword: "beast of reincarnation waterfall grotto"
 image: "beast-of-reincarnation-waterfall-grotto.webp"
-imageAlt: "A glowing hidden grotto behind a waterfall with crystals lighting the cavern in Beast of Reincarnation"
-publishDate: 2025-07-23
+imageAlt: "A cavern lit by crystals behind falling water in Beast of Reincarnation promotional imagery"
+publishDate: 2026-07-23
+updateDate: 2026-07-25
 order: 11
 featured: false
 preview: true
 source: speculation
 ---
 
-The Waterfall Grotto is one of the game's best-hidden sub-areas, branching off the [river route](/guides/emma-koo-river-exploration/). It holds a light-crystal puzzle, a mini-boss, and one of the earliest rare relics you can get. Most players miss it entirely because the entrance is behind the waterfall itself. Here's how to find it and clear everything inside.
+Official marketing for Beast of Reincarnation leans into discovery: shifting landscapes, hidden truths, and a harsh world that rewards exploration. A waterfall grotto is a natural community expectation from that imagery - not a confirmed, mapped sub-area with a solved crystal puzzle.
 
-## Finding the Entrance
+Read [confirmed game info](/game-info/) for the published world and systems baseline.
 
-At the waterfall pool on the river route, take the left fork. Walk *into* the waterfall curtain — there's a passage behind it. You'll need the grapple rope from the river vendor to descend the shaft on the other side; without it, the drop is a dead end.
+## Why optional secrets are plausible
 
-Inside, the grotto opens into a large crystal cavern. It's dark until you solve the light puzzle, and several ledges are invisible in the gloom, so light it up before exploring.
+Steam copy highlights:
 
-## The Light-Crystal Puzzle
+- An expansive adventure through a beautiful yet harsh world
+- Ever-changing blighted scenery
+- Story secrets and dangerous truths
+- Build customization that can support different traversal or combat approaches
 
-The cavern has four dormant crystals and one lit master crystal near the entrance. The goal is to light all four by reflecting the master crystal's beam.
+That supports optional spaces. It does **not** confirm light-crystal puzzles, named relics, or mini-boss guardians.
 
-The solution: there are three moveable mirror pillars. Position them so the beam bounces master → back-left crystal → right crystal → far crystal → entrance crystal. The order matters — lighting them out of sequence resets the chain.
+## Provisional secret-hunting checklist
 
-- **Pillar one** goes at the center mark, angled 45° left.
-- **Pillar two** goes on the raised ledge (grapple up to it), angled toward the far wall.
-- **Pillar three** stays near the entrance to close the loop.
+On launch day, when you find a candidate hidden space:
 
-When all four light, the cavern floor rises and reveals the relic chamber.
+1. Capture the entrance condition and any required tool / story flag.
+2. Separate environmental beauty from actual puzzle mechanics.
+3. Note whether companion commands are required or merely helpful.
+4. Record rewards precisely: relic effect, upgrade material, lore item, or nothing mechanical.
+5. Check if the secret is missable, repeatable, or one-time.
 
-## The Grotto Guardian
+## Claims to withhold until verified
 
-Lighting the crystals wakes the **Grotto Guardian**, a mini-boss. It's a stone construct weak to blunt damage and slow enough to punish freely — the danger is the cramped arena, not the boss itself. Keep Koo off the crystals during this fight; a stray hit can knock a mirror pillar out of alignment and re-darken the room mid-fight.
+- Exact mirror-pillar solutions
+- Named relics such as a "Tidal Sigil"
+- Guaranteed links to later boss advantages
+- Mini-boss stats or weaknesses
 
-## The Reward
+## After launch
 
-The relic chamber holds the **Tidal Sigil**, a relic that boosts parry stagger against water-element enemies — which makes it a direct upgrade for the [Nushi rematch](/guides/nushi-boss-fight/) and the flooded arenas later on. There's also a memory shard on the chamber's back ledge.
-
-Grab both, then grapple back up to the river route to continue north.
+Replace this outline with a short, spoiler-aware walkthrough only after the entrance, puzzle, combat, and reward are recorded from the final game. Until **3 August 2026**, this page should help you organize questions - not route you through a finished secret.

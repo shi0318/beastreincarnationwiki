@@ -1,43 +1,52 @@
 ---
-title: "Blighted Boar — Weakness, Drops & How to Fight"
-description: "Everything about the Blighted Boar in Beast of Reincarnation: attack patterns, elemental weakness, how to bait the charge, and what materials it drops."
-heading: "Blighted Boar: Weaknesses & Combat Guide"
+title: "Blighted Boar - Pre-Release Enemy Notes"
+description: "Pre-release notes on blighted wildlife themes in Beast of Reincarnation, using boar-like enemies as a working example of pack pressure, status risk, and farming questions to answer after launch."
+heading: "Blighted Boar: Pre-Release Enemy Notes"
 category: enemies
 keyword: "beast of reincarnation blighted boar"
 image: "beast-of-reincarnation-blighted-boar-enemies.webp"
-imageAlt: "A pack of blighted boar enemies with glowing infection marks charging across the wasteland"
-publishDate: 2025-07-22
+imageAlt: "Blighted animal enemies with infection marks in a wasteland setting from Beast of Reincarnation promotional imagery"
+publishDate: 2026-07-22
+updateDate: 2026-07-25
 order: 20
 featured: false
 preview: true
 source: speculation
 ---
 
-The Blighted Boar is the wasteland's most common mid-tier enemy, and it's a lot deadlier than its scruffy look suggests. Boars travel in packs, hit hard on the charge, and spread a blight status that chips your health over time. This guide covers how they attack, what they're weak to, and the cleanest way to farm them for materials.
+Official copy describes a world "ravaged by blight" and wildlife twisted by that environment. Community discussion often uses boar-like enemies as a shorthand for early pack threats. This page records **what to verify**, not a finished bestiary entry.
 
-## Attack Patterns
+For official combat and world framing, read the [game info overview](/game-info/).
 
-The Boar has a small but punishing moveset:
+## Official context
 
-- **Charge** — the signature attack. It paws the ground twice, then rushes in a straight line. Sidestep at the second paw; it can't correct mid-charge and overshoots badly, leaving a long punish window.
-- **Tusk toss** — a close-range upward gore. Short tell, so don't linger in melee after a hit. Back off after each combo.
-- **Blight spray** — only the infected variants do this. They rear back and spray blight in a cone. Getting hit applies the blight stack; three stacks and you take damage-over-time until you cure it.
+Steam and marketing materials confirm:
 
-## Weakness and Damage
+- Blight as a world-shaping force
+- Emma + Koo as a unit against harsh fauna and Bosses
+- Build options that include aggressive, ranged, and stealthy approaches
 
-Boars are weak to **fire**. A fire weapon or fire-coated attacks roughly double your stagger buildup, and staggered boars drop instantly to a heavy attack. If you don't have fire, target the hind legs — hits there build stagger faster than body blows.
+They do **not** confirm specific boar move lists, elemental weaknesses, night spawn rates, or drop tables.
 
-Their armor is on the front. Never trade blows head-on; the tusks win that exchange every time. Bait the charge, punish the overshoot from behind.
+## Working assumptions for launch day
 
-## Fighting the Pack
+If blighted pack enemies behave like other action-RPG fauna, prioritize:
 
-Packs are the real threat. A lone boar is trivial; three at once will chain-charge you from different angles. Two rules:
+1. **Pack control first** - one enemy is information; three is a stunlock risk.
+2. **Positioning over raw DPS** - avoid center-mass fights in open ground.
+3. **Status awareness** - blight may mean chips, debuffs, or cleanse requirements.
+4. **Koo peel tests** - check whether Koo can isolate one target while Emma deletes another.
 
-- **Never stand between two boars.** Reposition so they line up, then you only face one charge lane at a time.
-- **Use Koo to peel.** Send Koo at the farthest boar to occupy it while you delete the closest. Koo can solo a single boar given time.
+## Checklist for first verified bestiary pass
 
-Bottleneck them in the canyon chokepoints if you can. Fighting a pack in the open is how you eat three charges at once.
+- Real enemy name in-game UI
+- Solo vs pack spawn patterns
+- Which attacks are blockable / parryable / only dodgeable
+- Actual weaknesses and resistances
+- Drops, farm routes, and whether time-of-day matters
 
-## Drops and Farming
+## Do not use these claims yet
 
-Boars drop **blighted hide** and, from infected variants, **blight glands** — both used in early armor upgrades. The infected variants spawn along the river route at night. If you're farming glands specifically, clear the [river route](/guides/emma-koo-river-exploration/) after dark; the spawn rate for infected boars roughly triples.
+Any precise statements about fire double-stagger, gland drop rates, or "infected variants only at night" remain speculation until recorded from the final build.
+
+When the game launches, rewrite this page into a short, practical enemy sheet with evidence from gameplay, not trailer mood.

@@ -1,47 +1,54 @@
 ---
-title: "River Route Exploration — Secrets, Items & Shortcuts"
-description: "Full exploration walkthrough of the eastern river route in Beast of Reincarnation: every collectible, the hidden shortcut back to camp, and how to use Koo to reach the far bank."
-heading: "River Route: Complete Exploration Walkthrough"
+title: "River Route Exploration - Pre-Release Route Notes"
+description: "Pre-release exploration notes for Beast of Reincarnation's blighted world: what official copy implies about traversal and companion utility, and what to verify on launch-day route runs."
+heading: "River Route: Pre-Release Exploration Notes"
 category: exploration
 keyword: "beast of reincarnation river exploration"
 image: "beast-of-reincarnation-emma-koo-river-exploration.webp"
-imageAlt: "Emma and Koo wading through a sunlit river canyon while exploring in Beast of Reincarnation"
-publishDate: 2025-07-22
+imageAlt: "Emma and Koo traveling through a water-carved landscape in Beast of Reincarnation promotional imagery"
+publishDate: 2026-07-22
+updateDate: 2026-07-25
 order: 10
 featured: false
 preview: true
 source: speculation
 ---
 
-The eastern river route opens after you beat Nushi, and it's the first area that really rewards exploration over combat. There are three collectibles, one permanent shortcut, and a hidden vendor most players walk right past. This walkthrough takes the route in order, so you can follow it start to finish without backtracking.
+Steam describes Beast of Reincarnation as an expansive adventure through a beautiful yet harsh post-apocalyptic Japan. Water, wasteland, and shifting blighted forests all appear in official presentation - but a specific "eastern river route" with fixed collectible counts is **not** confirmed.
 
-## Entering from Camp
+Use this page as an exploration framework. Confirmed world framing lives on the [game info page](/game-info/).
 
-Head east out of camp and drop down to the riverbed. The current here is strong enough to sweep you if you wade into the deep channel, so stick to the shallows on the near bank for now. You'll see a glowing collectible across the water — you can't reach it yet. Note it and move on; the far-bank route loops back to it.
+## What is closer to official
 
-## The First Collectible & Koo's Swim
+- Emma and Koo travel a large blighted world together.
+- Environments can change dramatically - forests bursting forth or withering.
+- Bosses and power capture are progression pillars, so routes likely gate major encounters.
+- Companion utility is part of the fantasy, so traversal or combat assists from Koo are plausible.
 
-Follow the near bank until the canyon narrows. There's a **memory shard** tucked behind a fallen log — easy to miss because the log blends into the rock. This is the first of the three collectibles.
+## What is still speculation
 
-Just past it, the water calms into a crossing. This is where Koo earns its keep: send Koo across first and it anchors on the far rocks, giving you a current-break to swim through. Without the Koo anchor the current pushes you back downstream.
+- Exact river map layout
+- Memory-shard counts
+- Hidden vendors or permanent shortcuts
+- Whether swimming / grappling / rope tools exist in the final build
 
-## Far Bank: Vendor and Shortcut
+## Launch-day route method
 
-On the far bank you'll find a **wandering vendor** — a hooded trader who only appears here and sells the river-region crafting materials you can't get anywhere else. Buy the grapple rope if you haven't; it's cheap and it matters for the [waterfall grotto](/guides/waterfall-grotto/) next door.
+When the game is out, map any riverside path like this:
 
-Behind the vendor is a rockfall you can clear with a charged attack. Clearing it opens a **shortcut straight back to camp** — do this now so you don't have to re-swim the river on every trip.
+1. Note entrance condition (story gate, boss clear, or open from start).
+2. Mark traversal tools required (jump, swim, grapple, Koo assist).
+3. Log collectibles with screenshots and return routes.
+4. Record whether shortcuts are permanent or one-way.
+5. Separate cosmetic secrets from progression-critical items.
 
-## The Waterfall Approach
+## How to rewrite after launch
 
-Continue upstream and the canyon opens into a wide pool at the base of a waterfall. The second **memory shard** sits on a ledge behind the falling water — walk through the curtain, it's safe. The third collectible is that original across-the-water item from the start: from the far bank you can now drop down to it.
+A finished route page should include:
 
-From the pool, the path splits. The left fork leads into the [waterfall grotto](/guides/waterfall-grotto/), a full sub-area with its own secrets. The right fork continues the main route north.
+- Real region name from the game UI
+- Ordered path with landmarks
+- Confirmed collectibles and costs/tools
+- Danger notes based on actual enemy spawns
 
-## Route Summary
-
-- 3 memory shards, all on this route
-- 1 wandering vendor (river materials + grapple rope)
-- 1 permanent shortcut back to camp
-- Access to the waterfall grotto sub-area
-
-Grab everything here before pushing north — the river vendor doesn't follow you, and those materials gate an early weapon upgrade.
+Until then, treat named items and exact counts on older draft versions of this idea as obsolete speculation.

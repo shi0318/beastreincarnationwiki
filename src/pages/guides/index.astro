@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import JsonLd from '../../components/JsonLd.astro';
 import GuideCard from '../../components/GuideCard.astro';
-import { SITE, CATEGORIES, type Category } from '../../data/site';
+import { SITE, CATEGORIES, GAME_FACTS, type Category } from '../../data/site';
 
 const guides = await getCollection('guides');
 
@@ -12,7 +12,6 @@ const sorted = [...guides].sort((a, b) => {
   return b.data.publishDate.getTime() - a.data.publishDate.getTime();
 });
 
-// 分类展示顺序
 const order: Category[] = ['beginner', 'boss', 'enemies', 'combat', 'exploration'];
 const groups = order
   .map((cat) => ({
@@ -23,14 +22,14 @@ const groups = order
   .filter((g) => g.items.length > 0);
 
 const path = '/guides/';
-const title = 'Beast of Reincarnation Guides';
+const title = 'Beast of Reincarnation Pre-Release Guide Outlines';
 const description =
-  'Every Beast of Reincarnation guide — boss strategies, enemy weakness charts, combat tech and exploration routes, organized by category. Pre-release previews for now.';
+  'Provisional Beast of Reincarnation guide outlines for bosses, combat, enemies, and exploration. Clearly labeled pre-release speculation until the Aug 3, 2026 launch.';
 
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'CollectionPage',
-  name: `${title} | ${SITE.name}`,
+  name: title,
   description,
   url: new URL(path, SITE.url).href,
   isPartOf: { '@type': 'WebSite', name: SITE.name, url: SITE.url },
@@ -50,13 +49,15 @@ const schema = {
         </ol>
       </nav>
       <h1 class="font-display text-3xl font-bold text-ash-50 md:text-4xl">
-        Beast of Reincarnation Guides
+        Pre-release guide outlines
       </h1>
-      <p class="mt-3 max-w-2xl text-lg leading-relaxed text-ash-300">
-        {description}
+      <p class="mt-3 max-w-3xl text-lg leading-relaxed text-ash-300">
+        These pages are planning notes for Beast of Reincarnation before the
+        {GAME_FACTS.releaseDate} Steam launch. They are labeled speculation and currently
+        noindex. For verified facts, use the
+        <a href="/game-info/" class="text-ember-400 hover:text-ember-500">game info page</a>.
       </p>
 
-      <!-- Category jump links -->
       <ul class="mt-6 flex flex-wrap gap-2">
         {
           groups.map((g) => (
@@ -91,6 +92,7 @@ const schema = {
               imageAlt={guide.data.imageAlt}
               category={guide.data.category}
               source={guide.data.source}
+              date={guide.data.updateDate ?? guide.data.publishDate}
             />
           ))}
         </div>

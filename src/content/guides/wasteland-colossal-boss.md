@@ -1,47 +1,62 @@
 ---
-title: "Wasteland Colossal Boss — How to Beat the Ash Titan"
-description: "A complete Wasteland Colossal boss guide for Beast of Reincarnation: how to climb the Ash Titan, break its armor plates, survive the ground-slam phase, and time Koo's grapple assists."
-heading: "Wasteland Colossal: Bringing Down the Ash Titan"
+title: "Wasteland Colossal Boss - Pre-Release Outline"
+description: "Pre-release notes for a wasteland colossal boss concept in Beast of Reincarnation: spectacle-fight expectations from official marketing, plus what still needs hands-on verification."
+heading: "Wasteland Colossal: Pre-Release Outline"
 category: boss
 keyword: "beast of reincarnation wasteland colossal boss"
 image: "beast-of-reincarnation-wasteland-colossal-boss.webp"
-imageAlt: "A colossal armored boss towering over the ash wasteland as Emma and Koo close in"
-publishDate: 2025-07-21
+imageAlt: "A colossal armored figure towering over an ash wasteland in Beast of Reincarnation promotional imagery"
+publishDate: 2026-07-21
+updateDate: 2026-07-25
 order: 2
 featured: false
 preview: true
 source: speculation
 ---
 
-The Wasteland Colossal — most players call it the Ash Titan — is the game's first true spectacle fight. It's less a duel and more a climb: you're not just dodging attacks, you're finding a way onto the thing and tearing off the armor plates that protect its core. This guide covers the full sequence, from the opening ground phase to the final core break.
+Official marketing for Beast of Reincarnation repeatedly sells scale: blighted landscapes, world-ruling Bosses, and Emma/Koo as an outmatched pair. A "colossal" wasteland fight is a natural expectation from that pitch - but this page remains a **concept outline**, not a confirmed climb guide.
 
-## Understanding the Fight Structure
+See [confirmed game info](/game-info/) for systems that are actually published on Steam.
 
-Unlike Nushi, the Colossal is not a rhythm fight. It's a puzzle with a timer. The boss has three armor plates — two on the legs, one on the back — and you have to break all three to expose the core. Each plate break forces a stagger you can climb.
+## Why this concept appears before launch
 
-The mistake most players make is treating it like a standard boss and swinging at its legs. Regular attacks barely scratch the plates. You need the environmental hooks and Koo's grapple to make real progress.
+Steam copy stresses:
 
-## Ground Phase: Breaking the Leg Plates
+- Bosses that rule the world
+- Capturing boss powers as a progression goal
+- A beautiful-but-brutal post-apocalyptic Japan
+- Custom loadouts spanning aggressive, ranged, and stealthy approaches
 
-The Colossal opens by stomping around the arena. Two attacks matter here:
+Those pillars make a multi-stage spectacle boss plausible. They do **not** confirm plate breaks, climb windows, or core-exposure phases.
 
-- **Ground slam** — it raises one foot high and holds for almost a full second. Roll toward the planted foot, not away. The shockwave radiates outward, so being close is safer than being far.
-- **Sweeping kick** — a low horizontal kick that tracks you. Jump-dodge this; a normal roll clips you on the recovery.
+## Provisional fight framework
 
-To break a leg plate, wait for the ground slam, then attack the *planted* leg during the recovery. Three full combos per opening. When Koo's grapple prompt appears, use it — Koo latches on and pries the plate loose, cutting the work in half.
+If a colossal boss ships, expect the design to test more than a single dodge cycle:
 
-## Climb Phase: Reaching the Back
+- **Ground pressure** - large slam or sweep patterns that control space
+- **Traversal / positioning** - opportunities to change elevation or target weak points
+- **Koo utility** - command windows that matter more than pure DPS
+- **Loadout identity** - whether ranged or aggressive kits change the route
 
-Once both leg plates are gone, the Colossal kneels. This is your climb window and it's short. Sprint to a shoulder and mount. On the back you'll find the third plate. Attack it while holding on — the camera fights you here, so lock onto the plate directly.
+Treat every named phase below as a launch checklist, not a spoiler-proof walkthrough:
 
-The Colossal will try to shake you off with a body roll. Watch for the screen shudder tell and brace (hold guard) to keep your grip. Get thrown and you restart the climb from the ground.
+1. Learn the ground tells.
+2. Identify whether weak points are always exposed or only after a mechanic.
+3. Test if Koo can create openings when Emma is forced defensive.
+4. Record whether the fight becomes a race once a core or second form appears.
 
-## Core Phase: The Real Damage
+## What not to trust yet
 
-With all three plates gone the core is exposed on the back. Now the fight inverts: the Colossal becomes aggressive, and you're racing to burn the core before its enrage timer. Dump everything — this is where saved Koo bond charges and heavy attacks pay off.
+- Exact plate counts
+- Climb timing windows
+- "Two clean core phases" style damage math
+- Claims that another boss is a hard prerequisite
 
-The core has a pulsing tell: it glows brightest right before the Colossal reloads its guard. Land hits during the bright window for bonus stagger damage. Two clean core windows are usually enough to finish it.
+## Post-launch rewrite goals
 
-## After the Titan
+After 3 August 2026, replace this outline with:
 
-The Colossal drops a large chunk of upgrade material and opens the northern ridge. If you haven't cleared the [Nushi fight](/guides/nushi-boss-fight/) yet, do that first — the Colossal assumes you have Koo's grapple bond, which Nushi unlocks.
+- Real arena layout and camera constraints
+- Confirmed weak-point rules
+- Verified rewards and progression unlocks
+- Loadout recommendations based on clears, not marketing language

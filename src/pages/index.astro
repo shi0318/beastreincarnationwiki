@@ -3,23 +3,44 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import JsonLd from '../components/JsonLd.astro';
 import GuideCard from '../components/GuideCard.astro';
-import { SITE, CATEGORIES, GAME_FACTS, type Category } from '../data/site';
+import SourceBadge from '../components/SourceBadge.astro';
+import { SITE, GAME_FACTS } from '../data/site';
 
 const guides = await getCollection('guides');
 
-// 排序：featured 优先，其次 order 升序，再按发布日期倒序
+const homeTitle = `${SITE.name} - Release Date, Story & Guides`;
+
 const sorted = [...guides].sort((a, b) => {
   if (a.data.featured !== b.data.featured) return a.data.featured ? -1 : 1;
   if (a.data.order !== b.data.order) return a.data.order - b.data.order;
   return b.data.publishDate.getTime() - a.data.publishDate.getTime();
 });
 
-const featured = sorted[0];
-const rest = sorted.slice(1, 7);
+const previews = sorted.slice(0, 6);
 
-// 按分类分组用于分区展示
-const byCategory = (cat: Category) =>
-  sorted.filter((g) => g.data.category === cat);
+const confirmedFacts = [
+  { label: 'Release date', value: GAME_FACTS.releaseDate },
+  { label: 'Developer', value: GAME_FACTS.developer },
+  { label: 'Publisher', value: GAME_FACTS.publisher },
+  { label: 'Platform', value: GAME_FACTS.platform },
+  { label: 'Combat', value: 'Real-time + turn-based hybrid' },
+  { label: 'Price (Steam)', value: `${GAME_FACTS.priceUsd} / Deluxe ${GAME_FACTS.deluxePriceUsd}` },
+];
+
+const pillars = [
+  {
+    title: 'One-person, one-dog combat',
+    body: GAME_FACTS.combatSummary,
+  },
+  {
+    title: 'Post-apocalyptic Japan, 4026',
+    body: GAME_FACTS.storySummary,
+  },
+  {
+    title: 'Build your loadout',
+    body: GAME_FACTS.buildSummary,
+  },
+];
 
 const schema = [
   {
@@ -28,14 +49,6 @@ const schema = [
     name: SITE.name,
     url: SITE.url,
     description: SITE.description,
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: {
-        '@type': 'EntryPoint',
-        urlTemplate: `${SITE.url}/guides/?q={search_term_string}`,
-      },
-      'query-input': 'required name=search_term_string',
-    },
   },
   {
     '@context': 'https://schema.org',
@@ -44,76 +57,190 @@ const schema = [
     url: SITE.url,
     description: SITE.description,
   },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'VideoGame',
+    name: GAME_FACTS.name,
+    description: GAME_FACTS.shortDescription,
+    url: GAME_FACTS.source,
+    genre: GAME_FACTS.genres,
+    gamePlatform: ['PC'],
+    datePublished: GAME_FACTS.releaseDateISO,
+    author: { '@type': 'Organization', name: GAME_FACTS.developer },
+    publisher: { '@type': 'Organization', name: GAME_FACTS.publisher },
+    offers: {
+      '@type': 'Offer',
+      price: '59.99',
+      priceCurrency: 'USD',
+      availability: 'https://schema.org/PreOrder',
+      url: GAME_FACTS.source,
+    },
+  },
 ];
 ---
 
-<BaseLayout title={SITE.name} description={SITE.description} path="/">
+<BaseLayout title={homeTitle} description={SITE.description} path="/">
   <JsonLd slot="head" schema={schema} />
 
   <!-- Hero -->
   <section class="relative overflow-hidden border-b border-ash-800">
-    {
-      featured && (
-        <img
-          src={`/images/${featured.data.image}`}
-          alt={featured.data.imageAlt}
-          width="1600"
-          height="900"
-          loading="eager"
-          fetchpriority="high"
-          decoding="async"
-          class="absolute inset-0 h-full w-full object-cover opacity-40"
-        />
-      )
-    }
-    <div
-      class="absolute inset-0 bg-gradient-to-t from-ash-950 via-ash-950/80 to-ash-950/40"
-    >
-    </div>
+    <img
+      src="/images/beast-of-reincarnation-nushi-boss-fight.webp"
+      alt="Emma and Koo in Beast of Reincarnation's post-apocalyptic wasteland"
+      width="1600"
+      height="900"
+      loading="eager"
+      fetchpriority="high"
+      decoding="async"
+      class="absolute inset-0 h-full w-full object-cover opacity-40"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-ash-950 via-ash-950/80 to-ash-950/40"></div>
     <div class="relative mx-auto max-w-6xl px-4 py-24 md:py-32">
       <p class="font-display text-sm font-semibold uppercase tracking-[0.2em] text-ember-400">
         Beast of Reincarnation
       </p>
-      <p class="mt-3 inline-flex items-center gap-2 rounded-full border border-ember-700/60 bg-ember-950/40 px-3 py-1 text-sm text-ember-200">
+      <p class="mt-3 inline-flex flex-wrap items-center gap-2 rounded-full border border-ember-700/60 bg-ember-950/40 px-3 py-1 text-sm text-ember-200">
         <span aria-hidden="true">📅</span>
-        Releasing {GAME_FACTS.releaseDate} · {GAME_FACTS.developer}
+        Steam release: {GAME_FACTS.releaseDate} · {GAME_FACTS.developer}
       </p>
       <h1 class="mt-4 max-w-3xl font-display text-4xl font-bold leading-tight text-ash-50 md:text-6xl">
-        {SITE.tagline}
+        Confirmed release date, story & systems for Game Freak's one-person, one-dog action RPG
       </h1>
       <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ash-300">
-        {SITE.description}
+        {GAME_FACTS.shortDescription}
       </p>
       <div class="mt-8 flex flex-wrap gap-3">
         <a
           href="/game-info/"
           class="rounded-lg bg-ember-600 px-6 py-3 font-semibold text-ash-950 transition-colors hover:bg-ember-500"
         >
-          Everything we know
+          Confirmed game info
         </a>
         <a
-          href="/guides/"
+          href={GAME_FACTS.source}
+          rel="noopener"
+          target="_blank"
           class="rounded-lg border border-ash-600 px-6 py-3 font-semibold text-ash-100 transition-colors hover:border-ash-400 hover:bg-ash-800"
         >
-          Browse all guides
+          Official Steam page
+        </a>
+      </div>
+      <p class="mt-4 text-xs text-ash-500">
+        Source verified from the official Steam listing on {GAME_FACTS.lastVerified}. Pre-purchase is live; the game is not out yet.
+      </p>
+    </div>
+  </section>
+
+  <!-- Confirmed facts -->
+  <section class="border-b border-ash-800 bg-ash-900/30">
+    <div class="mx-auto max-w-6xl px-4 py-14">
+      <div class="mb-6 flex flex-wrap items-center gap-3">
+        <h2 class="font-display text-2xl font-bold text-ash-50 md:text-3xl">
+          What is confirmed right now
+        </h2>
+        <SourceBadge source="official" />
+      </div>
+      <p class="max-w-3xl text-ash-300">
+        Before launch, this site prioritizes official Steam facts over strategy speculation.
+        Use this section for release planning; treat preview guides as provisional only.
+      </p>
+      <dl class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {
+          confirmedFacts.map((f) => (
+            <div class="rounded-xl border border-ash-800 bg-ash-950/40 p-5">
+              <dt class="text-xs font-semibold uppercase tracking-wide text-ash-500">{f.label}</dt>
+              <dd class="mt-2 font-display text-lg font-semibold leading-snug text-ash-50">{f.value}</dd>
+            </div>
+          ))
+        }
+      </dl>
+      <div class="mt-8">
+        <a href="/game-info/" class="text-sm font-medium text-ember-400 hover:text-ember-500">
+          Full confirmed overview, FAQ & PC specs →
         </a>
       </div>
     </div>
   </section>
 
-  <!-- Latest guides -->
+  <!-- Official pillars -->
   <section class="mx-auto max-w-6xl px-4 py-16">
-    <div class="mb-8 flex items-end justify-between">
+    <div class="mb-8 max-w-3xl">
       <h2 class="font-display text-2xl font-bold text-ash-50 md:text-3xl">
-        Latest guides
+        Official pillars from Steam
       </h2>
+      <p class="mt-3 text-ash-300">
+        These are the systems and story beats Game Freak and Fictions already publish on Steam  - 
+        not player-tested walkthrough claims.
+      </p>
+    </div>
+    <div class="grid gap-6 md:grid-cols-3">
+      {
+        pillars.map((p) => (
+          <article class="rounded-xl border border-ash-800 bg-ash-900/40 p-6">
+            <h3 class="font-display text-xl font-semibold text-ash-50">{p.title}</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ash-300">{p.body}</p>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- System snapshot -->
+  <section class="border-y border-ash-800 bg-ash-900/20">
+    <div class="mx-auto max-w-6xl px-4 py-14">
+      <div class="grid gap-8 lg:grid-cols-2">
+        <div>
+          <h2 class="font-display text-2xl font-bold text-ash-50">PC system requirements</h2>
+          <p class="mt-3 text-ash-300">
+            Steam currently lists Windows-only support, full controller support, 45 GB storage, and SSD required.
+          </p>
+          <ul class="mt-6 space-y-3 text-sm text-ash-300">
+            <li><strong class="text-ash-100">Minimum GPU:</strong> GTX 1070 / RX 580 (8 GB)</li>
+            <li><strong class="text-ash-100">Recommended GPU:</strong> RTX 3060 / RX 6700 XT (12 GB)</li>
+            <li><strong class="text-ash-100">Memory:</strong> 16 GB RAM</li>
+            <li><strong class="text-ash-100">Storage:</strong> 45 GB SSD</li>
+          </ul>
+          <a href="/game-info/#system-requirements" class="mt-6 inline-block text-sm font-medium text-ember-400 hover:text-ember-500">
+            See full minimum & recommended specs →
+          </a>
+        </div>
+        <div class="rounded-xl border border-ash-800 bg-ash-950/40 p-6">
+          <h3 class="font-display text-lg font-semibold text-ash-50">Also confirmed on Steam</h3>
+          <ul class="mt-4 grid gap-2 text-sm text-ash-300 sm:grid-cols-2">
+            {GAME_FACTS.features.map((f) => (
+              <li class="rounded-lg border border-ash-800 bg-ash-900/50 px-3 py-2">{f}</li>
+            ))}
+          </ul>
+          <p class="mt-4 text-xs text-ash-500">
+            Genres listed: {GAME_FACTS.genres.join(', ')}. Languages include full audio for English and Japanese.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pre-release previews -->
+  <section class="mx-auto max-w-6xl px-4 py-16">
+    <div class="mb-8 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+      <div class="max-w-2xl">
+        <p class="text-sm font-semibold uppercase tracking-wide text-ash-500">
+          Secondary · Pre-release only
+        </p>
+        <h2 class="mt-2 font-display text-2xl font-bold text-ash-50 md:text-3xl">
+          Provisional guide outlines
+        </h2>
+        <p class="mt-2 text-ash-400">
+          These pages are labeled speculation, marked noindex, and written as planning notes until the
+          {GAME_FACTS.releaseDate} launch. Prefer the confirmed info above.
+        </p>
+      </div>
       <a href="/guides/" class="text-sm font-medium text-ember-400 hover:text-ember-500">
-        View all →
+        Browse all previews →
       </a>
     </div>
     <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {
-        rest.map((g, i) => (
+        previews.map((g, i) => (
           <GuideCard
             href={`/guides/${g.id}/`}
             title={g.data.heading ?? g.data.title}
@@ -122,44 +249,11 @@ const schema = [
             imageAlt={g.data.imageAlt}
             category={g.data.category}
             source={g.data.source}
+            date={g.data.updateDate ?? g.data.publishDate}
             eager={i < 3}
           />
         ))
       }
     </div>
   </section>
-
-  <!-- Category sections -->
-  {
-    (['boss', 'combat', 'exploration'] as Category[]).map((cat) => {
-      const items = byCategory(cat).slice(0, 3);
-      if (items.length === 0) return null;
-      const meta = CATEGORIES[cat];
-      return (
-        <section class="border-t border-ash-800 py-14">
-          <div class="mx-auto max-w-6xl px-4">
-            <div class="mb-6">
-              <h2 class="font-display text-2xl font-bold text-ash-50">
-                {meta.label}
-              </h2>
-              <p class="mt-1 text-ash-400">{meta.blurb}</p>
-            </div>
-            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {items.map((g) => (
-                <GuideCard
-                  href={`/guides/${g.id}/`}
-                  title={g.data.heading ?? g.data.title}
-                  description={g.data.description}
-                  image={`/images/${g.data.image}`}
-                  imageAlt={g.data.imageAlt}
-                  category={g.data.category}
-                  source={g.data.source}
-                />
-              ))}
-            </div>
-          </div>
-        </section>
-      );
-    })
-  }
 </BaseLayout>

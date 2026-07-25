@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import JsonLd from '../components/JsonLd.astro';
-import { SITE } from '../data/site';
+import { SITE, GAME_FACTS } from '../data/site';
 
 const path = '/about/';
 
@@ -11,7 +11,7 @@ const schema = [
     '@type': 'AboutPage',
     name: `About ${SITE.name}`,
     url: new URL(path, SITE.url).href,
-    description: `About ${SITE.name} — who we are, what we cover, and how our Beast of Reincarnation guides are made.`,
+    description: `About ${SITE.name} - how we cover Beast of Reincarnation before and after launch.`,
   },
   {
     '@context': 'https://schema.org',
@@ -26,7 +26,7 @@ const schema = [
 
 <BaseLayout
   title="About Us"
-  description={`About ${SITE.name} — a community-built wiki for Beast of Reincarnation, covering boss guides, enemy breakdowns, combat tech, and exploration routes.`}
+  description={`About ${SITE.name}: a community wiki focused on confirmed Beast of Reincarnation facts first, with clearly labeled pre-release previews until launch.`}
   path={path}
 >
   <JsonLd slot="head" schema={schema} />
@@ -44,50 +44,37 @@ const schema = [
       About {SITE.name}
     </h1>
     <p class="mt-4 text-lg leading-relaxed text-ash-300">
-      {SITE.name} is a community-built resource dedicated to helping players get
-      the most out of Beast of Reincarnation — from your first boss wall to the
-      deepest exploration secrets.
+      {SITE.name} helps players track what is confirmed about Beast of Reincarnation and prepare for launch
+      without treating speculation as hands-on fact.
     </p>
 
     <div class="prose mt-10 max-w-none">
-      <h2>What We Cover</h2>
-      <p>
-        We write in-depth, tested guides across every part of the game. Our
-        coverage is organized into a few core areas:
-      </p>
+      <h2>What we prioritize</h2>
       <ul>
-        <li><strong>Boss guides</strong> — phase-by-phase strategies, attack tells, and the safest damage windows for every major encounter.</li>
-        <li><strong>Enemy breakdowns</strong> — weaknesses, drops, and how to fight the wasteland's fauna without wasting resources.</li>
-        <li><strong>Combat tech</strong> — parry timing, Koo bond mechanics, and offensive techniques that carry across the whole game.</li>
-        <li><strong>Exploration</strong> — region routes, hidden collectibles, and the paths worth taking first.</li>
+        <li><strong>Confirmed game info</strong> - release date, developer, combat pillars, PC specs, and Steam features.</li>
+        <li><strong>Source labels</strong> - every page shows how solid the information is.</li>
+        <li><strong>Pre-release honesty</strong> - strategy outlines stay provisional and noindex until verified after launch.</li>
+        <li><strong>Post-launch rewrites</strong> - real boss, combat, and exploration guides will replace previews after {GAME_FACTS.releaseDate}.</li>
       </ul>
 
-      <h2>How We Write Our Guides</h2>
+      <h2>How we write before launch</h2>
       <p>
-        Every guide is written from hands-on play, not scraped patch notes. When
-        the game updates and mechanics shift, we revisit and revise — each guide
-        carries a published and updated date so you always know how current the
-        information is.
-      </p>
-      <p>
-        We aim for guides that respect your time: clear tells, concrete timing,
-        and no filler. If something isn't confirmed in-game, we don't state it as
-        fact.
+        Before the game is out, we do not claim hands-on testing. Official Steam copy, trailers, and clearly
+        marked analysis are the only foundations we use. If something is expected rather than confirmed, we say so.
       </p>
 
-      <h2>A Note on Ownership</h2>
+      <h2>Ownership</h2>
       <p>
-        {SITE.name} is an unofficial, fan-made resource. We are not affiliated
-        with or endorsed by the developers or publishers of Beast of
-        Reincarnation, and all trademarks remain the property of their respective
-        owners. We build this wiki because we love the game and want the
-        community to have a reliable place to learn it.
+        {SITE.name} is an unofficial fan-made resource. We are not affiliated with or endorsed by
+        {GAME_FACTS.developer}, {GAME_FACTS.publisher}, or Steam. All trademarks remain the property of their
+        respective owners.
       </p>
 
-      <h2>Get In Touch</h2>
+      <h2>Get in touch</h2>
       <p>
-        Spotted an error, have a correction, or want to suggest a guide? We'd
-        love to hear from you — head over to our <a href="/contact/">contact page</a>.
+        Spotted an error, have a correction, or want to suggest a post-launch guide? Visit our
+        <a href="/contact/">contact page</a>. Editorial rules live on the
+        <a href="/disclaimer/">disclaimer</a> page.
       </p>
     </div>
   </section>

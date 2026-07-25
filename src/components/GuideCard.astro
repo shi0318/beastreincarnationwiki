@@ -11,11 +11,13 @@ interface Props {
   category: Category;
   /** 内容来源可信度，卡片右上角徽章 */
   source?: SourceKey;
+  /** 列表卡片显示的日期（发售前为最近核对日） */
+  date?: Date;
   /** 首图使用 eager 加载以优化 LCP */
   eager?: boolean;
 }
 
-const { href, title, description, image, imageAlt, category, source, eager = false } =
+const { href, title, description, image, imageAlt, category, source, date, eager = false } =
   Astro.props;
 
 const cat = CATEGORIES[category];
@@ -23,6 +25,9 @@ const accentClass =
   cat.accent === 'ember'
     ? 'bg-ember-600/90 text-ash-950'
     : 'bg-moss-600/90 text-ash-50';
+
+const fmtDate = (d: Date) =>
+  d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 ---
 
 <article
@@ -56,5 +61,10 @@ const accentClass =
       </a>
     </h3>
     <p class="mt-2 text-sm leading-relaxed text-ash-400">{description}</p>
+    {date && (
+      <time datetime={date.toISOString()} class="mt-3 text-xs font-medium text-ember-500/80">
+        Reviewed {fmtDate(date)}
+      </time>
+    )}
   </div>
 </article>

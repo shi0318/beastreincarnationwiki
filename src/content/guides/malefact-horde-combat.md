@@ -1,52 +1,51 @@
 ---
-title: "Surviving Malefact Hordes — Crowd Control Tactics"
-description: "How to survive Malefact horde encounters in Beast of Reincarnation: crowd-control tactics, the best AoE options, Koo command timing, and how to avoid getting surrounded."
-heading: "Malefact Hordes: Crowd-Control Combat Guide"
+title: "Malefact Hordes - Pre-Release Crowd Notes"
+description: "Pre-release notes on crowd-pressure combat in Beast of Reincarnation: what hybrid Emma/Koo combat implies for multi-enemy fights, plus a launch checklist for verifying horde tactics."
+heading: "Malefact Hordes: Pre-Release Crowd Notes"
 category: combat
 keyword: "beast of reincarnation malefact horde"
 image: "beast-of-reincarnation-malefact-horde-combat.webp"
-imageAlt: "Emma surrounded by a horde of malefact creatures mid-combat in Beast of Reincarnation"
-publishDate: 2025-07-23
+imageAlt: "Emma facing multiple hostile creatures in Beast of Reincarnation promotional imagery"
+publishDate: 2026-07-23
+updateDate: 2026-07-25
 order: 30
 featured: false
 preview: true
 source: speculation
 ---
 
-Malefacts are weak individually, but the game rarely sends them one at a time. Horde encounters — six, eight, sometimes a dozen at once — are a completely different skill from boss fights. Win them by managing space and crowd position, not by out-damaging the swarm. This guide covers the tactics that keep you alive when you're outnumbered.
+Official materials for Beast of Reincarnation emphasize a harsh blighted world and Emma fighting as a unit with Koo. That makes multi-enemy pressure likely - but "Malefact hordes" remains a **working label**, not a confirmed bestiary category with verified spawn rules.
 
-## Why Hordes Kill You
+For published combat pillars, start with [confirmed game info](/game-info/).
 
-A single Malefact does trivial damage. The problem is stacking: three hits from three directions in the same half-second stunlocks you, and a stunlock in a horde is usually a death. Your entire goal is to **never be surrounded**. Everything below serves that one principle.
+## What official materials support
 
-## Positioning: Fight the Funnel
+- Hybrid real-time + turn-based combat
+- Emma sword play plus Koo command techniques
+- Aggressive, ranged, and stealthy loadout directions
+- A world full of Bosses and dangerous fauna
 
-The single most important habit is fighting with your back protected. Never fight a horde in an open field. Instead:
+None of that confirms exact pack sizes, AoE weapon ranks, or a named "Malefact" enemy family.
 
-- **Back into a wall or chokepoint** so they can only approach from the front arc.
-- **Kite toward doorways and gaps** that force the horde into a single-file line.
-- **Keep moving in wide arcs.** Circling naturally strings the horde into a tail, so you face the nearest one or two instead of all of them.
+## Provisional crowd-combat principles
 
-If you find yourself in the center of the group, don't attack — dodge *outward* immediately to reset your position. Attacking while surrounded is the mistake.
+Until launch, treat these as hypotheses to test:
 
-## AoE and Sweep Attacks
+1. **Space management beats raw DPS** when multiple threats can interrupt you.
+2. **Koo may be better as peel/control** than as pure bonus damage in crowded fights.
+3. **Wide attacks or crowd tools** should be tested early if the build system allows them.
+4. **Stealth or ranged openers** may matter if the game lets you choose engagement terms.
 
-Horde fights are where wide weapons shine. Sweeping heavy attacks that hit multiple targets do far more real work than a fast single-target blade. If you have a choice of loadout before a horde area, bring the widest weapon you own.
+## Launch-day checklist
 
-Charged sweep attacks also knock down multiple Malefacts at once, buying you space. Use a charged sweep the moment three or more cluster together.
+- Confirm the real enemy family names and spawn compositions.
+- Measure whether surrounding pressure is a real fail state or mostly cosmetic.
+- Test Koo commands specifically for interrupt, scatter, or single-target lock.
+- Compare wide weapons vs single-target kits in the first dense encounter zones.
+- Note whether difficulty options change pack density or only damage numbers.
 
-## Koo as a Crowd Splitter
+## What this page must not claim yet
 
-Koo is your pressure valve. Command Koo into the *thickest* part of the horde — Koo's attacks knock Malefacts around and split their attention, peeling half the group off you. Refresh the command whenever Koo finishes its combo.
+Do not treat any "six to twelve enemies," "charged sweep knockdown," or guaranteed peel rotation as fact. Those details need gameplay evidence after **3 August 2026**.
 
-Timing tip: send Koo in right as the horde closes, not before. Sent early, Koo drifts and the command is wasted. Sent as they cluster, it scatters the pack at the exact moment you'd otherwise get surrounded.
-
-## Practical Checklist
-
-- Wide weapon over fast weapon
-- Back to a wall, never fight center-field
-- Charged sweeps to knock down clusters
-- Koo into the thickest group, refreshed often
-- Dodge outward, never inward, when pressured
-
-Master the [parry timing](/guides/emma-parry-flower-beast/) on top of this and even the large late-game hordes become manageable.
+After launch, rewrite this into a short crowd-control guide with verified enemy examples and loadout notes.

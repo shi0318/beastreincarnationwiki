@@ -34,8 +34,11 @@ const {
 
 const canonical = new URL(path, SITE.url).href;
 const ogImage = image.startsWith('http') ? image : new URL(image, SITE.url).href;
+// 标题已含品牌名时不再追加，避免 "Wiki - ... | Wiki"
 const fullTitle =
-  title === SITE.name ? title : `${title} | ${SITE.name}`;
+  title === SITE.name || title.includes(SITE.name)
+    ? title
+    : `${title} | ${SITE.name}`;
 ---
 
 <!doctype html>

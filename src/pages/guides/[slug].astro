@@ -22,61 +22,95 @@ const path = `/guides/${entry.id}/`;
 const image = `/images/${data.image}`;
 const cat = CATEGORIES[data.category];
 
-// 相关攻略：同分类的其它文章，最多 3 篇
 const all = await getCollection('guides');
 const related = all
   .filter((g) => g.id !== entry.id && g.data.category === data.category)
   .slice(0, 3);
 
-// 只取 h2 用于目录
 const toc = headings.filter((h) => h.depth === 2);
 
 const publishDate = data.publishDate;
 const updateDate = data.updateDate ?? data.publishDate;
+const isPreview = data.preview;
 
-// 结构化数据：Article + Breadcrumb
-const schema = [
-  {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: data.heading ?? data.title,
-    description: data.description,
-    image: new URL(image, SITE.url).href,
-    datePublished: publishDate.toISOString(),
-    dateModified: updateDate.toISOString(),
-    author: { '@type': 'Organization', name: SITE.name },
-    publisher: {
-      '@type': 'Organization',
-      name: SITE.name,
-      url: SITE.url,
-    },
-    mainEntityOfPage: { '@type': 'WebPage', '@id': new URL(path, SITE.url).href },
-  },
-  {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
+// Preview content: use WebPage + reviewed date language instead of claiming a verified Article publish.
+const schema = isPreview
+  ? [
       {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Home',
-        item: SITE.url,
-      },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: 'Guides',
-        item: new URL('/guides/', SITE.url).href,
-      },
-      {
-        '@type': 'ListItem',
-        position: 3,
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
         name: data.heading ?? data.title,
-        item: new URL(path, SITE.url).href,
+        description: data.description,
+        url: new URL(path, SITE.url).href,
+        dateModified: updateDate.toISOString(),
+        about: {
+          '@type': 'VideoGame',
+          name: GAME_FACTS.name,
+          url: GAME_FACTS.source,
+        },
+        isPartOf: { '@type': 'WebSite', name: SITE.name, url: SITE.url },
+        creativeWorkStatus: 'Incomplete',
       },
-    ],
-  },
-];
+      {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.url },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Guides',
+            item: new URL('/guides/', SITE.url).href,
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: data.heading ?? data.title,
+            item: new URL(path, SITE.url).href,
+          },
+        ],
+      },
+    ]
+  : [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        headline: data.heading ?? data.title,
+        description: data.description,
+        image: new URL(image, SITE.url).href,
+        datePublished: publishDate.toISOString(),
+        dateModified: updateDate.toISOString(),
+        author: { '@type': 'Organization', name: SITE.name },
+        publisher: {
+          '@type': 'Organization',
+          name: SITE.name,
+          url: SITE.url,
+        },
+        mainEntityOfPage: {
+          '@type': 'WebPage',
+          '@id': new URL(path, SITE.url).href,
+        },
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.url },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Guides',
+            item: new URL('/guides/', SITE.url).href,
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: data.heading ?? data.title,
+            item: new URL(path, SITE.url).href,
+          },
+        ],
+      },
+    ];
 
 const fmt = (d: Date) =>
   d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
@@ -88,15 +122,14 @@ const fmt = (d: Date) =>
   path={path}
   image={image}
   imageAlt={data.imageAlt}
-  ogType="article"
-  publishDate={publishDate}
+  ogType={isPreview ? 'website' : 'article'}
+  publishDate={isPreview ? undefined : publishDate}
   updateDate={updateDate}
-  noindex={data.preview}
+  noindex={isPreview}
 >
   <JsonLd slot="head" schema={schema} />
 
   <article>
-    <!-- Hero -->
     <div class="relative">
       <img
         src={image}
@@ -112,7 +145,6 @@ const fmt = (d: Date) =>
     </div>
 
     <div class="mx-auto -mt-24 max-w-3xl px-4 pb-16">
-      <!-- Breadcrumb -->
       <nav aria-label="Breadcrumb" class="relative mb-4 text-xs text-ash-400">
         <ol class="flex flex-wrap items-center gap-1.5">
           <li><a href="/" class="hover:text-ember-400">Home</a></li>
@@ -124,9 +156,7 @@ const fmt = (d: Date) =>
       </nav>
 
       <div class="relative flex flex-wrap items-center gap-2">
-        <span
-          class="inline-flex rounded-full bg-ember-600/90 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-ash-950"
-        >
+        <span class="inline-flex rounded-full bg-ember-600/90 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-ash-950">
           {cat.label}
         </span>
         <SourceBadge source={data.source} />
@@ -141,7 +171,7 @@ const fmt = (d: Date) =>
       </p>
 
       {
-        data.preview && (
+        isPreview && (
           <aside
             role="note"
             class="relative mt-6 flex gap-3 rounded-lg border border-ember-700/60 bg-ember-950/40 p-4 text-sm leading-relaxed text-ember-100"
@@ -149,28 +179,34 @@ const fmt = (d: Date) =>
             <span aria-hidden="true" class="mt-0.5 text-lg">⚠️</span>
             <p>
               <strong class="font-semibold text-ember-300">Pre-release preview.</strong>{' '}
-              Beast of Reincarnation launches on {GAME_FACTS.releaseDate}. This guide is
-              based on pre-release information and community expectations, not
-              hands-on play. Names, mechanics, and strategies are provisional —
-              we'll verify and rewrite every guide against the final game at launch.
+              Beast of Reincarnation is scheduled for {GAME_FACTS.releaseDate} on Steam. This page is a
+              planning outline based on official materials and expectations, not hands-on play. Names,
+              routes, and tactics may change - we will verify everything after launch.
             </p>
           </aside>
         )
       }
 
-      <div class="relative mt-4 flex items-center gap-3 text-xs text-ash-500">
-        <time datetime={publishDate.toISOString()}>Published {fmt(publishDate)}</time>
+      <div class="relative mt-4 flex flex-wrap items-center gap-3 text-xs text-ash-500">
         {
-          data.updateDate && (
+          isPreview ? (
+            <time datetime={updateDate.toISOString()}>Last reviewed {fmt(updateDate)}</time>
+          ) : (
             <>
-              <span aria-hidden="true">•</span>
-              <time datetime={updateDate.toISOString()}>Updated {fmt(updateDate)}</time>
+              <time datetime={publishDate.toISOString()}>Published {fmt(publishDate)}</time>
+              {data.updateDate && (
+                <>
+                  <span aria-hidden="true">•</span>
+                  <time datetime={updateDate.toISOString()}>Updated {fmt(updateDate)}</time>
+                </>
+              )}
             </>
           )
         }
+        <span aria-hidden="true">•</span>
+        <a href="/game-info/" class="text-ember-400 hover:text-ember-500">Confirmed game info</a>
       </div>
 
-      <!-- Table of contents -->
       {
         toc.length > 1 && (
           <nav
@@ -183,10 +219,7 @@ const fmt = (d: Date) =>
             <ol class="space-y-1.5 text-sm">
               {toc.map((h) => (
                 <li>
-                  <a
-                    href={`#${h.slug}`}
-                    class="text-ash-400 transition-colors hover:text-ember-400"
-                  >
+                  <a href={`#${h.slug}`} class="text-ash-400 transition-colors hover:text-ember-400">
                     {h.text}
                   </a>
                 </li>
@@ -196,14 +229,21 @@ const fmt = (d: Date) =>
         )
       }
 
-      <!-- Body -->
       <div class="prose relative mt-10 max-w-none">
         <Content />
+      </div>
+
+      <div class="relative mt-10 rounded-xl border border-ash-800 bg-ash-900/40 p-5 text-sm text-ash-300">
+        <p class="font-display text-base font-semibold text-ash-50">Need confirmed facts instead?</p>
+        <p class="mt-2">
+          For release date, combat pillars, pricing, and PC specs, start with the
+          <a href="/game-info/" class="text-ember-400 hover:text-ember-500">official game info page</a>.
+          Editorial rules are on the <a href="/disclaimer/" class="text-ember-400 hover:text-ember-500">disclaimer</a>.
+        </p>
       </div>
     </div>
   </article>
 
-  <!-- Related guides -->
   {
     related.length > 0 && (
       <section class="border-t border-ash-800 bg-ash-900/30 py-14">
@@ -221,6 +261,7 @@ const fmt = (d: Date) =>
                 imageAlt={g.data.imageAlt}
                 category={g.data.category}
                 source={g.data.source}
+                date={g.data.updateDate ?? g.data.publishDate}
               />
             ))}
           </div>

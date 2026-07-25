@@ -5,31 +5,87 @@ import SourceBadge from '../components/SourceBadge.astro';
 import { SITE, GAME_FACTS, SOURCES, type SourceKey } from '../data/site';
 
 const path = '/game-info/';
-const title = 'Beast of Reincarnation — Release Date, Story & Everything We Know';
+const title = 'Beast of Reincarnation - Release Date, Story, Specs & Everything Confirmed';
 const description =
-  'Everything confirmed about Beast of Reincarnation: the 4 August 2026 release date, Game Freak as developer, the Emma and Koo story, and the hybrid combat system.';
+  'Confirmed Beast of Reincarnation info from Steam: Aug 3, 2026 release date, Game Freak / Fictions, hybrid combat, PC system requirements, price, languages, and FAQ.';
 
-// 官方已确认的核心事实表
 const facts = [
   { label: 'Release date', value: GAME_FACTS.releaseDate },
   { label: 'Developer', value: GAME_FACTS.developer },
   { label: 'Publisher', value: GAME_FACTS.publisher },
-  { label: 'Platform', value: GAME_FACTS.platform },
-  { label: 'Genre', value: GAME_FACTS.genre },
+  { label: 'Platform (Steam)', value: GAME_FACTS.platform },
+  { label: 'Genre', value: `${GAME_FACTS.genres.join(' / ')}` },
+  { label: 'Price', value: `${GAME_FACTS.priceUsd} (Deluxe ${GAME_FACTS.deluxePriceUsd})` },
+  { label: 'Controller', value: GAME_FACTS.controllerSupport },
+  { label: 'Status', value: 'Coming soon · pre-purchase live' },
+];
+
+const faq = [
+  {
+    q: 'When does Beast of Reincarnation release?',
+    a: `Steam currently lists the release date as ${GAME_FACTS.releaseDate} (coming soon). Pre-purchase is already live on the official Steam store.`,
+  },
+  {
+    q: 'Who is developing and publishing Beast of Reincarnation?',
+    a: `It is developed by ${GAME_FACTS.developer} and published by ${GAME_FACTS.publisher}.`,
+  },
+  {
+    q: 'What platforms is Beast of Reincarnation on?',
+    a: 'The Steam store page currently lists Windows PC support. Other storefront platforms are not confirmed on the Steam listing itself.',
+  },
+  {
+    q: 'Is Beast of Reincarnation a Souls-like?',
+    a: 'Not exactly. Official copy describes a hybrid combat system that fuses real-time action with turn-based RPG elements, built around Emma and Koo fighting as a unit.',
+  },
+  {
+    q: 'How does the Emma and Koo combat system work?',
+    a: GAME_FACTS.combatSummary,
+  },
+  {
+    q: 'What are the PC system requirements?',
+    a: `Minimum: ${GAME_FACTS.systemRequirements.minimum.cpu}, ${GAME_FACTS.systemRequirements.minimum.gpu}, 16 GB RAM, 45 GB SSD. Recommended: ${GAME_FACTS.systemRequirements.recommended.cpu}, ${GAME_FACTS.systemRequirements.recommended.gpu}, 16 GB RAM, 45 GB SSD.`,
+  },
+  {
+    q: 'How much does Beast of Reincarnation cost on Steam?',
+    a: `Steam currently lists the standard edition at ${GAME_FACTS.priceUsd} and the Deluxe Edition at ${GAME_FACTS.deluxePriceUsd} (USD, no discount at last check).`,
+  },
+  {
+    q: 'Are the guides on this site confirmed?',
+    a: 'Not yet. Strategy pages are pre-release previews built from official materials and expectations, not hands-on play. They are labeled speculation and kept noindex until verified after launch.',
+  },
 ];
 
 const schema = [
   {
     '@context': 'https://schema.org',
     '@type': 'VideoGame',
-    name: 'Beast of Reincarnation',
+    name: GAME_FACTS.name,
     description,
     url: new URL(path, SITE.url).href,
-    genre: GAME_FACTS.genre,
-    gamePlatform: ['PC', 'PlayStation 5', 'Xbox Series X|S'],
+    genre: GAME_FACTS.genres,
+    gamePlatform: ['PC'],
     datePublished: GAME_FACTS.releaseDateISO,
     author: { '@type': 'Organization', name: GAME_FACTS.developer },
     publisher: { '@type': 'Organization', name: GAME_FACTS.publisher },
+    offers: {
+      '@type': 'Offer',
+      price: '59.99',
+      priceCurrency: 'USD',
+      availability: 'https://schema.org/PreOrder',
+      url: GAME_FACTS.source,
+    },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faq.map((item) => ({
+      '@type': 'Question',
+      name: item.q,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.a,
+      },
+    })),
   },
   {
     '@context': 'https://schema.org',
@@ -59,19 +115,21 @@ const schema = [
           <li class="text-ash-300">Game Info</li>
         </ol>
       </nav>
-      <h1 class="font-display text-3xl font-bold leading-tight text-ash-50 md:text-4xl">
-        Beast of Reincarnation: Everything We Know
-      </h1>
+      <div class="flex flex-wrap items-center gap-3">
+        <h1 class="font-display text-3xl font-bold leading-tight text-ash-50 md:text-4xl">
+          Beast of Reincarnation: Everything Confirmed
+        </h1>
+        <SourceBadge source="official" />
+      </div>
       <p class="mt-4 max-w-2xl text-lg leading-relaxed text-ash-300">
-        The facts confirmed by {GAME_FACTS.developer} and the official Steam
-        listing — release date, story, world, and how the one-person, one-dog
-        combat actually works. We update this page as new official details land.
+        A living summary of what {GAME_FACTS.developer} and {GAME_FACTS.publisher}
+        have published on Steam - release date, combat pillars, story setup, pricing,
+        features, and PC requirements. Last verified {GAME_FACTS.lastVerified}.
       </p>
     </div>
   </section>
 
   <section class="mx-auto max-w-4xl px-4 py-14">
-    <!-- Quick facts table -->
     <div class="mb-4 flex items-center gap-3">
       <h2 class="font-display text-xl font-bold text-ash-50">Confirmed facts</h2>
       <SourceBadge source="official" />
@@ -82,10 +140,7 @@ const schema = [
           {
             facts.map((f, i) => (
               <tr class={i % 2 === 0 ? 'bg-ash-900/40' : ''}>
-                <th
-                  scope="row"
-                  class="w-40 px-5 py-3 font-display font-semibold text-ash-300"
-                >
+                <th scope="row" class="w-44 px-5 py-3 font-display font-semibold text-ash-300">
                   {f.label}
                 </th>
                 <td class="px-5 py-3 text-ash-100">{f.value}</td>
@@ -100,15 +155,15 @@ const schema = [
       Source:{' '}
       <a
         href={GAME_FACTS.source}
-        rel="nofollow noopener"
+        rel="noopener"
         target="_blank"
         class="underline hover:text-ember-400"
       >
-        Official Steam store listing
-      </a>. Pre-purchase is live; the game is not out yet.
+        Official Steam store listing (App {GAME_FACTS.steamAppId})
+      </a>
+      . Steam shows <strong>coming soon</strong> with date {GAME_FACTS.releaseDateShort}.
     </p>
 
-    <!-- Genre tags -->
     <ul class="mt-6 flex flex-wrap gap-2">
       {
         GAME_FACTS.tags.map((t) => (
@@ -120,77 +175,120 @@ const schema = [
     </ul>
 
     <div class="prose mt-12 max-w-none">
-      <h2>The Premise</h2>
+      <h2>The premise</h2>
       <p>
-        Beast of Reincarnation is set in a <strong>post-apocalyptic Japan, in
-        the year 4026</strong>. Humanity's hope rests with two outcasts:
-        <strong>Emma</strong>, a young woman shunned by society for an affliction
-        she carries, and <strong>Koo</strong>, a blighted dog. Together they set
-        out across a world ravaged by blight — a place where forests can burst to
-        life amid the wasteland one moment and wither the next.
+        Beast of Reincarnation is set in a <strong>post-apocalyptic Japan in the year 4026</strong>.
+        Humanity's hope rests with two outcasts: <strong>Emma</strong>, shunned for an affliction she carries,
+        and <strong>Koo</strong>, a blighted dog. Official copy frames their journey as both lonely and
+        companionable, moving through a world where forests can burst to life amid wasteland and wither again.
       </p>
       <p>
-        Their goal is to hunt down the Bosses that rule this world, capture their
-        powers, and use them to defeat the being the game is named for — the
-        <strong>Beast of Reincarnation</strong>. It's pitched as a story of
-        loneliness and companionship in equal measure, where every character
-        hides a dangerous truth.
+        Emma and Koo are tasked with battling Bosses, capturing their powers, and ultimately facing the
+        being the game is named for - the <strong>Beast of Reincarnation</strong>. Steam also pitches a
+        story where every character hides a dangerous truth.
       </p>
 
-      <h2>Emma and Koo: The "One-Person, One-Dog" System</h2>
+      <h2>Emma and Koo: the hybrid combat system</h2>
       <p>
-        The headline mechanic is the bond between Emma and Koo. You fight as a
-        unit: Emma handles sword combat directly, while you issue commands to Koo
-        to unleash different techniques. Game Freak describes the result as a
-        <strong>hybrid combat system that blends real-time action with
-        turn-based RPG elements</strong> — the core thing that sets this apart
-        from a straight Souls-like.
+        The headline mechanic is the bond between Emma and Koo. You fight as a unit: Emma handles sword
+        combat while you issue commands to Koo. Game Freak describes this as a
+        <strong> hybrid combat system that combines real-time action with turn-based RPG elements</strong>  - 
+        the core difference from a straight Souls-like framing.
       </p>
 
-      <h2>Combat and Builds</h2>
+      <h2>Builds and playstyles</h2>
       <p>
-        You customize your playstyle through <strong>skill trees, gear, and
-        spirit stones</strong>. The official description calls out three broad
-        approaches you can lean into — <strong>ranged, stealthy, and
-        aggressive</strong> — with your loadout defining how you take on the
-        world's Bosses.
+        Official materials highlight customization through <strong>skill trees, gear, and spirit stones</strong>.
+        Steam calls out three broad loadout directions - <strong>ranged, stealthy, and aggressive</strong>  - 
+        so players can define how they approach the world's Bosses.
       </p>
 
-      <h2>When Can You Play It?</h2>
+      <h2 id="system-requirements">PC system requirements</h2>
       <p>
-        Beast of Reincarnation launches on <strong>{GAME_FACTS.releaseDate}</strong>
-        across <strong>{GAME_FACTS.platform}</strong>. It's developed by{' '}
-        {GAME_FACTS.developer} — the studio best known for Pokémon — and
-        published by {GAME_FACTS.publisher}. Pre-purchase is live now.
-      </p>
-
-      <h2>About Our Guides</h2>
-      <p>
-        Because the game isn't out yet, every strategy guide on this site is
-        clearly marked as a <strong>pre-release preview</strong> — built from
-        official information and community expectations, not hands-on play. Once
-        the game launches, we'll verify and rewrite each guide against the final
-        version. You can{' '}
-        <a href="/guides/">browse the current guides here</a>.
-      </p>
-
-      <h2>How We Label Our Sources</h2>
-      <p>
-        Every guide and fact on this site carries a source label so you always
-        know how solid the information is — from officially confirmed to
-        pre-release speculation. Here's what each label means:
+        Steam currently lists Windows-only support, DirectX 12, 45 GB storage, and an SSD requirement.
       </p>
     </div>
 
-    <!-- Source label legend -->
+    <div class="mt-6 grid gap-4 md:grid-cols-2">
+      <div class="rounded-xl border border-ash-800 bg-ash-900/40 p-5">
+        <h3 class="font-display text-lg font-semibold text-ash-50">Minimum</h3>
+        <ul class="mt-3 space-y-2 text-sm text-ash-300">
+          <li><strong class="text-ash-100">OS:</strong> {GAME_FACTS.systemRequirements.minimum.os}</li>
+          <li><strong class="text-ash-100">CPU:</strong> {GAME_FACTS.systemRequirements.minimum.cpu}</li>
+          <li><strong class="text-ash-100">Memory:</strong> {GAME_FACTS.systemRequirements.minimum.memory}</li>
+          <li><strong class="text-ash-100">GPU:</strong> {GAME_FACTS.systemRequirements.minimum.gpu}</li>
+          <li><strong class="text-ash-100">DirectX:</strong> {GAME_FACTS.systemRequirements.minimum.directx}</li>
+          <li><strong class="text-ash-100">Storage:</strong> {GAME_FACTS.systemRequirements.minimum.storage}</li>
+          <li><strong class="text-ash-100">Notes:</strong> {GAME_FACTS.systemRequirements.minimum.notes}</li>
+        </ul>
+      </div>
+      <div class="rounded-xl border border-ash-800 bg-ash-900/40 p-5">
+        <h3 class="font-display text-lg font-semibold text-ash-50">Recommended</h3>
+        <ul class="mt-3 space-y-2 text-sm text-ash-300">
+          <li><strong class="text-ash-100">OS:</strong> {GAME_FACTS.systemRequirements.recommended.os}</li>
+          <li><strong class="text-ash-100">CPU:</strong> {GAME_FACTS.systemRequirements.recommended.cpu}</li>
+          <li><strong class="text-ash-100">Memory:</strong> {GAME_FACTS.systemRequirements.recommended.memory}</li>
+          <li><strong class="text-ash-100">GPU:</strong> {GAME_FACTS.systemRequirements.recommended.gpu}</li>
+          <li><strong class="text-ash-100">DirectX:</strong> {GAME_FACTS.systemRequirements.recommended.directx}</li>
+          <li><strong class="text-ash-100">Storage:</strong> {GAME_FACTS.systemRequirements.recommended.storage}</li>
+          <li><strong class="text-ash-100">Notes:</strong> {GAME_FACTS.systemRequirements.recommended.notes}</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="prose mt-12 max-w-none">
+      <h2>Features, languages & editions</h2>
+      <p>
+        Steam lists full controller support (including DualShock / DualSense notes), Steam Achievements,
+        Steam Cloud, adjustable difficulty, subtitle options, and family sharing. Supported languages include
+        full audio for English and Japanese, with additional text languages listed on the store page.
+      </p>
+      <p>
+        Two purchase options currently appear on Steam: the standard edition at {GAME_FACTS.priceUsd}
+        and a Deluxe Edition at {GAME_FACTS.deluxePriceUsd}. Exact deluxe contents should be checked on the
+        store page, as package art may change before launch.
+      </p>
+
+      <h2>About our guides</h2>
+      <p>
+        Because the game is not out yet, every strategy guide on this site is marked as a
+        <strong> pre-release preview</strong> - built from official information and community expectations,
+        not hands-on play. Those pages stay noindex until we verify them after launch. For planning and SEO,
+        treat this Game Info page as the primary source of truth.
+      </p>
+      <p>
+        You can still <a href="/guides/">browse provisional previews</a>, or read our
+        <a href="/disclaimer/">editorial disclaimer</a>.
+      </p>
+
+      <h2>Frequently asked questions</h2>
+    </div>
+
+    <div class="mt-6 space-y-4">
+      {
+        faq.map((item) => (
+          <div class="rounded-xl border border-ash-800 bg-ash-900/30 p-5">
+            <h3 class="font-display text-lg font-semibold text-ash-50">{item.q}</h3>
+            <p class="mt-2 text-sm leading-relaxed text-ash-300">{item.a}</p>
+          </div>
+        ))
+      }
+    </div>
+
+    <div class="prose mt-12 max-w-none">
+      <h2>How we label sources</h2>
+      <p>
+        Every fact and guide carries a source label so you always know how solid the information is  - 
+        from officially confirmed to pre-release speculation.
+      </p>
+    </div>
+
     <ul class="mt-6 grid gap-3 sm:grid-cols-2">
       {
         (Object.keys(SOURCES) as SourceKey[]).map((key) => (
           <li class="flex flex-col gap-2 rounded-lg border border-ash-800 bg-ash-900/40 p-4">
             <SourceBadge source={key} />
-            <span class="text-sm leading-relaxed text-ash-400">
-              {SOURCES[key].blurb}
-            </span>
+            <span class="text-sm leading-relaxed text-ash-400">{SOURCES[key].blurb}</span>
           </li>
         ))
       }
