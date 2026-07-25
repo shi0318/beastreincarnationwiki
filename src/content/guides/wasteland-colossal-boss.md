@@ -54,7 +54,7 @@ Treat every named phase below as a launch checklist, not a spoiler-proof walkthr
 
 ## Post-launch rewrite goals
 
-After 3 August 2026, replace this outline with:
+After 4 August 2026, replace this outline with:
 
 - Real arena layout and camera constraints
 - Confirmed weak-point rules

@@ -14,7 +14,7 @@ source: speculation
 order: 1
 ---
 
-This is **not** a verified boss clear. Beast of Reincarnation launches on **3 August 2026**, and Nushi-style encounters are only publicly framed through trailers, screenshots, and official world copy. Use this page as a launch-day checklist, then replace every claim with hands-on notes after the game is out.
+This is **not** a verified boss clear. Beast of Reincarnation launches on **4 August 2026**, and Nushi-style encounters are only publicly framed through trailers, screenshots, and official world copy. Use this page as a launch-day checklist, then replace every claim with hands-on notes after the game is out.
 
 For confirmed systems context, start with our [game info page](/game-info/).
 

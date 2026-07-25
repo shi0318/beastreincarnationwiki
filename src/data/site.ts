@@ -7,7 +7,7 @@ export const SITE = {
   url: 'https://beastreincarnationwiki.com',
   tagline: 'Release date, story & guides for the one-person, one-dog action RPG',
   description:
-    'Beast of Reincarnation wiki: confirmed Steam release date (Aug 3, 2026), Game Freak\'s Emma & Koo story, hybrid combat system, PC specs, and clearly labeled pre-release previews.',
+    'Beast of Reincarnation wiki: confirmed August 4, 2026 release on PC, PS5 & Xbox Series X|S, Game Freak\'s Emma & Koo story, hybrid combat system, and clearly labeled pre-release previews.',
   locale: 'en_US',
   twitter: '@borwiki',
   email: 'hello@beastreincarnationwiki.com',
@@ -58,16 +58,18 @@ export const NAV = [
 export const GAME_FACTS = {
   name: 'Beast of Reincarnation',
   steamAppId: 2001760,
-  // Steam API: release_date.date = "Aug 3, 2026", coming_soon = true
-  releaseDate: '3 August 2026',
-  releaseDateShort: 'Aug 3, 2026',
-  releaseDateISO: '2026-08-03',
+  // 发售日：Steam 商店显示 "Aug 3, 2026"（区域时间），但官方公告与各平台商店均为
+  // "August 4th, 2026 (00:00 UTC in all regions)"，IGN 结构化平台数据同为 2026-08-04。以官方公告为准。
+  releaseDate: '4 August 2026',
+  releaseDateShort: 'Aug 4, 2026',
+  releaseDateISO: '2026-08-04',
   comingSoon: true,
   developer: 'GAME FREAK inc.',
   publisher: 'Fictions',
-  // Steam platforms currently list Windows only
-  platform: 'PC (Steam / Windows)',
-  platformsDetail: ['PC (Windows via Steam)'] as const,
+  // 三平台同步发售（PC 在 Steam；PS5 / Xbox 在各自商店）。Steam 页面只列 PC 是因为
+  // 只上架 PC 版，其页面出现的 PS5/Xbox 字样是手柄兼容性，非平台。来源：官方公告 + IGN。
+  platform: 'PC (Steam), PlayStation 5, Xbox Series X|S',
+  platformsDetail: ['PC (Steam)', 'PlayStation 5', 'Xbox Series X|S'] as const,
   genre: 'Action RPG',
   genres: ['Action', 'Adventure', 'RPG'] as const,
   source: 'https://store.steampowered.com/app/2001760/Beast_of_Reincarnation/',

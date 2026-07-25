@@ -48,4 +48,4 @@ On launch day, when you find a candidate hidden space:
 
 ## After launch
 
-Replace this outline with a short, spoiler-aware walkthrough only after the entrance, puzzle, combat, and reward are recorded from the final game. Until **3 August 2026**, this page should help you organize questions - not route you through a finished secret.
+Replace this outline with a short, spoiler-aware walkthrough only after the entrance, puzzle, combat, and reward are recorded from the final game. Until **4 August 2026**, this page should help you organize questions - not route you through a finished secret.

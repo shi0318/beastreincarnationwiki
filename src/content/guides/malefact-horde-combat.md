@@ -46,6 +46,6 @@ Until launch, treat these as hypotheses to test:
 
 ## What this page must not claim yet
 
-Do not treat any "six to twelve enemies," "charged sweep knockdown," or guaranteed peel rotation as fact. Those details need gameplay evidence after **3 August 2026**.
+Do not treat any "six to twelve enemies," "charged sweep knockdown," or guaranteed peel rotation as fact. Those details need gameplay evidence after **4 August 2026**.
 
 After launch, rewrite this into a short crowd-control guide with verified enemy examples and loadout notes.

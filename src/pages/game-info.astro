@@ -7,13 +7,13 @@ import { SITE, GAME_FACTS, SOURCES, type SourceKey } from '../data/site';
 const path = '/game-info/';
 const title = 'Beast of Reincarnation - Release Date, Story, Specs & Everything Confirmed';
 const description =
-  'Confirmed Beast of Reincarnation info from Steam: Aug 3, 2026 release date, Game Freak / Fictions, hybrid combat, PC system requirements, price, languages, and FAQ.';
+  'Confirmed Beast of Reincarnation info: Aug 4, 2026 release on PC, PS5 & Xbox Series X|S, Game Freak / Fictions, hybrid combat, PC system requirements, price, and FAQ.';
 
 const facts = [
   { label: 'Release date', value: GAME_FACTS.releaseDate },
   { label: 'Developer', value: GAME_FACTS.developer },
   { label: 'Publisher', value: GAME_FACTS.publisher },
-  { label: 'Platform (Steam)', value: GAME_FACTS.platform },
+  { label: 'Platforms', value: GAME_FACTS.platform },
   { label: 'Genre', value: `${GAME_FACTS.genres.join(' / ')}` },
   { label: 'Price', value: `${GAME_FACTS.priceUsd} (Deluxe ${GAME_FACTS.deluxePriceUsd})` },
   { label: 'Controller', value: GAME_FACTS.controllerSupport },
@@ -23,7 +23,7 @@ const facts = [
 const faq = [
   {
     q: 'When does Beast of Reincarnation release?',
-    a: `Steam currently lists the release date as ${GAME_FACTS.releaseDate} (coming soon). Pre-purchase is already live on the official Steam store.`,
+    a: `Beast of Reincarnation launches on ${GAME_FACTS.releaseDate} (00:00 UTC in all regions). Pre-purchase is already live on the official Steam store.`,
   },
   {
     q: 'Who is developing and publishing Beast of Reincarnation?',
@@ -31,7 +31,7 @@ const faq = [
   },
   {
     q: 'What platforms is Beast of Reincarnation on?',
-    a: 'The Steam store page currently lists Windows PC support. Other storefront platforms are not confirmed on the Steam listing itself.',
+    a: `Beast of Reincarnation launches on ${GAME_FACTS.platform} — all three on ${GAME_FACTS.releaseDate}. On PC it is sold via Steam; the PS5 and Xbox Series X|S versions release the same day on their own stores.`,
   },
   {
     q: 'Is Beast of Reincarnation a Souls-like?',
@@ -63,7 +63,7 @@ const schema = [
     description,
     url: new URL(path, SITE.url).href,
     genre: GAME_FACTS.genres,
-    gamePlatform: ['PC'],
+    gamePlatform: ['PC', 'PlayStation 5', 'Xbox Series X|S'],
     datePublished: GAME_FACTS.releaseDateISO,
     author: { '@type': 'Organization', name: GAME_FACTS.developer },
     publisher: { '@type': 'Organization', name: GAME_FACTS.publisher },
@@ -74,18 +74,6 @@ const schema = [
       availability: 'https://schema.org/PreOrder',
       url: GAME_FACTS.source,
     },
-  },
-  {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: faq.map((item) => ({
-      '@type': 'Question',
-      name: item.q,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: item.a,
-      },
-    })),
   },
   {
     '@context': 'https://schema.org',
@@ -205,7 +193,9 @@ const schema = [
 
       <h2 id="system-requirements">PC system requirements</h2>
       <p>
-        Steam currently lists Windows-only support, DirectX 12, 45 GB storage, and an SSD requirement.
+        These specs apply to the PC (Steam) version. The Steam listing calls for Windows,
+        DirectX 12, 45 GB storage, and an SSD. The PS5 and Xbox Series X|S versions launch
+        the same day and are not bound by these PC requirements.
       </p>
     </div>
 
