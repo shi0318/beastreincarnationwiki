@@ -1,0 +1,94 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import JsonLd from '../components/JsonLd.astro';
+import { SITE } from '../data/site';
+
+const path = '/about/';
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'AboutPage',
+    name: `About ${SITE.name}`,
+    url: new URL(path, SITE.url).href,
+    description: `About ${SITE.name} — who we are, what we cover, and how our Beast of Reincarnation guides are made.`,
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.url },
+      { '@type': 'ListItem', position: 2, name: 'About', item: new URL(path, SITE.url).href },
+    ],
+  },
+];
+---
+
+<BaseLayout
+  title="About Us"
+  description={`About ${SITE.name} — a community-built wiki for Beast of Reincarnation, covering boss guides, enemy breakdowns, combat tech, and exploration routes.`}
+  path={path}
+>
+  <JsonLd slot="head" schema={schema} />
+
+  <section class="mx-auto max-w-3xl px-4 py-16">
+    <nav aria-label="Breadcrumb" class="mb-6 text-xs text-ash-400">
+      <ol class="flex flex-wrap items-center gap-1.5">
+        <li><a href="/" class="hover:text-ember-400">Home</a></li>
+        <li aria-hidden="true">/</li>
+        <li class="text-ash-300">About</li>
+      </ol>
+    </nav>
+
+    <h1 class="font-display text-3xl font-bold leading-tight text-ash-50 md:text-4xl">
+      About {SITE.name}
+    </h1>
+    <p class="mt-4 text-lg leading-relaxed text-ash-300">
+      {SITE.name} is a community-built resource dedicated to helping players get
+      the most out of Beast of Reincarnation — from your first boss wall to the
+      deepest exploration secrets.
+    </p>
+
+    <div class="prose mt-10 max-w-none">
+      <h2>What We Cover</h2>
+      <p>
+        We write in-depth, tested guides across every part of the game. Our
+        coverage is organized into a few core areas:
+      </p>
+      <ul>
+        <li><strong>Boss guides</strong> — phase-by-phase strategies, attack tells, and the safest damage windows for every major encounter.</li>
+        <li><strong>Enemy breakdowns</strong> — weaknesses, drops, and how to fight the wasteland's fauna without wasting resources.</li>
+        <li><strong>Combat tech</strong> — parry timing, Koo bond mechanics, and offensive techniques that carry across the whole game.</li>
+        <li><strong>Exploration</strong> — region routes, hidden collectibles, and the paths worth taking first.</li>
+      </ul>
+
+      <h2>How We Write Our Guides</h2>
+      <p>
+        Every guide is written from hands-on play, not scraped patch notes. When
+        the game updates and mechanics shift, we revisit and revise — each guide
+        carries a published and updated date so you always know how current the
+        information is.
+      </p>
+      <p>
+        We aim for guides that respect your time: clear tells, concrete timing,
+        and no filler. If something isn't confirmed in-game, we don't state it as
+        fact.
+      </p>
+
+      <h2>A Note on Ownership</h2>
+      <p>
+        {SITE.name} is an unofficial, fan-made resource. We are not affiliated
+        with or endorsed by the developers or publishers of Beast of
+        Reincarnation, and all trademarks remain the property of their respective
+        owners. We build this wiki because we love the game and want the
+        community to have a reliable place to learn it.
+      </p>
+
+      <h2>Get In Touch</h2>
+      <p>
+        Spotted an error, have a correction, or want to suggest a guide? We'd
+        love to hear from you — head over to our <a href="/contact/">contact page</a>.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

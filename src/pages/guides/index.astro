@@ -1,0 +1,100 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import JsonLd from '../../components/JsonLd.astro';
+import GuideCard from '../../components/GuideCard.astro';
+import { SITE, CATEGORIES, type Category } from '../../data/site';
+
+const guides = await getCollection('guides');
+
+const sorted = [...guides].sort((a, b) => {
+  if (a.data.order !== b.data.order) return a.data.order - b.data.order;
+  return b.data.publishDate.getTime() - a.data.publishDate.getTime();
+});
+
+// 分类展示顺序
+const order: Category[] = ['beginner', 'boss', 'enemies', 'combat', 'exploration'];
+const groups = order
+  .map((cat) => ({
+    cat,
+    meta: CATEGORIES[cat],
+    items: sorted.filter((g) => g.data.category === cat),
+  }))
+  .filter((g) => g.items.length > 0);
+
+const path = '/guides/';
+const title = 'Beast of Reincarnation Guides';
+const description =
+  'Every Beast of Reincarnation guide — boss strategies, enemy weakness charts, combat tech and exploration routes, organized by category. Pre-release previews for now.';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: `${title} | ${SITE.name}`,
+  description,
+  url: new URL(path, SITE.url).href,
+  isPartOf: { '@type': 'WebSite', name: SITE.name, url: SITE.url },
+};
+---
+
+<BaseLayout title={title} description={description} path={path}>
+  <JsonLd slot="head" schema={schema} />
+
+  <section class="border-b border-ash-800 bg-ash-900/30">
+    <div class="mx-auto max-w-6xl px-4 py-14">
+      <nav aria-label="Breadcrumb" class="mb-4 text-xs text-ash-400">
+        <ol class="flex items-center gap-1.5">
+          <li><a href="/" class="hover:text-ember-400">Home</a></li>
+          <li aria-hidden="true">/</li>
+          <li class="text-ash-300">Guides</li>
+        </ol>
+      </nav>
+      <h1 class="font-display text-3xl font-bold text-ash-50 md:text-4xl">
+        Beast of Reincarnation Guides
+      </h1>
+      <p class="mt-3 max-w-2xl text-lg leading-relaxed text-ash-300">
+        {description}
+      </p>
+
+      <!-- Category jump links -->
+      <ul class="mt-6 flex flex-wrap gap-2">
+        {
+          groups.map((g) => (
+            <li>
+              <a
+                href={`#${g.cat}`}
+                class="rounded-full border border-ash-700 px-3 py-1.5 text-sm text-ash-300 transition-colors hover:border-ember-500 hover:text-ember-400"
+              >
+                {g.meta.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  {
+    groups.map((g) => (
+      <section id={g.cat} class="mx-auto max-w-6xl scroll-mt-24 px-4 py-14">
+        <div class="mb-6">
+          <h2 class="font-display text-2xl font-bold text-ash-50">{g.meta.label}</h2>
+          <p class="mt-1 text-ash-400">{g.meta.blurb}</p>
+        </div>
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {g.items.map((guide) => (
+            <GuideCard
+              href={`/guides/${guide.id}/`}
+              title={guide.data.heading ?? guide.data.title}
+              description={guide.data.description}
+              image={`/images/${guide.data.image}`}
+              imageAlt={guide.data.imageAlt}
+              category={guide.data.category}
+              source={guide.data.source}
+            />
+          ))}
+        </div>
+      </section>
+    ))
+  }
+</BaseLayout>

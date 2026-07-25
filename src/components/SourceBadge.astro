@@ -1,0 +1,31 @@
+---
+import { SOURCES, type SourceKey } from '../data/site';
+
+interface Props {
+  source: SourceKey;
+  /** 是否显示图例说明文字（详情页用），卡片上只显示徽章本体 */
+  showBlurb?: boolean;
+  class?: string;
+}
+
+const { source, showBlurb = false, class: className = '' } = Astro.props;
+const s = SOURCES[source];
+
+// tone → Tailwind 配色（边框 + 底色 + 文字）
+const toneClass: Record<typeof s.tone, string> = {
+  green: 'border-green-600/50 bg-green-950/50 text-green-300',
+  violet: 'border-violet-600/50 bg-violet-950/50 text-violet-300',
+  sky: 'border-sky-600/50 bg-sky-950/50 text-sky-300',
+  amber: 'border-amber-600/50 bg-amber-950/50 text-amber-300',
+  ash: 'border-ash-600/60 bg-ash-800/60 text-ash-300',
+};
+---
+
+<span
+  class={`inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-xs font-semibold ${toneClass[s.tone]} ${className}`}
+  title={s.blurb}
+>
+  <span aria-hidden="true">{s.icon}</span>
+  {s.label}
+  {showBlurb && <span class="ml-1 font-normal opacity-80">— {s.blurb}</span>}
+</span>

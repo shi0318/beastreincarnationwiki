@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Cinzel", ui-serif, Georgia, serif;
+
+  --color-ash-50: #f6f6f5;
+  --color-ash-100: #e7e6e3;
+  --color-ash-200: #cfcdc7;
+  --color-ash-300: #aba79d;
+  --color-ash-400: #837e72;
+  --color-ash-500: #67624f;
+  --color-ash-600: #514d3f;
+  --color-ash-700: #423f35;
+  --color-ash-800: #2c2a24;
+  --color-ash-900: #1c1b17;
+  --color-ash-950: #100f0c;
+
+  --color-ember-400: #f4a259;
+  --color-ember-500: #e8853c;
+  --color-ember-600: #d16b24;
+  --color-ember-700: #a9531b;
+
+  --color-moss-400: #7fa650;
+  --color-moss-500: #5f8a3a;
+  --color-moss-600: #4a6f2c;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-ash-950);
+  color: var(--color-ash-100);
+}
+
+/* Prose styling for markdown guide bodies */
+.prose {
+  color: var(--color-ash-200);
+  line-height: 1.75;
+}
+.prose h2 {
+  font-family: var(--font-display);
+  color: var(--color-ash-50);
+  font-size: 1.6rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--color-ash-700);
+  scroll-margin-top: 6rem;
+}
+.prose h3 {
+  font-family: var(--font-display);
+  color: var(--color-ash-50);
+  font-size: 1.25rem;
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+  scroll-margin-top: 6rem;
+}
+.prose p {
+  margin-bottom: 1.1rem;
+}
+.prose a {
+  color: var(--color-ember-400);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.prose a:hover {
+  color: var(--color-ember-500);
+}
+.prose ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1.1rem;
+}
+.prose ol {
+  list-style: decimal;
+  padding-left: 1.5rem;
+  margin-bottom: 1.1rem;
+}
+.prose li {
+  margin-bottom: 0.4rem;
+}
+.prose strong {
+  color: var(--color-ash-50);
+  font-weight: 600;
+}
+.prose blockquote {
+  border-left: 3px solid var(--color-ember-500);
+  padding-left: 1rem;
+  font-style: italic;
+  color: var(--color-ash-300);
+  margin: 1.5rem 0;
+}
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+}
+.prose th,
+.prose td {
+  border: 1px solid var(--color-ash-700);
+  padding: 0.6rem 0.8rem;
+  text-align: left;
+}
+.prose th {
+  background-color: var(--color-ash-800);
+  color: var(--color-ash-50);
+  font-weight: 600;
+}
+.prose code {
+  background-color: var(--color-ash-800);
+  padding: 0.15rem 0.4rem;
+  border-radius: 0.25rem;
+  font-size: 0.9em;
+  color: var(--color-ember-400);
+}

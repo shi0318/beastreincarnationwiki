@@ -1,0 +1,60 @@
+---
+import { CATEGORIES, type Category, type SourceKey } from '../data/site';
+import SourceBadge from './SourceBadge.astro';
+
+interface Props {
+  href: string;
+  title: string;
+  description: string;
+  image: string;
+  imageAlt: string;
+  category: Category;
+  /** 内容来源可信度，卡片右上角徽章 */
+  source?: SourceKey;
+  /** 首图使用 eager 加载以优化 LCP */
+  eager?: boolean;
+}
+
+const { href, title, description, image, imageAlt, category, source, eager = false } =
+  Astro.props;
+
+const cat = CATEGORIES[category];
+const accentClass =
+  cat.accent === 'ember'
+    ? 'bg-ember-600/90 text-ash-950'
+    : 'bg-moss-600/90 text-ash-50';
+---
+
+<article
+  class="group relative flex flex-col overflow-hidden rounded-xl border border-ash-800 bg-ash-900/50 transition-colors hover:border-ash-600"
+>
+  <a href={href} class="relative block overflow-hidden">
+    <img
+      src={image}
+      alt={imageAlt}
+      width="1600"
+      height="900"
+      loading={eager ? 'eager' : 'lazy'}
+      decoding="async"
+      class="aspect-video w-full object-cover transition-transform duration-500 group-hover:scale-105"
+    />
+    {source && (
+      <span class="absolute right-3 top-3 z-10">
+        <SourceBadge source={source} />
+      </span>
+    )}
+  </a>
+  <div class="flex flex-1 flex-col p-5">
+    <span
+      class={`mb-3 inline-flex w-fit rounded-full px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wide ${accentClass}`}
+    >
+      {cat.label}
+    </span>
+    <h3 class="font-display text-lg font-semibold leading-snug text-ash-50">
+      <a href={href} class="after:absolute after:inset-0" >
+        {title}
+      </a>
+    </h3>
+    <p class="mt-2 text-sm leading-relaxed text-ash-400">{description}</p>
+  </div>
+</article>

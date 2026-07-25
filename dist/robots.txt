@@ -1,0 +1,5 @@
+# Beast of Reincarnation Wiki — 允许全部路径，指向 sitemap
+User-agent: *
+Allow: /
+
+Sitemap: https://beastreincarnationwiki.com/sitemap-index.xml

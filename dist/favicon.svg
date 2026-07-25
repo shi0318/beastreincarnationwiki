@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="12" fill="#0c0e0b"/>
+  <!-- 彼岸花（Bloom）标记：花瓣 + 犬牙 -->
+  <g fill="none" stroke="#e0554a" stroke-width="4" stroke-linecap="round">
+    <path d="M32 40 V18"/>
+    <path d="M32 24 C 24 18, 18 20, 14 14"/>
+    <path d="M32 24 C 40 18, 46 20, 50 14"/>
+    <path d="M32 30 C 26 28, 22 30, 18 26"/>
+    <path d="M32 30 C 38 28, 42 30, 46 26"/>
+  </g>
+  <path d="M20 48 Q 32 40 44 48 Q 38 54 32 52 Q 26 54 20 48 Z" fill="#7da87b"/>
+</svg>

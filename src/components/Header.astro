@@ -1,0 +1,36 @@
+---
+import { SITE, NAV } from '../data/site';
+---
+
+<header class="sticky top-0 z-50 border-b border-ash-800 bg-ash-950/85 backdrop-blur">
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3.5">
+    <a href="/" class="group flex items-center gap-2.5">
+      <span
+        class="flex h-9 w-9 items-center justify-center rounded-md bg-ember-600 font-display text-lg font-bold text-ash-950 transition-colors group-hover:bg-ember-500"
+        aria-hidden="true"
+      >
+        B
+      </span>
+      <span class="font-display text-lg font-semibold tracking-wide text-ash-50">
+        {SITE.shortName}
+      </span>
+    </a>
+
+    <nav aria-label="Primary">
+      <ul class="flex items-center gap-1 text-sm font-medium">
+        {
+          NAV.map((item) => (
+            <li>
+              <a
+                href={item.href}
+                class="rounded-md px-3 py-2 text-ash-300 transition-colors hover:bg-ash-800 hover:text-ash-50"
+              >
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
+</header>

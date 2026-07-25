@@ -1,0 +1,199 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import JsonLd from '../components/JsonLd.astro';
+import SourceBadge from '../components/SourceBadge.astro';
+import { SITE, GAME_FACTS, SOURCES, type SourceKey } from '../data/site';
+
+const path = '/game-info/';
+const title = 'Beast of Reincarnation — Release Date, Story & Everything We Know';
+const description =
+  'Everything confirmed about Beast of Reincarnation: the 4 August 2026 release date, Game Freak as developer, the Emma and Koo story, and the hybrid combat system.';
+
+// 官方已确认的核心事实表
+const facts = [
+  { label: 'Release date', value: GAME_FACTS.releaseDate },
+  { label: 'Developer', value: GAME_FACTS.developer },
+  { label: 'Publisher', value: GAME_FACTS.publisher },
+  { label: 'Platform', value: GAME_FACTS.platform },
+  { label: 'Genre', value: GAME_FACTS.genre },
+];
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'VideoGame',
+    name: 'Beast of Reincarnation',
+    description,
+    url: new URL(path, SITE.url).href,
+    genre: GAME_FACTS.genre,
+    gamePlatform: ['PC', 'PlayStation 5', 'Xbox Series X|S'],
+    datePublished: GAME_FACTS.releaseDateISO,
+    author: { '@type': 'Organization', name: GAME_FACTS.developer },
+    publisher: { '@type': 'Organization', name: GAME_FACTS.publisher },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.url },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Game Info',
+        item: new URL(path, SITE.url).href,
+      },
+    ],
+  },
+];
+---
+
+<BaseLayout title={title} description={description} path={path}>
+  <JsonLd slot="head" schema={schema} />
+
+  <section class="border-b border-ash-800 bg-ash-900/30">
+    <div class="mx-auto max-w-4xl px-4 py-14">
+      <nav aria-label="Breadcrumb" class="mb-4 text-xs text-ash-400">
+        <ol class="flex flex-wrap items-center gap-1.5">
+          <li><a href="/" class="hover:text-ember-400">Home</a></li>
+          <li aria-hidden="true">/</li>
+          <li class="text-ash-300">Game Info</li>
+        </ol>
+      </nav>
+      <h1 class="font-display text-3xl font-bold leading-tight text-ash-50 md:text-4xl">
+        Beast of Reincarnation: Everything We Know
+      </h1>
+      <p class="mt-4 max-w-2xl text-lg leading-relaxed text-ash-300">
+        The facts confirmed by {GAME_FACTS.developer} and the official Steam
+        listing — release date, story, world, and how the one-person, one-dog
+        combat actually works. We update this page as new official details land.
+      </p>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-4xl px-4 py-14">
+    <!-- Quick facts table -->
+    <div class="mb-4 flex items-center gap-3">
+      <h2 class="font-display text-xl font-bold text-ash-50">Confirmed facts</h2>
+      <SourceBadge source="official" />
+    </div>
+    <div class="overflow-hidden rounded-xl border border-ash-800">
+      <table class="w-full text-left text-sm">
+        <tbody>
+          {
+            facts.map((f, i) => (
+              <tr class={i % 2 === 0 ? 'bg-ash-900/40' : ''}>
+                <th
+                  scope="row"
+                  class="w-40 px-5 py-3 font-display font-semibold text-ash-300"
+                >
+                  {f.label}
+                </th>
+                <td class="px-5 py-3 text-ash-100">{f.value}</td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+
+    <p class="mt-3 text-xs text-ash-500">
+      Source:{' '}
+      <a
+        href={GAME_FACTS.source}
+        rel="nofollow noopener"
+        target="_blank"
+        class="underline hover:text-ember-400"
+      >
+        Official Steam store listing
+      </a>. Pre-purchase is live; the game is not out yet.
+    </p>
+
+    <!-- Genre tags -->
+    <ul class="mt-6 flex flex-wrap gap-2">
+      {
+        GAME_FACTS.tags.map((t) => (
+          <li class="rounded-full border border-ash-700 px-3 py-1 text-xs text-ash-300">
+            {t}
+          </li>
+        ))
+      }
+    </ul>
+
+    <div class="prose mt-12 max-w-none">
+      <h2>The Premise</h2>
+      <p>
+        Beast of Reincarnation is set in a <strong>post-apocalyptic Japan, in
+        the year 4026</strong>. Humanity's hope rests with two outcasts:
+        <strong>Emma</strong>, a young woman shunned by society for an affliction
+        she carries, and <strong>Koo</strong>, a blighted dog. Together they set
+        out across a world ravaged by blight — a place where forests can burst to
+        life amid the wasteland one moment and wither the next.
+      </p>
+      <p>
+        Their goal is to hunt down the Bosses that rule this world, capture their
+        powers, and use them to defeat the being the game is named for — the
+        <strong>Beast of Reincarnation</strong>. It's pitched as a story of
+        loneliness and companionship in equal measure, where every character
+        hides a dangerous truth.
+      </p>
+
+      <h2>Emma and Koo: The "One-Person, One-Dog" System</h2>
+      <p>
+        The headline mechanic is the bond between Emma and Koo. You fight as a
+        unit: Emma handles sword combat directly, while you issue commands to Koo
+        to unleash different techniques. Game Freak describes the result as a
+        <strong>hybrid combat system that blends real-time action with
+        turn-based RPG elements</strong> — the core thing that sets this apart
+        from a straight Souls-like.
+      </p>
+
+      <h2>Combat and Builds</h2>
+      <p>
+        You customize your playstyle through <strong>skill trees, gear, and
+        spirit stones</strong>. The official description calls out three broad
+        approaches you can lean into — <strong>ranged, stealthy, and
+        aggressive</strong> — with your loadout defining how you take on the
+        world's Bosses.
+      </p>
+
+      <h2>When Can You Play It?</h2>
+      <p>
+        Beast of Reincarnation launches on <strong>{GAME_FACTS.releaseDate}</strong>
+        across <strong>{GAME_FACTS.platform}</strong>. It's developed by{' '}
+        {GAME_FACTS.developer} — the studio best known for Pokémon — and
+        published by {GAME_FACTS.publisher}. Pre-purchase is live now.
+      </p>
+
+      <h2>About Our Guides</h2>
+      <p>
+        Because the game isn't out yet, every strategy guide on this site is
+        clearly marked as a <strong>pre-release preview</strong> — built from
+        official information and community expectations, not hands-on play. Once
+        the game launches, we'll verify and rewrite each guide against the final
+        version. You can{' '}
+        <a href="/guides/">browse the current guides here</a>.
+      </p>
+
+      <h2>How We Label Our Sources</h2>
+      <p>
+        Every guide and fact on this site carries a source label so you always
+        know how solid the information is — from officially confirmed to
+        pre-release speculation. Here's what each label means:
+      </p>
+    </div>
+
+    <!-- Source label legend -->
+    <ul class="mt-6 grid gap-3 sm:grid-cols-2">
+      {
+        (Object.keys(SOURCES) as SourceKey[]).map((key) => (
+          <li class="flex flex-col gap-2 rounded-lg border border-ash-800 bg-ash-900/40 p-4">
+            <SourceBadge source={key} />
+            <span class="text-sm leading-relaxed text-ash-400">
+              {SOURCES[key].blurb}
+            </span>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</BaseLayout>
