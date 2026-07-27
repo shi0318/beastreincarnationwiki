@@ -21,10 +21,41 @@ const groups = order
   }))
   .filter((g) => g.items.length > 0);
 
+// 每个分类的关键词化 H2 + 诚实概述段落（元层面：说明这一类覆盖什么、
+// 为什么重要、发售后如何更新——不编造具体打法/数值，守住诚实预发布定位）。
+const SECTION: Record<Category, { h2: string; overview: string }> = {
+  beginner: {
+    h2: 'Beast of Reincarnation Beginner Guides',
+    overview:
+      'New to Beast of Reincarnation? Start here. These beginner guides map out the systems Game Freak has confirmed so far — the one-person, one-dog partnership between Emma and Koo, the hybrid combat loop, and how exploration is expected to work in the Year 4026 wasteland. Before the launch we keep this section to what official materials establish, so you can plan your first hours without wading through speculation. After release, each page expands into a tested walkthrough of the opening area, early upgrades, and the decisions that matter most in the first few hours.',
+  },
+  boss: {
+    h2: 'Beast of Reincarnation Boss Guides',
+    overview:
+      'Boss fights are the backbone of any Beast of Reincarnation guide, and this section tracks every named encounter revealed so far. Each outline is built from official trailers and press materials rather than a hands-on clear, so we flag it as pre-release and stick to what the footage actually shows — attack patterns hinted at, arena hazards, and how Emma and Koo are expected to combine attacks. Once the game is out on August 4, 2026, these pages become full strategy guides with phase-by-phase breakdowns, timing windows, and recommended loadouts.',
+  },
+  enemies: {
+    h2: 'Enemies & Wasteland Fauna',
+    overview:
+      'The wasteland of Year 4026 is filled with mutated fauna, and knowing what you are fighting is half the battle. This section collects what trailers and official copy suggest about common enemies, their behavior, and the threats you will meet between bosses. Because the game has not launched, these are provisional notes rather than confirmed bestiary entries. After release we replace them with verified enemy data — health behavior, weaknesses, drop tables, and the tactics that reliably work against each type.',
+  },
+  combat: {
+    h2: 'Combat Guides & Systems',
+    overview:
+      'Combat in Beast of Reincarnation is a hybrid system, blending Emma\'s direct attacks with Koo\'s support in a single flowing loop. These combat guides break down the pillars Game Freak has confirmed and lay out provisional technique notes drawn from official footage. We are deliberately careful here: until the game is playable, we describe what the systems appear to be rather than claiming frame-perfect combos. Post-launch, this section grows into a complete combat reference covering stamina, parries, dog commands, and the advanced techniques that separate a clean run from a messy one.',
+  },
+  exploration: {
+    h2: 'Exploration & World Guides',
+    overview:
+      'Exploration guides cover the themes, regions, and traversal of the Beast of Reincarnation world as official copy describes them. Routes and secrets stay provisional until launch — we would rather leave a gap than invent a path that does not exist. What we can outline now is the tone and structure the developers have shown: the ruined landscapes of Year 4026 and how Emma and Koo move through them. After August 4, 2026, these pages fill in with confirmed maps, shortcut routes, collectible locations, and region-by-region walkthroughs.',
+  },
+};
+
 const path = '/guides/';
-const title = 'Beast of Reincarnation Pre-Release Guide Outlines';
+// 含完整品牌名 → BaseLayout 不再追加 " | ...Wiki" 后缀，总长可控在 60 字符内。
+const title = 'Beast of Reincarnation Wiki — Guides: Bosses, Combat & More';
 const description =
-  'Provisional Beast of Reincarnation guide outlines for bosses, combat, enemies, and exploration. Clearly labeled pre-release speculation until the Aug 4, 2026 launch.';
+  'Beast of Reincarnation guides for bosses, combat, enemies, and exploration. Pre-release outlines from official materials, expanded after the Aug 4, 2026 launch.';
 
 const schema = {
   '@context': 'https://schema.org',
@@ -49,12 +80,14 @@ const schema = {
         </ol>
       </nav>
       <h1 class="font-display text-3xl font-bold text-ash-50 md:text-4xl">
-        Pre-release guide outlines
+        Beast of Reincarnation Guides — Bosses, Combat, Enemies &amp; More
       </h1>
       <p class="mt-3 max-w-3xl text-lg leading-relaxed text-ash-300">
-        These pages are planning notes for Beast of Reincarnation before the
-        {GAME_FACTS.releaseDate} Steam launch. They are labeled speculation and currently
-        noindex. For verified facts, use the
+        This is the hub for every Beast of Reincarnation guide, covering bosses, combat,
+        enemies, exploration, and beginner systems. Until the {GAME_FACTS.releaseDate} launch,
+        each guide is a pre-release outline built from official materials and clearly labeled
+        as such — the individual pages fill in with tested, hands-on strategy after release.
+        For facts confirmed today, see the
         <a href="/game-info/" class="text-ember-400 hover:text-ember-500">game info page</a>.
       </p>
 
@@ -78,9 +111,10 @@ const schema = {
   {
     groups.map((g) => (
       <section id={g.cat} class="mx-auto max-w-6xl scroll-mt-24 px-4 py-14">
-        <div class="mb-6">
-          <h2 class="font-display text-2xl font-bold text-ash-50">{g.meta.label}</h2>
+        <div class="mb-6 max-w-3xl">
+          <h2 class="font-display text-2xl font-bold text-ash-50">{SECTION[g.cat].h2}</h2>
           <p class="mt-1 text-ash-400">{g.meta.blurb}</p>
+          <p class="mt-4 leading-relaxed text-ash-300">{SECTION[g.cat].overview}</p>
         </div>
         <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {g.items.map((guide) => (
