@@ -94,8 +94,19 @@ const schema = [
 <BaseLayout title={title} description={description} path={path}>
   <JsonLd slot="head" schema={schema} />
 
-  <section class="border-b border-ash-800 bg-ash-900/30">
-    <div class="mx-auto max-w-4xl px-4 py-14">
+  <section class="relative overflow-hidden border-b border-ash-800">
+    <img
+      src="/images/beast-of-reincarnation-header-banner.webp"
+      alt="Emma and Koo in Beast of Reincarnation's flower-strewn wilds"
+      width="960"
+      height="311"
+      loading="eager"
+      fetchpriority="high"
+      decoding="async"
+      class="absolute inset-0 h-full w-full object-cover opacity-30"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-ash-950 via-ash-950/85 to-ash-950/50"></div>
+    <div class="relative mx-auto max-w-4xl px-4 py-14">
       <nav aria-label="Breadcrumb" class="mb-4 text-xs text-ash-400">
         <ol class="flex flex-wrap items-center gap-1.5">
           <li><a href="/" class="hover:text-ember-400">Home</a></li>
