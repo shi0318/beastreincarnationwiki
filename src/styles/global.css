@@ -16,14 +16,21 @@
   --color-ash-900: #1c1b17;
   --color-ash-950: #100f0c;
 
+  --color-ember-200: #fad6ae;
+  --color-ember-300: #f7bd85;
   --color-ember-400: #f4a259;
   --color-ember-500: #e8853c;
   --color-ember-600: #d16b24;
   --color-ember-700: #a9531b;
+  --color-ember-800: #833f16;
+  --color-ember-950: #2a1206;
 
+  --color-moss-300: #a3c47b;
   --color-moss-400: #7fa650;
   --color-moss-500: #5f8a3a;
   --color-moss-600: #4a6f2c;
+  --color-moss-800: #2e4519;
+  --color-moss-950: #121b09;
 }
 
 html {

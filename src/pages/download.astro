@@ -8,7 +8,7 @@ const path = '/download/';
 const canonical = new URL(path, SITE.url).href;
 
 const title = 'Beast of Reincarnation Download & PC Requirements';
-const description = `Where to download Beast of Reincarnation: the official Steam page, ${GAME_FACTS.priceUsd} pre-purchase, 45 GB SSD requirement, full PC specs, and why no demo exists.`;
+const description = `Where to download Beast of Reincarnation: official Steam page, ${GAME_FACTS.priceUsd} pre-purchase, day one on Xbox Game Pass, 45 GB SSD requirement and full PC specs.`;
 
 const { minimum, recommended } = GAME_FACTS.systemRequirements;
 
@@ -69,8 +69,9 @@ const schema = [
     </h1>
     <p class="mt-4 text-lg leading-relaxed text-ash-300">
       <strong class="text-ash-50">The game is not out yet.</strong> It releases
-      {' '}{GAME_FACTS.releaseDate}. Until then the only thing you can do is pre-purchase on an
-      official store — and this page exists so you can check the PC requirements and the
+      {' '}{GAME_FACTS.releaseDate}. Until then the only things you can do are pre-purchase on an
+      official store or line up an Xbox Game Pass subscription, which includes it on day one — and
+      this page exists so you can check the PC requirements and the
       {' '}45 GB SSD footprint before launch day, not after.
     </p>
 
@@ -99,7 +100,67 @@ const schema = [
       </p>
     </div>
 
+    <div class="mt-4 rounded-xl border border-moss-800/60 bg-moss-950/25 p-6">
+      <p class="text-xs font-semibold uppercase tracking-wide text-moss-300">
+        Subscription channel · Xbox &amp; Windows
+      </p>
+      <a
+        href={GAME_FACTS.gamePass.storeUrl}
+        rel="noopener"
+        target="_blank"
+        class="mt-2 inline-block font-display text-lg font-semibold text-ash-50 underline decoration-moss-500/60 underline-offset-4 hover:text-moss-300"
+      >
+        Day one on Xbox Game Pass Ultimate &amp; PC Game Pass →
+      </a>
+      <p class="mt-3 text-sm leading-relaxed text-ash-300">
+        If you subscribe, you do not have to buy the game: it enters the catalogue on
+        {' '}{GAME_FACTS.releaseDate}, the same day it goes on sale. It is also an
+        {' '}<strong class="text-ash-100">Xbox Play Anywhere</strong> title, so one entitlement covers
+        Xbox console and Windows PC, and it is flagged
+        {' '}<strong class="text-ash-100">Handheld optimized</strong>. Game Pass does not cover the
+        Steam or PlayStation versions.
+      </p>
+    </div>
+
     <div class="prose mt-10 max-w-none">
+      <h2>Downloading it through Xbox Game Pass</h2>
+      <p>
+        On Xbox and Windows there is a second route that does not involve buying the game.
+        {' '}<strong>Beast of Reincarnation is in the Game Pass catalogue from day one.</strong> The
+        Xbox Wire Developer_Direct post states it "will be available with Xbox Game Pass Ultimate on
+        day one, and is an Xbox Play Anywhere and Handheld Optimized title", and the
+        {' '}<a href={GAME_FACTS.gamePass.storeUrl} rel="noopener" target="_blank">official Xbox game
+        page</a> repeats the same thing as "Play day one with Game Pass · Available August 4, 2026".
+        Microsoft's store entitlement data for product {GAME_FACTS.gamePass.productId} lists two
+        subscriptions: Xbox Game Pass (console) and PC Game Pass.
+      </p>
+      <p>
+        Practical consequences for download planning:
+      </p>
+      <ul>
+        <li>
+          <strong>Xbox Play Anywhere</strong> — one entitlement, whether bought or subscribed, covers
+          Xbox Series X|S and Windows. You install on both without paying twice, and saves sync.
+        </li>
+        <li>
+          <strong>Handheld optimized</strong> — Microsoft has verified it against supported Windows
+          handhelds, so the 45 GB SSD figure matters there too, on a device where free space is
+          usually tighter.
+        </li>
+        <li>
+          <strong>Xbox Cloud</strong> — the Developer_Direct post lists Xbox Cloud alongside console
+          and PC, which means Ultimate subscribers have a streaming option with no download at all.
+        </li>
+        <li>
+          <strong>It does not extend to Steam or PlayStation.</strong> There is no subscription route
+          on either. If you want it on Steam, you buy it.
+        </li>
+        <li>
+          A subscription is not ownership. Access lasts while the game stays in the catalogue, and
+          nothing has been said about how long that will be.
+        </li>
+      </ul>
+
       <h2>Is there a demo to download right now?</h2>
       <p>
         <strong>No.</strong> {GAME_FACTS.developer} and {GAME_FACTS.publisher} have not announced a
@@ -203,8 +264,9 @@ const schema = [
       <h2>Console downloads</h2>
       <p>
         PlayStation 5 and Xbox Series X|S versions launch the same day and are downloaded through
-        their own storefronts. No Nintendo version has been announced. Install sizes for the console
-        builds have not been published; the 45 GB figure above is the PC requirement.
+        their own storefronts — on Xbox, either as a purchase or through Game Pass. No Nintendo
+        version has been announced. Install sizes for the console builds have not been published; the
+        45 GB figure above is the PC requirement.
       </p>
 
       <h2>Launch-day checklist</h2>

@@ -7,7 +7,7 @@ import { SITE, GAME_FACTS, SOURCES, type SourceKey } from '../data/site';
 const path = '/game-info/';
 const title = 'Beast of Reincarnation Game Info, Specs & Confirmed Facts';
 const description =
-  'Confirmed Beast of Reincarnation info: Aug 4, 2026 release on PC, PS5 & Xbox, Game Freak / Fictions, hybrid combat, PC requirements, price and FAQ.';
+  'Confirmed Beast of Reincarnation info: Aug 4, 2026 release on PC, PS5 & Xbox, day one on Game Pass, hybrid combat, PC requirements, price and FAQ.';
 
 const facts = [
   { label: 'Release date', value: GAME_FACTS.releaseDate },
@@ -16,6 +16,7 @@ const facts = [
   { label: 'Platforms', value: GAME_FACTS.platform },
   { label: 'Genre', value: `${GAME_FACTS.genres.join(' / ')}` },
   { label: 'Price', value: `${GAME_FACTS.priceUsd} (Deluxe ${GAME_FACTS.deluxePriceUsd})` },
+  { label: 'Xbox Game Pass', value: 'Day one — Ultimate & PC Game Pass' },
   { label: 'Controller', value: GAME_FACTS.controllerSupport },
   { label: 'Status', value: 'Coming soon · pre-purchase live' },
 ];
@@ -32,6 +33,10 @@ const faq = [
   {
     q: 'What platforms is Beast of Reincarnation on?',
     a: `Beast of Reincarnation launches on ${GAME_FACTS.platform} — all three on ${GAME_FACTS.releaseDate}. On PC it is sold via Steam; the PS5 and Xbox Series X|S versions release the same day on their own stores.`,
+  },
+  {
+    q: 'Is Beast of Reincarnation on Xbox Game Pass?',
+    a: `Yes, on day one. Xbox Wire states the game "will be available with Xbox Game Pass Ultimate on day one, and is an Xbox Play Anywhere and Handheld Optimized title", and Microsoft Store entitlement data for product ${GAME_FACTS.gamePass.productId} lists Xbox Game Pass (console) and PC Game Pass. It covers Xbox consoles and Windows only — there is no subscription route on Steam or PlayStation.`,
   },
   {
     q: 'Is Beast of Reincarnation a Souls-like?',
@@ -264,6 +269,31 @@ const schema = [
         Two purchase options currently appear on Steam: the standard edition at {GAME_FACTS.priceUsd}
         and a Deluxe Edition at {GAME_FACTS.deluxePriceUsd}. Exact deluxe contents should be checked on the
         store page, as package art may change before launch.
+      </p>
+
+      <h2 id="game-pass">Xbox Game Pass, Play Anywhere &amp; handheld</h2>
+      <p>
+        On the Xbox side there is more confirmed than the Steam listing shows.
+        {' '}{GAME_FACTS.gamePass.summary} The wording on
+        {' '}<a href={GAME_FACTS.gamePass.wireUrl} rel="noopener" target="_blank">Xbox Wire</a> is
+        that the game "will be available with Xbox Game Pass Ultimate on day one, and is an Xbox Play
+        Anywhere and Handheld Optimized title"; the
+        {' '}<a href={GAME_FACTS.gamePass.storeUrl} rel="noopener" target="_blank">official Xbox game
+        page</a> carries "Play day one with Game Pass". Microsoft's store entitlement data for product
+        {' '}{GAME_FACTS.gamePass.productId} names both subscriptions — Xbox Game Pass (console) and
+        PC Game Pass.
+      </p>
+      <p>
+        The Xbox store lists these capabilities for it:
+        {' '}{GAME_FACTS.gamePass.xboxCapabilities.join(', ')}. Play Anywhere means a single
+        entitlement spans Xbox console and Windows, and the Developer_Direct post also names Xbox
+        Cloud, so Ultimate subscribers get a streaming option.
+      </p>
+      <p>
+        What this does <em>not</em> mean: Game Pass has no bearing on the Steam or PlayStation 5
+        versions, and a subscription is not a purchase — no one has said how long the game stays in
+        the catalogue. Buying it outright on Steam at {GAME_FACTS.priceUsd} is still the only route
+        that is unambiguously permanent.
       </p>
 
       <h2>About our guides</h2>

@@ -8,13 +8,14 @@ const path = '/release-date/';
 const canonical = new URL(path, SITE.url).href;
 
 const title = `Beast of Reincarnation Release Date — ${GAME_FACTS.releaseDateShort}`;
-const description = `Beast of Reincarnation releases ${GAME_FACTS.releaseDate} on PC, PS5 and Xbox Series X|S. Confirmed platforms, price and pre-purchase status.`;
+const description = `Beast of Reincarnation releases ${GAME_FACTS.releaseDate} on PC, PS5 and Xbox Series X|S, and day one on Xbox Game Pass. Confirmed platforms, price and pre-purchase status.`;
 
 const rows = [
   { label: 'Release date', value: `${GAME_FACTS.releaseDate} (00:00 UTC in all regions)` },
   { label: 'Platforms', value: GAME_FACTS.platform },
   { label: 'Standard edition', value: GAME_FACTS.priceUsd },
   { label: 'Deluxe edition', value: GAME_FACTS.deluxePriceUsd },
+  { label: 'Xbox Game Pass', value: 'Day one — Ultimate & PC Game Pass' },
   { label: 'Developer', value: GAME_FACTS.developer },
   { label: 'Publisher', value: GAME_FACTS.publisher },
   { label: 'Genre', value: GAME_FACTS.genre },
@@ -35,8 +36,12 @@ const faqs = [
     a: 'No Nintendo version has been announced. Given that Game Freak is the developer, people reasonably expect one, but there is no official listing, so we are not going to imply one exists. If a Nintendo page appears, this page is updated the same day with the source.',
   },
   {
+    q: 'Is Beast of Reincarnation on Xbox Game Pass?',
+    a: `Yes, and on day one. Xbox Wire's Developer_Direct post states the game "will be available with Xbox Game Pass Ultimate on day one, and is an Xbox Play Anywhere and Handheld Optimized title", and the official xbox.com game page carries the line "Play day one with Game Pass · Available August 4, 2026". The Microsoft Store entitlement data for product ${GAME_FACTS.gamePass.productId} lists both Xbox Game Pass (console) and PC Game Pass. Note this covers Xbox consoles and Windows only — there is no subscription route on Steam or PlayStation.`,
+  },
+  {
     q: 'How much does Beast of Reincarnation cost?',
-    a: `The standard edition is ${GAME_FACTS.priceUsd} and the Deluxe edition is ${GAME_FACTS.deluxePriceUsd} on Steam. Pre-purchase is already live. Regional pricing varies; those are the USD figures on the store page as of ${GAME_FACTS.lastVerified}.`,
+    a: `The standard edition is ${GAME_FACTS.priceUsd} and the Deluxe edition is ${GAME_FACTS.deluxePriceUsd} on Steam. Pre-purchase is already live. Regional pricing varies; those are the USD figures on the store page as of ${GAME_FACTS.lastVerified}. If you subscribe to Xbox Game Pass Ultimate or PC Game Pass you can play it at no extra cost from launch day instead of buying it.`,
   },
   {
     q: 'Is there a demo or a beta?',
@@ -161,13 +166,29 @@ const schema = [
         speculation and kept out of search.
       </p>
 
-      <h2>Where to buy or pre-purchase</h2>
+      <h2>Where to buy, pre-purchase, or play on Game Pass</h2>
       <p>
-        The only official PC channel is the
+        The only official PC storefront is the
         {' '}<a href={GAME_FACTS.source} rel="noopener" target="_blank">Steam store page</a> (App
         {' '}{GAME_FACTS.steamAppId}). PS5 and Xbox Series X|S versions are sold on their own
         platform stores. Our <a href="/download/">download page</a> covers install size, PC
         requirements, and why nothing is downloadable yet.
+      </p>
+      <p>
+        You may not need to buy it at all on Xbox or Windows.
+        {' '}<strong>Beast of Reincarnation is on Xbox Game Pass from day one</strong> — Xbox Wire's
+        Developer_Direct post says it "will be available with Xbox Game Pass Ultimate on day one, and
+        is an Xbox Play Anywhere and Handheld Optimized title", and the
+        {' '}<a href={GAME_FACTS.gamePass.storeUrl} rel="noopener" target="_blank">official Xbox game
+        page</a> states "Play day one with Game Pass". Microsoft's own store entitlement data lists
+        both Xbox Game Pass (console) and PC Game Pass. Because it is an Xbox Play Anywhere title, a
+        purchase or a subscription covers console and PC together, and it is flagged
+        {' '}<strong>Handheld optimized</strong> for devices like the ROG Xbox Ally.
+      </p>
+      <p>
+        Two things worth being clear about: Game Pass does not touch the Steam or PlayStation
+        versions — there is no subscription route on either — and a subscription is not a purchase,
+        so access lasts as long as the game stays in the catalogue.
       </p>
 
       <h2>Frequently asked questions</h2>

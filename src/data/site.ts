@@ -7,7 +7,7 @@ export const SITE = {
   url: 'https://beastreincarnationwiki.com',
   tagline: 'Release date, story & guides for the one-person, one-dog action RPG',
   description:
-    'Beast of Reincarnation wiki: confirmed Aug 4, 2026 release on PC, PS5 & Xbox, Game Freak\'s Emma & Koo story, and the hybrid combat system explained.',
+    'Beast of Reincarnation wiki: confirmed Aug 4, 2026 release on PC, PS5 & Xbox, day one on Game Pass, Game Freak\'s Emma & Koo story and hybrid combat explained.',
   locale: 'en_US',
   twitter: '@borwiki',
   email: 'nmlkareem161@gmail.com',
@@ -72,6 +72,37 @@ export const GAME_FACTS = {
   // 只上架 PC 版，其页面出现的 PS5/Xbox 字样是手柄兼容性，非平台。来源：官方公告 + IGN。
   platform: 'PC (Steam), PlayStation 5, Xbox Series X|S',
   platformsDetail: ['PC (Steam)', 'PlayStation 5', 'Xbox Series X|S'] as const,
+  // Xbox Game Pass / Play Anywhere / Handheld。来源逐条核实（2026-07-30）：
+  // 1) Xbox Wire 2026-01-22 原文："Beast of Reincarnation comes to Xbox Series X|S, Xbox on PC,
+  //    and Xbox Cloud this Summer. It will be available with Xbox Game Pass Ultimate on day one,
+  //    and is an Xbox Play Anywhere and Handheld Optimized title."（文中"this Summer"发布于定档前）
+  // 2) xbox.com 游戏页："Play day one with Game Pass · Available August 4, 2026"
+  // 3) 微软商店 displaycatalog（产品 9NXWSWBM4H6T）EligibilityProperties.Affirmations 列出
+  //    CFQ7TTC0K6L8 = Xbox Game Pass for Console、CFQ7TTC0KGQ8 = PC Game Pass
+  // 注意：Steam / PlayStation 侧没有任何订阅制入口，Game Pass 只覆盖 Xbox 与 Windows。
+  gamePass: {
+    included: true,
+    dayOne: true,
+    tiers: ['Xbox Game Pass Ultimate', 'PC Game Pass'] as const,
+    summary:
+      'Included with Xbox Game Pass Ultimate and PC Game Pass on day one — 4 August 2026, the same day the game goes on sale.',
+    playAnywhere: true,
+    handheldOptimized: true,
+    cloudGaming: true,
+    // Xbox 商店能力标签（displaycatalog Attributes / 商店页 capabilities）
+    xboxCapabilities: [
+      'Optimized for Xbox Series X|S',
+      '4K Ultra HD',
+      'Xbox Play Anywhere',
+      'Handheld optimized',
+      'Xbox achievements',
+      'Xbox cloud saves',
+    ] as const,
+    productId: '9NXWSWBM4H6T',
+    storeUrl: 'https://www.xbox.com/en-US/games/beast-of-reincarnation',
+    wireUrl:
+      'https://news.xbox.com/en-us/2026/01/22/beast-of-reincarnation-game-freak-developer-direct/',
+  },
   genre: 'Action RPG',
   genres: ['Action', 'Adventure', 'RPG'] as const,
   source: 'https://store.steampowered.com/app/2001760/Beast_of_Reincarnation/',
@@ -129,7 +160,7 @@ export const GAME_FACTS = {
       notes: 'Med 1080p @ 60fps w/ DLSS or FSR3 (Performance). SSD required.',
     },
   },
-  lastVerified: '2026-07-25',
+  lastVerified: '2026-07-30',
 } as const;
 
 // 来源可信度标签：标注每条内容的证据等级，支撑 E-E-A-T 与发售前内容诚信。
