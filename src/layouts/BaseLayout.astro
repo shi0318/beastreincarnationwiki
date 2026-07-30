@@ -1,5 +1,5 @@
 ---
-import { SITE } from '../data/site';
+import { SITE, GAME_FACTS } from '../data/site';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
@@ -34,9 +34,10 @@ const {
 
 const canonical = new URL(path, SITE.url).href;
 const ogImage = image.startsWith('http') ? image : new URL(image, SITE.url).href;
-// 标题已含品牌名时不再追加，避免 "Wiki - ... | Wiki"
+// 标题已含品牌名或游戏名时不再追加品牌后缀 —— 避免 "Wiki - ... | Wiki"，
+// 也避免 "Beast of Reincarnation X | Beast of Reincarnation Wiki" 这类被 Google 截断的超长标题。
 const fullTitle =
-  title === SITE.name || title.includes(SITE.name)
+  title === SITE.name || title.includes(SITE.name) || title.includes(GAME_FACTS.name)
     ? title
     : `${title} | ${SITE.name}`;
 ---
@@ -46,7 +47,13 @@ const fullTitle =
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="application-name" content={SITE.name} />
+    <meta name="theme-color" content="#0c0e0b" />
 
     <title>{fullTitle}</title>
     <meta name="description" content={description} />

@@ -7,7 +7,7 @@ export const SITE = {
   url: 'https://beastreincarnationwiki.com',
   tagline: 'Release date, story & guides for the one-person, one-dog action RPG',
   description:
-    'Beast of Reincarnation wiki: confirmed August 4, 2026 release on PC, PS5 & Xbox Series X|S, Game Freak\'s Emma & Koo story, hybrid combat system, and clearly labeled pre-release previews.',
+    'Beast of Reincarnation wiki: confirmed Aug 4, 2026 release on PC, PS5 & Xbox, Game Freak\'s Emma & Koo story, and the hybrid combat system explained.',
   locale: 'en_US',
   twitter: '@borwiki',
   email: 'nmlkareem161@gmail.com',
@@ -49,6 +49,8 @@ export const CATEGORIES: Record<
 export const NAV = [
   { label: 'Home', href: '/' },
   { label: 'Game Info', href: '/game-info/' },
+  { label: 'Release Date', href: '/release-date/' },
+  { label: 'Download', href: '/download/' },
   { label: 'Guides', href: '/guides/' },
   { label: 'Bosses', href: '/guides/category/boss/' },
   { label: 'Combat', href: '/guides/category/combat/' },

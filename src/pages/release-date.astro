@@ -1,0 +1,185 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import JsonLd from '../components/JsonLd.astro';
+import SourceBadge from '../components/SourceBadge.astro';
+import { SITE, GAME_FACTS } from '../data/site';
+
+const path = '/release-date/';
+const canonical = new URL(path, SITE.url).href;
+
+const title = `Beast of Reincarnation Release Date — ${GAME_FACTS.releaseDateShort}`;
+const description = `Beast of Reincarnation releases ${GAME_FACTS.releaseDate} on PC, PS5 and Xbox Series X|S. Confirmed platforms, price and pre-purchase status.`;
+
+const rows = [
+  { label: 'Release date', value: `${GAME_FACTS.releaseDate} (00:00 UTC in all regions)` },
+  { label: 'Platforms', value: GAME_FACTS.platform },
+  { label: 'Standard edition', value: GAME_FACTS.priceUsd },
+  { label: 'Deluxe edition', value: GAME_FACTS.deluxePriceUsd },
+  { label: 'Developer', value: GAME_FACTS.developer },
+  { label: 'Publisher', value: GAME_FACTS.publisher },
+  { label: 'Genre', value: GAME_FACTS.genre },
+  { label: 'Pre-purchase', value: 'Live now on Steam' },
+];
+
+const faqs = [
+  {
+    q: 'When does Beast of Reincarnation come out?',
+    a: `Beast of Reincarnation releases on ${GAME_FACTS.releaseDate}. The official announcement gives a simultaneous unlock at 00:00 UTC in all regions, so there is no regional stagger. The Steam store page displays "Aug 3, 2026" for some regions because of how Valve renders the local time of that UTC moment — the unlock itself is the same instant worldwide.`,
+  },
+  {
+    q: 'What platforms is Beast of Reincarnation on?',
+    a: 'Three platforms launch together: PC via Steam, PlayStation 5, and Xbox Series X|S. The Steam page lists only PC because that is the only version sold on Steam — the PS5 and Xbox wording that appears there refers to controller compatibility, not platform availability.',
+  },
+  {
+    q: 'Is it on Nintendo Switch or Switch 2?',
+    a: 'No Nintendo version has been announced. Given that Game Freak is the developer, people reasonably expect one, but there is no official listing, so we are not going to imply one exists. If a Nintendo page appears, this page is updated the same day with the source.',
+  },
+  {
+    q: 'How much does Beast of Reincarnation cost?',
+    a: `The standard edition is ${GAME_FACTS.priceUsd} and the Deluxe edition is ${GAME_FACTS.deluxePriceUsd} on Steam. Pre-purchase is already live. Regional pricing varies; those are the USD figures on the store page as of ${GAME_FACTS.lastVerified}.`,
+  },
+  {
+    q: 'Is there a demo or a beta?',
+    a: 'No demo, beta, or public test build has been announced. There is nothing playable before launch, which also means any site offering a "download" today is not distributing this game.',
+  },
+  {
+    q: 'Could the release date still change?',
+    a: `It could. ${GAME_FACTS.releaseDateShort} is the date on live store listings, which is the strongest signal available short of the game actually shipping. If it moves, this page and the countdown on the home page change with it.`,
+  },
+];
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: title,
+    url: canonical,
+    description,
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.url },
+      { '@type': 'ListItem', position: 2, name: 'Release Date', item: canonical },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  },
+];
+---
+
+<BaseLayout title={title} description={description} path={path}>
+  <JsonLd slot="head" schema={schema} />
+
+  <section class="mx-auto max-w-3xl px-4 py-16">
+    <nav aria-label="Breadcrumb" class="mb-6 text-xs text-ash-400">
+      <ol class="flex flex-wrap items-center gap-1.5">
+        <li><a href="/" class="hover:text-ember-400">Home</a></li>
+        <li aria-hidden="true">/</li>
+        <li class="text-ash-300">Release Date</li>
+      </ol>
+    </nav>
+
+    <div class="mb-4 flex flex-wrap items-center gap-3">
+      <SourceBadge source="official" />
+      <span class="text-xs text-ash-500">Verified from official sources on {GAME_FACTS.lastVerified}</span>
+    </div>
+
+    <h1 class="font-display text-3xl font-bold leading-tight text-ash-50 md:text-4xl">
+      Beast of Reincarnation Release Date
+    </h1>
+    <p class="mt-4 text-lg leading-relaxed text-ash-300">
+      <strong class="text-ash-50">Beast of Reincarnation releases {GAME_FACTS.releaseDate}</strong> on
+      PC (Steam), PlayStation 5, and Xbox Series X|S, at {GAME_FACTS.priceUsd} for the standard
+      edition. Pre-purchase is live; the game is not out yet.
+    </p>
+
+    <dl class="mt-8 grid gap-3 sm:grid-cols-2">
+      {
+        rows.map((r) => (
+          <div class="rounded-xl border border-ash-800 bg-ash-900/40 p-4">
+            <dt class="text-xs font-semibold uppercase tracking-wide text-ash-500">{r.label}</dt>
+            <dd class="mt-1.5 font-display text-base font-semibold leading-snug text-ash-50">{r.value}</dd>
+          </div>
+        ))
+      }
+    </dl>
+
+    <div class="prose mt-10 max-w-none">
+      <h2>Why you may see two different dates</h2>
+      <p>
+        Official communication and platform data both give <strong>{GAME_FACTS.releaseDate}</strong>,
+        with a single global unlock at 00:00 UTC. Steam renders that instant in your local time, which
+        is why some regions see "Aug 3, 2026" on the store page. Nothing is staggered — everyone
+        unlocks at the same moment. We treat the official announcement as authoritative and note the
+        Steam display quirk rather than pretending it does not exist.
+      </p>
+
+      <h2>What launches on day one</h2>
+      <p>
+        {GAME_FACTS.shortDescription} At launch you get the full single-player campaign with
+        {' '}{GAME_FACTS.controllerSupport.toLowerCase()}, Steam Achievements, Steam Cloud, and
+        adjustable difficulty. Full audio ships in English and Japanese, with subtitles in a further
+        eight languages.
+      </p>
+      <p>
+        The systems the developer has actually committed to are: hybrid real-time and turn-based
+        combat with Emma and Koo fighting as a unit, boss encounters whose powers you capture, and
+        build customisation through skill trees, gear, and spirit stones. Everything confirmed sits on
+        the <a href="/game-info/">game info page</a>; anything we cannot verify is labelled as
+        speculation and kept out of search.
+      </p>
+
+      <h2>Where to buy or pre-purchase</h2>
+      <p>
+        The only official PC channel is the
+        {' '}<a href={GAME_FACTS.source} rel="noopener" target="_blank">Steam store page</a> (App
+        {' '}{GAME_FACTS.steamAppId}). PS5 and Xbox Series X|S versions are sold on their own
+        platform stores. Our <a href="/download/">download page</a> covers install size, PC
+        requirements, and why nothing is downloadable yet.
+      </p>
+
+      <h2>Frequently asked questions</h2>
+      {
+        faqs.map((f) => (
+          <>
+            <h3>{f.q}</h3>
+            <p>{f.a}</p>
+          </>
+        ))
+      }
+
+      <h2>How this page is maintained</h2>
+      <p>
+        Every figure above comes from the official Steam listing (App {GAME_FACTS.steamAppId}) or the
+        publisher's release announcement, last checked {GAME_FACTS.lastVerified}. Console-store
+        details we cannot open and verify directly are described as such. After
+        {' '}{GAME_FACTS.releaseDate} this page switches from "what is planned" to "what shipped",
+        including any day-one patch notes worth knowing about.
+      </p>
+    </div>
+
+    <div class="mt-10 flex flex-wrap gap-3">
+      <a
+        href="/game-info/"
+        class="rounded-lg bg-ember-600 px-5 py-3 font-semibold text-ash-950 transition-colors hover:bg-ember-500"
+      >
+        Confirmed game info
+      </a>
+      <a
+        href="/download/"
+        class="rounded-lg border border-ash-600 px-5 py-3 font-semibold text-ash-100 transition-colors hover:border-ash-400 hover:bg-ash-800"
+      >
+        Download & PC requirements
+      </a>
+    </div>
+  </section>
+</BaseLayout>

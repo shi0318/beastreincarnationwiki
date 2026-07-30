@@ -1,0 +1,205 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import JsonLd from '../components/JsonLd.astro';
+import SourceBadge from '../components/SourceBadge.astro';
+import { SITE, GAME_FACTS } from '../data/site';
+
+const path = '/download/';
+const canonical = new URL(path, SITE.url).href;
+
+const title = 'Beast of Reincarnation Download & PC Requirements';
+const description = `Where to download Beast of Reincarnation: the official Steam page, ${GAME_FACTS.priceUsd} pre-purchase, 45 GB SSD requirement, full PC specs, and why no demo exists.`;
+
+const { minimum, recommended } = GAME_FACTS.systemRequirements;
+
+const specRows = [
+  { label: 'OS', min: minimum.os, rec: recommended.os },
+  { label: 'Processor', min: minimum.cpu, rec: recommended.cpu },
+  { label: 'Memory', min: minimum.memory, rec: recommended.memory },
+  { label: 'Graphics', min: minimum.gpu, rec: recommended.gpu },
+  { label: 'DirectX', min: minimum.directx, rec: recommended.directx },
+  { label: 'Storage', min: minimum.storage, rec: recommended.storage },
+  { label: 'Target', min: minimum.notes, rec: recommended.notes },
+];
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: title,
+    url: canonical,
+    description,
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.url },
+      { '@type': 'ListItem', position: 2, name: 'Download', item: canonical },
+    ],
+  },
+];
+---
+
+<BaseLayout title={title} description={description} path={path}>
+  <JsonLd slot="head" schema={schema} />
+
+  <section class="mx-auto max-w-3xl px-4 py-16">
+    <nav aria-label="Breadcrumb" class="mb-6 text-xs text-ash-400">
+      <ol class="flex flex-wrap items-center gap-1.5">
+        <li><a href="/" class="hover:text-ember-400">Home</a></li>
+        <li aria-hidden="true">/</li>
+        <li class="text-ash-300">Download</li>
+      </ol>
+    </nav>
+
+    <div class="mb-4 flex flex-wrap items-center gap-3">
+      <SourceBadge source="official" />
+      <span class="text-xs text-ash-500">Steam listing checked {GAME_FACTS.lastVerified}</span>
+    </div>
+
+    <h1 class="font-display text-3xl font-bold leading-tight text-ash-50 md:text-4xl">
+      Beast of Reincarnation Download
+    </h1>
+    <p class="mt-4 text-lg leading-relaxed text-ash-300">
+      <strong class="text-ash-50">The game is not out yet.</strong> It releases
+      {' '}{GAME_FACTS.releaseDate}. Until then the only thing you can do is pre-purchase on an
+      official store — and this page exists so you can check the PC requirements and the
+      {' '}45 GB SSD footprint before launch day, not after.
+    </p>
+
+    <div class="mt-8 rounded-xl border border-ember-800/60 bg-ember-950/25 p-6">
+      <p class="text-xs font-semibold uppercase tracking-wide text-ember-300">Official PC channel</p>
+      <a
+        href={GAME_FACTS.source}
+        rel="noopener"
+        target="_blank"
+        class="mt-2 block font-display text-lg font-semibold text-ash-50 underline decoration-ember-500/60 underline-offset-4 hover:text-ember-300"
+      >
+        Beast of Reincarnation on Steam (App {GAME_FACTS.steamAppId}) →
+      </a>
+      <p class="mt-3 text-sm leading-relaxed text-ash-300">
+        {GAME_FACTS.priceUsd} standard, {GAME_FACTS.deluxePriceUsd} Deluxe. PlayStation 5 and Xbox
+        Series X|S versions are sold on their own platform stores. This site never hosts game files.
+      </p>
+    </div>
+
+    <div class="prose mt-10 max-w-none">
+      <h2>Is there a demo to download right now?</h2>
+      <p>
+        <strong>No.</strong> {GAME_FACTS.developer} and {GAME_FACTS.publisher} have not announced a
+        demo, a beta, or a public test build. There is no playable version of this game in
+        circulation before {GAME_FACTS.releaseDate}.
+      </p>
+      <p>
+        That is worth stating plainly, because "beast of reincarnation download" is exactly the query
+        that fake-installer and repack sites farm for unreleased games. If a page offers you a
+        working download, an installer, or a mobile APK, it is not distributing this game — there is
+        nothing to distribute yet. The Steam link above, App {GAME_FACTS.steamAppId}, is the only PC
+        address worth trusting.
+      </p>
+
+      <h2>How pre-purchase downloads work</h2>
+      <ol>
+        <li>Pre-purchase on Steam and the game appears in your library as unreleased.</li>
+        <li>
+          Steam may enable a <strong>preload</strong> shortly before launch so files are on disk in
+          advance. Publishers opt into that individually and {GAME_FACTS.publisher} has not confirmed
+          whether they will.
+        </li>
+        <li>
+          On {GAME_FACTS.releaseDate} the build unlocks at 00:00 UTC — the same instant in every
+          region. See the <a href="/release-date/">release date page</a> for why some Steam regions
+          display the previous day.
+        </li>
+      </ol>
+
+      <h2>Install size and drive requirements</h2>
+      <p>
+        Steam lists <strong>45 GB of available space</strong>, and an <strong>SSD is required</strong>
+        {' '}— not recommended, required. Plan for more than 45 GB free: Steam needs headroom while it
+        unpacks, and day-one patches usually add to the footprint. If your only free space is on a
+        mechanical drive, sort that out before launch day rather than during it.
+      </p>
+
+      <h2>PC system requirements</h2>
+      <p>
+        Both tiers below are from the official Steam listing. Note that the stated performance
+        targets already assume upscaling: minimum aims at 1080p/40fps with DLSS or FSR1 on
+        Performance, and recommended aims at 1080p/60fps with DLSS or FSR3 on Performance. That is a
+        meaningful detail — native-resolution performance will be lower than these numbers suggest.
+      </p>
+      <div class="not-prose mt-6 overflow-x-auto rounded-xl border border-ash-800">
+        <table class="w-full border-collapse text-sm">
+          <thead>
+            <tr class="bg-ash-900/60 text-left">
+              <th class="px-4 py-3 font-semibold text-ash-200"></th>
+              <th class="px-4 py-3 font-semibold text-ash-200">Minimum</th>
+              <th class="px-4 py-3 font-semibold text-ash-200">Recommended</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              specRows.map((r) => (
+                <tr class="border-t border-ash-800/80 align-top">
+                  <th class="px-4 py-3 text-left font-semibold text-ash-400">{r.label}</th>
+                  <td class="px-4 py-3 text-ash-300">{r.min}</td>
+                  <td class="px-4 py-3 text-ash-300">{r.rec}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+
+      <h2>What ships in the box</h2>
+      <p>
+        Steam confirms the following for the PC version: {GAME_FACTS.features.join(', ')}. Language
+        support is {GAME_FACTS.languages}.
+      </p>
+      <p>
+        The Deluxe edition is listed at {GAME_FACTS.deluxePriceUsd} but its contents have not been
+        itemised on the store page, so we are not going to guess at what the extra
+        {' '}$10 buys. When the breakdown is published it goes here and on the
+        {' '}<a href="/release-date/">release date page</a>.
+      </p>
+
+      <h2>Console downloads</h2>
+      <p>
+        PlayStation 5 and Xbox Series X|S versions launch the same day and are downloaded through
+        their own storefronts. No Nintendo version has been announced. Install sizes for the console
+        builds have not been published; the 45 GB figure above is the PC requirement.
+      </p>
+
+      <h2>Launch-day checklist</h2>
+      <ol>
+        <li>Confirm at least 50–60 GB free on an SSD.</li>
+        <li>Update GPU drivers — day-one drivers usually land within a week of a major release.</li>
+        <li>Check your GPU against the table above and decide your upscaling setting in advance.</li>
+        <li>
+          Read the <a href="/game-info/">confirmed game info</a> so you know which systems are real
+          and which are still unannounced.
+        </li>
+      </ol>
+      <p>
+        Our strategy pages stay marked as provisional and out of search until we can test the shipped
+        game. After {GAME_FACTS.releaseDate} they get rewritten from hands-on play.
+      </p>
+    </div>
+
+    <div class="mt-10 flex flex-wrap gap-3">
+      <a
+        href="/release-date/"
+        class="rounded-lg bg-ember-600 px-5 py-3 font-semibold text-ash-950 transition-colors hover:bg-ember-500"
+      >
+        Release date & platforms
+      </a>
+      <a
+        href="/game-info/"
+        class="rounded-lg border border-ash-600 px-5 py-3 font-semibold text-ash-100 transition-colors hover:border-ash-400 hover:bg-ash-800"
+      >
+        Confirmed game info
+      </a>
+    </div>
+  </section>
+</BaseLayout>
