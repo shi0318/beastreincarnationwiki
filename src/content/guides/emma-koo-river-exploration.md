@@ -5,7 +5,7 @@ heading: "River Route: Pre-Release Exploration Notes"
 category: exploration
 keyword: "beast of reincarnation river exploration"
 image: "beast-of-reincarnation-emma-koo-river-exploration.webp"
-imageAlt: "Emma and Koo traveling through a water-carved landscape in Beast of Reincarnation promotional imagery"
+imageAlt: "Emma wading a shallow river beside Koo, with misty stone arches and a ruined shrine behind them, in Beast of Reincarnation"
 publishDate: 2026-07-22
 updateDate: 2026-07-25
 order: 10

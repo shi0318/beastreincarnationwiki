@@ -76,7 +76,13 @@ const schema = [
 ];
 ---
 
-<BaseLayout title={title} description={description} path={path}>
+<BaseLayout
+  title={title}
+  description={description}
+  path={path}
+  image="/images/beast-of-reincarnation-emma-character.webp"
+  imageAlt="Official character render of Emma from Beast of Reincarnation"
+>
   <JsonLd slot="head" schema={schema} />
 
   <section class="mx-auto max-w-3xl px-4 py-16">
@@ -101,6 +107,23 @@ const schema = [
       PC (Steam), PlayStation 5, and Xbox Series X|S, at {GAME_FACTS.priceUsd} for the standard
       edition. Pre-purchase is live; the game is not out yet.
     </p>
+
+    <figure class="mt-8 overflow-hidden rounded-xl border border-ash-800 bg-ash-900/40">
+      <img
+        src="/images/beast-of-reincarnation-emma-character.webp"
+        alt="Official Beast of Reincarnation character render of Emma in a wide-brimmed straw hat and dark coat with her sword drawn"
+        width="1600"
+        height="900"
+        loading="eager"
+        fetchpriority="high"
+        decoding="async"
+        class="w-full"
+      />
+      <figcaption class="px-5 py-3 text-xs leading-relaxed text-ash-500">
+        Emma, the outcast protagonist, in the official character render used across the PlayStation
+        and Xbox store listings for the {GAME_FACTS.releaseDateShort} launch.
+      </figcaption>
+    </figure>
 
     <dl class="mt-8 grid gap-3 sm:grid-cols-2">
       {

@@ -5,7 +5,7 @@ heading: "Parry Timing: Pre-Release Combat Notes"
 category: combat
 keyword: "beast of reincarnation parry timing"
 image: "beast-of-reincarnation-emma-parry-flower-beast.webp"
-imageAlt: "Emma in a combat stance against a creature in Beast of Reincarnation promotional imagery"
+imageAlt: "Emma braced low in sunlit grass as a purple flower-covered beast lunges at her in Beast of Reincarnation"
 publishDate: 2026-07-24
 updateDate: 2026-07-25
 order: 5

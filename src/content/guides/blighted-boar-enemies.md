@@ -5,7 +5,7 @@ heading: "Blighted Boar: Pre-Release Enemy Notes"
 category: enemies
 keyword: "beast of reincarnation blighted boar"
 image: "beast-of-reincarnation-blighted-boar-enemies.webp"
-imageAlt: "Blighted animal enemies with infection marks in a wasteland setting from Beast of Reincarnation promotional imagery"
+imageAlt: "Over-the-shoulder view of Emma facing two blight-covered boars and a spider-legged machine across a burning field in Beast of Reincarnation"
 publishDate: 2026-07-22
 updateDate: 2026-07-25
 order: 20

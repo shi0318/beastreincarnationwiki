@@ -5,7 +5,7 @@ heading: "Nushi Boss Fight: Pre-Release Outline"
 category: boss
 keyword: "beast of reincarnation nushi boss"
 image: "beast-of-reincarnation-nushi-boss-fight.webp"
-imageAlt: "Emma facing a towering boss silhouette in a mist-covered arena from Beast of Reincarnation marketing imagery"
+imageAlt: "A hulking bark-and-foliage creature rearing up over Emma as she dodges through a flooded ruined village in Beast of Reincarnation"
 publishDate: 2026-07-20
 updateDate: 2026-07-25
 featured: true

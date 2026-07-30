@@ -5,7 +5,7 @@ heading: "Waterfall Grotto: Pre-Release Secret Notes"
 category: exploration
 keyword: "beast of reincarnation waterfall grotto"
 image: "beast-of-reincarnation-waterfall-grotto.webp"
-imageAlt: "A cavern lit by crystals behind falling water in Beast of Reincarnation promotional imagery"
+imageAlt: "Emma standing on a rock ledge facing Koo in a mossy grotto fed by three waterfalls in Beast of Reincarnation"
 publishDate: 2026-07-23
 updateDate: 2026-07-25
 order: 11

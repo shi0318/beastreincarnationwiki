@@ -5,7 +5,7 @@ heading: "Wasteland Colossal: Pre-Release Outline"
 category: boss
 keyword: "beast of reincarnation wasteland colossal boss"
 image: "beast-of-reincarnation-wasteland-colossal-boss.webp"
-imageAlt: "A colossal armored figure towering over an ash wasteland in Beast of Reincarnation promotional imagery"
+imageAlt: "A towering long-legged machine silhouetted against the setting sun on a rocky ridge, with Emma and Koo tiny in the distance, in Beast of Reincarnation"
 publishDate: 2026-07-21
 updateDate: 2026-07-25
 order: 2

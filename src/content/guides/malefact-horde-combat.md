@@ -4,8 +4,8 @@ description: "Pre-release notes on crowd-pressure combat in Beast of Reincarnati
 heading: "Malefact Hordes: Pre-Release Crowd Notes"
 category: combat
 keyword: "beast of reincarnation malefact horde"
-image: "beast-of-reincarnation-malefact-horde-combat.webp"
-imageAlt: "Emma facing multiple hostile creatures in Beast of Reincarnation promotional imagery"
+image: "beast-of-reincarnation-machine-swarm-combat.webp"
+imageAlt: "Emma braced in tall grass among stone ruins as several spider-legged machine enemies close in through a cloud of dust in Beast of Reincarnation"
 publishDate: 2026-07-23
 updateDate: 2026-07-25
 order: 30

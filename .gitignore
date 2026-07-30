@@ -16,3 +16,6 @@ dist/
 
 # logs
 npm-debug.log*
+
+# 官方素材抓取暂存目录（原始 4K JPEG / 联络表，不入库）
+image/
