@@ -160,7 +160,7 @@ export const GAME_FACTS = {
       notes: 'Med 1080p @ 60fps w/ DLSS or FSR3 (Performance). SSD required.',
     },
   },
-  lastVerified: '2026-07-30',
+  lastVerified: '2026-07-31',
 } as const;
 
 // 来源可信度标签：标注每条内容的证据等级，支撑 E-E-A-T 与发售前内容诚信。
