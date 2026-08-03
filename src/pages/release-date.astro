@@ -2,13 +2,13 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import JsonLd from '../components/JsonLd.astro';
 import SourceBadge from '../components/SourceBadge.astro';
-import { SITE, GAME_FACTS } from '../data/site';
+import { SITE, GAME_FACTS, IS_RELEASED, LAUNCH_COPY } from '../data/site';
 
 const path = '/release-date/';
 const canonical = new URL(path, SITE.url).href;
 
 const title = `Beast of Reincarnation Release Date — ${GAME_FACTS.releaseDateShort}`;
-const description = `Beast of Reincarnation releases ${GAME_FACTS.releaseDate} on PC, PS5 and Xbox Series X|S, and day one on Xbox Game Pass. Confirmed platforms, price and pre-purchase status.`;
+const description = `Beast of Reincarnation releases ${GAME_FACTS.releaseDate} on PC, PS5 and Xbox Series X|S, and day one on Xbox Game Pass. Confirmed platforms, price and ${IS_RELEASED ? 'availability' : 'pre-purchase'} status.`;
 
 const rows = [
   { label: 'Release date', value: `${GAME_FACTS.releaseDate} (00:00 UTC in all regions)` },
@@ -19,7 +19,7 @@ const rows = [
   { label: 'Developer', value: GAME_FACTS.developer },
   { label: 'Publisher', value: GAME_FACTS.publisher },
   { label: 'Genre', value: GAME_FACTS.genre },
-  { label: 'Pre-purchase', value: 'Live now on Steam' },
+  { label: IS_RELEASED ? 'Availability' : 'Pre-purchase', value: IS_RELEASED ? 'Out now on Steam' : 'Live now on Steam' },
 ];
 
 const faqs = [
@@ -41,16 +41,22 @@ const faqs = [
   },
   {
     q: 'How much does Beast of Reincarnation cost?',
-    a: `The standard edition is ${GAME_FACTS.priceUsd} and the Deluxe edition is ${GAME_FACTS.deluxePriceUsd} on Steam. Pre-purchase is already live. Regional pricing varies; those are the USD figures on the store page as of ${GAME_FACTS.lastVerified}. If you subscribe to Xbox Game Pass Ultimate or PC Game Pass you can play it at no extra cost from launch day instead of buying it.`,
+    a: `The standard edition is ${GAME_FACTS.priceUsd} and the Deluxe edition is ${GAME_FACTS.deluxePriceUsd} on Steam. ${LAUNCH_COPY.storeStatusSentence} Regional pricing varies; those are the USD figures on the store page as of ${GAME_FACTS.lastVerified}. If you subscribe to Xbox Game Pass Ultimate or PC Game Pass you can play it at no extra cost from launch day instead of buying it.`,
   },
   {
     q: 'Is there a demo or a beta?',
-    a: 'No demo, beta, or public test build has been announced. There is nothing playable before launch, which also means any site offering a "download" today is not distributing this game.',
+    a: IS_RELEASED
+      ? 'No demo, beta, or public test build was ever released. The full game is the only playable version, so any site offering a separate "free download" is not distributing this game.'
+      : 'No demo, beta, or public test build has been announced. There is nothing playable before launch, which also means any site offering a "download" today is not distributing this game.',
   },
-  {
-    q: 'Could the release date still change?',
-    a: `It could. ${GAME_FACTS.releaseDateShort} is the date on live store listings, which is the strongest signal available short of the game actually shipping. If it moves, this page and the countdown on the home page change with it.`,
-  },
+  ...(IS_RELEASED
+    ? []
+    : [
+        {
+          q: 'Could the release date still change?',
+          a: `It could. ${GAME_FACTS.releaseDateShort} is the date on live store listings, which is the strongest signal available short of the game actually shipping. If it moves, this page changes with it.`,
+        },
+      ]),
 ];
 
 const schema = [
@@ -110,7 +116,7 @@ const schema = [
     <p class="mt-4 text-lg leading-relaxed text-ash-300">
       <strong class="text-ash-50">Beast of Reincarnation releases {GAME_FACTS.releaseDate}</strong> on
       PC (Steam), PlayStation 5, and Xbox Series X|S, at {GAME_FACTS.priceUsd} for the standard
-      edition. Pre-purchase is live; the game is not out yet.
+      edition. {LAUNCH_COPY.notOutYetNote || LAUNCH_COPY.storeStatusSentence}
     </p>
 
     <figure class="mt-8 overflow-hidden rounded-xl border border-ash-800 bg-ash-900/40">
@@ -163,16 +169,16 @@ const schema = [
         combat with Emma and Koo fighting as a unit, boss encounters whose powers you capture, and
         build customisation through skill trees, gear, and spirit stones. Everything confirmed sits on
         the <a href="/game-info/">game info page</a>; anything we cannot verify is labelled as
-        speculation and kept out of search.
+        speculation until it is rewritten from hands-on play.
       </p>
 
-      <h2>Where to buy, pre-purchase, or play on Game Pass</h2>
+      <h2>Where to buy{IS_RELEASED ? '' : ', pre-purchase,'} or play on Game Pass</h2>
       <p>
         The only official PC storefront is the
         {' '}<a href={GAME_FACTS.source} rel="noopener" target="_blank">Steam store page</a> (App
         {' '}{GAME_FACTS.steamAppId}). PS5 and Xbox Series X|S versions are sold on their own
-        platform stores. Our <a href="/download/">download page</a> covers install size, PC
-        requirements, and why nothing is downloadable yet.
+        platform stores. Our <a href="/download/">download page</a> covers install size and PC
+        requirements.
       </p>
       <p>
         You may not need to buy it at all on Xbox or Windows.
@@ -205,9 +211,12 @@ const schema = [
       <p>
         Every figure above comes from the official Steam listing (App {GAME_FACTS.steamAppId}) or the
         publisher's release announcement, last checked {GAME_FACTS.lastVerified}. Console-store
-        details we cannot open and verify directly are described as such. After
-        {' '}{GAME_FACTS.releaseDate} this page switches from "what is planned" to "what shipped",
-        including any day-one patch notes worth knowing about.
+        details we cannot open and verify directly are described as such.
+        {
+          IS_RELEASED
+            ? ' Now that the game has shipped, this page reports what actually released rather than what was planned, including any day-one patch notes worth knowing about.'
+            : ` After ${GAME_FACTS.releaseDate} this page switches from "what is planned" to "what shipped", including any day-one patch notes worth knowing about.`
+        }
       </p>
     </div>
 

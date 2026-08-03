@@ -2,25 +2,17 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import JsonLd from '../components/JsonLd.astro';
 import SourceBadge from '../components/SourceBadge.astro';
-import { SITE, GAME_FACTS } from '../data/site';
+import { SITE, GAME_FACTS, IS_RELEASED, LAUNCH_COPY } from '../data/site';
 
 const path = '/download/';
 const canonical = new URL(path, SITE.url).href;
 
 const title = 'Beast of Reincarnation Download & PC Requirements';
-const description = `Where to download Beast of Reincarnation: official Steam page, ${GAME_FACTS.priceUsd} pre-purchase, day one on Xbox Game Pass, 45 GB SSD requirement and full PC specs.`;
+const description = `Where to download Beast of Reincarnation: official Steam page, ${GAME_FACTS.priceUsd} ${LAUNCH_COPY.purchaseNoun}, day one on Xbox Game Pass, install size and the 45 GB SSD requirement.`;
 
+// 规格数据只用于本页的「at a glance」摘要块。完整 min/rec 对照表已收敛到
+// /guides/pc-system-requirements/ 作为唯一正文页，避免三处页面互相稀释同一关键词。
 const { minimum, recommended } = GAME_FACTS.systemRequirements;
-
-const specRows = [
-  { label: 'OS', min: minimum.os, rec: recommended.os },
-  { label: 'Processor', min: minimum.cpu, rec: recommended.cpu },
-  { label: 'Memory', min: minimum.memory, rec: recommended.memory },
-  { label: 'Graphics', min: minimum.gpu, rec: recommended.gpu },
-  { label: 'DirectX', min: minimum.directx, rec: recommended.directx },
-  { label: 'Storage', min: minimum.storage, rec: recommended.storage },
-  { label: 'Target', min: minimum.notes, rec: recommended.notes },
-];
 
 const schema = [
   {
@@ -68,11 +60,25 @@ const schema = [
       Beast of Reincarnation Download
     </h1>
     <p class="mt-4 text-lg leading-relaxed text-ash-300">
-      <strong class="text-ash-50">The game is not out yet.</strong> It releases
-      {' '}{GAME_FACTS.releaseDate}. Until then the only things you can do are pre-purchase on an
-      official store or line up an Xbox Game Pass subscription, which includes it on day one — and
-      this page exists so you can check the PC requirements and the
-      {' '}45 GB SSD footprint before launch day, not after.
+      {
+        IS_RELEASED ? (
+          <>
+            <strong class="text-ash-50">Out now.</strong> Beast of Reincarnation released
+            {' '}{GAME_FACTS.releaseDate}. You can buy it on an official store or play it through an
+            Xbox Game Pass subscription, which has included it since day one — and this page covers
+            the official channels, the 45 GB SSD footprint, and the PC requirements you need before
+            installing.
+          </>
+        ) : (
+          <>
+            <strong class="text-ash-50">The game is not out yet.</strong> It releases
+            {' '}{GAME_FACTS.releaseDate}. Until then the only things you can do are pre-purchase on
+            an official store or line up an Xbox Game Pass subscription, which includes it on day one
+            — and this page exists so you can check the PC requirements and the
+            {' '}45 GB SSD footprint before launch day, not after.
+          </>
+        )
+      }
     </p>
 
     <div class="mt-8 rounded-xl border border-ember-800/60 bg-ember-950/25 p-6">
@@ -163,32 +169,49 @@ const schema = [
 
       <h2>Is there a demo to download right now?</h2>
       <p>
-        <strong>No.</strong> {GAME_FACTS.developer} and {GAME_FACTS.publisher} have not announced a
-        demo, a beta, or a public test build. There is no playable version of this game in
-        circulation before {GAME_FACTS.releaseDate}.
+        <strong>No.</strong> {GAME_FACTS.developer} and {GAME_FACTS.publisher} have never announced a
+        demo, a beta, or a public test build. The "demo" you may have read about in preview coverage
+        was a press event — journalists played a timed hands-on build at a Game Freak showcase, not
+        something that was ever downloadable.
       </p>
       <p>
-        That is worth stating plainly, because "beast of reincarnation download" is exactly the query
-        that fake-installer and repack sites farm for unreleased games. If a page offers you a
-        working download, an installer, or a mobile APK, it is not distributing this game — there is
-        nothing to distribute yet. The Steam link above, App {GAME_FACTS.steamAppId}, is the only PC
-        address worth trusting.
+        That is worth stating plainly, because "beast of reincarnation demo" and "download" are
+        exactly the queries that fake-installer and repack sites farm. If a page offers you a
+        {' '}<em>free</em> download, a cracked installer, or a mobile APK, it is not giving you this
+        game. The Steam link above, App {GAME_FACTS.steamAppId}, is the only PC address worth
+        trusting{IS_RELEASED ? '' : ', and there is nothing to distribute yet'}.
       </p>
 
-      <h2>How pre-purchase downloads work</h2>
-      <ol>
-        <li>Pre-purchase on Steam and the game appears in your library as unreleased.</li>
-        <li>
-          Steam may enable a <strong>preload</strong> shortly before launch so files are on disk in
-          advance. Publishers opt into that individually and {GAME_FACTS.publisher} has not confirmed
-          whether they will.
-        </li>
-        <li>
-          On {GAME_FACTS.releaseDate} the build unlocks at 00:00 UTC — the same instant in every
-          region. See the <a href="/release-date/">release date page</a> for why some Steam regions
-          display the previous day.
-        </li>
-      </ol>
+      <h2>How buying and downloading works</h2>
+      {
+        IS_RELEASED ? (
+          <ol>
+            <li>Buy on Steam and the download starts straight away — the build is unlocked.</li>
+            <li>
+              The unlock happened at 00:00 UTC on {GAME_FACTS.releaseDate}, the same instant in every
+              region. See the <a href="/release-date/">release date page</a> for why some Steam
+              regions displayed the previous day.
+            </li>
+            <li>
+              On Xbox and Windows a Game Pass subscription installs it the same way, with no purchase.
+            </li>
+          </ol>
+        ) : (
+          <ol>
+            <li>Pre-purchase on Steam and the game appears in your library as unreleased.</li>
+            <li>
+              Steam may enable a <strong>preload</strong> shortly before launch so files are on disk
+              in advance. Publishers opt into that individually and {GAME_FACTS.publisher} has not
+              confirmed whether they will.
+            </li>
+            <li>
+              On {GAME_FACTS.releaseDate} the build unlocks at 00:00 UTC — the same instant in every
+              region. See the <a href="/release-date/">release date page</a> for why some Steam
+              regions display the previous day.
+            </li>
+          </ol>
+        )
+      }
 
       <h2>Install size and drive requirements</h2>
       <p>
@@ -198,35 +221,32 @@ const schema = [
         mechanical drive, sort that out before launch day rather than during it.
       </p>
 
-      <h2>PC system requirements</h2>
+      <h2>PC system requirements at a glance</h2>
       <p>
-        Both tiers below are from the official Steam listing. Note that the stated performance
-        targets already assume upscaling: minimum aims at 1080p/40fps with DLSS or FSR1 on
-        Performance, and recommended aims at 1080p/60fps with DLSS or FSR3 on Performance. That is a
-        meaningful detail — native-resolution performance will be lower than these numbers suggest.
+        The short version, from the official Steam listing: you need a
+        {' '}<strong>{minimum.gpu.split(' or ')[0]}</strong> class GPU at minimum, 16 GB RAM at both
+        tiers, and 45 GB on an SSD. One detail matters more than the part numbers — both tiers quote
+        1080p <em>with upscaling in Performance mode</em>, so the 40fps and 60fps figures are already
+        upscaled, not native.
       </p>
-      <div class="not-prose mt-6 overflow-x-auto rounded-xl border border-ash-800">
-        <table class="w-full border-collapse text-sm">
-          <thead>
-            <tr class="bg-ash-900/60 text-left">
-              <th class="px-4 py-3 font-semibold text-ash-200"></th>
-              <th class="px-4 py-3 font-semibold text-ash-200">Minimum</th>
-              <th class="px-4 py-3 font-semibold text-ash-200">Recommended</th>
-            </tr>
-          </thead>
-          <tbody>
-            {
-              specRows.map((r) => (
-                <tr class="border-t border-ash-800/80 align-top">
-                  <th class="px-4 py-3 text-left font-semibold text-ash-400">{r.label}</th>
-                  <td class="px-4 py-3 text-ash-300">{r.min}</td>
-                  <td class="px-4 py-3 text-ash-300">{r.rec}</td>
-                </tr>
-              ))
-            }
-          </tbody>
-        </table>
+      <div class="not-prose my-6 grid gap-3 sm:grid-cols-2">
+        <div class="rounded-xl border border-ash-800 bg-ash-900/40 p-4">
+          <p class="text-xs font-semibold uppercase tracking-wide text-ash-500">Minimum</p>
+          <p class="mt-1.5 text-sm leading-relaxed text-ash-200">{minimum.gpu}</p>
+          <p class="mt-1 text-xs text-ash-500">{minimum.notes}</p>
+        </div>
+        <div class="rounded-xl border border-ash-800 bg-ash-900/40 p-4">
+          <p class="text-xs font-semibold uppercase tracking-wide text-ash-500">Recommended</p>
+          <p class="mt-1.5 text-sm leading-relaxed text-ash-200">{recommended.gpu}</p>
+          <p class="mt-1 text-xs text-ash-500">{recommended.notes}</p>
+        </div>
       </div>
+      <p>
+        Full CPU, OS, DirectX and storage rows for both tiers — plus why the minimum note names DLSS
+        alongside a GTX 1070 that cannot run it — are on our
+        {' '}<a href="/guides/pc-system-requirements/"><strong>PC system requirements page</strong></a>.
+        That page is the one we keep current against the store listing.
+      </p>
 
       <h2>What ships in the box</h2>
       <p>

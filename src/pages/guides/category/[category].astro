@@ -71,7 +71,7 @@ const schema = [
 ];
 ---
 
-<BaseLayout title={title} description={description} path={path} noindex={allPreview}>
+<BaseLayout title={title} description={description} path={path}>
   <JsonLd slot="head" schema={schema} />
 
   <section class="border-b border-ash-800 bg-ash-900/30">
@@ -94,8 +94,9 @@ const schema = [
       {
         allPreview && (
           <p class="mt-4 max-w-2xl rounded-lg border border-ember-700/50 bg-ember-950/30 px-4 py-3 text-sm text-ember-100">
-            All pages in this category are pre-release speculation and currently noindex. Prefer the
-            <a href="/game-info/" class="underline hover:text-white">confirmed game info</a> until launch.
+            All pages in this category are pre-release speculation. Prefer the
+            <a href="/game-info/" class="underline hover:text-white">confirmed game info</a> until launch,
+            then use these outlines as rewrite checklists.
           </p>
         )
       }

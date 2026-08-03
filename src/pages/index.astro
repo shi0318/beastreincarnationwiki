@@ -4,7 +4,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import JsonLd from '../components/JsonLd.astro';
 import GuideCard from '../components/GuideCard.astro';
 import SourceBadge from '../components/SourceBadge.astro';
-import { SITE, GAME_FACTS } from '../data/site';
+import { SITE, GAME_FACTS, LAUNCH_COPY, OFFER_AVAILABILITY, PRICE_NUMERIC } from '../data/site';
 
 const guides = await getCollection('guides');
 
@@ -72,9 +72,9 @@ const schema = [
     publisher: { '@type': 'Organization', name: GAME_FACTS.publisher },
     offers: {
       '@type': 'Offer',
-      price: '59.99',
+      price: PRICE_NUMERIC,
       priceCurrency: 'USD',
-      availability: 'https://schema.org/PreOrder',
+      availability: OFFER_AVAILABILITY,
       url: GAME_FACTS.source,
     },
   },
@@ -141,7 +141,7 @@ const schema = [
         </a>
       </div>
       <p class="mt-4 text-xs text-ash-500">
-        Source verified from the official Steam listing on {GAME_FACTS.lastVerified}. Pre-purchase is live; the game is not out yet.
+        Source verified from the official Steam listing on {GAME_FACTS.lastVerified}. {LAUNCH_COPY.notOutYetNote || LAUNCH_COPY.availabilitySentence}
       </p>
     </div>
   </section>
@@ -315,10 +315,9 @@ const schema = [
           slotted, whether respeccing is free, and how gear rarity works. Those are exactly the
           details a build guide needs, which is why we are not publishing tier lists yet. The site
           runs on a source-tracking system — every claim carries a confirmation status, and
-          provisional pages are marked <code class="text-ash-200">noindex</code> so speculation
-          never competes with verified facts in search. Pre-purchase is live on Steam at
-          {GAME_FACTS.priceUsd}, with a Deluxe edition at {GAME_FACTS.deluxePriceUsd}, but the game
-          is not out yet.
+          provisional pages are clearly labeled as speculation until they are rewritten from
+          hands-on play. {LAUNCH_COPY.buyVerb} on Steam at
+          {GAME_FACTS.priceUsd}, with a Deluxe edition at {GAME_FACTS.deluxePriceUsd}.
         </p>
       </article>
     </div>
@@ -335,7 +334,7 @@ const schema = [
           Provisional guide outlines
         </h2>
         <p class="mt-2 text-ash-400">
-          These pages are labeled speculation, marked noindex, and written as planning notes until the
+          These pages are labeled speculation and written as planning notes before the
           {GAME_FACTS.releaseDate} launch. Prefer the confirmed info above.
         </p>
       </div>

@@ -65,7 +65,9 @@ export const GAME_FACTS = {
   releaseDate: '4 August 2026',
   releaseDateShort: 'Aug 4, 2026',
   releaseDateISO: '2026-08-04',
-  comingSoon: true,
+  // 全球同步解锁时刻（官方公告：00:00 UTC in all regions）。IS_RELEASED 由此推导，
+  // 因此「发售前 / 发售后」的措辞与 schema 库存状态只依赖这一个值。
+  releaseAtUtc: '2026-08-04T00:00:00Z',
   developer: 'GAME FREAK inc.',
   publisher: 'Fictions',
   // 三平台同步发售（PC 在 Steam；PS5 / Xbox 在各自商店）。Steam 页面只列 PC 是因为
@@ -162,6 +164,60 @@ export const GAME_FACTS = {
   },
   lastVerified: '2026-07-31',
 } as const;
+
+// ─────────────────────────────────────────────────────────────────────────────
+// 发售状态：全站唯一开关。构建时按 releaseAtUtc 判定，发售当天重新构建即自动翻转，
+// 不需要手改任何页面文案或 schema。
+//
+// 为什么用构建时间而非运行时：站点是 output: 'static'，页面在构建时定型；
+// 用运行时判断会让已生成的 HTML 永远停在构建那一刻的状态，反而更容易出错。
+// 代价是发售当天必须触发一次重新构建 —— 这本来就要做（要发上线内容）。
+// ─────────────────────────────────────────────────────────────────────────────
+export const IS_RELEASED = Date.now() >= Date.parse(GAME_FACTS.releaseAtUtc);
+
+// schema.org 库存状态：发售前 PreOrder，发售后 InStock。
+// 硬编码 'PreOrder' 会在 2026-08-04 变成错误的结构化数据（Google 会拿它做富媒体展示）。
+export const OFFER_AVAILABILITY = IS_RELEASED
+  ? 'https://schema.org/InStock'
+  : 'https://schema.org/PreOrder';
+
+// schema.org 的 price 要求裸数字字符串（不带货币符号），currency 单独用 priceCurrency 表示。
+// 从 GAME_FACTS.priceUsd 派生，改价格只需改一处。
+const stripCurrency = (v: string) => v.replace(/[^0-9.]/g, '');
+export const PRICE_NUMERIC = stripCurrency(GAME_FACTS.priceUsd);
+export const DELUXE_PRICE_NUMERIC = stripCurrency(GAME_FACTS.deluxePriceUsd);
+
+// 发售前后措辞。散落在 6+ 个文件里的「pre-purchase is live / 尚未发售」由此统一。
+export const LAUNCH_COPY = IS_RELEASED
+  ? {
+      status: 'Out now · released ' + GAME_FACTS.releaseDateShort,
+      buyVerb: 'Buy',
+      purchaseNoun: 'purchase',
+      // 一句话状态，用于 hero / 页首
+      availabilitySentence: `Out now on ${GAME_FACTS.platform}.`,
+      notOutYetNote: '',
+      // 商店状态：Steam 上「能不能立刻买到并下载」
+      storeStatusSentence: 'It is on sale now on the official Steam store.',
+      steamListingNote: `Steam lists it as released on ${GAME_FACTS.releaseDateShort}.`,
+      preloadNote:
+        'The game is released, so buying it on Steam starts the download immediately.',
+      // 攻略页免责：发售后逐篇改写，措辞不能再说「游戏还没出」
+      guidesCaveat:
+        'Strategy pages written before launch are still marked as pre-release previews until we rewrite each one from hands-on play.',
+    }
+  : {
+      status: 'Coming soon · pre-purchase live',
+      buyVerb: 'Pre-purchase',
+      purchaseNoun: 'pre-purchase',
+      availabilitySentence: `Releases ${GAME_FACTS.releaseDate} on ${GAME_FACTS.platform}.`,
+      notOutYetNote: 'Pre-purchase is live; the game is not out yet.',
+      storeStatusSentence: 'Pre-purchase is already live on the official Steam store.',
+      steamListingNote: `Steam shows coming soon with date ${GAME_FACTS.releaseDateShort}.`,
+      preloadNote:
+        'Steam may enable a preload shortly before launch so files are on disk in advance.',
+      guidesCaveat:
+        'Because the game is not out yet, every strategy guide on this site is marked as a pre-release preview — built from official information and community expectations, not hands-on play.',
+    };
 
 // 来源可信度标签：标注每条内容的证据等级，支撑 E-E-A-T 与发售前内容诚信。
 export type SourceKey =

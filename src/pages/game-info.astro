@@ -2,7 +2,15 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import JsonLd from '../components/JsonLd.astro';
 import SourceBadge from '../components/SourceBadge.astro';
-import { SITE, GAME_FACTS, SOURCES, type SourceKey } from '../data/site';
+import {
+  SITE,
+  GAME_FACTS,
+  SOURCES,
+  LAUNCH_COPY,
+  OFFER_AVAILABILITY,
+  PRICE_NUMERIC,
+  type SourceKey,
+} from '../data/site';
 
 const path = '/game-info/';
 const title = 'Beast of Reincarnation Game Info, Specs & Confirmed Facts';
@@ -18,13 +26,13 @@ const facts = [
   { label: 'Price', value: `${GAME_FACTS.priceUsd} (Deluxe ${GAME_FACTS.deluxePriceUsd})` },
   { label: 'Xbox Game Pass', value: 'Day one — Ultimate & PC Game Pass' },
   { label: 'Controller', value: GAME_FACTS.controllerSupport },
-  { label: 'Status', value: 'Coming soon · pre-purchase live' },
+  { label: 'Status', value: LAUNCH_COPY.status },
 ];
 
 const faq = [
   {
     q: 'When does Beast of Reincarnation release?',
-    a: `Beast of Reincarnation launches on ${GAME_FACTS.releaseDate} (00:00 UTC in all regions). Pre-purchase is already live on the official Steam store.`,
+    a: `Beast of Reincarnation launches on ${GAME_FACTS.releaseDate} (00:00 UTC in all regions). ${LAUNCH_COPY.storeStatusSentence}`,
   },
   {
     q: 'Who is developing and publishing Beast of Reincarnation?',
@@ -56,7 +64,7 @@ const faq = [
   },
   {
     q: 'Are the guides on this site confirmed?',
-    a: 'Not yet. Strategy pages are pre-release previews built from official materials and expectations, not hands-on play. They are labeled speculation and kept noindex until verified after launch.',
+    a: 'Not yet. Strategy pages are pre-release previews built from official materials and expectations, not hands-on play. They are labeled speculation until verified after launch.',
   },
 ];
 
@@ -74,9 +82,9 @@ const schema = [
     publisher: { '@type': 'Organization', name: GAME_FACTS.publisher },
     offers: {
       '@type': 'Offer',
-      price: '59.99',
+      price: PRICE_NUMERIC,
       priceCurrency: 'USD',
-      availability: 'https://schema.org/PreOrder',
+      availability: OFFER_AVAILABILITY,
       url: GAME_FACTS.source,
     },
   },
@@ -165,7 +173,7 @@ const schema = [
       >
         Official Steam store listing (App {GAME_FACTS.steamAppId})
       </a>
-      . Steam shows <strong>coming soon</strong> with date {GAME_FACTS.releaseDateShort}.
+      . {LAUNCH_COPY.steamListingNote}
     </p>
 
     <ul class="mt-6 flex flex-wrap gap-2">
@@ -259,18 +267,30 @@ const schema = [
     </div>
 
     <div class="prose mt-12 max-w-none">
-      <h2>Features, languages & editions</h2>
+      <h2>Features and languages</h2>
       <p>
         Steam lists full controller support (including DualShock / DualSense notes), Steam Achievements,
         Steam Cloud, adjustable difficulty, subtitle options, and family sharing. Supported languages include
         full audio for English and Japanese, with additional text languages listed on the store page.
       </p>
+
+      <h2 id="price">Price and editions</h2>
       <p>
-        Two purchase options currently appear on Steam: the standard edition at {GAME_FACTS.priceUsd}
-        and a Deluxe Edition at {GAME_FACTS.deluxePriceUsd}. Per the official pre-order post, Deluxe
-        adds an Alternate Black Shiba Skin for Koo, a Big Dipper sword and Oni's Hat for Emma, 100,000
-        Amber (vs 30,000 standard), and Vegetable Seedlings. Both editions include the Alternate Brown
-        Shiba Skin for Koo as the pre-order bonus.
+        Two purchase options appear on Steam: the standard edition at
+        {' '}<strong>{GAME_FACTS.priceUsd}</strong> and a Deluxe Edition at
+        {' '}<strong>{GAME_FACTS.deluxePriceUsd}</strong> (USD). Regional pricing varies —
+        those are the figures on the store page as of {GAME_FACTS.lastVerified}.
+      </p>
+      <p>
+        Per the official pre-order post, Deluxe adds an Alternate Black Shiba Skin for Koo, a Big
+        Dipper sword and Oni's Hat for Emma, 100,000 Amber (vs 30,000 standard), and Vegetable
+        Seedlings. Both editions include the Alternate Brown Shiba Skin for Koo as the pre-order
+        bonus.
+      </p>
+      <p>
+        Worth weighing against those prices: on Xbox consoles and Windows the game is in the
+        {' '}<a href="#game-pass">Game Pass catalogue from day one</a>, so a subscription is an
+        alternative to buying it outright. That does not apply to Steam or PlayStation 5.
       </p>
 
       <h2 id="game-pass">Xbox Game Pass, Play Anywhere &amp; handheld</h2>
@@ -300,10 +320,8 @@ const schema = [
 
       <h2>About our guides</h2>
       <p>
-        Because the game is not out yet, every strategy guide on this site is marked as a
-        <strong> pre-release preview</strong> - built from official information and community expectations,
-        not hands-on play. Those pages stay noindex until we verify them after launch. For planning and SEO,
-        treat this Game Info page as the primary source of truth.
+        {LAUNCH_COPY.guidesCaveat} Those pages stay labeled as speculation until we verify them
+        after launch. For planning and SEO, treat this Game Info page as the primary source of truth.
       </p>
       <p>
         You can still <a href="/guides/">browse provisional previews</a>, or read our
