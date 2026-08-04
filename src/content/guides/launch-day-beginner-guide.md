@@ -32,6 +32,11 @@ Guarding is a fallback, not a plan. It drains the **entanglement gauge** (the pa
 
 When an enemy **flashes red** as it winds up, the attack cannot be parried or guarded at all. Dodge instead — **Ctrl** on PC, **B** on Xbox, **Circle** on PlayStation — then press attack for a counterattack.
 
+<figure>
+  <img src="/images/beast-of-reincarnation-emma-parry-flower-beast.webp" alt="Emma in a straw hat braced low in tall grass with her sword drawn, facing a shaggy plant-creature covered in purple petals beside a ruined stone bridge in Beast of Reincarnation" width="1600" height="900" loading="lazy" decoding="async" />
+  <figcaption>Official Beast of Reincarnation screenshot. The information you need for a parry is on the <em>enemy</em>, not on Emma — you are reading that creature's wind-up, and the confirmation you timed it right is the yellow sparkle on your own blade afterwards.</figcaption>
+</figure>
+
 ## Two bars, two purposes — do not confuse them
 
 New players routinely conflate these. They are separate resources that happen to share one source (parrying).
@@ -71,6 +76,11 @@ Under an enemy's red HP bar is a **yellow stagger bar** that fills on every succ
 
 The exception: the game's heavyweights, **Nushi** included, cannot be stunned. Filling their stagger bar **dazes** them instead — no execution prompt, but several seconds of free damage.
 
+<figure>
+  <img src="/images/beast-of-reincarnation-machine-swarm-combat.webp" alt="Emma surrounded by eight or more spindly machine enemies with glowing red markings in a ruined overgrown clearing in Beast of Reincarnation" width="1600" height="900" loading="lazy" decoding="async" />
+  <figcaption>Official Beast of Reincarnation screenshot. Crowds like this are exactly where the stagger bar earns its keep — an execution kills outright regardless of remaining HP, so parrying your way through a group is far faster than chipping each enemy down.</figcaption>
+</figure>
+
 ## Elements, and matching Emma to Koo
 
 There are **four elemental effects** — **poison, acid, flame, lightning** — all of which deal damage over time. Alongside them sit two utility damage types: **destructive** attacks break enemy shields, and **bind** attacks restrict movement.
@@ -78,6 +88,11 @@ There are **four elemental effects** — **poison, acid, flame, lightning** — 
 An enemy's weakness is displayed next to its HP bar. Open Koo's bloom art menu and the word **"weak"** is stamped over any art that matches it, so you never have to guess mid-fight.
 
 Emma's attacks and weapon can also be imbued with an element, and buildup is faster when **both** halves of the duo push the same one — a real reason to memorise which blade art and Nushi skill combos pair with your current bloom arts. Mods interact with this too: Polygon's example is running the flame-imbued Higanbana bloom art for burn, then equipping the **Rapid Cooling** mod, which returns an entanglement point whenever you hit a burning enemy.
+
+<figure>
+  <img src="/images/beast-of-reincarnation-blighted-boar-enemies.webp" alt="Over-the-shoulder view of Emma watching two blighted boars with green foliage and purple flowers on their backs face off against a tall blue-lit machine enemy, with patches of grass burning nearby in Beast of Reincarnation" width="1600" height="900" loading="lazy" decoding="async" />
+  <figcaption>Official Beast of Reincarnation screenshot, and two lessons in one frame: fire spreading through the grass, and two hostile factions — blighted fauna and a machine — squared up against each other rather than against Emma. Let them finish before you step in.</figcaption>
+</figure>
 
 ## Healing, status effects, and hunger
 
@@ -100,6 +115,11 @@ Emma's blight-stricken braid has two abilities you should master immediately:
 - **Extend** — grow her hair forward in a straight line to bridge gaps.
 
 Both are movement options on paper and **opening moves** in practice. Extend a bridge over an enemy, walk out onto it and drop for an **air assassination**; or use Lift to climb above an enemy's awareness range and fall on it. Crouching and approaching from behind works too. Kotaku makes the wider point that the level design consistently offers somewhere to climb to, so a fight you are not ready for is usually a fight you can decline — and height is also an excellent place to shoot from.
+
+<figure>
+  <img src="/images/beast-of-reincarnation-waterfall-grotto.webp" alt="Emma and Koo standing on a rock at the foot of a grotto with three tall waterfalls, stacked stone ledges, ruined wooden walkways and floating white flowers in Beast of Reincarnation" width="1600" height="900" loading="lazy" decoding="async" />
+  <figcaption>Official Beast of Reincarnation screenshot. Read spaces like this vertically: every ledge is a Lift target, every gap is an Extend bridge, and anything above an enemy is an air assassination waiting to happen.</figcaption>
+</figure>
 
 Two blunt limits: Emma **cannot swim**, so fleeing into water just deposits you back on the shore with the enemies still waiting; and the environment does not care that you are outnumbered.
 
@@ -125,6 +145,11 @@ One genuinely buried setting: the game ships with **both Japanese and English fu
 - A **Deluxe upgrade DLC** (App 4146830, **$9.99**) released alongside the game, so standard-edition buyers can add the Deluxe content afterwards. It contains black and brown Shiba skins for Koo, the "Oni's Hat" for Emma, Emma's sword "Big Dipper", **100,000 Amber**, and a set of vegetable seedlings.
 - Fictions and Game Freak asked players to route feedback, questions and technical issues through the **official threads pinned in the Steam forums** so reports reach the team together.
 - Reception is genuinely split. As of **4 August 2026** the Steam user reviews sat at **Mixed** — 193 positive out of 358 — which is worth knowing before you buy at full price. That number moves daily; check the store page rather than trusting this snapshot.
+
+<figure>
+  <img src="/images/beast-of-reincarnation-koo-shiba-skin.webp" alt="Official Beast of Reincarnation render of Koo in the brown Shiba coat, a ginger-and-cream dog with golden fern foliage along his back and a tall branching tail of golden leaves, on a black background" width="1600" height="900" loading="lazy" decoding="async" />
+  <figcaption>Koo wearing the Brown Shiba Skin, from the official store gallery. This one is the pre-order bonus granted with both editions; the black variant is part of the Deluxe content, which is also sold as that standalone $9.99 upgrade DLC.</figcaption>
+</figure>
 
 ## What we have not verified
 

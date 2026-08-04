@@ -32,6 +32,11 @@ If you have not read the systems primer yet, the [beginner's guide](/guides/laun
 
 Levels are the figures GamesRadar's Rangifer guide reports; if the first attempt feels impossible, the fix is usually two or three levels rather than better execution. Kill nearby enemies for XP and come back.
 
+<figure>
+  <img src="/images/beast-of-reincarnation-wasteland-colossal-boss.webp" alt="Emma and Koo standing tiny on a rock ledge at sunset, dwarfed by the silhouette of a colossal long-legged creature with branching antlers, beside a ruined communications tower in the wasteland of Beast of Reincarnation" width="1600" height="900" loading="lazy" decoding="async" />
+  <figcaption>Official Beast of Reincarnation screenshot of a colossal antlered Malefect towering over Emma and Koo. Game Freak has not confirmed which creature this is, so we are not labelling it Rangifer — but it is an honest picture of the scale a Nushi encounter operates at, and of why height and distance matter more than trading blows.</figcaption>
+</figure>
+
 ## Before you swing: take the arena's camp
 
 The centre of Rangifer's first arena has a **tall building with a campsite on top**, plus **armor** up there. Unlock the camp before you commit to the fight. This is the general rule the launch coverage keeps repeating — most boss arenas have a campsite nearby for resting, saving and applying upgrades, and some are not obvious, so you do not want to discover it after a death with no checkpoint set.
@@ -53,11 +58,21 @@ Rangifer is **weak to fire** in both encounters. In practice that means:
 - For the rematch you can also pick up **Fire Arrows** from **Brad** back at the Cleanse Walker, giving Emma a fire option of her own.
 - Caveat for fight two: Rangifer keeps the fire weakness but becomes **more resistant to the Burn status effect**, so lean on raw fire damage rather than assuming burn ticks will carry you.
 
+<figure>
+  <img src="/images/beast-of-reincarnation-koo-blighted-wolf.webp" alt="Official Beast of Reincarnation character render of Koo, a dark-furred dog with red blighted foliage growing along his back and tail, against a black background" width="1600" height="900" loading="lazy" decoding="async" />
+  <figcaption>Koo in the official character gallery. Against Rangifer he is your fire delivery system — every antler parry you land is florescence points spent on <strong>Higanbana: Seeds</strong>, and the fight is much longer without that loop.</figcaption>
+</figure>
+
 ## Parry the antlers
 
 Rangifer's most frequent attack is a **swing of its antlers**, and despite the creature's size, **this attack is parryable**. Parry it deliberately, for two reasons: the parry builds **Koo's FP** so you can keep casting fire, and the swing **leaves Rangifer's head lowered**, which is your safest melee window in the whole fight.
 
 That is the loop: parry the antlers, punish the lowered head, spend FP on fire, repeat.
+
+<figure>
+  <img src="/images/beast-of-reincarnation-emma-parry-flower-beast.webp" alt="Emma in a straw hat braced low in tall grass with her sword drawn, facing a shaggy plant-creature covered in purple petals beside a ruined stone bridge in Beast of Reincarnation" width="1600" height="900" loading="lazy" decoding="async" />
+  <figcaption>Official Beast of Reincarnation screenshot of Emma squaring up to a smaller plant-type Malefect. The same discipline applies to Rangifer: hold your ground for the parry on a normal swing, and only give ground when the body lights up red.</figcaption>
+</figure>
 
 ## The attacks that will kill you
 
