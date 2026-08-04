@@ -6,7 +6,7 @@ import { SITE, GAME_FACTS } from '../data/site';
 const path = '/disclaimer/';
 const title = 'Disclaimer & Editorial Policy';
 const description =
-  'How Beast of Reincarnation Wiki handles official facts, pre-release speculation, affiliate independence, and post-launch corrections.';
+  'How Beast of Reincarnation Wiki handles official facts, hands-on coverage of the shipped game, pages written before launch, affiliate independence, and corrections.';
 
 const schema = [
   {
@@ -43,8 +43,9 @@ const schema = [
       Disclaimer & Editorial Policy
     </h1>
     <p class="mt-4 text-lg leading-relaxed text-ash-300">
-      This page explains how we separate confirmed Steam information from pre-release guide outlines,
-      and how we will revise content after Beast of Reincarnation launches on {GAME_FACTS.releaseDate}.
+      Beast of Reincarnation released on {GAME_FACTS.releaseDate}. This page explains how we separate
+      confirmed store information from guides written against the shipped build, and from pages that
+      still predate launch.
     </p>
 
     <div class="prose mt-10 max-w-none">
@@ -55,31 +56,40 @@ const schema = [
         All trademarks remain the property of their respective owners.
       </p>
 
-      <h2>Official facts vs speculation</h2>
+      <h2>How we label sources</h2>
       <p>
-        Confirmed release, systems, pricing, language, and hardware details are drawn from the official
-        Steam listing and labeled <strong>Official</strong>. Strategy pages written before launch are labeled
-        <strong>Speculation</strong>, shown with a pre-release notice, and written so they are not
-        presented as verified walkthroughs.
+        Confirmed release, systems, pricing, language, and hardware details come from the official
+        Steam listing and first-party announcements, and are labeled <strong>Official</strong>. Guides
+        describing the shipped game are labeled <strong>Hands-on</strong> and name the post-launch
+        coverage each detail came from at the bottom of the page — that label means sourced and
+        attributed, not that we personally cleared every fight. Pages written before the
+        {' '}{GAME_FACTS.releaseDateShort} release remain labeled <strong>Speculation</strong> and keep
+        a notice saying so until they are rewritten; we do not silently promote them.
       </p>
 
-      <h2>What we will not claim before launch</h2>
+      <h2>What we will not claim</h2>
       <ul>
         <li>Exact frame data, damage numbers, or drop tables as verified facts</li>
-        <li>Hands-on boss clears we have not performed</li>
-        <li>Map routes, puzzles, or item locations as final unless officially shown</li>
+        <li>Boss clears or routes we have neither performed nor found a source for</li>
+        <li>Full maps, puzzle solutions, or item locations as complete</li>
+        <li>Tier lists or "best build" rankings, which no published source supports yet</li>
       </ul>
 
-      <h2>After launch</h2>
+      <h2>Rewriting pre-launch pages</h2>
       <p>
-        When the game is out, we will re-test and rewrite preview guides against the final build, update
-        source labels, and refresh dates so readers can see what changed.
+        The game is out, so preview outlines are being rewritten against the final build one at a
+        time, with source labels and dates updated as each is done. Until a page is rewritten it says
+        plainly at the top that it predates launch. The
+        {' '}<a href="/guides/launch-day-beginner-guide/">beginner's guide</a> and the
+        {' '}<a href="/guides/nushi-boss-fight/">Rangifer Nushi guide</a> are the pages currently
+        written from the released game.
       </p>
 
       <h2>Corrections</h2>
       <p>
-        If you spot an error in a confirmed fact or a misleading pre-release claim, please
-        <a href="/contact/">contact us</a>. We prioritize corrections to official data first.
+        If you spot an error in a confirmed fact, or a claim on a guide page that does not match the
+        shipped game, please <a href="/contact/">contact us</a>. We prioritize corrections to official
+        data first.
       </p>
 
       <h2>External links</h2>

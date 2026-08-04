@@ -11,7 +11,7 @@ const schema = [
     '@type': 'AboutPage',
     name: `About ${SITE.name}`,
     url: new URL(path, SITE.url).href,
-    description: `About ${SITE.name} - how we cover Beast of Reincarnation before and after launch.`,
+    description: `About ${SITE.name} - how we cover Beast of Reincarnation now that it is out, and how we label what is verified.`,
   },
   {
     '@context': 'https://schema.org',
@@ -26,7 +26,7 @@ const schema = [
 
 <BaseLayout
   title="About Us"
-  description={`About ${SITE.name}: a community wiki focused on confirmed Beast of Reincarnation facts first, with clearly labeled pre-release previews until launch.`}
+  description={`About ${SITE.name}: a community wiki that puts confirmed Beast of Reincarnation facts first and labels every page by how solid its sourcing is.`}
   path={path}
 >
   <JsonLd slot="head" schema={schema} />
@@ -44,8 +44,8 @@ const schema = [
       About {SITE.name}
     </h1>
     <p class="mt-4 text-lg leading-relaxed text-ash-300">
-      {SITE.name} helps players track what is confirmed about Beast of Reincarnation and prepare for launch
-      without treating speculation as hands-on fact.
+      {SITE.name} helps players get through Beast of Reincarnation — out since
+      {' '}{GAME_FACTS.releaseDateShort} — without treating speculation as hands-on fact.
     </p>
 
     <div class="prose mt-10 max-w-none">
@@ -53,14 +53,18 @@ const schema = [
       <ul>
         <li><strong>Confirmed game info</strong> - release date, developer, combat pillars, PC specs, and Steam features.</li>
         <li><strong>Source labels</strong> - every page shows how solid the information is.</li>
-        <li><strong>Pre-release honesty</strong> - strategy outlines stay provisional and clearly labeled until verified after launch.</li>
-        <li><strong>Post-launch rewrites</strong> - real boss, combat, and exploration guides will replace previews after {GAME_FACTS.releaseDate}.</li>
+        <li><strong>Named sources</strong> - guides written from the shipped game list the coverage each detail came from at the bottom of the page.</li>
+        <li><strong>Honest labelling</strong> - pages written before the {GAME_FACTS.releaseDateShort} launch keep a notice saying so until they are rewritten, rather than being quietly re-dated.</li>
       </ul>
 
-      <h2>How we write before launch</h2>
+      <h2>How we label a page</h2>
       <p>
-        Before the game is out, we do not claim hands-on testing. Official Steam copy, trailers, and clearly
-        marked analysis are the only foundations we use. If something is expected rather than confirmed, we say so.
+        Three tiers do most of the work. <strong>Official</strong> means it is on the Steam listing or
+        in a first-party announcement. <strong>Hands-on</strong> means it describes the shipped game
+        and cites the post-launch coverage it came from. <strong>Speculation</strong> means it was
+        written before release from trailers and store copy, and has not been checked against the real
+        build. We do not claim to have personally played through content we have not, and we do not
+        publish tier lists or drop tables that no source supports.
       </p>
 
       <h2>Ownership</h2>
@@ -72,9 +76,11 @@ const schema = [
 
       <h2>Get in touch</h2>
       <p>
-        Spotted an error, have a correction, or want to suggest a post-launch guide? Visit our
+        Spotted an error, have a correction, or want to suggest a guide? Visit our
         <a href="/contact/">contact page</a>. Editorial rules live on the
-        <a href="/disclaimer/">disclaimer</a> page.
+        <a href="/disclaimer/">disclaimer</a> page, and the current starting points are the
+        <a href="/guides/launch-day-beginner-guide/">beginner's guide</a> and the
+        <a href="/game-info/">confirmed game info</a>.
       </p>
     </div>
   </section>

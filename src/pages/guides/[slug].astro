@@ -177,10 +177,17 @@ const fmt = (d: Date) =>
           >
             <span aria-hidden="true" class="mt-0.5 text-lg">⚠️</span>
             <p>
-              <strong class="font-semibold text-ember-300">Pre-release preview.</strong>{' '}
-              Beast of Reincarnation is scheduled for {GAME_FACTS.releaseDate} on Steam. This page is a
-              planning outline based on official materials and expectations, not hands-on play. Names,
-              routes, and tactics may change - we will verify everything after launch.
+              <strong class="font-semibold text-ember-300">Written before launch.</strong>{' '}
+              Beast of Reincarnation released on {GAME_FACTS.releaseDateShort}, and this page has not
+              yet been rewritten against the shipped build. It is a planning outline drawn from
+              official pre-launch materials, not hands-on play, so names, routes and tactics may be
+              wrong. For systems verified in the released game, start with the{' '}
+              <a
+                href="/guides/launch-day-beginner-guide/"
+                class="underline decoration-ember-500/60 hover:text-white"
+              >
+                beginner's guide
+              </a>.
             </p>
           </aside>
         )

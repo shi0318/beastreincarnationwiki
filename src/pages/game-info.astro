@@ -15,10 +15,11 @@ import {
 const path = '/game-info/';
 const title = 'Beast of Reincarnation Game Info, Specs & Confirmed Facts';
 const description =
-  'Confirmed Beast of Reincarnation info: Aug 4, 2026 release on PC, PS5 & Xbox, day one on Game Pass, hybrid combat, PC requirements, price and FAQ.';
+  'Confirmed Beast of Reincarnation info: out now on PC, PS5 & Xbox, day one on Game Pass, hybrid combat, difficulty options, PC requirements, price and FAQ.';
 
 const facts = [
-  { label: 'Release date', value: GAME_FACTS.releaseDate },
+  { label: 'Release date', value: `${GAME_FACTS.releaseDate} — out now` },
+  { label: 'Launch build', value: `Version ${GAME_FACTS.launchVersion}` },
   { label: 'Developer', value: GAME_FACTS.developer },
   { label: 'Publisher', value: GAME_FACTS.publisher },
   { label: 'Platforms', value: GAME_FACTS.platform },
@@ -26,13 +27,14 @@ const facts = [
   { label: 'Price', value: `${GAME_FACTS.priceUsd} (Deluxe ${GAME_FACTS.deluxePriceUsd})` },
   { label: 'Xbox Game Pass', value: 'Day one — Ultimate & PC Game Pass' },
   { label: 'Controller', value: GAME_FACTS.controllerSupport },
+  { label: 'Difficulty', value: `${GAME_FACTS.difficulties.join(' / ')} — switchable at any time` },
   { label: 'Status', value: LAUNCH_COPY.status },
 ];
 
 const faq = [
   {
-    q: 'When does Beast of Reincarnation release?',
-    a: `Beast of Reincarnation launches on ${GAME_FACTS.releaseDate} (00:00 UTC in all regions). ${LAUNCH_COPY.storeStatusSentence}`,
+    q: 'When did Beast of Reincarnation release?',
+    a: `Beast of Reincarnation released on ${GAME_FACTS.releaseDate}, unlocking at 00:00 UTC in all regions. ${LAUNCH_COPY.storeStatusSentence} The launch build is version ${GAME_FACTS.launchVersion}.`,
   },
   {
     q: 'Who is developing and publishing Beast of Reincarnation?',
@@ -40,7 +42,7 @@ const faq = [
   },
   {
     q: 'What platforms is Beast of Reincarnation on?',
-    a: `Beast of Reincarnation launches on ${GAME_FACTS.platform} — all three on ${GAME_FACTS.releaseDate}. On PC it is sold via Steam; the PS5 and Xbox Series X|S versions release the same day on their own stores.`,
+    a: `Beast of Reincarnation is out on ${GAME_FACTS.platform} — all three released on ${GAME_FACTS.releaseDate}. On PC it is sold via Steam; the PS5 and Xbox Series X|S versions launched the same day on their own stores.`,
   },
   {
     q: 'Is Beast of Reincarnation on Xbox Game Pass?',
@@ -60,11 +62,15 @@ const faq = [
   },
   {
     q: 'How much does Beast of Reincarnation cost on Steam?',
-    a: `Steam currently lists the standard edition at ${GAME_FACTS.priceUsd} and the Deluxe Edition at ${GAME_FACTS.deluxePriceUsd} (USD, no discount at last check).`,
+    a: `Steam lists the standard edition at ${GAME_FACTS.priceUsd} and the Deluxe Edition at ${GAME_FACTS.deluxePriceUsd} (USD, no discount at last check). The Deluxe content also released as a standalone ${GAME_FACTS.deluxeDlc.priceUsd} upgrade DLC, so standard-edition owners can add it afterwards.`,
+  },
+  {
+    q: 'Does Beast of Reincarnation have difficulty options?',
+    a: `Yes. Steam lists an Adjustable Difficulty tag, and post-launch coverage names three settings — ${GAME_FACTS.difficulties.join(', ')} — which can be changed at any time. Story reduces incoming damage substantially but still requires parrying and dodging.`,
   },
   {
     q: 'Are the guides on this site confirmed?',
-    a: 'Not yet. Strategy pages are pre-release previews built from official materials and expectations, not hands-on play. They are labeled speculation until verified after launch.',
+    a: `Partly. Pages badged Hands-on are written from the shipped game with their sources cited on the page. Pages still badged Speculation were written before the ${GAME_FACTS.releaseDateShort} launch from official pre-release materials, carry a notice saying so, and are being rewritten.`,
   },
 ];
 
@@ -320,11 +326,15 @@ const schema = [
 
       <h2>About our guides</h2>
       <p>
-        {LAUNCH_COPY.guidesCaveat} Those pages stay labeled as speculation until we verify them
-        after launch. For planning and SEO, treat this Game Info page as the primary source of truth.
+        {LAUNCH_COPY.guidesCaveat} Pages that have been rewritten from the shipped game carry a
+        <strong>Hands-on</strong> badge and list the coverage each detail came from at the bottom of
+        the page; anything still badged <strong>Speculation</strong> shows a notice saying it predates
+        launch. This Game Info page remains the store-verified baseline.
       </p>
       <p>
-        You can still <a href="/guides/">browse provisional previews</a>, or read our
+        Start with the <a href="/guides/launch-day-beginner-guide/">beginner's guide</a> for the
+        systems in the released build, or the <a href="/guides/nushi-boss-fight/">Rangifer Nushi
+        fight</a>. You can also <a href="/guides/">browse every guide</a>, or read our
         <a href="/disclaimer/">editorial disclaimer</a>.
       </p>
       <p>
@@ -351,8 +361,9 @@ const schema = [
     <div class="prose mt-12 max-w-none">
       <h2>How we label sources</h2>
       <p>
-        Every fact and guide carries a source label so you always know how solid the information is  - 
-        from officially confirmed to pre-release speculation.
+        Every fact and guide carries a source label so you always know how solid the information is  -
+        from officially confirmed, through hands-on coverage of the shipped game, down to pages
+        written before release.
       </p>
     </div>
 

@@ -17,11 +17,11 @@ const guides = defineCollection({
     updateDate: z.coerce.date().optional(),
     order: z.number().default(50),
     featured: z.boolean().default(false),
-    // 发售前预测内容标记：游戏 2026-08-04 才发售，未经实机核实的攻略需标注
+    // 发售前预测内容标记：游戏已于 2026-08-04 发售，未按实机重写的旧攻略仍需标注
     preview: z.boolean().default(false),
     // 内容来源可信度标签，用于卡片/详情页徽章
     source: z
-      .enum(['official', 'trailer', 'analysis', 'lore', 'speculation'])
+      .enum(['official', 'handson', 'trailer', 'analysis', 'lore', 'speculation'])
       .default('speculation'),
   }),
 });

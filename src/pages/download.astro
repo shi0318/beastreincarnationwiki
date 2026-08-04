@@ -169,10 +169,11 @@ const schema = [
 
       <h2>Is there a demo to download right now?</h2>
       <p>
-        <strong>No.</strong> {GAME_FACTS.developer} and {GAME_FACTS.publisher} have never announced a
-        demo, a beta, or a public test build. The "demo" you may have read about in preview coverage
-        was a press event — journalists played a timed hands-on build at a Game Freak showcase, not
-        something that was ever downloadable.
+        <strong>No.</strong> {GAME_FACTS.developer} and {GAME_FACTS.publisher} never announced a
+        demo, a beta, or a public test build, and none appeared at launch. The "demo" you may have
+        read about in pre-release coverage was a press event — journalists played a timed hands-on
+        build at a Game Freak showcase, not something that was ever downloadable. The full game is
+        the only build there has ever been.
       </p>
       <p>
         That is worth stating plainly, because "beast of reincarnation demo" and "download" are
@@ -217,8 +218,9 @@ const schema = [
       <p>
         Steam lists <strong>45 GB of available space</strong>, and an <strong>SSD is required</strong>
         {' '}— not recommended, required. Plan for more than 45 GB free: Steam needs headroom while it
-        unpacks, and day-one patches usually add to the footprint. If your only free space is on a
-        mechanical drive, sort that out before launch day rather than during it.
+        unpacks, and the launch build is already at version {GAME_FACTS.launchVersion}, so patches
+        have added to the footprint. If your only free space is on a mechanical drive, sort that out
+        before you start the download rather than halfway through it.
       </p>
 
       <h2>PC system requirements at a glance</h2>
@@ -285,25 +287,31 @@ const schema = [
 
       <h2>Console downloads</h2>
       <p>
-        PlayStation 5 and Xbox Series X|S versions launch the same day and are downloaded through
-        their own storefronts — on Xbox, either as a purchase or through Game Pass. No Nintendo
-        version has been announced. Install sizes for the console builds have not been published; the
-        45 GB figure above is the PC requirement.
+        The PlayStation 5 and Xbox Series X|S versions released the same day and are downloaded
+        through their own storefronts — on Xbox, either as a purchase or through Game Pass. No
+        Nintendo version has been announced. Install sizes for the console builds have not been
+        published; the 45 GB figure above is the PC requirement.
       </p>
 
-      <h2>Launch-day checklist</h2>
+      <h2>Before you start playing</h2>
       <ol>
         <li>Confirm at least 50–60 GB free on an SSD.</li>
-        <li>Update GPU drivers — day-one drivers usually land within a week of a major release.</li>
+        <li>Update GPU drivers — both tiers assume upscaling, so driver-side scaling matters.</li>
         <li>Check your GPU against the table above and decide your upscaling setting in advance.</li>
+        <li>
+          If you want English voice acting, set it from the <strong>main menu</strong> before starting
+          a save — the in-game options do not expose the audio language.
+        </li>
         <li>
           Read the <a href="/game-info/">confirmed game info</a> so you know which systems are real
           and which are still unannounced.
         </li>
       </ol>
       <p>
-        Our strategy pages stay marked as provisional and out of search until we can test the shipped
-        game. After {GAME_FACTS.releaseDate} they get rewritten from hands-on play.
+        Then start with our <a href="/guides/launch-day-beginner-guide/">beginner's guide</a>, which
+        covers the parry, florescence points and bloom arts as they work in the shipped build, or the
+        {' '}<a href="/guides/nushi-boss-fight/">Rangifer Nushi fight</a>. Pages written before launch
+        that we have not yet rewritten still carry a notice saying so.
       </p>
     </div>
 

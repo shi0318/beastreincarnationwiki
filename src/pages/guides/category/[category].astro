@@ -28,8 +28,8 @@ const meta = CATEGORIES[cat];
 const allPreview = items.every((g) => g.data.preview);
 
 const path = `/guides/category/${cat}/`;
-const title = `${meta.label} Pre-Release Outlines`;
-const description = `${meta.blurb} Provisional ${meta.label.toLowerCase()} notes for Beast of Reincarnation ahead of the ${GAME_FACTS.releaseDate} launch.`;
+const title = `Beast of Reincarnation ${meta.label}`;
+const description = `${meta.blurb} Beast of Reincarnation ${meta.label.toLowerCase()} for the shipped ${GAME_FACTS.releaseDateShort} release, with sources cited on every page.`;
 
 const schema = [
   {
@@ -94,9 +94,14 @@ const schema = [
       {
         allPreview && (
           <p class="mt-4 max-w-2xl rounded-lg border border-ember-700/50 bg-ember-950/30 px-4 py-3 text-sm text-ember-100">
-            All pages in this category are pre-release speculation. Prefer the
-            <a href="/game-info/" class="underline hover:text-white">confirmed game info</a> until launch,
-            then use these outlines as rewrite checklists.
+            Every page in this category was written before the {GAME_FACTS.releaseDateShort} release
+            and has not yet been rewritten against the shipped game. Treat them as outlines, prefer
+            the <a href="/game-info/" class="underline hover:text-white">confirmed game info</a>, and
+            start from the
+            <a href="/guides/launch-day-beginner-guide/" class="underline hover:text-white">
+              beginner's guide
+            </a>{' '}
+            for verified systems.
           </p>
         )
       }

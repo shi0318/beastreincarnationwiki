@@ -8,7 +8,7 @@ import { SITE, GAME_FACTS, LAUNCH_COPY, OFFER_AVAILABILITY, PRICE_NUMERIC } from
 
 const guides = await getCollection('guides');
 
-const homeTitle = `${SITE.name} - Release Date, Story & Guides`;
+const homeTitle = `${SITE.name} - Guides, Combat & Confirmed Game Info`;
 
 const sorted = [...guides].sort((a, b) => {
   if (a.data.featured !== b.data.featured) return a.data.featured ? -1 : 1;
@@ -19,11 +19,13 @@ const sorted = [...guides].sort((a, b) => {
 const previews = sorted.slice(0, 6);
 
 const confirmedFacts = [
-  { label: 'Release date', value: GAME_FACTS.releaseDate },
+  { label: 'Status', value: `Out now — released ${GAME_FACTS.releaseDateShort}` },
+  { label: 'Launch build', value: `Version ${GAME_FACTS.launchVersion}` },
   { label: 'Developer', value: GAME_FACTS.developer },
   { label: 'Publisher', value: GAME_FACTS.publisher },
   { label: 'Platform', value: GAME_FACTS.platform },
   { label: 'Combat', value: 'Real-time + turn-based hybrid' },
+  { label: 'Difficulty', value: `${GAME_FACTS.difficulties.join(' / ')} — switchable any time` },
   { label: 'Price (Steam)', value: `${GAME_FACTS.priceUsd} / Deluxe ${GAME_FACTS.deluxePriceUsd}` },
   { label: 'Xbox Game Pass', value: 'Day one — Ultimate & PC Game Pass' },
   { label: 'Xbox extras', value: 'Play Anywhere · Handheld optimized' },
@@ -111,23 +113,29 @@ const schema = [
         Beast of Reincarnation
       </p>
       <p class="mt-3 inline-flex flex-wrap items-center gap-2 rounded-full border border-ember-700/60 bg-ember-950/40 px-3 py-1 text-sm text-ember-200">
-        <span aria-hidden="true">📅</span>
-        Release: {GAME_FACTS.releaseDate} · PC · PS5 · Xbox Series X|S · {GAME_FACTS.developer}
+        <span aria-hidden="true">🟢</span>
+        Out now ({GAME_FACTS.releaseDateShort}) · PC · PS5 · Xbox Series X|S · {GAME_FACTS.developer}
       </p>
       <p class="mt-2 inline-flex flex-wrap items-center gap-2 rounded-full border border-moss-800/70 bg-moss-950/40 px-3 py-1 text-sm text-moss-300">
         <span aria-hidden="true">🎮</span>
         Day one on Xbox Game Pass Ultimate &amp; PC Game Pass · Play Anywhere · Handheld optimized
       </p>
       <h1 class="mt-4 max-w-3xl font-display text-4xl font-bold leading-tight text-ash-50 md:text-6xl">
-        Beast of Reincarnation Wiki — Release Date, Story & Confirmed Game Info
+        Beast of Reincarnation Wiki — Guides, Combat Systems & Confirmed Game Info
       </h1>
       <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ash-300">
         {GAME_FACTS.shortDescription}
       </p>
       <div class="mt-8 flex flex-wrap gap-3">
         <a
-          href="/game-info/"
+          href="/guides/launch-day-beginner-guide/"
           class="rounded-lg bg-ember-600 px-6 py-3 font-semibold text-ash-950 transition-colors hover:bg-ember-500"
+        >
+          Beginner's guide
+        </a>
+        <a
+          href="/game-info/"
+          class="rounded-lg border border-ash-600 px-6 py-3 font-semibold text-ash-100 transition-colors hover:border-ash-400 hover:bg-ash-800"
         >
           Confirmed game info
         </a>
@@ -141,7 +149,7 @@ const schema = [
         </a>
       </div>
       <p class="mt-4 text-xs text-ash-500">
-        Source verified from the official Steam listing on {GAME_FACTS.lastVerified}. {LAUNCH_COPY.notOutYetNote || LAUNCH_COPY.availabilitySentence}
+        Source verified from the official Steam listing on {GAME_FACTS.lastVerified}. {LAUNCH_COPY.availabilitySentence} Launch build: version {GAME_FACTS.launchVersion}.
       </p>
     </div>
   </section>
@@ -156,8 +164,9 @@ const schema = [
         <SourceBadge source="official" />
       </div>
       <p class="max-w-3xl text-ash-300">
-        Before launch, this site prioritizes official Steam facts over strategy speculation.
-        Use this section for release planning; treat preview guides as provisional only.
+        The game is out, so this section is the official baseline — release, platforms, price,
+        specs and the launch build number — checked against the Steam listing rather than
+        summarised from coverage.
       </p>
       <p class="mt-3 max-w-3xl text-ash-400">
         One detail the Steam page does not show: on Xbox and Windows the game is in the
@@ -267,14 +276,17 @@ const schema = [
           a pet following behind.
         </p>
         <p class="mt-3 max-w-3xl text-ash-400">
-          In practice that means two resource layers to think about: Emma's moment-to-moment
-          positioning and attacks, and the timing of Koo's commanded techniques. Game Freak has not
-          published frame data, stamina rules, or a full move list, so anyone posting combo routes
-          or parry timings right now is guessing. Our
+          Now that the game has shipped, the specifics are known: a successful
+          <strong class="text-ash-50">parry</strong> is the engine of the whole kit, feeding two
+          separate resources — <strong class="text-ash-50">florescence points</strong> for Koo's
+          bloom arts and the <strong class="text-ash-50">entanglement gauge</strong> for guarding,
+          blade arts and Nushi skills. Bloom arts run through a quicktime event, bosses that cannot
+          be stunned get <em>dazed</em> instead, and entanglement overdrive only slows time rather
+          than firing off a super move. Our
+          <a href="/guides/launch-day-beginner-guide/" class="text-ember-400 hover:text-ember-500">beginner's
+          guide</a> breaks all of it down with the inputs, and the
           <a href="/guides/category/combat/" class="text-ember-400 hover:text-ember-500">combat
-          pages</a> separate the officially confirmed pillars from provisional technique notes, and
-          the notes are labeled as speculation until we can test the shipped game on
-          {GAME_FACTS.releaseDate}.
+          section</a> collects the rest.
         </p>
       </article>
 
@@ -307,39 +319,47 @@ const schema = [
         <p class="mt-3 max-w-3xl text-ash-300">
           Officially, you customize your playstyle through skill trees, gear, and
           <strong class="text-ash-50">spirit stones</strong>, with ranged, stealthy, and aggressive
-          loadouts all called out by name. Three named archetypes in pre-launch marketing is a
-          strong signal that build variety is a real pillar rather than a bullet point.
+          loadouts all called out by name. Three named archetypes in the marketing turned out to be
+          a real pillar rather than a bullet point: Koo's bloom arts take
+          <strong class="text-ash-50">mods</strong> that reshape what each art does, Emma's blade
+          arts sit on their own upgradeable tree, and both can be respecced once you reach the
+          relevant NPC.
         </p>
         <p class="mt-3 max-w-3xl text-ash-400">
-          What is not public: the actual skill tree layout, how spirit stones are acquired or
-          slotted, whether respeccing is free, and how gear rarity works. Those are exactly the
-          details a build guide needs, which is why we are not publishing tier lists yet. The site
-          runs on a source-tracking system — every claim carries a confirmation status, and
-          provisional pages are clearly labeled as speculation until they are rewritten from
-          hands-on play. {LAUNCH_COPY.buyVerb} on Steam at
-          {GAME_FACTS.priceUsd}, with a Deluxe edition at {GAME_FACTS.deluxePriceUsd}.
+          Weapon upgrades are also gated by your base: levelling the
+          <strong class="text-ash-200">Cleanse Walker</strong> requires Generator Devices,
+          Electronic Brains and Memory Chips found out in the regions, so exploration is a
+          progression requirement rather than optional completionism. Full skill tree layouts, every
+          mod name, and drop tables are still not published anywhere official, so we do not run tier
+          lists. The site's source-tracking system stays in place — every claim carries a
+          confirmation status, and guides written before launch remain clearly labelled until they
+          are rewritten from the shipped build. {LAUNCH_COPY.buyVerb} on Steam at
+          {GAME_FACTS.priceUsd}, with a Deluxe edition at {GAME_FACTS.deluxePriceUsd} (the
+          {GAME_FACTS.deluxeDlc.priceUsd} upgrade DLC can be added afterwards).
         </p>
       </article>
     </div>
   </section>
 
-  <!-- Pre-release previews -->
+  <!-- Guides -->
   <section class="mx-auto max-w-6xl px-4 py-16">
     <div class="mb-8 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
       <div class="max-w-2xl">
         <p class="text-sm font-semibold uppercase tracking-wide text-ash-500">
-          Secondary · Pre-release only
+          Guides
         </p>
         <h2 class="mt-2 font-display text-2xl font-bold text-ash-50 md:text-3xl">
-          Provisional guide outlines
+          Start with these
         </h2>
         <p class="mt-2 text-ash-400">
-          These pages are labeled speculation and written as planning notes before the
-          {GAME_FACTS.releaseDate} launch. Prefer the confirmed info above.
+          Each card carries a source badge. <strong class="text-ash-200">Hands-on</strong> pages are
+          written from the shipped game with their sources cited; pages still marked
+          <strong class="text-ash-200">Speculation</strong> were written before launch and are being
+          rewritten.
         </p>
       </div>
       <a href="/guides/" class="text-sm font-medium text-ember-400 hover:text-ember-500">
-        Browse all previews →
+        Browse all guides →
       </a>
     </div>
     <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

@@ -8,10 +8,13 @@ const path = '/release-date/';
 const canonical = new URL(path, SITE.url).href;
 
 const title = `Beast of Reincarnation Release Date — ${GAME_FACTS.releaseDateShort}`;
-const description = `Beast of Reincarnation releases ${GAME_FACTS.releaseDate} on PC, PS5 and Xbox Series X|S, and day one on Xbox Game Pass. Confirmed platforms, price and ${IS_RELEASED ? 'availability' : 'pre-purchase'} status.`;
+const description = `Beast of Reincarnation ${IS_RELEASED ? 'released' : 'releases'} ${GAME_FACTS.releaseDate} on PC, PS5 and Xbox Series X|S, and day one on Xbox Game Pass. Confirmed platforms, price and ${IS_RELEASED ? 'availability' : 'pre-purchase'} status.`;
 
 const rows = [
-  { label: 'Release date', value: `${GAME_FACTS.releaseDate} (00:00 UTC in all regions)` },
+  {
+    label: 'Release date',
+    value: `${GAME_FACTS.releaseDate} (00:00 UTC in all regions)${IS_RELEASED ? ' — out now' : ''}`,
+  },
   { label: 'Platforms', value: GAME_FACTS.platform },
   { label: 'Standard edition', value: GAME_FACTS.priceUsd },
   { label: 'Deluxe edition', value: GAME_FACTS.deluxePriceUsd },
@@ -19,17 +22,20 @@ const rows = [
   { label: 'Developer', value: GAME_FACTS.developer },
   { label: 'Publisher', value: GAME_FACTS.publisher },
   { label: 'Genre', value: GAME_FACTS.genre },
+  ...(IS_RELEASED ? [{ label: 'Launch build', value: `Version ${GAME_FACTS.launchVersion}` }] : []),
   { label: IS_RELEASED ? 'Availability' : 'Pre-purchase', value: IS_RELEASED ? 'Out now on Steam' : 'Live now on Steam' },
 ];
 
 const faqs = [
   {
     q: 'When does Beast of Reincarnation come out?',
-    a: `Beast of Reincarnation releases on ${GAME_FACTS.releaseDate}. The official announcement gives a simultaneous unlock at 00:00 UTC in all regions, so there is no regional stagger. The Steam store page displays "Aug 3, 2026" for some regions because of how Valve renders the local time of that UTC moment — the unlock itself is the same instant worldwide.`,
+    a: IS_RELEASED
+      ? `Beast of Reincarnation is out now — it released on ${GAME_FACTS.releaseDate}, unlocking simultaneously at 00:00 UTC in all regions, so there was no regional stagger. The Steam store page displays "Aug 3, 2026" for some regions because of how Valve renders the local time of that UTC moment; the unlock itself was the same instant worldwide. The launch build is version ${GAME_FACTS.launchVersion}.`
+      : `Beast of Reincarnation releases on ${GAME_FACTS.releaseDate}. The official announcement gives a simultaneous unlock at 00:00 UTC in all regions, so there is no regional stagger. The Steam store page displays "Aug 3, 2026" for some regions because of how Valve renders the local time of that UTC moment — the unlock itself is the same instant worldwide.`,
   },
   {
     q: 'What platforms is Beast of Reincarnation on?',
-    a: 'Three platforms launch together: PC via Steam, PlayStation 5, and Xbox Series X|S. The Steam page lists only PC because that is the only version sold on Steam — the PS5 and Xbox wording that appears there refers to controller compatibility, not platform availability.',
+    a: `All three platforms ${IS_RELEASED ? 'released' : 'launch'} together: PC via Steam, PlayStation 5, and Xbox Series X|S. The Steam page lists only PC because that is the only version sold on Steam — the PS5 and Xbox wording that appears there refers to controller compatibility, not platform availability.`,
   },
   {
     q: 'Is it on Nintendo Switch or Switch 2?',
@@ -41,7 +47,7 @@ const faqs = [
   },
   {
     q: 'How much does Beast of Reincarnation cost?',
-    a: `The standard edition is ${GAME_FACTS.priceUsd} and the Deluxe edition is ${GAME_FACTS.deluxePriceUsd} on Steam. ${LAUNCH_COPY.storeStatusSentence} Regional pricing varies; those are the USD figures on the store page as of ${GAME_FACTS.lastVerified}. If you subscribe to Xbox Game Pass Ultimate or PC Game Pass you can play it at no extra cost from launch day instead of buying it.`,
+    a: `The standard edition is ${GAME_FACTS.priceUsd} and the Deluxe edition is ${GAME_FACTS.deluxePriceUsd} on Steam. ${LAUNCH_COPY.storeStatusSentence} Regional pricing varies; those are the USD figures on the store page as of ${GAME_FACTS.lastVerified}. The Deluxe content also ${IS_RELEASED ? 'released as' : 'exists as'} a standalone ${GAME_FACTS.deluxeDlc.priceUsd} upgrade DLC, so standard-edition owners can add it afterwards. If you subscribe to Xbox Game Pass Ultimate or PC Game Pass you can play it at no extra cost instead of buying it.`,
   },
   {
     q: 'Is there a demo or a beta?',
@@ -114,7 +120,9 @@ const schema = [
       Beast of Reincarnation Release Date
     </h1>
     <p class="mt-4 text-lg leading-relaxed text-ash-300">
-      <strong class="text-ash-50">Beast of Reincarnation releases {GAME_FACTS.releaseDate}</strong> on
+      <strong class="text-ash-50">
+        Beast of Reincarnation {IS_RELEASED ? 'released' : 'releases'} {GAME_FACTS.releaseDate}
+      </strong> on
       PC (Steam), PlayStation 5, and Xbox Series X|S, at {GAME_FACTS.priceUsd} for the standard
       edition. {LAUNCH_COPY.notOutYetNote || LAUNCH_COPY.storeStatusSentence}
     </p>
@@ -157,19 +165,22 @@ const schema = [
         Steam display quirk rather than pretending it does not exist.
       </p>
 
-      <h2>What launches on day one</h2>
+      <h2>What {IS_RELEASED ? 'shipped' : 'launches'} on day one</h2>
       <p>
-        {GAME_FACTS.shortDescription} At launch you get the full single-player campaign with
+        {GAME_FACTS.shortDescription} The {IS_RELEASED ? 'launch build (version ' + GAME_FACTS.launchVersion + ') includes' : 'launch build includes'} the full single-player campaign with
         {' '}{GAME_FACTS.controllerSupport.toLowerCase()}, Steam Achievements, Steam Cloud, and
-        adjustable difficulty. Full audio ships in English and Japanese, with subtitles in a further
-        eight languages.
+        adjustable difficulty — {GAME_FACTS.difficulties.join(', ')}, switchable at any time. Full
+        audio ships in English and Japanese, with subtitles in a further eight languages. One quirk
+        worth knowing: the audio language can only be set from the main menu, not the in-game options.
       </p>
       <p>
-        The systems the developer has actually committed to are: hybrid real-time and turn-based
-        combat with Emma and Koo fighting as a unit, boss encounters whose powers you capture, and
-        build customisation through skill trees, gear, and spirit stones. Everything confirmed sits on
-        the <a href="/game-info/">game info page</a>; anything we cannot verify is labelled as
-        speculation until it is rewritten from hands-on play.
+        The systems confirmed by the developer are hybrid real-time and turn-based combat with Emma
+        and Koo fighting as a unit, boss encounters whose powers you capture, and build customisation
+        through skill trees, gear, and spirit stones. Everything store-verified sits on the
+        {' '}<a href="/game-info/">game info page</a>. For how those systems actually behave in the
+        shipped build — the parry, florescence points, bloom arts and entanglement — see the
+        {' '}<a href="/guides/launch-day-beginner-guide/">beginner's guide</a>; pages we have not yet
+        rewritten from the released game remain labelled as speculation.
       </p>
 
       <h2>Where to buy{IS_RELEASED ? '' : ', pre-purchase,'} or play on Game Pass</h2>

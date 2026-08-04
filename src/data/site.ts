@@ -5,9 +5,9 @@ export const SITE = {
   shortName: 'BoR Wiki',
   // 与 astro.config.mjs 中 site 保持一致（末尾不带斜杠）
   url: 'https://beastreincarnationwiki.com',
-  tagline: 'Release date, story & guides for the one-person, one-dog action RPG',
+  tagline: 'Out now — guides, combat systems & confirmed info for the one-person, one-dog action RPG',
   description:
-    'Beast of Reincarnation wiki: confirmed Aug 4, 2026 release on PC, PS5 & Xbox, day one on Game Pass, Game Freak\'s Emma & Koo story and hybrid combat explained.',
+    'Beast of Reincarnation wiki: out now on PC, PS5 & Xbox and day one on Game Pass. Parry, FP and bloom arts explained, plus the Rangifer Nushi fight and confirmed game info.',
   locale: 'en_US',
   twitter: '@borwiki',
   email: 'nmlkareem161@gmail.com',
@@ -21,27 +21,27 @@ export const CATEGORIES: Record<
 > = {
   beginner: {
     label: 'Beginner',
-    blurb: 'Start here - systems overview and what is confirmed before launch.',
+    blurb: 'Start here - the systems the shipped game actually runs on, and what to do first.',
     accent: 'moss',
   },
   boss: {
     label: 'Boss Guides',
-    blurb: 'Pre-release boss outlines based on official materials - not hands-on clears.',
+    blurb: 'Nushi and Malefect encounters - verified fights first, older outlines clearly labelled.',
     accent: 'ember',
   },
   enemies: {
     label: 'Enemies',
-    blurb: 'What trailers and official copy suggest about wasteland fauna.',
+    blurb: 'Wasteland fauna, elemental weaknesses, and what is still unverified.',
     accent: 'ember',
   },
   combat: {
     label: 'Combat',
-    blurb: 'Official hybrid combat pillars and provisional technique notes.',
+    blurb: 'Parrying, florescence points, bloom arts, blade arts and entanglement overdrive.',
     accent: 'ember',
   },
   exploration: {
     label: 'Exploration',
-    blurb: 'World themes from official copy - routes remain provisional until launch.',
+    blurb: 'Traversal with Emma\'s hair, region sweeps, and Cleanse Walker upgrade materials.',
     accent: 'moss',
   },
 };
@@ -114,6 +114,22 @@ export const GAME_FACTS = {
     'Game Freak\'s brand-new title: Beast of Reincarnation is an action RPG with a fusion of real-time and turn-based combat. Experience the innovative "one-person, one-dog action RPG" in the beautiful yet harsh world of Beast of Reincarnation.',
   priceUsd: '$59.99',
   deluxePriceUsd: '$69.99',
+  // 发售后核实（2026-08-04，Steam appdetails）：本体 $59.99，Deluxe 以「升级 DLC」形式单卖
+  // （App 4146830，$9.99），两者相加即 Deluxe 版 $69.99。
+  deluxeDlc: {
+    appId: 4146830,
+    priceUsd: '$9.99',
+    contents:
+      'Black and Brown Shiba skins for Koo, the "Oni\'s Hat" for Emma, Emma\'s sword "Big Dipper", 100,000 Amber, and a number of vegetable seedlings.',
+    upgradeNote:
+      'Released alongside the game as a standalone upgrade, so standard-edition buyers can add the Deluxe content afterwards.',
+  },
+  // 官方发售公告（2026-08-04）："it should now show version 1.0.6"
+  launchVersion: '1.0.6',
+  launchTrailerYouTubeId: 'zPAv3JEvtCs',
+  // Steam 分类里的 "Adjustable Difficulty" 对应的三档。名称来自发售后实机报道
+  // （ScreenRant 2026-08-03：Normal 为默认，另有 Story 与 Hard，可随时切换）。
+  difficulties: ['Story', 'Normal', 'Hard'] as const,
   controllerSupport: 'Full controller support',
   features: [
     'Single-player',
@@ -162,7 +178,7 @@ export const GAME_FACTS = {
       notes: 'Med 1080p @ 60fps w/ DLSS or FSR3 (Performance). SSD required.',
     },
   },
-  lastVerified: '2026-07-31',
+  lastVerified: '2026-08-04',
 } as const;
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -203,7 +219,7 @@ export const LAUNCH_COPY = IS_RELEASED
         'The game is released, so buying it on Steam starts the download immediately.',
       // 攻略页免责：发售后逐篇改写，措辞不能再说「游戏还没出」
       guidesCaveat:
-        'Strategy pages written before launch are still marked as pre-release previews until we rewrite each one from hands-on play.',
+        'Guides on this site are being rewritten one at a time now that the game has shipped.',
     }
   : {
       status: 'Coming soon · pre-purchase live',
@@ -222,6 +238,7 @@ export const LAUNCH_COPY = IS_RELEASED
 // 来源可信度标签：标注每条内容的证据等级，支撑 E-E-A-T 与发售前内容诚信。
 export type SourceKey =
   | 'official'
+  | 'handson'
   | 'trailer'
   | 'analysis'
   | 'lore'
@@ -236,6 +253,13 @@ export const SOURCES: Record<
     icon: '✅',
     tone: 'green',
     blurb: 'Confirmed by the developer, publisher, or official Steam listing.',
+  },
+  handson: {
+    label: 'Hands-on',
+    icon: '🎮',
+    tone: 'green',
+    blurb:
+      'Systems and fight details from the shipped game, cited to the post-launch coverage they come from.',
   },
   trailer: {
     label: 'Trailer',
