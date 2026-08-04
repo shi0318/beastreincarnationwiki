@@ -239,6 +239,7 @@ export const LAUNCH_COPY = IS_RELEASED
 export type SourceKey =
   | 'official'
   | 'handson'
+  | 'community'
   | 'trailer'
   | 'analysis'
   | 'lore'
@@ -260,6 +261,13 @@ export const SOURCES: Record<
     tone: 'green',
     blurb:
       'Systems and fight details from the shipped game, cited to the post-launch coverage they come from.',
+  },
+  community: {
+    label: 'Player reports',
+    icon: '💬',
+    tone: 'sky',
+    blurb:
+      'Fixes and impressions from players of the shipped game, drawn from the official Steam forums and attributed to the threads they come from.',
   },
   trailer: {
     label: 'Trailer',
