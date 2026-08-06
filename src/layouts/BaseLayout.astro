@@ -2,6 +2,7 @@
 import { SITE, GAME_FACTS } from '../data/site';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import AmbientParticles from '../components/AmbientParticles.astro';
 import '../styles/global.css';
 
 interface Props {
@@ -100,6 +101,7 @@ const fullTitle =
     <slot name="head" />
   </head>
   <body class="min-h-screen flex flex-col font-sans antialiased">
+    <AmbientParticles />
     <Header />
     <main class="flex-1">
       <slot />
