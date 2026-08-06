@@ -62,6 +62,8 @@ You can chain different bloom arts back to back, but you **cannot use the same b
 
 **Mods** are the build layer. Each bloom art can take mods that add secondary effects — HP restoration, extra damage, and so on — bought and slotted from Koo's skill tree. ScreenRant notes the trees specialise: the **Incantation** side leans into building status effects faster, while the **Guard** side supports Emma directly. You are not locked into one tree, and once you meet the relevant NPC a little way into the story you can **respec** Koo's attributes and skills. Rest at a campsite or return to the Cleanse Walker to use the "acquire skills" menu.
 
+For the complete input and timing sequence, continue with the [Koo Bloom Arts, FP and QTE guide](/guides/koo-bloom-arts-qte-guide/).
+
 Outside of bloom arts you do not need to micromanage Koo — he uses his regular abilities on his own. Kotaku's advice is worth repeating: when Koo peels off to fight something you were not targeting, let him. You *can* order an attack on an unaware enemy, with **right mouse + middle mouse** on PC or **LT/L2 + right stick** on a controller.
 
 ## Emma's blade arts and Nushi skills
@@ -75,6 +77,8 @@ To read the inputs, open the equipment menu and choose "view skills" at the bott
 Under an enemy's red HP bar is a **yellow stagger bar** that fills on every successful hit *or* parry. Fill it on a normal enemy and it is stunned for a few seconds — press attack for an **execution** that kills it outright, regardless of remaining HP. This is why aggressive parrying shortens fights so dramatically.
 
 The exception: the game's heavyweights, **Nushi** included, cannot be stunned. Filling their stagger bar **dazes** them instead — no execution prompt, but several seconds of free damage.
+
+The focused [elements, weakness, stagger and daze guide](/guides/elements-weakness-stagger-guide/) separates elemental matching from the yellow stagger bar and explains how to test both without invented values.
 
 <figure>
   <img src="/images/beast-of-reincarnation-machine-swarm-combat.webp" alt="Emma surrounded by eight or more spindly machine enemies with glowing red markings in a ruined overgrown clearing in Beast of Reincarnation" width="1600" height="900" loading="lazy" decoding="async" />
@@ -120,6 +124,8 @@ Both are movement options on paper and **opening moves** in practice. Extend a b
   <img src="/images/beast-of-reincarnation-waterfall-grotto.webp" alt="Emma and Koo standing on a rock at the foot of a grotto with three tall waterfalls, stacked stone ledges, ruined wooden walkways and floating white flowers in Beast of Reincarnation" width="1600" height="900" loading="lazy" decoding="async" />
   <figcaption>Official Beast of Reincarnation screenshot. Read spaces like this vertically: every ledge is a Lift target, every gap is an Extend bridge, and anything above an enemy is an air assassination waiting to happen.</figcaption>
 </figure>
+
+The [Lift and Extend traversal guide](/guides/lift-extend-traversal-guide/) expands this into a route-reading checklist for gaps, high ledges, campsites, Koo discoveries, and water boundaries.
 
 Two blunt limits: Emma **cannot swim**, so fleeing into water just deposits you back on the shore with the enemies still waiting; and the environment does not care that you are outnumbered.
 

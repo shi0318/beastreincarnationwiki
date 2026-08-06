@@ -35,6 +35,8 @@ If the timing is early, the same input becomes a guard. Guarding spends the enta
 
 The simplest practice loop is: face one enemy, wait for one readable attack, parry once, and immediately follow with a normal attack for the riposte. Do not add a bloom art until you can tell the difference between a yellow-spark parry and a plain guard.
 
+Use the [parry, guard, dodge and controls guide](/guides/parry-guard-dodge-controls-guide/) for the full default input table, red-attack response, and a five-minute practice routine.
+
 ## 2. Use the two bars for different jobs
 
 The game has two resources that both benefit from successful parries but are spent differently.
@@ -76,6 +78,8 @@ This is a practical priority list, not a permanent tier list:
 
 The [progression and builds page](/guides/progression-and-builds/) explains which systems are confirmed and which numbers remain unpublished. In the shipped game, you can respec Koo after meeting the relevant NPC, so the first build does not need to be perfect.
 
+The [Cleanse Walker upgrade materials guide](/guides/cleanse-walker-upgrade-materials-guide/) covers the three confirmed material names, deposit loop, and equipment-screen gate without claiming a complete item map.
+
 ## 6. Find the campsite before the boss
 
 Before entering a boss arena, look for the nearby campsite and check the equipment enhancement screen. Resting restores HP and supplies, but it also respawns enemies in the area. That trade is worth making before a boss because the campsite gives you a checkpoint and a clean chance to apply Walker upgrades.
@@ -92,4 +96,3 @@ The complete skill tree, every mod effect, full boss list, and endgame differenc
 - [Official launch announcement](https://store.steampowered.com/news/app/2001760) - version 1.0.6, launch date, Deluxe upgrade, and official feedback route; checked 2026-08-05.
 - [Polygon combat guide](https://www.polygon.com/beast-of-reincarnation-combat-guide/) - launch-week hands-on details for parries, resources, bloom-art QTEs, elements, stagger, and controls; checked 2026-08-05.
 - [Kotaku early tips](https://kotaku.com/beast-of-reincarnation-tips-difficulty-settings-english-2000721303) and [ScreenRant starter tips](https://screenrant.com/beast-of-reincarnation-starter-tips/) - early dodge, campsite, Walker, and skill-mod observations; checked 2026-08-05.
-
