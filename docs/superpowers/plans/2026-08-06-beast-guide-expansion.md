@@ -492,7 +492,7 @@ Expected: no output and exit code 0.
 Run:
 
 ```powershell
-rg -n "PLACEHOLDER|implement later|fill in details|exact damage|drop rate|complete map|all locations" src/content/guides/*guide.md
+rg -n "PLACEHOLDER|exact damage|drop rate|complete map|all locations" src/content/guides/*guide.md
 git diff --check
 git status --short
 ```
