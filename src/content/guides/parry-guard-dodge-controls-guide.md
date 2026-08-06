@@ -1,5 +1,5 @@
 ---
-title: "Parry, Guard, Dodge & Controls Guide - Beast of Reincarnation"
+title: "Parry, Guard & Dodge Controls - Beast of Reincarnation"
 description: "The confirmed parry, guard and dodge controls in Beast of Reincarnation, how entanglement changes blocking, and how to practice red attacks safely."
 heading: "Parry, Guard, Dodge & Controls Guide"
 category: combat

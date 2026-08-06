@@ -1,6 +1,6 @@
 ---
 title: "Lift & Extend Traversal Guide - Beast of Reincarnation"
-description: "How Emma's Lift and Extend hair abilities work in Beast of Reincarnation, including vertical routes, gap crossing, air assassinations, campsites, and material sweeps."
+description: "How Lift and Extend work in Beast of Reincarnation: vertical routes, gaps, air assassinations, campsites, and material sweeps."
 heading: "Lift, Extend & Exploration Routes"
 category: exploration
 keyword: "beast of reincarnation lift extend traversal"

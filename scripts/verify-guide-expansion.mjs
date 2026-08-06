@@ -47,6 +47,10 @@ for (const [slug, rules] of Object.entries(expected)) {
   }
 
   const body = readFileSync(guidePath, 'utf8');
+  const title = body.match(/^title: "(.*)"$/m)?.[1] ?? '';
+  const description = body.match(/^description: "(.*)"$/m)?.[1] ?? '';
+  if (title.length > 60) errors.push(`${slug}: title is ${title.length} characters`);
+  if (description.length > 160) errors.push(`${slug}: description is ${description.length} characters`);
   for (const [field, value] of Object.entries(rules)) {
     const pattern = new RegExp(`^${field}: ["']?${value.replaceAll('.', '\\.')}["']?$`, 'm');
     if (!pattern.test(body)) errors.push(`${slug}: expected ${field}=${value}`);

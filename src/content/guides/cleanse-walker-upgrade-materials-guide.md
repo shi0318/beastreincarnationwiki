@@ -1,5 +1,5 @@
 ---
-title: "Cleanse Walker Upgrade Materials Guide - Beast of Reincarnation"
+title: "Cleanse Walker Materials - Beast of Reincarnation"
 description: "How Cleanse Walker levels gate weapon upgrades in Beast of Reincarnation, where Generator Devices, Electronic Brains and Memory Chips fit, and when to return."
 heading: "Cleanse Walker Upgrade Materials"
 category: beginner

@@ -1,5 +1,5 @@
 ---
-title: "Deluxe DLC & Pre-Order Entitlement Fix - Beast of Reincarnation"
+title: "Deluxe DLC Entitlement Fix - Beast of Reincarnation"
 description: "The exact Beast of Reincarnation Standard pre-order and Deluxe contents, plus the official Steam fix for missing Deluxe pre-order DLC entitlement."
 heading: "Deluxe DLC & Pre-Order Entitlement Fix"
 category: beginner

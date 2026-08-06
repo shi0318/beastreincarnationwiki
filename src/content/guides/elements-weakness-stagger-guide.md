@@ -1,5 +1,5 @@
 ---
-title: "Elements, Weakness, Stagger & Daze Guide - Beast of Reincarnation"
+title: "Elements, Weakness & Stagger - Beast of Reincarnation"
 description: "How elemental weaknesses, Destructive and Bind attacks, the yellow stagger bar, executions, and boss daze work in Beast of Reincarnation."
 heading: "Elements, Weakness, Stagger & Daze"
 category: combat
