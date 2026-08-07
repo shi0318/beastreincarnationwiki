@@ -35,6 +35,12 @@ const expected = {
     source: 'official',
     image: 'beast-of-reincarnation-deluxe-dlc.webp',
   },
+  'amber-technique-points-farm': {
+    category: 'beginner',
+    source: 'community',
+    image: 'beast-of-reincarnation-amber-technique-farm.webp',
+    checkedDate: '2026-08-07',
+  },
 };
 
 const errors = [];
@@ -51,7 +57,8 @@ for (const [slug, rules] of Object.entries(expected)) {
   const description = body.match(/^description: "(.*)"$/m)?.[1] ?? '';
   if (title.length > 60) errors.push(`${slug}: title is ${title.length} characters`);
   if (description.length > 160) errors.push(`${slug}: description is ${description.length} characters`);
-  for (const [field, value] of Object.entries(rules)) {
+  const { checkedDate = '2026-08-06', ...frontmatterRules } = rules;
+  for (const [field, value] of Object.entries(frontmatterRules)) {
     const pattern = new RegExp(`^${field}: ["']?${value.replaceAll('.', '\\.')}["']?$`, 'm');
     if (!pattern.test(body)) errors.push(`${slug}: expected ${field}=${value}`);
   }
@@ -60,10 +67,12 @@ for (const [slug, rules] of Object.entries(expected)) {
   if (!body.includes('<figure>')) errors.push(`${slug}: local in-body figure is missing`);
   if (!body.includes('src="/images/')) errors.push(`${slug}: figure must use /images/`);
   if (!body.includes('## Sources')) errors.push(`${slug}: Sources section is missing`);
-  if (!body.includes('Checked 2026-08-06')) errors.push(`${slug}: checked date is missing`);
+  if (!body.includes(`Checked ${checkedDate}`)) errors.push(`${slug}: checked date is missing`);
   const internalLinks = body.match(/\]\(\/guides\//g)?.length ?? 0;
   if (internalLinks < 2) errors.push(`${slug}: expected at least two internal guide links`);
-  if (!existsSync(join(imagesDir, rules.image))) errors.push(`${slug}: ${rules.image} is missing`);
+  if (!existsSync(join(imagesDir, frontmatterRules.image))) {
+    errors.push(`${slug}: ${frontmatterRules.image} is missing`);
+  }
 }
 
 if (errors.length > 0) {
@@ -71,4 +80,4 @@ if (errors.length > 0) {
   process.exit(1);
 }
 
-console.log('Verified 6 source-backed guide entries.');
+console.log(`Verified ${Object.keys(expected).length} source-backed guide entries.`);
