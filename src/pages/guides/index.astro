@@ -7,9 +7,11 @@ import { SITE, CATEGORIES, GAME_FACTS, type Category } from '../../data/site';
 
 const guides = await getCollection('guides');
 
-const sorted = [...guides].sort((a, b) => {
-  if (a.data.order !== b.data.order) return a.data.order - b.data.order;
-  return b.data.publishDate.getTime() - a.data.publishDate.getTime();
+const latest = [...guides].sort((a, b) => {
+  const aDate = a.data.updateDate ?? a.data.publishDate;
+  const bDate = b.data.updateDate ?? b.data.publishDate;
+  if (aDate.getTime() !== bDate.getTime()) return bDate.getTime() - aDate.getTime();
+  return a.id.localeCompare(b.id);
 });
 
 const order: Category[] = ['beginner', 'boss', 'enemies', 'combat', 'exploration'];
@@ -17,7 +19,7 @@ const groups = order
   .map((cat) => ({
     cat,
     meta: CATEGORIES[cat],
-    items: sorted.filter((g) => g.data.category === cat),
+    items: latest.filter((g) => g.data.category === cat),
   }))
   .filter((g) => g.items.length > 0);
 
@@ -107,6 +109,29 @@ const schema = {
           ))
         }
       </ul>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-4 py-14">
+    <div class="mb-6 max-w-3xl">
+      <h2 class="font-display text-2xl font-bold text-ash-50">Latest Beast of Reincarnation Guides</h2>
+      <p class="mt-1 text-ash-400">
+        Recently published or materially updated guides, newest first.
+      </p>
+    </div>
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {latest.slice(0, 6).map((guide) => (
+        <GuideCard
+          href={`/guides/${guide.id}/`}
+          title={guide.data.heading ?? guide.data.title}
+          description={guide.data.description}
+          image={`/images/${guide.data.image}`}
+          imageAlt={guide.data.imageAlt}
+          category={guide.data.category}
+          source={guide.data.source}
+          date={guide.data.updateDate ?? guide.data.publishDate}
+        />
+      ))}
     </div>
   </section>
 

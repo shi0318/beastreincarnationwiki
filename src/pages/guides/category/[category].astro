@@ -14,8 +14,10 @@ export async function getStaticPaths() {
       const items = guides
         .filter((g) => g.data.category === cat)
         .sort((a, b) => {
-          if (a.data.order !== b.data.order) return a.data.order - b.data.order;
-          return b.data.publishDate.getTime() - a.data.publishDate.getTime();
+          const aDate = a.data.updateDate ?? a.data.publishDate;
+          const bDate = b.data.updateDate ?? b.data.publishDate;
+          if (aDate.getTime() !== bDate.getTime()) return bDate.getTime() - aDate.getTime();
+          return a.id.localeCompare(b.id);
         });
       return { params: { category: cat }, props: { cat, items } };
     })

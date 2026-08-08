@@ -7,13 +7,14 @@ keyword: "beast of reincarnation pc requirements"
 image: "beast-of-reincarnation-header-banner.webp"
 imageAlt: "Beast of Reincarnation official banner art showing Emma and Koo in the blighted wasteland"
 publishDate: 2026-08-03
+updateDate: 2026-08-08
 order: 7
 featured: false
 preview: false
 source: official
 ---
 
-Game Freak published full PC specs on the Steam store page for **App 2001760**, and they are unusually specific — both tiers name a target resolution, a target frame rate, and the upscaler assumed to hit it. That detail is worth reading carefully, because it changes what "recommended" actually promises. Everything on this page is copied from the official listing, checked on **3 August 2026**, one day before the **4 August 2026** launch.
+Before pre-load, Fictions and Game Freak said an earlier published PC-specification list contained mistakes and that the updated Steam store requirements were the correct ones. The tables below reflect that current first-party Steam listing, re-checked on **2026-08-08**. Both tiers name a target resolution, a target frame rate, and the upscaler assumed to hit it, which changes what "recommended" actually promises.
 
 ## Minimum requirements
 
@@ -75,11 +76,8 @@ That matters practically: if you are on a GTX 1070 or RX 580, plan on **FSR1 Per
 
 The PC specs above apply only to the Steam version. The game also ships **4 August 2026** on **PlayStation 5** and **Xbox Series X|S**, and is included with **Xbox Game Pass Ultimate** and **PC Game Pass** on day one. The full platform and subscription breakdown is on our [download page](/download/) and [release date page](/release-date/).
 
-## What we will re-check after launch
+## What the published specifications still do not answer
 
-- Whether real-world performance matches the quoted 40fps / 60fps targets at those presets.
-- Whether a Steam Deck rating appears.
-- Whether native (no-upscaling) 1080p is viable on the recommended tier.
-- Actual install size on disk versus the listed 45 GB.
+The official targets do not promise native-resolution performance, a 1440p or 4K frame rate, or performance on hardware outside the named tiers. They also do not establish the result of a particular driver, display, Steam Deck, or handheld configuration. Those are separate tests, not missing lines in the requirements table.
 
-This page is rewritten from measured results once the game is out. For the confirmed systems overview, see [game info](/game-info/); for how the game actually plays, start with the [combat overview](/guides/combat-overview-trailer/).
+For clearly labelled player reports and reversible settings checks, use the [PC performance guide](/guides/pc-performance-settings-fixes/). For the publisher's launch status and feedback route, see [official launch support](/guides/launch-support-status/). The original [pre-load Steam announcement](https://store.steampowered.com/news/app/2001760/view/1839676055886372) is the source for the correction notice; the live [Steam store page](https://store.steampowered.com/app/2001760/Beast_of_Reincarnation/) remains the source of truth for future specification changes. Checked 2026-08-08.

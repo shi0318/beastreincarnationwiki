@@ -41,6 +41,18 @@ const expected = {
     image: 'beast-of-reincarnation-amber-technique-farm.webp',
     checkedDate: '2026-08-07',
   },
+  'launch-support-status': {
+    category: 'beginner',
+    source: 'official',
+    image: 'beast-of-reincarnation-header-banner.webp',
+    checkedDate: '2026-08-08',
+  },
+  'community-resource-directory': {
+    category: 'exploration',
+    source: 'community',
+    image: 'beast-of-reincarnation-waterfall-grotto.webp',
+    checkedDate: '2026-08-08',
+  },
 };
 
 const errors = [];
