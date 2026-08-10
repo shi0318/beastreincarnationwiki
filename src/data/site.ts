@@ -62,8 +62,8 @@ export const GAME_FACTS = {
   steamAppId: 2001760,
   // 发售日：Steam 商店显示 "Aug 3, 2026"（区域时间），但官方公告与各平台商店均为
   // "August 4th, 2026 (00:00 UTC in all regions)"，IGN 结构化平台数据同为 2026-08-04。以官方公告为准。
-  releaseDate: '4 August 2026',
-  releaseDateShort: 'Aug 4, 2026',
+  releaseDate: 'August 4, 2026',
+  releaseDateShort: 'August 4, 2026',
   releaseDateISO: '2026-08-04',
   // 全球同步解锁时刻（官方公告：00:00 UTC in all regions）。IS_RELEASED 由此推导，
   // 因此「发售前 / 发售后」的措辞与 schema 库存状态只依赖这一个值。

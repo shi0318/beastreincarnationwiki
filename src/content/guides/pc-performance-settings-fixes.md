@@ -1,6 +1,6 @@
 ---
-title: "Beast of Reincarnation PC Performance Fixes — FSR, Film Grain & FPS"
-description: "The launch-week PC problems players actually hit in Beast of Reincarnation, and the fixes they found: DLSS resetting to FSR, film grain, the missing 4K option, low GPU usage, Steam Deck and Intel crashes."
+title: "Beast of Reincarnation PC Fixes — FSR 4, Film Grain & Engine.ini"
+description: "Source-tagged Beast of Reincarnation PC fixes for film grain, the DLSS/FSR reset, FSR 4 availability, engine.ini, 21:9, 4K, low GPU use, Steam Deck, and Intel crashes."
 heading: "PC Performance & Settings: The Fixes Players Actually Found"
 category: beginner
 keyword: "beast of reincarnation pc performance fix"
@@ -28,7 +28,7 @@ Everything below comes from players discussing the shipped game in the [official
 | Playing on Steam Deck | [Steam Deck](#steam-deck-not-verified-yet) |
 | Ultrawide (21:9 / 32:9) | [Ultrawide](#ultrawide-219--329) |
 
-## The two fixes almost everyone wants: film grain and the DLSS reset
+## Film grain, FSR 4, and the DLSS reset
 
 Two complaints dominate every performance thread, and they have the same root cause — the post-processing pipeline.
 
@@ -139,4 +139,3 @@ We have not personally benchmarked the game. Every fix above is attributed to th
 
 - **Developer, first-party.** Team member "Sam" in the [Steam Deck discussion thread](https://steamcommunity.com/app/2001760/discussions/) (3 August 2026) — not Verified, working on it, resubmitting. [Official launch announcement](https://store.steampowered.com/news/app/2001760) — version 1.0.6, feedback via pinned threads.
 - **Player fixes.** [Beast of Reincarnation General Discussions](https://steamcommunity.com/app/2001760/discussions/) (3–4 August 2026): the `engine.ini` film-grain fix ("Seibzehn"), DLSS-reset reports, DLSS preset K advice ("Flopparooskey"), the Windowed→Borderless 4K fix ("kame2", "Crimsongz"), the Nvidia Profile Inspector Power Management fix ("Chang Chang", "Sleazus"), the Intel BIOS fix ("Blaze"), and the Steam Deck / GE-Proton reports.
-
