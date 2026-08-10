@@ -1,34 +1,35 @@
 ---
-title: "Beast of Reincarnation PC Fixes — FSR 4, Film Grain & Engine.ini"
-description: "Source-tagged Beast of Reincarnation PC fixes for film grain, the DLSS/FSR reset, FSR 4 availability, engine.ini, 21:9, 4K, low GPU use, Steam Deck, and Intel crashes."
+title: "Beast of Reincarnation PC Fixes and v1.0.7 Update"
+description: "Source-backed PC fixes for Beast of Reincarnation, plus the official v1.0.7 result for upscaling reset, V-Sync, input, camera, and text issues."
 heading: "PC Performance & Settings: The Fixes Players Actually Found"
 category: beginner
 keyword: "beast of reincarnation pc performance fix"
 image: "beast-of-reincarnation-machine-swarm-combat.webp"
 imageAlt: "Emma surrounded by spindly machine enemies with glowing red markings in a ruined overgrown clearing in Beast of Reincarnation"
 publishDate: 2026-08-04
+updateDate: 2026-08-10T08:10:00.000Z
 order: 8
 featured: true
 preview: false
 source: community
 ---
 
-Beast of Reincarnation shipped on **4 August 2026** at **version 1.0.6**, and by the end of launch day the biggest thread on the Steam forums was not about bosses — it was about the PC port. The game itself runs on a lot of machines, but the **settings menu is rough**, and a handful of options either do nothing, don't save, or are hidden where you would not think to look.
+Beast of Reincarnation shipped on **August 4, 2026** at **version 1.0.6**, and the launch-week Steam forums focused heavily on the PC port. Version **1.0.7**, published on August 9, now officially fixes the upscaling-setting reset and the V-Sync resolution interaction. Other reports below remain player reports rather than developer-confirmed fixes. Checked August 10, 2026.
 
-Everything below comes from players discussing the shipped game in the [official Steam forums](https://steamcommunity.com/app/2001760/discussions/), not from us. Where a fix is one player's report rather than something confirmed by the developer, that is stated. This is the launch-window state; a patch may change any of it, so treat the store page and pinned dev threads as the live source of truth.
+Everything below comes from players discussing the shipped game in the [official Steam forums](https://steamcommunity.com/app/2001760/discussions/) unless it is explicitly attributed to the [official v1.0.7 patch notes](/guides/patch-notes/). Where a fix is one player's report rather than something confirmed by the developer, that is stated. Treat the store page and pinned developer threads as the live source of truth.
 
 ## Quick triage: which problem do you have?
 
 | Symptom | Jump to |
 | --- | --- |
-| Game looks soft/noisy even at high settings | [Film grain & DLSS reset](#the-two-fixes-almost-everyone-wants-film-grain-and-the-dlss-reset) |
+| Game looks soft/noisy even at high settings | [Film grain and upscaling](#film-grain-and-upscaling-after-v107) |
 | No 4K option in the menu | [The missing 4K option](#the-missing-4k-option) |
 | Low FPS but GPU **and** CPU sit at 50–60% | [Low GPU usage fix](#low-fps-with-gpu-and-cpu-both-under-60) |
 | Game won't launch (Intel 13th/14th-gen) | [Intel launch crash](#the-game-refuses-to-launch-intel-13th14th-gen) |
 | Playing on Steam Deck | [Steam Deck](#steam-deck-not-verified-yet) |
 | Ultrawide (21:9 / 32:9) | [Ultrawide](#ultrawide-219--329) |
 
-## Film grain, FSR 4, and the DLSS reset
+## Film grain and upscaling after v1.0.7
 
 Two complaints dominate every performance thread, and they have the same root cause — the post-processing pipeline.
 
@@ -55,7 +56,7 @@ r.SceneColorFringeQuality=0
 
 These are standard Unreal Engine console variables, which is consistent with this being a UE5 title. Back the file up — a game update can overwrite or ignore custom `engine.ini` settings.
 
-**2. The game keeps resetting DLSS to FSR 1 on every launch.** This is the single most-repeated technical complaint, reported independently by many players: you set DLSS (or a higher-quality upscaler), quit, relaunch, and the game is back on **FSR 1 / Ultra Quality** — or swaps itself mid-session. One player noticed it by looking at Emma's hair in menus. There is no confirmed fix beyond **re-selecting your upscaler every time you start the game** until a patch lands. If you use an Nvidia card, players recommend forcing a newer DLSS preset (see next section) to at least improve the image while you live with the reset.
+**2. Upscaling settings resetting after a restart.** This was a repeated launch-week player report, but it is no longer accurate to say there is no confirmed fix. The official v1.0.7 notes say: **"Fixed a bug causing upscaling settings to reset upon restarting the game."** After Steam updates the game, set your preferred option once, restart, and check the setting before applying other workarounds. If it still resets, record the version you see and report that reproducible case through the official route.
 
 <figure>
   <img src="/images/beast-of-reincarnation-machine-swarm-combat.webp" alt="Emma surrounded by eight or more spindly machine enemies with glowing red markings in a ruined overgrown clearing in Beast of Reincarnation" width="1600" height="900" loading="lazy" decoding="async" />
@@ -69,7 +70,7 @@ The game ships with an older DLSS build (players identified **3.7**) and, by def
 - **Force a newer DLSS preset.** Players say the default is **Preset E**, and that forcing **Preset K** "resolves the noise in this game" better than the alternatives; **Preset L** and **M** are also suggested for RTX 40/50-series cards. You can do this through the **Nvidia App** (which can force the latest DLSS model without any file swapping) or DLSS Swapper.
 - **DLSS Swapper / newer DLL.** Some players swap in DLSS **310.7** for cleaner reconstruction and less shimmering. Note two caveats from the threads: one player got **crashes after swapping to 310.6/310.7**, and the game's tendency to fall back to FSR can undo the swap anyway. Your mileage varies — if it crashes, roll back.
 
-On AMD the situation is worse: the game only ships **FSR 3.0**, and players report you cannot upgrade it to FSR 4.1. There is **no native frame generation** on any vendor at launch, though a frame-gen mod already exists on Nexus Mods.
+The official v1.0.7 post says **DLSS 4/4.5 (L/M)** and **FSR4** are planned for future patches. It does not say either has shipped in v1.0.7. Third-party frame-generation tools are not a publisher-supported replacement; the [mod support status guide](/guides/mod-support-status/) explains why this site does not treat unverified tools as universal fixes.
 
 ## The missing 4K option
 
@@ -120,7 +121,7 @@ Playable on a Deck today if you accept 30 FPS and low settings; wait for the pro
 
 ## Ultrawide (21:9 / 32:9)
 
-There is **no native ultrawide support** at launch, and it is one of the most-upvoted complaints — a UE5 game shipping without it in 2026 surprised a lot of people. A community mod for ultrawide already exists on Nexus Mods, and players report using it. If you're on 32:9/21:9 and unwilling to letterbox, that mod is currently the only route; the developers have not committed to native support.
+The launch forums contain ultrawide concerns, but the official v1.0.7 notes do not announce a native ultrawide change. A community project has published camera-distance, FOV, and ultrawide work, but it is not official support and its author has reported different version labels across its Steam and GitHub pages. See the [mod support status guide](/guides/mod-support-status/) for the source boundary; do not assume a third-party tool works after every patch.
 
 ## What the developers have said
 
@@ -135,7 +136,7 @@ Beyond that, route bugs and requests through the **pinned official threads** in 
 
 We have not personally benchmarked the game. Every fix above is attributed to the player who reported it; the `engine.ini` values are standard UE5 cvars but we have not tested that this exact file survives future patches. Hardware behaviour varies wildly — the same 4K-menu bug hits some high-end cards and not others — so treat these as starting points, not guarantees. For the settings that *are* officially documented, see the [PC requirements page](/guides/pc-system-requirements/); for how the game actually plays, see the [beginner's guide](/guides/launch-day-beginner-guide/) and [is it a Soulslike?](/guides/difficulty-and-combat-feel/).
 
-## Where these details come from
+## Sources
 
-- **Developer, first-party.** Team member "Sam" in the [Steam Deck discussion thread](https://steamcommunity.com/app/2001760/discussions/) (3 August 2026) — not Verified, working on it, resubmitting. [Official launch announcement](https://store.steampowered.com/news/app/2001760) — version 1.0.6, feedback via pinned threads.
-- **Player fixes.** [Beast of Reincarnation General Discussions](https://steamcommunity.com/app/2001760/discussions/) (3–4 August 2026): the `engine.ini` film-grain fix ("Seibzehn"), DLSS-reset reports, DLSS preset K advice ("Flopparooskey"), the Windowed→Borderless 4K fix ("kame2", "Crimsongz"), the Nvidia Profile Inspector Power Management fix ("Chang Chang", "Sleazus"), the Intel BIOS fix ("Blaze"), and the Steam Deck / GE-Proton reports.
+- **Developer, first-party.** [Official v1.0.7 patch notes](https://store.steampowered.com/news/app/2001760/view/1840310314349621) - upscaling-reset and V-Sync fixes, plus the future DLSS and FSR wording. Checked August 10, 2026. Team member "Sam" in the [Steam Deck discussion thread](https://steamcommunity.com/app/2001760/discussions/) - not Verified, working on it, resubmitting. [Official launch announcement](https://store.steampowered.com/news/app/2001760) - version 1.0.6, feedback via pinned threads.
+- **Player fixes.** [Beast of Reincarnation General Discussions](https://steamcommunity.com/app/2001760/discussions/) (August 3-4, 2026): the `engine.ini` film-grain fix ("Seibzehn"), launch-week DLSS-reset reports, DLSS preset K advice ("Flopparooskey"), the Windowed-to-Borderless 4K fix ("kame2", "Crimsongz"), the Nvidia Profile Inspector Power Management fix ("Chang Chang", "Sleazus"), the Intel BIOS fix ("Blaze"), and the Steam Deck / GE-Proton reports. Checked August 10, 2026.

@@ -4,6 +4,8 @@ import { join } from 'node:path';
 const root = process.cwd();
 const guidesDir = join(root, 'src', 'content', 'guides');
 const imagesDir = join(root, 'public', 'images');
+const contentConfigPath = join(root, 'src', 'content.config.ts');
+const siteConfigPath = join(root, 'src', 'data', 'site.ts');
 const expected = {
   'koo-bloom-arts-qte-guide': {
     category: 'combat',
@@ -45,7 +47,8 @@ const expected = {
     category: 'beginner',
     source: 'official',
     image: 'beast-of-reincarnation-header-banner.webp',
-    checkedDate: '2026-08-08',
+    checkedText: 'Checked August 10, 2026',
+    requires: ['v1.0.7', '/guides/patch-notes/'],
   },
   'community-resource-directory': {
     category: 'exploration',
@@ -53,9 +56,70 @@ const expected = {
     image: 'beast-of-reincarnation-waterfall-grotto.webp',
     checkedDate: '2026-08-08',
   },
+  'patch-notes': {
+    category: 'beginner',
+    source: 'official',
+    image: 'beast-of-reincarnation-patch-v1-0-7.png',
+    checkedText: 'Checked August 10, 2026',
+    requires: [
+      'v1.0.7',
+      '1840310314349621',
+      'Fixed a bug causing upscaling settings to reset',
+      '/guides/pc-performance-settings-fixes/',
+    ],
+  },
+  'metacritic-score': {
+    category: 'beginner',
+    source: 'reviews',
+    image: 'beast-of-reincarnation-key-art.webp',
+    checkedText: 'Checked August 10, 2026',
+    requires: [
+      '73/100',
+      '6.1/10',
+      'metacritic.com/game/beast-of-reincarnation',
+      '/guides/steam-reception-and-issues/',
+    ],
+  },
+  'mod-support-status': {
+    category: 'beginner',
+    source: 'community',
+    image: 'beast-of-reincarnation-machine-swarm-combat.webp',
+    checkedText: 'Checked August 10, 2026',
+    requires: [
+      'does not list Steam Workshop',
+      'therake620-collab',
+      '/guides/pc-performance-settings-fixes/',
+      '/guides/patch-notes/',
+    ],
+  },
+  'pc-performance-settings-fixes': {
+    category: 'beginner',
+    source: 'community',
+    image: 'beast-of-reincarnation-machine-swarm-combat.webp',
+    checkedText: 'Checked August 10, 2026',
+    requires: ['v1.0.7', 'Fixed a bug causing upscaling settings to reset'],
+  },
+  'steam-reception-and-issues': {
+    category: 'beginner',
+    source: 'community',
+    image: 'beast-of-reincarnation-key-art.webp',
+    checkedText: 'Checked August 10, 2026',
+    requires: ['4,129', '2,339', '1,790', '/guides/metacritic-score/'],
+  },
 };
 
 const errors = [];
+
+const contentConfig = readFileSync(contentConfigPath, 'utf8');
+if (!contentConfig.includes("'reviews'")) {
+  errors.push('content config: reviews source label is missing');
+}
+
+const siteConfig = readFileSync(siteConfigPath, 'utf8');
+const navBlock = siteConfig.match(/export const NAV = \[([\s\S]*?)\] as const;/)?.[1] ?? '';
+for (const label of ['Patch Notes', 'Metacritic', 'Mods']) {
+  if (navBlock.includes(label)) errors.push(`site navigation: unexpected ${label} item`);
+}
 
 for (const [slug, rules] of Object.entries(expected)) {
   const guidePath = join(guidesDir, `${slug}.md`);
@@ -69,7 +133,12 @@ for (const [slug, rules] of Object.entries(expected)) {
   const description = body.match(/^description: "(.*)"$/m)?.[1] ?? '';
   if (title.length > 60) errors.push(`${slug}: title is ${title.length} characters`);
   if (description.length > 160) errors.push(`${slug}: description is ${description.length} characters`);
-  const { checkedDate = '2026-08-06', ...frontmatterRules } = rules;
+  const {
+    checkedDate = '2026-08-06',
+    checkedText = `Checked ${checkedDate}`,
+    requires = [],
+    ...frontmatterRules
+  } = rules;
   for (const [field, value] of Object.entries(frontmatterRules)) {
     const pattern = new RegExp(`^${field}: ["']?${value.replaceAll('.', '\\.')}["']?$`, 'm');
     if (!pattern.test(body)) errors.push(`${slug}: expected ${field}=${value}`);
@@ -79,7 +148,10 @@ for (const [slug, rules] of Object.entries(expected)) {
   if (!body.includes('<figure>')) errors.push(`${slug}: local in-body figure is missing`);
   if (!body.includes('src="/images/')) errors.push(`${slug}: figure must use /images/`);
   if (!body.includes('## Sources')) errors.push(`${slug}: Sources section is missing`);
-  if (!body.includes(`Checked ${checkedDate}`)) errors.push(`${slug}: checked date is missing`);
+  if (!body.includes(checkedText)) errors.push(`${slug}: checked date is missing`);
+  for (const text of requires) {
+    if (!body.includes(text)) errors.push(`${slug}: required evidence is missing: ${text}`);
+  }
   const internalLinks = body.match(/\]\(\/guides\//g)?.length ?? 0;
   if (internalLinks < 2) errors.push(`${slug}: expected at least two internal guide links`);
   if (!existsSync(join(imagesDir, frontmatterRules.image))) {

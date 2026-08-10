@@ -240,6 +240,7 @@ export type SourceKey =
   | 'official'
   | 'handson'
   | 'community'
+  | 'reviews'
   | 'trailer'
   | 'analysis'
   | 'lore'
@@ -268,6 +269,12 @@ export const SOURCES: Record<
     tone: 'sky',
     blurb:
       'Fixes and impressions from players of the shipped game, drawn from the official Steam forums and attributed to the threads they come from.',
+  },
+  reviews: {
+    label: 'Review data',
+    icon: 'R',
+    tone: 'amber',
+    blurb: 'Dated critic and player-score aggregates from the published review services cited on the page.',
   },
   trailer: {
     label: 'Trailer',

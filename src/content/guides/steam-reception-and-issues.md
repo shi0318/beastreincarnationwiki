@@ -1,20 +1,20 @@
 ---
-title: "Beast of Reincarnation Steam Reviews - Reception and PC Issues"
-description: "What Beast of Reincarnation players praise and report after launch, plus a practical order for checking PC image quality, performance, controller prompts, and refunds."
+title: "Beast of Reincarnation Steam Reviews and PC Issues"
+description: "A dated Steam review snapshot for Beast of Reincarnation, its player-reported PC issues, and the difference between player and critic scores."
 heading: "Steam Reception: What Players Like and What to Check"
 category: beginner
 keyword: "beast of reincarnation steam reviews"
 image: "beast-of-reincarnation-key-art.webp"
 imageAlt: "Emma and Koo walking through a blighted forest in Beast of Reincarnation official key art"
 publishDate: 2026-08-05
-updateDate: 2026-08-08
+updateDate: 2026-08-10T08:00:00.000Z
 order: 11
 featured: false
 preview: false
 source: community
 ---
 
-**Beast of Reincarnation** is out, and the Steam conversation is split. The store's overall rating was **Mixed** when this page was checked on **5 August 2026**, with roughly 2,000 total user reviews and a near-even positive/negative balance. That is a snapshot, not a permanent score: the live store page is the authority for the current number.
+**Beast of Reincarnation** is out, and the Steam conversation remains split. Steam's public summary was **Mixed** when this page was checked on **August 10, 2026**. That is a snapshot, not a permanent score: the live store page is the authority for the current number.
 
 This guide is useful if you are deciding whether to buy or if you have just installed the game and are trying to separate a personal preference from a fixable PC problem. It does not turn a handful of forum posts into a universal bug report. Player patterns below are labelled as community reports, while launch version and support information comes from the developer.
 
@@ -23,13 +23,13 @@ This guide is useful if you are deciding whether to buy or if you have just inst
   <figcaption>The launch conversation is about both the game itself and the conditions in which it is being played. Check the technical baseline before judging the combat.</figcaption>
 </figure>
 
-## 8 August Steam snapshot
+## August 10 Steam snapshot
 
-Steam's public review-summary endpoint returned **3,477 total reviews** when checked on **2026-08-08**: **1,971 positive** and **1,506 negative**, which Steam labelled **Mixed**. The public current-player endpoint returned **5,406 concurrent players** at the same check. Both numbers are time-specific snapshots, not lifetime claims, forecasts, or a substitute for the live Steam store page.
+Steam's public review-summary endpoint returned **4,129 total reviews** when checked on **August 10, 2026**: **2,339 positive** and **1,790 negative**, which Steam labelled **Mixed**. These numbers are time-specific snapshots, not lifetime claims, forecasts, or a substitute for the live Steam store page.
 
 The individual reviews in that sample reinforce the same split described below. Some players praise the parry-focused combat, Emma and Koo's partnership, music, and visual style. Others report dissatisfaction with exploration rewards, enemy or boss variety, camera and UI choices, and PC presentation. These are player views, not verified developer bug lists; one review is not proof that every system or configuration behaves that way.
 
-For a status update based on developer statements rather than reviews, see [official launch support and fixes](/guides/launch-support-status/). For a buying decision that should outlive this snapshot, read the live store page and the source boundary at the bottom of this guide.
+For a status update based on developer statements rather than reviews, see [official launch support and fixes](/guides/launch-support-status/). For a separate critic and user-score aggregate, see the [Metacritic score snapshot](/guides/metacritic-score/). For a buying decision that should outlive this snapshot, read the live store page and the source boundary at the bottom of this guide.
 
 ## The short version
 
@@ -87,6 +87,6 @@ The first four can be tested. The last one cannot be patched by a graphics setti
 
 **Consider a refund** if you have tested the recommended settings, the input device works, and the core combat still feels wrong for you. A refund is not a bug report; include your reproducible technical information in the official forum separately so the developer can act on it.
 
-## Source and date boundary
+## Sources
 
-The review snapshot and recurring complaint categories were checked against the [Steam store page](https://store.steampowered.com/app/2001760/Beast_of_Reincarnation/), Steam's [public review summary](https://store.steampowered.com/appreviews/2001760?json=1&language=all&purchase_type=all&filter=summary), the [current-player endpoint](https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/?appid=2001760), and the [official Steam discussions](https://steamcommunity.com/app/2001760/discussions/) on **2026-08-08**. Counts and rating labels can change after this page is published. The shipped build, Deluxe upgrade, and feedback route come from the [official launch announcement](https://store.steampowered.com/news/app/2001760). For broader buying context, see [Should You Buy Beast of Reincarnation?](/guides/should-you-buy-player-reception/).
+The review snapshot and recurring complaint categories were checked against the [Steam store page](https://store.steampowered.com/app/2001760/Beast_of_Reincarnation/), Steam's [public review summary](https://store.steampowered.com/appreviews/2001760?json=1&language=all&purchase_type=all&filter=summary), and the [official Steam discussions](https://steamcommunity.com/app/2001760/discussions/) on **August 10, 2026**. Counts and rating labels can change after this page is published. The shipped build, Deluxe upgrade, and feedback route come from the [official launch announcement](https://store.steampowered.com/news/app/2001760). For broader buying context, see [Should You Buy Beast of Reincarnation?](/guides/should-you-buy-player-reception/). Checked August 10, 2026.
