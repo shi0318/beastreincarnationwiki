@@ -1,20 +1,20 @@
 ---
-title: "Beast of Reincarnation Steam Reviews and PC Issues"
-description: "A dated Steam review snapshot for Beast of Reincarnation, its player-reported PC issues, and the difference between player and critic scores."
+title: "Beast of Reincarnation Review: Steam Reception and PC Issues"
+description: "Beast of Reincarnation review context from Steam: player reception, reported PC issues, patch status, and how Steam differs from critic scores."
 heading: "Steam Reception: What Players Like and What to Check"
 category: beginner
 keyword: "beast of reincarnation steam reviews"
 image: "beast-of-reincarnation-key-art.webp"
 imageAlt: "Emma and Koo walking through a blighted forest in Beast of Reincarnation official key art"
 publishDate: 2026-08-05
-updateDate: 2026-08-10T08:00:00.000Z
+updateDate: 2026-08-12
 order: 11
 featured: false
 preview: false
 source: community
 ---
 
-**Beast of Reincarnation** is out, and the Steam conversation remains split. Steam's public summary was **Mixed** when this page was checked on **August 10, 2026**. That is a snapshot, not a permanent score: the live store page is the authority for the current number.
+**Beast of Reincarnation** is out, and the Steam conversation remains split. Steam's public summary was **Mixed** when the public review summary was checked on **August 10, 2026**. That is a snapshot, not a permanent score: the live store page is the authority for the current number. Updated August 12, 2026 to link the shipped v1.0.7 support record.
 
 This guide is useful if you are deciding whether to buy or if you have just installed the game and are trying to separate a personal preference from a fixable PC problem. It does not turn a handful of forum posts into a universal bug report. Player patterns below are labelled as community reports, while launch version and support information comes from the developer.
 

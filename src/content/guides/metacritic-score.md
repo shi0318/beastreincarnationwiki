@@ -1,19 +1,20 @@
 ---
-title: "Beast of Reincarnation Metacritic Score: 73/100"
-description: "A dated Beast of Reincarnation Metacritic score snapshot, including the 73/100 critic score, 6.1/10 user score, platform context, and Steam comparison."
+title: "Beast of Reincarnation Metacritic Score: 73/100 Snapshot"
+description: "Beast of Reincarnation Metacritic score snapshot with the 73/100 critic score, 6.1/10 user score, platform scores and Steam context."
 heading: "Metacritic Score: Critic and User Snapshot"
 category: beginner
 keyword: "metacritic beast of reincarnation"
 image: "beast-of-reincarnation-key-art.webp"
 imageAlt: "Emma and Koo walking through a blighted forest in official Beast of Reincarnation key art"
 publishDate: 2026-08-10T08:40:00.000Z
+updateDate: 2026-08-12
 order: 1
 featured: false
 preview: false
 source: reviews
 ---
 
-This is a snapshot of the numbers shown by Metacritic, not an original review by this site. On **August 10, 2026**, the [Beast of Reincarnation Metacritic page](https://www.metacritic.com/game/beast-of-reincarnation/) displayed a **73/100 Metascore** and a **6.1/10 user score**. Metacritic labels both readings "Mixed or Average." Checked August 10, 2026.
+This is a snapshot of the numbers shown by Metacritic, not an original review by this site. On **August 10, 2026**, the [Beast of Reincarnation Metacritic page](https://www.metacritic.com/game/beast-of-reincarnation/) displayed a **73/100 Metascore** and a **6.1/10 user score**. Metacritic labels both readings "Mixed or Average." Updated and rechecked August 12, 2026; the displayed values below remain the August 10 snapshot.
 
 <figure>
   <img src="/images/beast-of-reincarnation-key-art.webp" alt="Emma and Koo walking through a blighted forest in official Beast of Reincarnation key art" width="1600" height="900" loading="lazy" decoding="async" />
