@@ -3,16 +3,16 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import JsonLd from '../../components/JsonLd.astro';
 import GuideCard from '../../components/GuideCard.astro';
+import Pagination from '../../components/Pagination.astro';
 import { SITE, CATEGORIES, GAME_FACTS, type Category } from '../../data/site';
+import { GUIDE_PAGE_SIZE, pageCount, pageItems, sortGuides } from '../../lib/guides';
 
 const guides = await getCollection('guides');
 
-const latest = [...guides].sort((a, b) => {
-  const aDate = a.data.updateDate ?? a.data.publishDate;
-  const bDate = b.data.updateDate ?? b.data.publishDate;
-  if (aDate.getTime() !== bDate.getTime()) return bDate.getTime() - aDate.getTime();
-  return a.id.localeCompare(b.id);
-});
+const latest = sortGuides(guides);
+const currentPage = 1;
+const totalPages = pageCount(latest.length, GUIDE_PAGE_SIZE);
+const visibleLatest = pageItems(latest, currentPage, GUIDE_PAGE_SIZE);
 
 const order: Category[] = ['beginner', 'boss', 'enemies', 'combat', 'exploration'];
 const groups = order
@@ -66,11 +66,22 @@ const schema = {
   description,
   url: new URL(path, SITE.url).href,
   isPartOf: { '@type': 'WebSite', name: SITE.name, url: SITE.url },
+  mainEntity: {
+    '@type': 'ItemList',
+    numberOfItems: visibleLatest.length,
+    itemListElement: visibleLatest.map((guide, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      url: new URL(`/guides/${guide.id}/`, SITE.url).href,
+      name: guide.data.heading ?? guide.data.title,
+    })),
+  },
 };
 ---
 
 <BaseLayout title={title} description={description} path={path}>
   <JsonLd slot="head" schema={schema} />
+  {totalPages > 1 && <link slot="head" rel="next" href={new URL('/guides/page/2/', SITE.url).href} />}
 
   <section class="border-b border-ash-800 bg-ash-900/30">
     <div class="mx-auto max-w-6xl px-4 py-14">
@@ -120,7 +131,7 @@ const schema = {
       </p>
     </div>
     <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      {latest.slice(0, 6).map((guide) => (
+      {visibleLatest.map((guide) => (
         <GuideCard
           href={`/guides/${guide.id}/`}
           title={guide.data.heading ?? guide.data.title}
@@ -133,6 +144,7 @@ const schema = {
         />
       ))}
     </div>
+    <Pagination currentPage={currentPage} totalPages={totalPages} basePath="/guides/" />
   </section>
 
   {
@@ -143,19 +155,17 @@ const schema = {
           <p class="mt-1 text-ash-400">{g.meta.blurb}</p>
           <p class="mt-4 leading-relaxed text-ash-300">{SECTION[g.cat].overview}</p>
         </div>
-        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {g.items.map((guide) => (
-            <GuideCard
-              href={`/guides/${guide.id}/`}
-              title={guide.data.heading ?? guide.data.title}
-              description={guide.data.description}
-              image={`/images/${guide.data.image}`}
-              imageAlt={guide.data.imageAlt}
-              category={guide.data.category}
-              source={guide.data.source}
-              date={guide.data.updateDate ?? guide.data.publishDate}
-            />
-          ))}
+        <div class="rounded-xl border border-ash-800 bg-ash-900/40 p-5">
+          <p class="text-sm text-ash-400">
+            {g.items.length} guides are available in this category, sorted newest first on the
+            category page.
+          </p>
+          <a
+            href={`/guides/category/${g.cat}/`}
+            class="mt-4 inline-block text-sm font-medium text-ember-400 hover:text-ember-500"
+          >
+            Browse all {g.meta.label.toLowerCase()} guides →
+          </a>
         </div>
       </section>
     ))

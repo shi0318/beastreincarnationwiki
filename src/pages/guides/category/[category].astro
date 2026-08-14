@@ -3,7 +3,9 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import JsonLd from '../../../components/JsonLd.astro';
 import GuideCard from '../../../components/GuideCard.astro';
+import Pagination from '../../../components/Pagination.astro';
 import { SITE, CATEGORIES, GAME_FACTS, type Category } from '../../../data/site';
+import { GUIDE_PAGE_SIZE, pageCount, pageItems, sortGuides } from '../../../lib/guides';
 
 export async function getStaticPaths() {
   const guides = await getCollection('guides');
@@ -11,14 +13,7 @@ export async function getStaticPaths() {
 
   return cats
     .map((cat) => {
-      const items = guides
-        .filter((g) => g.data.category === cat)
-        .sort((a, b) => {
-          const aDate = a.data.updateDate ?? a.data.publishDate;
-          const bDate = b.data.updateDate ?? b.data.publishDate;
-          if (aDate.getTime() !== bDate.getTime()) return bDate.getTime() - aDate.getTime();
-          return a.id.localeCompare(b.id);
-        });
+      const items = sortGuides(guides.filter((g) => g.data.category === cat));
       return { params: { category: cat }, props: { cat, items } };
     })
     .filter((p) => p.props.items.length > 0);
@@ -28,6 +23,9 @@ const { cat, items } = Astro.props;
 const meta = CATEGORIES[cat];
 
 const allPreview = items.every((g) => g.data.preview);
+const currentPage = 1;
+const totalPages = pageCount(items.length, GUIDE_PAGE_SIZE);
+const visibleItems = pageItems(items, currentPage, GUIDE_PAGE_SIZE);
 
 const path = `/guides/category/${cat}/`;
 const title = `Beast of Reincarnation ${meta.label}`;
@@ -43,7 +41,8 @@ const schema = [
     isPartOf: { '@type': 'WebSite', name: SITE.name, url: SITE.url },
     mainEntity: {
       '@type': 'ItemList',
-      itemListElement: items.map((g, i) => ({
+      numberOfItems: visibleItems.length,
+      itemListElement: visibleItems.map((g, i) => ({
         '@type': 'ListItem',
         position: i + 1,
         url: new URL(`/guides/${g.id}/`, SITE.url).href,
@@ -75,6 +74,7 @@ const schema = [
 
 <BaseLayout title={title} description={description} path={path}>
   <JsonLd slot="head" schema={schema} />
+  {totalPages > 1 && <link slot="head" rel="next" href={new URL(`${path}page/2/`, SITE.url).href} />}
 
   <section class="border-b border-ash-800 bg-ash-900/30">
     <div class="mx-auto max-w-6xl px-4 py-14">
@@ -113,7 +113,7 @@ const schema = [
   <section class="mx-auto max-w-6xl px-4 py-14">
     <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {
-        items.map((guide) => (
+        visibleItems.map((guide) => (
           <GuideCard
             href={`/guides/${guide.id}/`}
             title={guide.data.heading ?? guide.data.title}
@@ -127,5 +127,6 @@ const schema = [
         ))
       }
     </div>
+    <Pagination currentPage={currentPage} totalPages={totalPages} basePath={path} />
   </section>
 </BaseLayout>

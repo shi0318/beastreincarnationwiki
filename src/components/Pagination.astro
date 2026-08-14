@@ -1,0 +1,64 @@
+---
+interface Props {
+  currentPage: number;
+  totalPages: number;
+  basePath: string;
+}
+
+const { currentPage, totalPages, basePath } = Astro.props;
+const normalizedBasePath = basePath.endsWith('/') ? basePath : `${basePath}/`;
+const pageHref = (page: number) =>
+  page === 1 ? normalizedBasePath : `${normalizedBasePath}page/${page}/`;
+---
+
+{totalPages > 1 && (
+  <nav aria-label="Pagination" class="mt-12 flex flex-wrap items-center justify-center gap-2">
+    {
+      currentPage > 1 && (
+        <a
+          href={pageHref(currentPage - 1)}
+          rel="prev"
+          class="rounded-lg border border-ash-700 px-4 py-2 text-sm font-medium text-ash-200 transition-colors hover:border-ember-500 hover:text-ember-400"
+        >
+          Previous
+        </a>
+      )
+    }
+
+    <ol class="flex flex-wrap items-center justify-center gap-2" aria-label="Pages">
+      {
+        Array.from({ length: totalPages }, (_, index) => index + 1).map((page) => (
+          <li>
+            {page === currentPage ? (
+              <span
+                aria-current="page"
+                class="inline-flex min-w-10 justify-center rounded-lg border border-ember-500 bg-ember-600 px-3 py-2 text-sm font-semibold text-ash-950"
+              >
+                {page}
+              </span>
+            ) : (
+              <a
+                href={pageHref(page)}
+                class="inline-flex min-w-10 justify-center rounded-lg border border-ash-700 px-3 py-2 text-sm font-medium text-ash-300 transition-colors hover:border-ember-500 hover:text-ember-400"
+              >
+                {page}
+              </a>
+            )}
+          </li>
+        ))
+      }
+    </ol>
+
+    {
+      currentPage < totalPages && (
+        <a
+          href={pageHref(currentPage + 1)}
+          rel="next"
+          class="rounded-lg border border-ash-700 px-4 py-2 text-sm font-medium text-ash-200 transition-colors hover:border-ember-500 hover:text-ember-400"
+        >
+          Next
+        </a>
+      )
+    }
+  </nav>
+)}

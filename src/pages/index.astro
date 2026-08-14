@@ -5,18 +5,15 @@ import JsonLd from '../components/JsonLd.astro';
 import GuideCard from '../components/GuideCard.astro';
 import SourceBadge from '../components/SourceBadge.astro';
 import { SITE, GAME_FACTS, LAUNCH_COPY, OFFER_AVAILABILITY, PRICE_NUMERIC } from '../data/site';
+import { sortGuides } from '../lib/guides';
 
 const guides = await getCollection('guides');
 
 const homeTitle = `${SITE.name} - Guides, Combat & Confirmed Game Info`;
 
-const sorted = [...guides].sort((a, b) => {
-  if (a.data.featured !== b.data.featured) return a.data.featured ? -1 : 1;
-  if (a.data.order !== b.data.order) return a.data.order - b.data.order;
-  return b.data.publishDate.getTime() - a.data.publishDate.getTime();
-});
+const sorted = sortGuides(guides);
 
-const previews = sorted.slice(0, 6);
+const previews = sorted.slice(0, 9);
 
 const confirmedFacts = [
   { label: 'Status', value: `Out now — released ${GAME_FACTS.releaseDateShort}` },
@@ -350,9 +347,10 @@ const schema = [
           Guides
         </p>
         <h2 class="mt-2 font-display text-2xl font-bold text-ash-50 md:text-3xl">
-          Start with these
+          Latest guides
         </h2>
         <p class="mt-2 text-ash-400">
+          These are the nine most recently published or materially updated guides, newest first.
           Each card carries a source badge. <strong class="text-ash-200">Hands-on</strong> pages are
           written from the shipped game with their sources cited; pages still marked
           <strong class="text-ash-200">Speculation</strong> were written before launch and are being
