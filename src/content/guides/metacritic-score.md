@@ -7,14 +7,14 @@ keyword: "metacritic beast of reincarnation"
 image: "beast-of-reincarnation-key-art.webp"
 imageAlt: "Emma and Koo walking through a blighted forest in official Beast of Reincarnation key art"
 publishDate: 2026-08-10T08:40:00.000Z
-updateDate: 2026-08-12
+updateDate: 2026-08-17
 order: 1
 featured: false
 preview: false
 source: reviews
 ---
 
-This is a snapshot of the numbers shown by Metacritic, not an original review by this site. On **August 10, 2026**, the [Beast of Reincarnation Metacritic page](https://www.metacritic.com/game/beast-of-reincarnation/) displayed a **73/100 Metascore** and a **6.1/10 user score**. Metacritic labels both readings "Mixed or Average." Updated and rechecked August 12, 2026; the displayed values below remain the August 10 snapshot.
+This is a snapshot of the numbers shown by Metacritic, not an original review by this site. On **August 17, 2026**, the [Beast of Reincarnation Metacritic page](https://www.metacritic.com/game/beast-of-reincarnation/) displayed a **73/100 Metascore** and a **6.1/10 user score**. Metacritic labels both readings "Mixed or Average." Scores can change as more reviews and user ratings arrive, so this page records the check date instead of presenting the numbers as permanent.
 
 <figure>
   <img src="/images/beast-of-reincarnation-key-art.webp" alt="Emma and Koo walking through a blighted forest in official Beast of Reincarnation key art" width="1600" height="900" loading="lazy" decoding="async" />
@@ -40,9 +40,9 @@ For example, the [Steam reception and PC issues guide](/guides/steam-reception-a
 - Platform differences can reflect different review pools, timing, and coverage volume. They do not prove a technical advantage on one platform.
 - Scores can change after publication. Use the live Metacritic page before citing a number in a purchase decision or another article.
 
-For developer-confirmed change information, read the [official v1.0.7 patch notes](/guides/patch-notes/) instead of inferring patch status from a review score.
+For developer-confirmed change information, read the [official v1.0.7 patch notes](/guides/patch-notes/) and [v1.0.8 patch notes](/guides/beast-of-reincarnation-update-1-0-8/) instead of inferring patch status from a review score.
 
 ## Sources
 
-- [Metacritic: Beast of Reincarnation](https://www.metacritic.com/game/beast-of-reincarnation/) - the displayed Metascore, user score, rating labels, and platform cards. Checked August 10, 2026.
-- [Steam public review summary](https://store.steampowered.com/appreviews/2001760?json=1&language=all&purchase_type=all&filter=summary) - a separate PC player-review aggregate used only for the comparison boundary above. Checked August 10, 2026.
+- [Metacritic: Beast of Reincarnation](https://www.metacritic.com/game/beast-of-reincarnation/) - the displayed Metascore, user score, rating labels, and platform cards. Checked August 17, 2026.
+- [Steam public review summary](https://store.steampowered.com/appreviews/2001760?json=1&language=all&purchase_type=all&filter=summary) - a separate PC player-review aggregate used only for the comparison boundary above. Checked August 17, 2026.

@@ -178,7 +178,7 @@ export const GAME_FACTS = {
       notes: 'Med 1080p @ 60fps w/ DLSS or FSR3 (Performance). SSD required.',
     },
   },
-  lastVerified: '2026-08-04',
+  lastVerified: '2026-08-17',
 } as const;
 
 // ─────────────────────────────────────────────────────────────────────────────

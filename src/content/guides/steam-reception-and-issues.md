@@ -1,20 +1,20 @@
 ---
 title: "Beast of Reincarnation Review: Steam Reception and PC Issues"
-description: "Beast of Reincarnation review context from Steam: player reception, reported PC issues, patch status, and how Steam differs from critic scores."
+description: "Beast of Reincarnation review context from Steam: the current player-reception snapshot, reported PC issues, patch status, and how Steam differs from critic scores."
 heading: "Steam Reception: What Players Like and What to Check"
 category: beginner
 keyword: "beast of reincarnation steam reviews"
 image: "beast-of-reincarnation-key-art.webp"
 imageAlt: "Emma and Koo walking through a blighted forest in Beast of Reincarnation official key art"
 publishDate: 2026-08-05
-updateDate: 2026-08-12
+updateDate: 2026-08-17
 order: 11
 featured: false
 preview: false
 source: community
 ---
 
-**Beast of Reincarnation** is out, and the Steam conversation remains split. Steam's public summary was **Mixed** when the public review summary was checked on **August 10, 2026**. That is a snapshot, not a permanent score: the live store page is the authority for the current number. Updated August 12, 2026 to link the shipped v1.0.7 support record.
+**Beast of Reincarnation** is out, and the Steam conversation remains split. Steam's public summary was **Mixed** when the public review summary was checked on **August 17, 2026**. That is a snapshot, not a permanent score: the live store page is the authority for the current number. Updated August 17, 2026 after checking the shipped v1.0.8 announcement and the live review endpoint.
 
 This guide is useful if you are deciding whether to buy or if you have just installed the game and are trying to separate a personal preference from a fixable PC problem. It does not turn a handful of forum posts into a universal bug report. Player patterns below are labelled as community reports, while launch version and support information comes from the developer.
 
@@ -23,13 +23,13 @@ This guide is useful if you are deciding whether to buy or if you have just inst
   <figcaption>The launch conversation is about both the game itself and the conditions in which it is being played. Check the technical baseline before judging the combat.</figcaption>
 </figure>
 
-## August 10 Steam snapshot
+## August 17 Steam snapshot
 
-Steam's public review-summary endpoint returned **4,129 total reviews** when checked on **August 10, 2026**: **2,339 positive** and **1,790 negative**, which Steam labelled **Mixed**. These numbers are time-specific snapshots, not lifetime claims, forecasts, or a substitute for the live Steam store page.
+Steam's public review-summary endpoint returned **5,162 total reviews** when checked on **August 17, 2026**: **2,981 positive** and **2,181 negative**, which Steam labelled **Mixed**. These numbers are time-specific snapshots, not lifetime claims, forecasts, or a substitute for the live Steam store page.
 
 The individual reviews in that sample reinforce the same split described below. Some players praise the parry-focused combat, Emma and Koo's partnership, music, and visual style. Others report dissatisfaction with exploration rewards, enemy or boss variety, camera and UI choices, and PC presentation. These are player views, not verified developer bug lists; one review is not proof that every system or configuration behaves that way.
 
-For a status update based on developer statements rather than reviews, see [official launch support and fixes](/guides/launch-support-status/). For a separate critic and user-score aggregate, see the [Metacritic score snapshot](/guides/metacritic-score/). For a buying decision that should outlive this snapshot, read the live store page and the source boundary at the bottom of this guide.
+For a status update based on developer statements rather than reviews, see [official launch support and fixes](/guides/launch-support-status/) and the [v1.0.8 patch notes](/guides/beast-of-reincarnation-update-1-0-8/). For a separate critic and user-score aggregate, see the [Metacritic score snapshot](/guides/metacritic-score/). For a buying decision that should outlive this snapshot, read the live store page and the source boundary at the bottom of this guide.
 
 ## The short version
 
@@ -89,4 +89,4 @@ The first four can be tested. The last one cannot be patched by a graphics setti
 
 ## Sources
 
-The review snapshot and recurring complaint categories were checked against the [Steam store page](https://store.steampowered.com/app/2001760/Beast_of_Reincarnation/), Steam's [public review summary](https://store.steampowered.com/appreviews/2001760?json=1&language=all&purchase_type=all&filter=summary), and the [official Steam discussions](https://steamcommunity.com/app/2001760/discussions/) on **August 10, 2026**. Counts and rating labels can change after this page is published. The shipped build, Deluxe upgrade, and feedback route come from the [official launch announcement](https://store.steampowered.com/news/app/2001760). For broader buying context, see [Should You Buy Beast of Reincarnation?](/guides/should-you-buy-player-reception/). Checked August 10, 2026.
+The review snapshot and recurring complaint categories were checked against the [Steam store page](https://store.steampowered.com/app/2001760/Beast_of_Reincarnation/), Steam's [public review summary](https://store.steampowered.com/appreviews/2001760?json=1&language=all&purchase_type=all&filter=summary), and the [official Steam discussions](https://steamcommunity.com/app/2001760/discussions/) on **August 17, 2026**. Counts and rating labels can change after this page is published. The shipped build and support information come from the [official Steam news feed](https://store.steampowered.com/news/app/2001760). For broader buying context, see [Should You Buy Beast of Reincarnation?](/guides/should-you-buy-player-reception/). Checked August 17, 2026.
