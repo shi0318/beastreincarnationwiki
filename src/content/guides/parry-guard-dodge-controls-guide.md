@@ -10,7 +10,7 @@ publishDate: 2026-08-06
 order: 1
 featured: true
 preview: false
-source: handson
+source: third-party-tested
 ---
 
 Beast of Reincarnation uses one defensive input for both a perfect parry and an ordinary guard. The result depends on timing: press just before impact and Emma parries; press too early and she guards instead. That makes early mistakes survivable, but guard is powered by a limited gauge and cannot be treated like a permanent shield.

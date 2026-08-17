@@ -1,0 +1,164 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import JsonLd from '../components/JsonLd.astro';
+import SourceBadge from '../components/SourceBadge.astro';
+import WikiSectionNav from '../components/WikiSectionNav.astro';
+import { GAME_FACTS, SITE } from '../data/site';
+
+const path = '/weapons/';
+const title = 'Beast of Reincarnation Weapons: Swords, Crossbow, Arrows & Bolts';
+const description =
+  'Beast of Reincarnation weapons list with Mechblade forms, named swords, the Spring Thunder Crossbow, arrows, bolts, weapon abilities and source-checked location notes.';
+const image = '/images/beast-of-reincarnation-emma-character.webp';
+
+const swords = [
+  ['Mechblade (Standard)', 'Slash', 'Mech Slash: Medium'],
+  ['Purifier', 'Slash', 'Purifier Soul'],
+  ['Cirrus Sword', 'Impact', 'Clear Skies'],
+  ['Mechblade (Light)', 'Rupture', 'Mech Slash: Light'],
+  ['Purity', 'Slash', 'Vampiric Blade'],
+  ['Mechblade (Heavy)', 'Impact', 'Mech Slash: Heavy'],
+  ['Thunderwave Sword', 'Electric', 'Tempest'],
+  ['Bell Sword', 'Impact', 'Crushing Blade'],
+  ["Hunter's Sword", 'Poison', 'Envenomed'],
+  ['Sunrise Sword', 'Flame', 'Light of Dawn'],
+  ['Hazebringer', 'Acid', 'Caustic Touch'],
+  ['Shark Cutter', 'Slash', 'Spiral Critical'],
+  ['First Moon', 'Slash', 'Ravenous Eclipse'],
+  ['Camellia', 'Impact', 'Spring Thunder'],
+  ['Big Dipper', 'Slash', 'Lucky'],
+] as const;
+
+const ammo = [
+  'Spring Thunder Crossbow',
+  'Arrows and Acid, Explosive, Fire, Lightning and Poison Arrows',
+  'Bolts and Acid, Explosive, Fire, Lightning and Poison Bolts',
+] as const;
+
+const canonical = new URL(path, SITE.url).href;
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: title,
+    description,
+    url: canonical,
+    about: { '@type': 'VideoGame', name: GAME_FACTS.name, url: GAME_FACTS.source },
+    isPartOf: { '@type': 'WebSite', name: SITE.name, url: SITE.url },
+    mainEntity: {
+      '@type': 'ItemList',
+      numberOfItems: swords.length + ammo.length,
+      itemListElement: [...swords.map(([name], index) => ({
+        '@type': 'ListItem', position: index + 1, name,
+      })), ...ammo.map((name, index) => ({
+        '@type': 'ListItem', position: swords.length + index + 1, name,
+      }))],
+    },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.url },
+      { '@type': 'ListItem', position: 2, name: 'Guides', item: new URL('/guides/', SITE.url).href },
+      { '@type': 'ListItem', position: 3, name: 'Weapons', item: canonical },
+    ],
+  },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} image={image} imageAlt="Emma holding her sword in Beast of Reincarnation" >
+  <JsonLd slot="head" schema={schema} />
+  <section class="border-b border-ash-800 bg-ash-900/30">
+    <div class="mx-auto max-w-6xl px-4 py-12">
+      <nav aria-label="Breadcrumb" class="mb-5 text-xs text-ash-400">
+        <a href="/" class="hover:text-ember-400">Home</a><span aria-hidden="true"> / </span>
+        <a href="/guides/" class="hover:text-ember-400">Guides</a><span aria-hidden="true"> / </span>
+        <span class="text-ash-300">Weapons</span>
+      </nav>
+      <div class="grid items-center gap-8 md:grid-cols-[1.1fr_.9fr]">
+        <div>
+          <SourceBadge source="third-party-tested" showBlurb />
+          <h1 class="mt-4 font-display text-3xl font-bold leading-tight text-ash-50 md:text-5xl">
+            Beast of Reincarnation Weapons: Swords, Crossbow, Arrows &amp; Bolts
+          </h1>
+          <p class="mt-4 max-w-3xl text-lg leading-relaxed text-ash-300">
+            Looking for a Beast of Reincarnation weapon list? This index separates named swords,
+            Emma's ranged weapon and ammunition, then points to the progression and location
+            guidance that is already source-checked on this site.
+          </p>
+        </div>
+        <img src={image} alt="Emma holding a sword in Beast of Reincarnation" width="1600" height="900" loading="eager" fetchpriority="high" class="rounded-xl border border-ash-800" />
+      </div>
+    </div>
+  </section>
+
+  <main class="mx-auto max-w-6xl px-4 py-12">
+    <WikiSectionNav active={path} />
+    <section class="mt-10">
+      <h2 class="font-display text-2xl font-bold text-ash-50">Beast of Reincarnation sword list</h2>
+      <p class="mt-2 max-w-3xl leading-relaxed text-ash-400">
+        The names and displayed abilities below follow the current hands-on weapon index. The
+        official Steam page confirms that the game has gear and loadout customization, while the
+        complete named list and locations come from the cited guide source. We do not turn this
+        list into an unsupported tier ranking.
+      </p>
+      <div class="mt-6 overflow-x-auto rounded-xl border border-ash-800">
+        <table class="w-full min-w-[620px] text-left text-sm">
+          <thead class="bg-ash-900 text-ash-200">
+            <tr><th class="px-4 py-3">Weapon</th><th class="px-4 py-3">Element / type</th><th class="px-4 py-3">Listed ability</th></tr>
+          </thead>
+          <tbody>
+            {swords.map(([name, type, ability]) => (
+              <tr class="border-t border-ash-800">
+                <th scope="row" class="px-4 py-3 font-medium text-ash-100">{name}</th>
+                <td class="px-4 py-3 text-ash-300">{type}</td>
+                <td class="px-4 py-3 text-ash-300">{ability}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="mt-12">
+      <h2 class="font-display text-2xl font-bold text-ash-50">Detailed Beast of Reincarnation weapon pages</h2>
+      <div class="mt-5 grid gap-4 md:grid-cols-3">
+        <a href="/weapons/blades/" class="rounded-xl border border-ash-800 bg-ash-900/40 p-5 transition hover:border-ember-500"><h3 class="font-display text-lg font-bold text-ash-50">Blade count and NG+</h3><p class="mt-2 text-sm leading-relaxed text-ash-400">Steam-reported standard, Deluxe and upgrade milestones.</p></a>
+        <a href="/weapons/thunderwave-sword/" class="rounded-xl border border-ash-800 bg-ash-900/40 p-5 transition hover:border-ember-500"><h3 class="font-display text-lg font-bold text-ash-50">Thunderwave Sword</h3><p class="mt-2 text-sm leading-relaxed text-ash-400">The electric weapon note for the Steam-reported Lacerta weakness.</p></a>
+        <a href="/weapons/big-dipper/" class="rounded-xl border border-ash-800 bg-ash-900/40 p-5 transition hover:border-ember-500"><h3 class="font-display text-lg font-bold text-ash-50">Big Dipper</h3><p class="mt-2 text-sm leading-relaxed text-ash-400">Deluxe Edition entitlement and blade-count boundary.</p></a>
+      </div>
+    </section>
+
+    <section class="mt-12">
+      <h2 class="font-display text-2xl font-bold text-ash-50">Ranged weapons and ammunition</h2>
+      <ul class="mt-4 grid gap-3 sm:grid-cols-3">
+        {ammo.map((item) => <li class="rounded-lg border border-ash-800 bg-ash-900/40 p-4 text-ash-200">{item}</li>)}
+      </ul>
+    </section>
+
+    <section class="mt-12 grid gap-6 md:grid-cols-2">
+      <div class="rounded-xl border border-ash-800 bg-ash-900/40 p-6">
+        <h2 class="font-display text-xl font-bold text-ash-50">How to use this weapon index</h2>
+        <ol class="mt-4 list-decimal space-y-2 pl-5 text-ash-300">
+          <li>Use the weapon name and element to match the target's visible weakness.</li>
+          <li>Check the Cleanse Walker requirement before assuming a weapon is permanently capped.</li>
+          <li>Compare the ability and upgrade path with your Emma and Koo build rather than chasing an unverified universal tier list.</li>
+        </ol>
+      </div>
+      <div class="rounded-xl border border-ash-800 bg-ash-900/40 p-6">
+        <h2 class="font-display text-xl font-bold text-ash-50">Related Beast of Reincarnation guides</h2>
+        <ul class="mt-4 space-y-2 text-ash-300">
+          <li><a class="text-ember-400 hover:text-ember-300" href="/guides/cleanse-walker-upgrade-materials-guide/">Cleanse Walker upgrade materials and weapon gates</a></li>
+          <li><a class="text-ember-400 hover:text-ember-300" href="/guides/progression-and-builds/">Progression, skills, gear and Spirit Stones</a></li>
+          <li><a class="text-ember-400 hover:text-ember-300" href="/guides/deluxe-dlc-entitlement-fix-guide/">Big Dipper Deluxe DLC entitlement fix</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="mt-12 border-t border-ash-800 pt-6 text-sm leading-relaxed text-ash-400">
+      <h2 class="font-display text-xl font-bold text-ash-200">Sources and evidence boundary</h2>
+      <p class="mt-2">Checked August 17, 2026. Weapon names, displayed abilities and location structure are referenced from <a class="text-ember-400 hover:text-ember-300" href="https://game8.co/games/Beast-of-Reincarnation/archives/613125" rel="noopener" target="_blank">Game8's Beast of Reincarnation weapon list</a>. Big Dipper's Deluxe inclusion is confirmed by the <a class="text-ember-400 hover:text-ember-300" href={GAME_FACTS.source} rel="noopener" target="_blank">official Steam listing</a>. This index is not a claim that this site personally tested every weapon.</p>
+    </section>
+  </main>
+</BaseLayout>

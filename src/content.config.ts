@@ -21,7 +21,17 @@ const guides = defineCollection({
     preview: z.boolean().default(false),
     // 内容来源可信度标签，用于卡片/详情页徽章
     source: z
-      .enum(['official', 'handson', 'community', 'reviews', 'trailer', 'analysis', 'lore', 'speculation'])
+      .enum([
+        'official',
+        'handson',
+        'third-party-tested',
+        'community',
+        'reviews',
+        'trailer',
+        'analysis',
+        'lore',
+        'speculation',
+      ])
       .default('speculation'),
   }),
 });

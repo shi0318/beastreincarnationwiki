@@ -10,7 +10,7 @@ publishDate: 2026-08-06
 order: 0
 featured: true
 preview: false
-source: handson
+source: third-party-tested
 ---
 
 Koo's Bloom Arts are the turn-selection half of Beast of Reincarnation's hybrid combat. Emma stays under your direct control, while Koo spends **florescence points (FP)** on commanded techniques. The system looks busy because FP, Emma's entanglement gauge, elemental weaknesses, mods, and an on-screen timing prompt all meet in the same few seconds.

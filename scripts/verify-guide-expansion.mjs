@@ -9,27 +9,27 @@ const siteConfigPath = join(root, 'src', 'data', 'site.ts');
 const expected = {
   'koo-bloom-arts-qte-guide': {
     category: 'combat',
-    source: 'handson',
+    source: 'third-party-tested',
     image: 'beast-of-reincarnation-koo-blighted-wolf.webp',
   },
   'parry-guard-dodge-controls-guide': {
     category: 'combat',
-    source: 'handson',
+    source: 'third-party-tested',
     image: 'beast-of-reincarnation-emma-parry-flower-beast.webp',
   },
   'elements-weakness-stagger-guide': {
     category: 'combat',
-    source: 'handson',
+    source: 'third-party-tested',
     image: 'beast-of-reincarnation-blighted-boar-enemies.webp',
   },
   'cleanse-walker-upgrade-materials-guide': {
     category: 'beginner',
-    source: 'handson',
+    source: 'third-party-tested',
     image: 'beast-of-reincarnation-wasteland-colossal-boss.webp',
   },
   'lift-extend-traversal-guide': {
     category: 'exploration',
-    source: 'handson',
+    source: 'third-party-tested',
     image: 'beast-of-reincarnation-emma-koo-river-exploration.webp',
   },
   'deluxe-dlc-entitlement-fix-guide': {
@@ -72,7 +72,7 @@ const expected = {
     category: 'beginner',
     source: 'reviews',
     image: 'beast-of-reincarnation-key-art.webp',
-    checkedText: 'Checked August 10, 2026',
+    checkedText: 'Checked August 17, 2026',
     requires: [
       '73/100',
       '6.1/10',
@@ -103,8 +103,8 @@ const expected = {
     category: 'beginner',
     source: 'community',
     image: 'beast-of-reincarnation-key-art.webp',
-    checkedText: 'Checked August 10, 2026',
-    requires: ['4,129', '2,339', '1,790', '/guides/metacritic-score/'],
+    checkedText: 'Checked August 17, 2026',
+    requires: ['5,173', '2,987', '2,186', '/guides/metacritic-score/'],
   },
 };
 

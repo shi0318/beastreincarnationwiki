@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import JsonLd from '../../components/JsonLd.astro';
+import SourceBadge from '../../components/SourceBadge.astro';
+import WikiSectionNav from '../../components/WikiSectionNav.astro';
+import { GAME_FACTS, SITE } from '../../data/site';
+import { CHAPTER_DETAILS } from '../../data/section-pages';
+
+export function getStaticPaths() {
+  return CHAPTER_DETAILS.map((chapter, index) => ({
+    params: { slug: chapter.slug },
+    props: { chapter, previous: CHAPTER_DETAILS[index - 1], next: CHAPTER_DETAILS[index + 1] },
+  }));
+}
+
+const { chapter, previous, next } = Astro.props;
+const path = `/walkthrough/${chapter.slug}/`;
+const seoRegion = chapter.region === 'Ancient Civilization Zone' ? 'Ancient Civilization' : chapter.region;
+const seoTitle = `Beast of Reincarnation Chapter ${chapter.number}: ${seoRegion} Guide`;
+const canonical = new URL(path, SITE.url).href;
+const schema = [
+  { '@context': 'https://schema.org', '@type': 'Article', headline: seoTitle, description: chapter.description, url: canonical, image: new URL(chapter.image, SITE.url).href, about: { '@type': 'VideoGame', name: GAME_FACTS.name, url: GAME_FACTS.source }, isPartOf: { '@type': 'WebSite', name: SITE.name, url: SITE.url } },
+  { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: SITE.url }, { '@type': 'ListItem', position: 2, name: 'Walkthrough', item: new URL('/walkthrough/', SITE.url).href }, { '@type': 'ListItem', position: 3, name: `Chapter ${chapter.number}`, item: canonical }] },
+];
+---
+
+<BaseLayout title={seoTitle} description={chapter.description} path={path} image={chapter.image} imageAlt={chapter.imageAlt} ogType="article" updateDate={new Date('2026-08-17T00:00:00Z')}>
+  <JsonLd slot="head" schema={schema} />
+  <section class="border-b border-ash-800 bg-ash-900/30"><div class="mx-auto max-w-5xl px-4 py-12">
+    <nav aria-label="Breadcrumb" class="mb-5 text-xs text-ash-400"><a href="/" class="hover:text-ember-400">Home</a><span aria-hidden="true"> / </span><a href="/walkthrough/" class="hover:text-ember-400">Walkthrough</a><span aria-hidden="true"> / </span><span class="text-ash-300">Chapter {chapter.number}</span></nav>
+    <SourceBadge source="community" showBlurb />
+    <h1 class="mt-4 font-display text-3xl font-bold leading-tight text-ash-50 md:text-5xl">Beast of Reincarnation Chapter {chapter.number}: {chapter.region} Guide</h1>
+    <p class="mt-4 max-w-3xl text-lg leading-relaxed text-ash-300">{chapter.description} The story subtitle listed by the site is <strong class="text-ash-100">{chapter.chapterName}</strong>; the collection figures below come from a Steam player guide and are kept separate from unsupported route claims.</p>
+  </div></section>
+  <main class="mx-auto max-w-5xl px-4 py-12"><WikiSectionNav active="/walkthrough/" />
+    <section class="mt-10 grid gap-8 md:grid-cols-[1.1fr_.9fr]"><div><h2 class="font-display text-2xl font-bold text-ash-50">Beast of Reincarnation Chapter {chapter.number} checklist</h2><div class="mt-5 overflow-hidden rounded-xl border border-ash-800"><table class="w-full text-left text-sm"><tbody>{chapter.facts.map((fact) => <tr class="border-t border-ash-800 first:border-t-0"><th scope="row" class="w-2/5 bg-ash-900/60 px-4 py-3 font-medium text-ash-200">{fact.label}</th><td class="px-4 py-3 text-ash-300">{fact.value}</td></tr>)}</tbody></table></div></div><img src={chapter.image} alt={chapter.imageAlt} width="1600" height="900" loading="eager" fetchpriority="high" class="rounded-xl border border-ash-800 object-cover" /></section>
+    <section class="mt-12"><h2 class="font-display text-2xl font-bold text-ash-50">How to use this Beast of Reincarnation chapter page</h2><ol class="mt-5 space-y-4 text-ash-300">{chapter.checklist.map((item, index) => <li class="flex gap-3"><span class="font-display font-bold text-ember-400">{index + 1}.</span><span>{item}</span></li>)}</ol></section>
+    <section class="mt-12 rounded-xl border border-ash-800 bg-ash-900/40 p-6"><h2 class="font-display text-xl font-bold text-ash-50">What the Steam evidence confirms</h2><p class="mt-3 leading-relaxed text-ash-300">{chapter.evidence}</p></section>
+    <section class="mt-12 border-t border-ash-800 pt-6 text-sm leading-relaxed text-ash-400"><h2 class="font-display text-xl font-bold text-ash-200">Sources and limits</h2><p class="mt-2">The regional counts are from <a class="text-ember-400 hover:text-ember-300" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3781175670" rel="noopener" target="_blank">Steam Community guide 3781175670</a>, a player-maintained Simplified Chinese collection guide updated August 11, 2026. English region labels are matched to the <a class="text-ember-400 hover:text-ember-300" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3778455109" rel="noopener" target="_blank">Steam interactive-map guide</a> where available. This page does not claim a personally cleared route or an official collectible count.</p></section>
+    <nav aria-label="Chapter navigation" class="mt-10 flex flex-wrap justify-between gap-3 border-t border-ash-800 pt-6 text-sm">{previous ? <a class="text-ember-400 hover:text-ember-300" href={`/walkthrough/${previous.slug}/`}>← Chapter {previous.number}: {previous.region}</a> : <span></span>}{next ? <a class="text-ember-400 hover:text-ember-300" href={`/walkthrough/${next.slug}/`}>Chapter {next.number}: {next.region} →</a> : <a class="text-ember-400 hover:text-ember-300" href="/walkthrough/">Back to walkthrough →</a>}</nav>
+  </main>
+</BaseLayout>

@@ -10,7 +10,7 @@ publishDate: 2026-08-06
 order: 2
 featured: true
 preview: false
-source: handson
+source: third-party-tested
 ---
 
 The Cleanse Walker is more than a story hub. It is part of Beast of Reincarnation's equipment progression, and launch coverage reports that weapon and projectile enhancement eventually stops until the Walker itself reaches the required level.

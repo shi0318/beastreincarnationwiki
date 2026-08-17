@@ -10,7 +10,7 @@ publishDate: 2026-08-05
 order: 1
 featured: false
 preview: false
-source: handson
+source: third-party-tested
 ---
 
 The opening hours of **Beast of Reincarnation** are easier once you understand what the game is rewarding. The most valuable early habit is not spending every resource on damage: it is learning to parry, then turning the resources that parry creates into Koo's bloom arts, Emma's blade arts, and safer upgrades.

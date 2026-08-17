@@ -1,5 +1,5 @@
 ---
-import { SITE, NAV, FOOTER_LINKS } from '../data/site';
+import { SITE, NAV, WIKI_SECTIONS, FOOTER_LINKS } from '../data/site';
 const year = new Date().getFullYear();
 ---
 
@@ -25,6 +25,26 @@ const year = new Date().getFullYear();
                     class="text-ash-400 transition-colors hover:text-ember-400"
                   >
                     {item.label}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </nav>
+
+        <nav aria-label="Wiki sections">
+          <p class="mb-3 font-display text-xs font-semibold uppercase tracking-wide text-ash-500">
+            Wiki Sections
+          </p>
+          <ul class="flex flex-col gap-2 text-sm">
+            {
+              WIKI_SECTIONS.map((section) => (
+                <li>
+                  <a
+                    href={section.href}
+                    class="text-ash-400 transition-colors hover:text-ember-400"
+                  >
+                    {section.label}
                   </a>
                 </li>
               ))

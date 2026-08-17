@@ -1,5 +1,5 @@
 ---
-title: "Blighted Boar - Pre-Release Enemy Notes"
+title: "Beast of Reincarnation Blighted Boar - Pre-Release Enemy Notes"
 description: "Pre-release notes on blighted wildlife themes in Beast of Reincarnation, using boar-like enemies as a working example of pack pressure, status risk, and farming questions to answer after launch."
 heading: "Blighted Boar: Pre-Release Enemy Notes"
 category: enemies

@@ -1,5 +1,5 @@
 ---
-title: "Malefact Hordes - Pre-Release Crowd Notes"
+title: "Beast of Reincarnation Malefact Hordes - Pre-Release Notes"
 description: "Pre-release notes on crowd-pressure combat in Beast of Reincarnation: what hybrid Emma/Koo combat implies for multi-enemy fights, plus a launch checklist for verifying horde tactics."
 heading: "Malefact Hordes: Pre-Release Crowd Notes"
 category: combat

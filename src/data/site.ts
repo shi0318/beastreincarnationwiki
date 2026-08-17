@@ -46,6 +46,35 @@ export const CATEGORIES: Record<
   },
 };
 
+// 专题入口故意不放进顶部 NAV。Guides 首页、正文相关链接和页脚共同承担发现路径，
+// 既方便 Google 抓取，也避免把每个内容集群都塞进主导航。
+export const WIKI_SECTIONS = [
+  {
+    label: 'Weapons',
+    href: '/weapons/',
+    title: 'Beast of Reincarnation Weapons',
+    description: 'Swords, the Spring Thunder Crossbow, arrows, bolts, names, stats and source-checked locations.',
+  },
+  {
+    label: 'Walkthrough',
+    href: '/walkthrough/',
+    title: 'Beast of Reincarnation Walkthrough',
+    description: 'The 13 main chapters, the epilogue, story order and a roadmap for deeper chapter guides.',
+  },
+  {
+    label: 'Skills & Builds',
+    href: '/skills/',
+    title: 'Beast of Reincarnation Skills & Builds',
+    description: 'Emma and Koo skill trees, progression priorities, Bloom Arts and build references.',
+  },
+  {
+    label: 'Characters',
+    href: '/characters/',
+    title: 'Beast of Reincarnation Characters',
+    description: 'Emma and Koo character pages, combat roles, abilities and links to practical guides.',
+  },
+] as const;
+
 export const NAV = [
   { label: 'Home', href: '/' },
   { label: 'Game Info', href: '/game-info/' },
@@ -239,6 +268,7 @@ export const LAUNCH_COPY = IS_RELEASED
 export type SourceKey =
   | 'official'
   | 'handson'
+  | 'third-party-tested'
   | 'community'
   | 'reviews'
   | 'trailer'
@@ -261,7 +291,16 @@ export const SOURCES: Record<
     icon: '🎮',
     tone: 'green',
     blurb:
-      'Systems and fight details from the shipped game, cited to the post-launch coverage they come from.',
+      'Reserved for original playtest notes recorded by this site, including the build, platform and reproducible steps.',
+  },
+  'third-party-tested': {
+    // Keep the provenance key for editorial tracking, but use the visitor-facing
+    // wording requested for shipped-game guide pages.
+    label: 'Hands-on',
+    icon: '🎮',
+    tone: 'green',
+    blurb:
+      'Hands-on coverage from cited post-launch gameplay sources; the source list identifies the coverage behind each detail.',
   },
   community: {
     label: 'Player reports',

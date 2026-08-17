@@ -19,8 +19,18 @@ function frontmatterDate(file) {
 }
 
 // Sitemap dates are content metadata, never the deployment timestamp.
+const STATIC_LASTMOD = {
+  '/weapons/': '2026-08-17',
+  '/walkthrough/': '2026-08-17',
+  '/skills/': '2026-08-17',
+  '/characters/': '2026-08-17',
+  '/characters/emma/': '2026-08-17',
+  '/characters/koo/': '2026-08-17',
+};
+
 function lastmodFor(url) {
   const pathname = new URL(url).pathname;
+  if (STATIC_LASTMOD[pathname]) return STATIC_LASTMOD[pathname];
   const slug = pathname.replace(/^\/+|\/+$/g, ''); // 去首尾斜杠
   const candidates = [`src/content/${slug}.md`, `src/content/${slug}.mdx`];
   const file = candidates.find((rel) => existsSync(join(ROOT, rel)));

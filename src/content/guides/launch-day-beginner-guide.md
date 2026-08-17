@@ -10,7 +10,7 @@ publishDate: 2026-08-04
 order: 0
 featured: true
 preview: false
-source: handson
+source: third-party-tested
 ---
 
 Beast of Reincarnation unlocked at **00:00 UTC on 4 August 2026** in every region, on the build Game Freak and Fictions labelled **version 1.0.6**. That means the guessing is over: the systems below are the ones in the shipped game.

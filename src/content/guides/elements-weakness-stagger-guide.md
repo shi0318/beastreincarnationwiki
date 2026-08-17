@@ -10,7 +10,7 @@ publishDate: 2026-08-06
 order: 2
 featured: true
 preview: false
-source: handson
+source: third-party-tested
 ---
 
 Beast of Reincarnation shows two different combat questions near an enemy's health: **what is it weak to, and how close is it to being staggered?** The first decides which element or utility type to bring. The second decides whether pressure will lead to an execution or only a short daze.

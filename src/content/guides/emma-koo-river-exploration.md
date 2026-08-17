@@ -1,5 +1,5 @@
 ---
-title: "River Route Exploration - Pre-Release Route Notes"
+title: "Beast of Reincarnation River Route Exploration - Pre-Release Notes"
 description: "Pre-release exploration notes for Beast of Reincarnation's blighted world: what official copy implies about traversal and companion utility, and what to verify on launch-day route runs."
 heading: "River Route: Pre-Release Exploration Notes"
 category: exploration

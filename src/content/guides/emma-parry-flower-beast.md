@@ -1,5 +1,5 @@
 ---
-title: "Parry Timing - Pre-Release Combat Notes"
+title: "Beast of Reincarnation Parry Timing - Pre-Release Combat Notes"
 description: "What official Beast of Reincarnation materials imply about hybrid combat and defensive timing, plus a launch-day checklist for verifying parry windows without inventing frame data."
 heading: "Parry Timing: Pre-Release Combat Notes"
 category: combat

@@ -10,7 +10,7 @@ publishDate: 2026-08-12
 order: 2
 featured: false
 preview: false
-source: handson
+source: third-party-tested
 ---
 
 **Beast of Reincarnation gameplay** combines real-time sword combat with turn-based decision points. You control Emma directly, command Koo's techniques through the bloom-art menu, and build both characters around parries, skill trees, gear, and spirit stones. This page describes the released game and separates shipped mechanics from details that still need a versioned test. Checked August 12, 2026.

@@ -1,5 +1,5 @@
 ---
-title: "Wasteland Colossal Boss - Pre-Release Outline"
+title: "Beast of Reincarnation Wasteland Colossal Boss - Pre-Release Outline"
 description: "Pre-release notes for a wasteland colossal boss concept in Beast of Reincarnation: spectacle-fight expectations from official marketing, plus what still needs hands-on verification."
 heading: "Wasteland Colossal: Pre-Release Outline"
 category: boss

@@ -4,7 +4,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import JsonLd from '../../components/JsonLd.astro';
 import GuideCard from '../../components/GuideCard.astro';
 import Pagination from '../../components/Pagination.astro';
-import { SITE, CATEGORIES, GAME_FACTS, type Category } from '../../data/site';
+import WikiSectionCard from '../../components/WikiSectionCard.astro';
+import WikiSectionNav from '../../components/WikiSectionNav.astro';
+import { SITE, CATEGORIES, GAME_FACTS, WIKI_SECTIONS, type Category } from '../../data/site';
 import { GUIDE_PAGE_SIZE, pageCount, pageItems, sortGuides } from '../../lib/guides';
 
 const guides = await getCollection('guides');
@@ -55,9 +57,9 @@ const SECTION: Record<Category, { h2: string; overview: string }> = {
 
 const path = '/guides/';
 // 含完整品牌名 → BaseLayout 不再追加 " | ...Wiki" 后缀，总长可控在 60 字符内。
-const title = 'Beast of Reincarnation Wiki — Guides: Bosses, Combat & More';
+const title = 'Beast of Reincarnation Wiki — Guides, Weapons & Walkthrough';
 const description =
-  'Beast of Reincarnation guides for bosses, combat, enemies and exploration: parry and bloom art systems, the Rangifer Nushi fight, and beginner priorities.';
+  'Beast of Reincarnation guides and wiki sections for weapons, chapters, skills, characters, bosses, combat and exploration, with sources cited on every page.';
 
 const schema = {
   '@context': 'https://schema.org',
@@ -93,11 +95,12 @@ const schema = {
         </ol>
       </nav>
       <h1 class="font-display text-3xl font-bold text-ash-50 md:text-4xl">
-        Beast of Reincarnation Guides — Bosses, Combat, Enemies &amp; More
+        Beast of Reincarnation Guides — Weapons, Walkthrough, Skills &amp; More
       </h1>
       <p class="mt-3 max-w-3xl text-lg leading-relaxed text-ash-300">
-        This is the hub for every Beast of Reincarnation guide, covering bosses, combat,
-        enemies, exploration, and beginner systems. The game released on
+        This is the hub for every Beast of Reincarnation guide, covering weapons, the 13-chapter
+        walkthrough, skills, characters, bosses, combat, enemies, exploration, and beginner
+        systems. The game released on
         {GAME_FACTS.releaseDateShort}, so pages carrying a
         <strong class="text-ash-100">Hands-on</strong> badge are written from the shipped build with
         their sources cited; anything still badged
@@ -120,6 +123,32 @@ const schema = {
           ))
         }
       </ul>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-4 pt-14">
+    <WikiSectionNav />
+    <div class="mt-8 mb-6 max-w-3xl">
+      <h2 class="font-display text-2xl font-bold text-ash-50">
+        Browse Beast of Reincarnation Wiki Sections
+      </h2>
+      <p class="mt-2 leading-relaxed text-ash-400">
+        Use these focused indexes to find the answer behind a specific search: a weapon name,
+        chapter title, skill-tree choice, or Emma and Koo build question. The indexes separate
+        confirmed facts from hands-on coverage and future original play notes.
+      </p>
+    </div>
+    <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      {
+        WIKI_SECTIONS.map((section) => (
+          <WikiSectionCard
+            href={section.href}
+            label={section.label}
+            title={section.title}
+            description={section.description}
+          />
+        ))
+      }
     </div>
   </section>
 

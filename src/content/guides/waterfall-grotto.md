@@ -1,5 +1,5 @@
 ---
-title: "Waterfall Grotto - Pre-Release Secret Notes"
+title: "Beast of Reincarnation Waterfall Grotto - Pre-Release Notes"
 description: "Pre-release notes on hidden-area expectations in Beast of Reincarnation: how official world fantasy suggests optional secrets, and what to verify before publishing a real grotto walkthrough."
 heading: "Waterfall Grotto: Pre-Release Secret Notes"
 category: exploration

@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import JsonLd from '../../components/JsonLd.astro';
+import WikiSectionNav from '../../components/WikiSectionNav.astro';
+import { GAME_FACTS, SITE } from '../../data/site';
+
+const path = '/characters/koo/';
+const title = 'Beast of Reincarnation Koo Guide: Bloom Arts, Skills & FP';
+const description =
+  'Beast of Reincarnation Koo guide covering Bloom Arts, FP, QTEs, Pounce, Guard, Incantation and support choices for Emma and Koo builds.';
+const image = '/images/beast-of-reincarnation-koo-blighted-wolf.webp';
+const canonical = new URL(path, SITE.url).href;
+const schema = [
+  {
+    '@context': 'https://schema.org', '@type': 'WebPage', name: title, description, url: canonical,
+    about: { '@type': 'Animal', name: 'Koo' }, isPartOf: { '@type': 'WebSite', name: SITE.name, url: SITE.url },
+  },
+  {
+    '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.url },
+      { '@type': 'ListItem', position: 2, name: 'Characters', item: new URL('/characters/', SITE.url).href },
+      { '@type': 'ListItem', position: 3, name: 'Koo', item: canonical },
+    ],
+  },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} image={image} imageAlt="Koo, the blighted dog companion, in Beast of Reincarnation">
+  <JsonLd slot="head" schema={schema} />
+  <section class="border-b border-ash-800 bg-ash-900/30"><div class="mx-auto max-w-6xl px-4 py-12">
+    <nav aria-label="Breadcrumb" class="mb-5 text-xs text-ash-400"><a href="/" class="hover:text-ember-400">Home</a><span aria-hidden="true"> / </span><a href="/characters/" class="hover:text-ember-400">Characters</a><span aria-hidden="true"> / </span><span class="text-ash-300">Koo</span></nav>
+    <h1 class="font-display text-3xl font-bold leading-tight text-ash-50 md:text-5xl">Beast of Reincarnation Koo Guide: Bloom Arts, Skills &amp; FP</h1>
+    <p class="mt-4 max-w-3xl text-lg leading-relaxed text-ash-300">Koo is the commanded companion in Beast of Reincarnation. His skill trees and Bloom Arts turn the FP created by combat into damage, healing, bindings and elemental pressure while Emma handles the direct sword exchange.</p>
+  </div></section>
+  <main class="mx-auto max-w-5xl px-4 py-12"><WikiSectionNav active="/characters/" />
+    <section class="mt-10 grid gap-6 md:grid-cols-2"><div class="rounded-xl border border-ash-800 bg-ash-900/40 p-6"><h2 class="font-display text-2xl font-bold text-ash-50">Koo's documented skill paths</h2><ul class="mt-4 space-y-3 text-ash-300"><li><strong class="text-ash-100">Pounce:</strong> early attack, trap, healing and utility nodes.</li><li><strong class="text-ash-100">Guard:</strong> status and defensive mod options.</li><li><strong class="text-ash-100">Incantation:</strong> later elemental and status-effect choices.</li><li><strong class="text-ash-100">Bloom Arts:</strong> spend FP on the technique that matches the encounter's visible weakness, then complete the QTE when prompted.</li></ul></div><div class="rounded-xl border border-ash-800 bg-ash-900/40 p-6"><h2 class="font-display text-2xl font-bold text-ash-50">Koo guide links</h2><ul class="mt-4 space-y-3 text-ash-300"><li><a class="text-ember-400 hover:text-ember-300" href="/guides/koo-bloom-arts-qte-guide/">Koo Bloom Arts, FP and QTE guide</a></li><li><a class="text-ember-400 hover:text-ember-300" href="/guides/elements-weakness-stagger-guide/">Elements, weakness and stagger</a></li><li><a class="text-ember-400 hover:text-ember-300" href="/skills/koo-skill-tree/">Koo skill tree guide</a></li><li><a class="text-ember-400 hover:text-ember-300" href="/skills/">Beast of Reincarnation skills and builds</a></li><li><a class="text-ember-400 hover:text-ember-300" href="/characters/emma/">Emma's weapons and combat role</a></li></ul></div></section>
+    <section class="mt-12 rounded-xl border border-ash-800 bg-ash-900/40 p-6"><h2 class="font-display text-2xl font-bold text-ash-50">How to use Koo without wasting FP</h2><p class="mt-3 leading-relaxed text-ash-300">Do not treat every Bloom Art as interchangeable. Read the target's displayed weakness, select the matching technique when the opening is safe, and use the QTE for the strongest reported result. Against a boss, the correct Koo choice is often the one that creates a stagger, bind or healing window rather than the largest unqualified damage number.</p></section>
+    <p class="mt-8 border-t border-ash-800 pt-5 text-sm leading-relaxed text-ash-500">Koo's role as Emma's commanded companion is confirmed by the <a class="text-ember-400 hover:text-ember-300" href={GAME_FACTS.source} rel="noopener" target="_blank">Beast of Reincarnation Steam page</a>. Detailed skill names and progression priorities remain attributed to the cited hands-on guide sources.</p>
+  </main>
+</BaseLayout>

@@ -10,7 +10,7 @@ publishDate: 2026-08-06
 order: 0
 featured: true
 preview: false
-source: handson
+source: third-party-tested
 ---
 
 Emma's blight-stricken hair is Beast of Reincarnation's main traversal tool. Launch coverage identifies two abilities that change how routes should be read: **Lift** for height and **Extend** for crossing a gap on a path Emma creates herself.
