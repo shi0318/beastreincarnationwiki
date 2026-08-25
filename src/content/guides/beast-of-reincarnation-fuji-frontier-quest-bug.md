@@ -1,11 +1,11 @@
 ---
 title: "Beast of Reincarnation Fuji Frontier Quest Bug — Golem Spawn and Progress Checks"
-description: "Beast of Reincarnation Fuji Frontier quest bug reports include missing headless Golems, a missing wolf-like enemy, and map progress problems across platforms."
+description: "Beast of Reincarnation Fuji Frontier quest bug guide: missing headless Golems, missing targets, safe checks, and what to record before requesting a fix."
 heading: "Beast of Reincarnation Fuji Frontier Quest Bug: What Players Can Check"
 category: exploration
 keyword: "beast of reincarnation fuji frontier quest bug"
 image: "beast-of-reincarnation-waterfall-grotto.webp"
-imageAlt: "Official Beast of Reincarnation exploration artwork used for the Fuji Frontier quest bug guide"
+imageAlt: "Beast of Reincarnation exploration artwork used for the Fuji Frontier quest bug guide"
 publishDate: 2026-08-24
 updateDate: 2026-08-24
 order: 1
@@ -19,8 +19,8 @@ The **Beast of Reincarnation Fuji Frontier quest bug** is a real launch discussi
 There is no confirmed player-side fix in the checked thread. This page separates the symptoms, the low-risk checks, and what should be reported instead of telling you to kill unrelated Golems repeatedly.
 
 <figure>
-  <img src="/images/beast-of-reincarnation-waterfall-grotto.webp" alt="Official Beast of Reincarnation exploration artwork for the Fuji Frontier quest bug page" width="1600" height="900" loading="lazy" decoding="async" />
-  <figcaption>Official Beast of Reincarnation environment artwork used as a Fuji Frontier visual; it is not a screenshot of the missing quest target.</figcaption>
+  <img src="/images/beast-of-reincarnation-waterfall-grotto.webp" alt="Beast of Reincarnation exploration artwork for the Fuji Frontier quest bug page" width="1600" height="900" loading="lazy" decoding="async" />
+  <figcaption>Beast of Reincarnation environment artwork for the Fuji Frontier quest guide; it is not a screenshot of the missing quest target.</figcaption>
 </figure>
 
 ## Symptoms reported by players
@@ -41,7 +41,7 @@ These reports show a useful pattern, but they do not prove that every missing en
 
 The following steps are diagnostics, not a guaranteed fix:
 
-1. **Let Steam or your console finish every update.** The official v1.0.8 patch notes are the current versioned reference, but they do not publish a Fuji Frontier quest-spawn fix in the checked change list.
+1. **Let Steam or your console finish every update.** The current v1.0.8 update is the version reference, but its published change list does not include a Fuji Frontier quest-spawn fix.
 2. **Record the platform and build.** Write down Steam, PS5, Xbox, or Xbox Game Pass, then capture the version shown by your installation.
 3. **Leave and re-enter the zone after a full restart.** This can distinguish a one-session loading problem from a repeatable quest-state problem; it does not repair a broken save state.
 4. **Compare the quest marker with the map filter.** The player-maintained [Beast of Reincarnation interactive map](/guides/interactive-map-guide/) can help identify whether you are at the intended Golem marker, but it cannot make an enemy spawn.
@@ -64,19 +64,12 @@ Do not delete a save or install an unofficial file replacement based on a forum 
 
 ## How the issue affects completion routes
 
-Fuji Frontier is also represented in the site’s chapter checklist. The current source-bounded Chapter 6 page reports **9 campsites, 5 Wayside Shrines, 0 documents, and 4 Keeper Golems** from a Steam Community map guide. Those are collection targets, not proof that a quest target will spawn in a bugged save.
+Fuji Frontier is also represented in the site’s chapter checklist. The current Chapter 6 page reports **9 campsites, 5 Wayside Shrines, 0 documents, and 4 Keeper Golems**. Those are collection targets, not proof that a quest target will spawn in a bugged save.
 
 Use the [Beast of Reincarnation Chapter 6 guide](/walkthrough/chapter-6/) for normal route planning, but do not mark the quest complete merely because the region’s general Golem count looks correct. A quest-specific headless target and a generic Keeper Golem are different claims.
 
 ## Current status
 
-The right status label is **community-reported, developer acknowledged, fix not confirmed**. The Steam thread is valuable because it contains cross-platform reports and a developer response. It is not a patch note, and the 14-reply count may change as players add new evidence.
+The right status label is **community-reported, developer acknowledged, fix not confirmed**. The Steam thread is useful because it contains cross-platform reports and a developer response. It is not a patch note, and the 14-reply count may change as players add new evidence.
 
 For other shipped-game problems, compare the [Beast of Reincarnation PC fixes](/guides/pc-performance-settings-fixes/) and [official v1.0.8 update notes](/guides/beast-of-reincarnation-update-1-0-8/) without assuming that a graphics fix applies to a progression bug.
-
-## Sources
-
-- [Steam discussion: Fuji Frontier quest bug](https://steamcommunity.com/app/2001760/discussions/0/591812820713159387/) — player symptoms, cross-platform replies, and the developer response. Checked August 24, 2026.
-- [Official Beast of Reincarnation v1.0.8 patch notes](https://store.steampowered.com/news/app/2001760/view/1840944183782330) — current versioned change list checked against the reported quest issue. Checked August 24, 2026.
-- [Steam Community interactive map guide](https://steamcommunity.com/sharedfiles/filedetails/?id=3778455109) — region and Golem checklist boundary. Checked August 24, 2026.
-

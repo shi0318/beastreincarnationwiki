@@ -1,11 +1,11 @@
 ---
 title: "Beast of Reincarnation PS5 Film Grain — Chromatic Aberration Status and Options"
-description: "Beast of Reincarnation PS5 film grain and chromatic aberration complaints are tracked from a 13-reply Steam discussion and a developer status reply."
+description: "Beast of Reincarnation PS5 film grain fix guide: current post-processing toggle status, safe display checks, and why PC commands do not work on PS5."
 heading: "Beast of Reincarnation PS5 Film Grain: Current Fix Status"
 category: beginner
 keyword: "beast of reincarnation ps5 film grain"
 image: "beast-of-reincarnation-machine-swarm-combat.webp"
-imageAlt: "Official Beast of Reincarnation combat screenshot used for the PS5 film grain guide"
+imageAlt: "Beast of Reincarnation combat screenshot used for the PS5 film grain guide"
 publishDate: 2026-08-24
 updateDate: 2026-08-24
 order: 2
@@ -16,11 +16,11 @@ source: community
 
 If you are looking for a **Beast of Reincarnation PS5 film grain fix**, the current answer is limited but clear: a public Steam discussion asks for film-grain and chromatic-aberration options on PS5, and a developer account says the team is aware and plans to implement post-processing toggles. The same thread later says there is **no exact patch date** yet.
 
-As checked on **August 24, 2026**, there is no confirmed PS5 menu switch or official release date for that option in the sources below. PC `engine.ini` commands and PC mods should not be presented as a PS5 fix.
+As checked on **August 24, 2026**, there is no confirmed PS5 menu switch or official release date for that option. PC `engine.ini` commands and PC mods should not be presented as a PS5 fix.
 
 <figure>
-  <img src="/images/beast-of-reincarnation-machine-swarm-combat.webp" alt="Official Beast of Reincarnation combat screenshot used for the PS5 film grain and chromatic aberration guide" width="1600" height="900" loading="lazy" decoding="async" />
-  <figcaption>Official Beast of Reincarnation combat screenshot used to illustrate the visual-effects discussion; it is not a PS5 settings capture.</figcaption>
+  <img src="/images/beast-of-reincarnation-machine-swarm-combat.webp" alt="Beast of Reincarnation combat screenshot used for the PS5 film grain and chromatic aberration guide" width="1600" height="900" loading="lazy" decoding="async" />
+  <figcaption>Beast of Reincarnation combat screenshot for the visual-effects guide; it is not a PS5 settings capture.</figcaption>
 </figure>
 
 ## What the PS5 discussion confirms
@@ -31,7 +31,7 @@ The important first-party reply comes from a developer account identified as **S
 
 ## Is there a PS5 setting to turn it off right now?
 
-The checked sources do not confirm one. Do not promise that the PC commands below work on PlayStation 5, and do not tell players to install a PC mod on a console. If the current PS5 build exposes other display controls, test those one at a time and note the exact menu names; that is different from claiming that film grain or chromatic aberration itself can be disabled.
+Current information does not confirm one. Do not promise that the PC commands below work on PlayStation 5, and do not tell players to install a PC mod on a console. If the current PS5 build exposes other display controls, test those one at a time and note the exact menu names; that is different from claiming that film grain or chromatic aberration itself can be disabled.
 
 The safest current choices are:
 
@@ -63,7 +63,7 @@ Keeping the platform boundary visible matters for searchers. “Beast of Reincar
 | --- | --- |
 | Is the PS5 request visible to the team? | Yes; the developer replied in the public thread. |
 | Is a post-processing toggle planned? | The developer said the team was planning one. |
-| Is the toggle already in the PS5 menu? | Not confirmed by the checked sources. |
+| Is the toggle already in the PS5 menu? | Not confirmed in the current build. |
 | Is there an official release date? | No exact date or time was given in the thread. |
 | Does the PC `engine.ini` method work on PS5? | No; it is a PC configuration method. |
 | Is a third-party mod an official PS5 fix? | No. |
@@ -80,9 +80,3 @@ Until then, the honest answer is: **PS5 players can request the toggle and watch
 - [Beast of Reincarnation v1.0.8 patch notes](/guides/beast-of-reincarnation-update-1-0-8/)
 - [Beast of Reincarnation launch support and fixes](/guides/launch-support-status/)
 - [Beast of Reincarnation Steam reception and issues](/guides/steam-reception-and-issues/)
-
-## Sources
-
-- [Steam discussion: Disable FILM GRAIN and Chromatic Aberration on PS5!!](https://steamcommunity.com/app/2001760/discussions/0/591812495357922972/) — 13-reply player discussion, developer status reply, and no-date update. Checked August 24, 2026.
-- [Official Beast of Reincarnation v1.0.8 patch notes](https://store.steampowered.com/news/app/2001760/view/1840944183782330) — versioned official change list checked for a shipped toggle. Checked August 24, 2026.
-
