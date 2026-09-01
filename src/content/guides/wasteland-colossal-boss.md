@@ -1,62 +1,63 @@
 ---
-title: "Beast of Reincarnation Wasteland Colossal Boss - Pre-Release Outline"
-description: "Pre-release notes for a wasteland colossal boss concept in Beast of Reincarnation: spectacle-fight expectations from official marketing, plus what still needs hands-on verification."
-heading: "Wasteland Colossal: Pre-Release Outline"
+title: "Beast of Reincarnation Wasteland Colossal Boss — Large Nushi Guide"
+description: "Beast of Reincarnation Wasteland Colossal boss guide: use Rangifer's fire weakness, hair-bridge opener, red-glow escape and phase-two trees."
+heading: "Beast of Reincarnation Wasteland Colossal Boss: Large Nushi Guide"
 category: boss
 keyword: "beast of reincarnation wasteland colossal boss"
 image: "beast-of-reincarnation-wasteland-colossal-boss.webp"
-imageAlt: "A towering long-legged machine silhouetted against the setting sun on a rocky ridge, with Emma and Koo tiny in the distance, in Beast of Reincarnation"
+imageAlt: "Emma and Koo facing a colossal antlered creature in the wasteland of Beast of Reincarnation"
 publishDate: 2026-07-21
-updateDate: 2026-07-25
+updateDate: 2026-09-01
 order: 2
 featured: false
-preview: true
-source: speculation
+preview: false
+source: third-party-tested
 ---
 
-Official marketing for Beast of Reincarnation repeatedly sells scale: blighted landscapes, world-ruling Bosses, and Emma/Koo as an outmatched pair. A "colossal" wasteland fight is a natural expectation from that pitch - but this page remains a **concept outline**, not a confirmed climb guide.
+Searches for **Beast of Reincarnation Wasteland Colossal Boss** often point to the large creature artwork. The released-game encounter that has a complete public strategy is **Rangifer**, a Nushi fought twice. “Wasteland Colossal” is kept as a search phrase here, not presented as a separate confirmed in-game boss name.
 
-See [confirmed game info](/game-info/) for systems that are actually published on Steam.
+## Rangifer quick reference
 
-## Why this concept appears before launch
+| Encounter | Boss level | Suggested player level | Stages | Weakness |
+| --- | ---: | ---: | ---: | --- |
+| Prowling Nushi crater fight | 9 | 6–7 | One | Fire |
+| Sealed lair rematch | 12 | 10+ | Two | Fire; more resistant to Burn |
 
-Steam copy stresses:
+The first fight is useful practice for the lair. Between attempts, spend time on weapon upgrades and an Amber route rather than repeating an under-levelled run.
 
-- Bosses that rule the world
-- Capturing boss powers as a progression goal
-- A beautiful-but-brutal post-apocalyptic Japan
-- Custom loadouts spanning aggressive, ranged, and stealthy approaches
+## Take the high-ground opener
 
-Those pillars make a multi-stage spectacle boss plausible. They do **not** confirm plate breaks, climb windows, or core-exposure phases.
+The first arena has a tall central building with a campsite and armour above it. Activate the campsite before starting the fight. Use Emma's **Extend** hair bridge to reach the high ground, then drop for an air assassination. This removes a large opening portion of the boss's health and gives you room to set the pace.
 
-## Provisional fight framework
+Keep ranged ammunition for the approach and the moments when Rangifer is out of reach. Height is especially valuable because many of its attacks are aimed at Emma on the ground.
 
-If a colossal boss ships, expect the design to test more than a single dodge cycle:
+<figure>
+  <img src="/images/beast-of-reincarnation-wasteland-colossal-boss.webp" alt="Emma and Koo dwarfed by a colossal antlered creature in Beast of Reincarnation" width="1600" height="900" loading="lazy" decoding="async" />
+  <figcaption>The artwork communicates the scale of a Nushi fight; use Rangifer's name and encounter details for the verified strategy.</figcaption>
+</figure>
 
-- **Ground pressure** - large slam or sweep patterns that control space
-- **Traversal / positioning** - opportunities to change elevation or target weak points
-- **Koo utility** - command windows that matter more than pure DPS
-- **Loadout identity** - whether ranged or aggressive kits change the route
+## Use fire, but do not rely on Burn alone
 
-Treat every named phase below as a launch checklist, not a spoiler-proof walkthrough:
+Rangifer is weak to fire in both encounters. **Higanbana: Seeds** is the useful Koo option because it delivers fiery projectiles and can build Burn. The second fight keeps the fire weakness but is more resistant to the Burn status, so raw fire damage matters more than waiting for damage-over-time ticks.
 
-1. Learn the ground tells.
-2. Identify whether weak points are always exposed or only after a mechanic.
-3. Test if Koo can create openings when Emma is forced defensive.
-4. Record whether the fight becomes a race once a core or second form appears.
+For Emma, **Fire Arrows** provide another fire option after the relevant shop progression. Read the current Bloom Art weakness marker before spending FP; an element is not automatically correct for every enemy in the arena.
 
-## What not to trust yet
+## Parry the normal antler swing
 
-- Exact plate counts
-- Climb timing windows
-- "Two clean core phases" style damage math
-- Claims that another boss is a hard prerequisite
+The regular antler swing is parryable. A successful parry creates the safest close-range opening: Rangifer's head lowers, Emma gains combat resources and Koo can spend the resulting FP on fire. Attack after the parry, then return to a defensive position rather than extending a long string into the next tell.
 
-## Post-launch rewrite goals
+## Escape the red-glow combo
 
-After 4 August 2026, replace this outline with:
+When Rangifer glows red, expect four antler sweeps followed by a stomp. Do not trade with it. Bind it with Koo if the command is available, use previously created grapple points, or evade repeatedly until the sequence ends.
 
-- Real arena layout and camera constraints
-- Confirmed weak-point rules
-- Verified rewards and progression unlocks
-- Loadout recommendations based on clears, not marketing language
+The rear-and-stomp attack creates a small area impact with roots rising from the ground. Move away from the feet. When Rangifer summons trees, leave the red ground circles; in the lair's second stage, some of the longer-lasting non-damaging trees can also become grapple points.
+
+## What changes in the rematch
+
+The sealed-lair fight adds a second health bar after the first is depleted. Treat the arena's summoned trees as part of your mobility plan and keep an escape route visible before committing to fire or a melee punish. The lair is longer and punishes a build that only plans for one short damage window.
+
+For the full first-boss route, rewards and both encounters, continue to the [Beast of Reincarnation Rangifer Nushi guide](/guides/nushi-boss-fight/). For the mechanics behind stagger and boss daze, use [weakness, stagger and daze](/guides/elements-weakness-stagger-guide/).
+
+## What is not being claimed
+
+The public strategy data does not establish a separate boss officially named Wasteland Colossal, exact HP values, universal phase thresholds or a complete drop table. Use the named Rangifer encounter above for the actionable released-game answer, and do not transfer its weakness to an unnamed creature without checking the target UI.

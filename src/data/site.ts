@@ -26,12 +26,12 @@ export const CATEGORIES: Record<
   },
   boss: {
     label: 'Boss Guides',
-    blurb: 'Nushi and Malefect encounters - verified fights first, older outlines clearly labelled.',
+    blurb: 'Nushi and Malefect encounters - verified fight details, positioning and build choices.',
     accent: 'ember',
   },
   enemies: {
     label: 'Enemies',
-    blurb: 'Wasteland fauna, elemental weaknesses, and what is still unverified.',
+    blurb: 'Wasteland fauna, target weakness cues, stagger and crowd-control decisions.',
     accent: 'ember',
   },
   combat: {
@@ -246,9 +246,9 @@ export const LAUNCH_COPY = IS_RELEASED
       steamListingNote: `Steam lists it as released on ${GAME_FACTS.releaseDateShort}.`,
       preloadNote:
         'The game is released, so buying it on Steam starts the download immediately.',
-      // 攻略页免责：发售后逐篇改写，措辞不能再说「游戏还没出」
+      // 攻略页说明：发售后内容按页面证据等级展示，避免把历史资料当作当前版本结论。
       guidesCaveat:
-        'Guides on this site are being rewritten one at a time now that the game has shipped.',
+        'Guides on this site are organized by the evidence available for the released game; current combat and route pages identify the version and coverage behind their practical details.',
     }
   : {
       status: 'Coming soon · pre-purchase live',

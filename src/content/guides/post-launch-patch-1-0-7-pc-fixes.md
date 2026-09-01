@@ -13,7 +13,7 @@ preview: false
 source: official
 ---
 
-Fictions and Game Freak published **Beast of Reincarnation PC Patch Notes: v1.0.7** on **August 9, 2026**. The game is already released, so this is a post-launch checklist for the live PC update, not a pre-release feature prediction. The page was checked on **August 14, 2026**.
+Fictions and Game Freak published **Beast of Reincarnation PC Patch Notes: v1.0.7** on **August 9, 2026**. The game is already released, so this is a post-launch checklist for the live PC update, not a feature prediction. The page was checked on **August 14, 2026**.
 
 <figure>
   <img src="/images/beast-of-reincarnation-patch-v1-0-7.png" alt="Emma and Koo beside a glowing stone monument in official Beast of Reincarnation patch artwork" width="2560" height="1440" loading="lazy" decoding="async" />

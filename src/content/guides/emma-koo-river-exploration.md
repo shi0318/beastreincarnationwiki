@@ -1,54 +1,49 @@
 ---
-title: "Beast of Reincarnation River Route Exploration - Pre-Release Notes"
-description: "Pre-release exploration notes for Beast of Reincarnation's blighted world: what official copy implies about traversal and companion utility, and what to verify on launch-day route runs."
-heading: "River Route: Pre-Release Exploration Notes"
+title: "Beast of Reincarnation River Exploration — Route & Collectibles Checklist"
+description: "Beast of Reincarnation river exploration guide: use campsites, shrines, documents and Keeper Golems to plan a safe return route through early regions."
+heading: "Beast of Reincarnation River Exploration: Route Checklist"
 category: exploration
 keyword: "beast of reincarnation river exploration"
 image: "beast-of-reincarnation-emma-koo-river-exploration.webp"
-imageAlt: "Emma wading a shallow river beside Koo, with misty stone arches and a ruined shrine behind them, in Beast of Reincarnation"
+imageAlt: "Emma and Koo exploring a shallow river beside ruined stone arches in Beast of Reincarnation"
 publishDate: 2026-07-22
-updateDate: 2026-07-25
+updateDate: 2026-09-01
 order: 10
 featured: false
-preview: true
-source: speculation
+preview: false
+source: community
 ---
 
-Steam describes Beast of Reincarnation as an expansive adventure through a beautiful yet harsh post-apocalyptic Japan. Water, wasteland, and shifting blighted forests all appear in official presentation - but a specific "eastern river route" with fixed collectible counts is **not** confirmed.
+This **Beast of Reincarnation river exploration guide** turns the early-region map data into a practical return-route checklist. The river image is a visual exploration cue, not the name of a separate official sub-area. Use the region name shown by the game or map when you are tracking progress.
 
-Use this page as an exploration framework. Confirmed world framing lives on the [game info page](/game-info/).
+## Early-region targets to track
 
-## What is closer to official
+The checked post-launch map checklist reports these totals for the first two regions:
 
-- Emma and Koo travel a large blighted world together.
-- Environments can change dramatically - forests bursting forth or withering.
-- Bosses and power capture are progression pillars, so routes likely gate major encounters.
-- Companion utility is part of the fantasy, so traversal or combat assists from Koo are plausible.
+| Region | Campsites | Wayside shrines | Documents | Keeper Golems |
+| --- | ---: | ---: | ---: | ---: |
+| Ogouchi Buffer Zone — Chapter 1 | 18 | 0 | 4 | 3 |
+| Ancient Civilization Zone — Chapter 2 | 9 | 3 | 1 | 2 |
 
-## What is still speculation
+These counts cover the listed categories only. A zero in the table does not mean the region contains no other item type, and a map total can change if the underlying guide is revised.
 
-- Exact river map layout
-- Memory-shard counts
-- Hidden vendors or permanent shortcuts
-- Whether swimming / grappling / rope tools exist in the final build
+## A safe route through riverside paths
 
-## Launch-day route method
+1. **Activate the nearest campsite first.** It gives you a return point before you inspect side paths or a combat pocket.
+2. **Sweep both banks before advancing.** Look for a blocked ledge, a ruined structure and a path that rises above the water rather than assuming the visible river is the whole route.
+3. **Separate the four checklists.** Record campsites, shrines, documents and Keeper Golems independently so a completed combat route does not look like a completed region.
+4. **Return after traversal upgrades.** Lift and Extend open vertical and gap-crossing routes; revisit a river edge after the required movement option appears instead of forcing a jump.
+5. **Leave one marker for the way back.** A campsite, shrine or distinctive ruin is more reliable than a vague note such as “left side of the river.”
 
-When the game is out, map any riverside path like this:
+The full early-region totals and chapter context are collected in [Beast of Reincarnation Chapter 1](/walkthrough/chapter-1/) and [Beast of Reincarnation Chapter 2](/walkthrough/chapter-2/). For upgrade-gated movement, see the [Lift and Extend traversal guide](/guides/lift-extend-traversal-guide/).
 
-1. Note entrance condition (story gate, boss clear, or open from start).
-2. Mark traversal tools required (jump, swim, grapple, Koo assist).
-3. Log collectibles with screenshots and return routes.
-4. Record whether shortcuts are permanent or one-way.
-5. Separate cosmetic secrets from progression-critical items.
+<figure>
+  <img src="/images/beast-of-reincarnation-emma-koo-river-exploration.webp" alt="Emma and Koo moving through a river route in Beast of Reincarnation" width="1600" height="900" loading="lazy" decoding="async" />
+  <figcaption>Use landmarks and the four separate progress categories when retracing a river route; the artwork is not a replacement for an in-game map marker.</figcaption>
+</figure>
 
-## How to rewrite after launch
+## How to avoid a false completion check
 
-A finished route page should include:
+If the chapter still feels incomplete, compare your notes with the target category rather than walking the entire river again. Missing a document is a different problem from missing a Keeper Golem, and the reported Chapter 2 table has three shrines while Chapter 1 has none.
 
-- Real region name from the game UI
-- Ordered path with landmarks
-- Confirmed collectibles and costs/tools
-- Danger notes based on actual enemy spawns
-
-Until then, treat named items and exact counts on older draft versions of this idea as obsolete speculation.
+Do not add an exact waterfall entrance, collectible coordinate or permanent shortcut to this page unless the current game or a reproducible player map identifies it. The route checklist above gives you a reliable sweep without assigning a landmark the game itself does not name.

@@ -7,13 +7,14 @@ keyword: "beast of reincarnation voice cast"
 image: "beast-of-reincarnation-emma-character.webp"
 imageAlt: "Official character render of Emma, the human protagonist of Beast of Reincarnation"
 publishDate: 2026-07-30
+updateDate: 2026-09-01
 order: 5
 featured: false
 preview: false
 source: official
 ---
 
-Beyond mechanics, Game Freak and Fictions have confirmed who voices Beast of Reincarnation, who directs it, and how it played in the hands of the press. This page gathers those officially confirmed details ahead of the **4 August 2026** launch.
+Beyond mechanics, Game Freak and Fictions have confirmed who voices Beast of Reincarnation, who directs it, and how it played in the hands of the press. This page gathers those officially confirmed details and preserves the dated preview record alongside the **4 August 2026** release.
 
 ## The Japanese voice cast
 
@@ -37,7 +38,7 @@ In July, Fictions flew games writers and creators to **Los Angeles** to play an 
 - **Easy Allies** — "Game Freak levels up to AAA animal combat."
 - **Polygon** — "I got obliterated in the Pokémon team's new Soulslike — and I can't wait to play more."
 
-These are impressions of pre-release builds from a curated event, not independent review scores, so weigh them accordingly. The through-line, though, is that the **tactical, hybrid** nature of the combat is what stood out to people who played it — the same thing the [combat overview](/guides/combat-overview-trailer/) describes.
+These are impressions of dated preview builds from a curated event, not independent review scores, so weigh them accordingly. The through-line, though, is that the **tactical, hybrid** nature of the combat is what stood out to people who played it — the same thing the [combat overview](/guides/combat-overview-trailer/) describes.
 
 ## A note on the studio
 

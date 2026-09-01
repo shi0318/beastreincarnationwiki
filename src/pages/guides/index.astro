@@ -36,12 +36,12 @@ const SECTION: Record<Category, { h2: string; overview: string }> = {
   boss: {
     h2: 'Beast of Reincarnation Boss Guides',
     overview:
-      'Boss fights are the backbone of any Beast of Reincarnation guide, and the game splits them into regional Nushi and other major encounters. The Rangifer page is written from post-launch coverage of the real fight — both encounters, the level ranges, the fire weakness, the hair-bridge assassination opener and the red-glow antler combo that can kill Emma from full health. Pages still carrying a Speculation badge were written before launch from trailers and are being rewritten against the shipped build; they say so at the top.',
+      'Boss fights are the backbone of any Beast of Reincarnation guide, and the game splits them into regional Nushi and other major encounters. The Rangifer page uses post-launch coverage of the real fight — both encounters, the level ranges, the fire weakness, the hair-bridge assassination opener and the red-glow antler combo that can kill Emma from full health. Other pages keep their encounter names and evidence boundaries explicit.',
   },
   enemies: {
     h2: 'Enemies & Wasteland Fauna',
     overview:
-      'The wasteland of Year 4026 is filled with mutated fauna, and knowing what you are fighting is half the battle. The shipped game shows an enemy\'s elemental weakness next to its health bar and stamps "weak" over any matching bloom art, so the four elemental effects — poison, acid, flame and lightning — plus destructive and bind damage are the vocabulary this section works in. Pages here that predate launch remain labelled as such rather than being quietly upgraded to bestiary entries we have not verified.',
+      'The wasteland of Year 4026 is filled with mutated fauna, and knowing what you are fighting is half the battle. The shipped game shows an enemy\'s elemental weakness next to its health bar and stamps "weak" over any matching bloom art, so the four elemental effects — poison, acid, flame and lightning — plus destructive and bind damage are the vocabulary this section works in. Named bestiary details are kept separate from visual descriptions and unsupported drop claims.',
   },
   combat: {
     h2: 'Combat Guides & Systems',
@@ -101,11 +101,10 @@ const schema = {
         This is the hub for every Beast of Reincarnation guide, covering weapons, the 13-chapter
         walkthrough, skills, characters, bosses, combat, enemies, exploration, and beginner
         systems. The game released on
-        {GAME_FACTS.releaseDateShort}, so pages carrying a
+        {GAME_FACTS.releaseDateShort}. Pages carrying a
         <strong class="text-ash-100">Hands-on</strong> badge are written from the shipped build with
-        their sources cited; anything still badged
-        <strong class="text-ash-100">Speculation</strong> was written before launch and is being
-        rewritten. For facts confirmed on the store page, see the
+        their sources cited, while Official and Player reports keep their own evidence boundary.
+        For facts confirmed on the store page, see the
         <a href="/game-info/" class="text-ember-400 hover:text-ember-500">game info page</a>.
       </p>
 

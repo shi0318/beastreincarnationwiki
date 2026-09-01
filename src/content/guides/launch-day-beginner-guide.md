@@ -147,7 +147,7 @@ One genuinely buried setting: the game ships with **both Japanese and English fu
 
 ## Launch-state notes
 
-- The shipped launch build is **version 1.0.6**, after a final pre-launch patch over the preceding weekend.
+- The shipped launch build is **version 1.0.6**, following the final patch issued before release.
 - A **Deluxe upgrade DLC** (App 4146830, **$9.99**) released alongside the game, so standard-edition buyers can add the Deluxe content afterwards. It contains black and brown Shiba skins for Koo, the "Oni's Hat" for Emma, Emma's sword "Big Dipper", **100,000 Amber**, and a set of vegetable seedlings.
 - Fictions and Game Freak asked players to route feedback, questions and technical issues through the **official threads pinned in the Steam forums** so reports reach the team together.
 - Reception is genuinely split. As of **4 August 2026** the Steam user reviews sat at **Mixed** — 193 positive out of 358 — which is worth knowing before you buy at full price. That number moves daily; check the store page rather than trusting this snapshot.

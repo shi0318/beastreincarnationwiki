@@ -7,6 +7,7 @@ keyword: "beast of reincarnation progression"
 image: "beast-of-reincarnation-key-art.webp"
 imageAlt: "Official Beast of Reincarnation key art of Emma and Koo walking through a golden sunlit forest"
 publishDate: 2026-07-30
+updateDate: 2026-09-01
 order: 4
 featured: false
 preview: false
@@ -41,7 +42,7 @@ Game Freak has repeatedly highlighted three broad playstyles the systems support
 | **Stealthy** | Avoiding detection and picking engagements |
 | **Aggressive** | Pressuring enemies up close with Emma's sword and Koo's techniques |
 
-Naming three archetypes in pre-launch marketing is a strong signal that build variety is a genuine pillar, not a bullet point. What is **not** public: the skill-tree layout, how spirit stones are acquired or slotted, whether respeccing is free, and how gear rarity works.
+Naming three archetypes in launch marketing is a strong signal that build variety is a genuine pillar, not a bullet point. What is **not** published in the official material tracked here: the skill-tree layout, how spirit stones are acquired or slotted, whether respeccing is free, and how gear rarity works.
 
 ## Amber, the in-game currency
 
@@ -49,6 +50,6 @@ Pre-order material confirms **Amber** as the in-game currency (the Deluxe editio
 
 ## Why we are not publishing a tier list
 
-Because the actual numbers are not public, we are not ranking builds or skills before launch. A build guide needs the tree layout, acquisition routes, and how captured Boss powers interact — none of which is confirmed. We rewrite this page from hands-on play after the **4 August 2026** launch.
+Because the official material tracked here does not publish the actual numbers, we are not ranking builds or skills from marketing copy. A reliable build guide needs the tree layout, acquisition routes, and how captured Boss powers interact; those details should be backed by a current-build record rather than inferred.
 
 For how the moment-to-moment fighting works, see the [combat overview](/guides/combat-overview-trailer/); for the full confirmed summary, see [game info](/game-info/).

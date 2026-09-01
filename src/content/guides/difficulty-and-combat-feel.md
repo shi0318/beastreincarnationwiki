@@ -94,5 +94,4 @@ For the exact mechanics behind parrying, florescence points and bloom arts, see 
 ## Where these details come from
 
 - **Player discussion, shipped game.** [Beast of Reincarnation General Discussions](https://steamcommunity.com/app/2001760/discussions/) (3–4 August 2026): the "not a Soulslike" thread and the "easy mode" thread (difficulties, generous parry, early-input tuning, power-leveling — players "naomha", "vault2049", "Lestrad"), the guard-vs-parry-vs-dodge rules ("Flannaz"), the combo/air-combo and 12-hour impressions ("YoLo", a 12-hour Game Pass player), and camera/FOV/movement friction across the "refunding?" and "1st hour impressions" threads.
-- **Official framing.** The developers' stated intent that the game be accessible to everyone, relayed by players citing pre-launch developer comments, and the three named difficulty settings corroborated by post-launch coverage.
-
+- **Official framing.** The developers' stated intent that the game be accessible to everyone, relayed by players citing earlier developer comments, and the three named difficulty settings corroborated by post-launch coverage.

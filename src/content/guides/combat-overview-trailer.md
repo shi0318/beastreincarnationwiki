@@ -7,13 +7,14 @@ keyword: "beast of reincarnation combat"
 image: "beast-of-reincarnation-emma-parry-flower-beast.webp"
 imageAlt: "Emma braced low in sunlit grass as a purple flower-covered beast lunges at her in Beast of Reincarnation"
 publishDate: 2026-07-30
+updateDate: 2026-09-01
 order: 3
 featured: true
 preview: false
 source: official
 ---
 
-On **14 July 2026**, Fictions and Game Freak released a dedicated **Combat Overview Trailer**, built specifically to explain the combat and progression systems in more detail. This page summarises what that official trailer and the accompanying preview event confirmed. Unlike our pre-release strategy notes, everything here is drawn from official materials — so it is not marked as speculation.
+On **14 July 2026**, Fictions and Game Freak released a dedicated **Combat Overview Trailer**, built specifically to explain the combat and progression systems in more detail. This page summarises what that official trailer and the accompanying preview event confirmed. It is a source-backed system overview, not a substitute for a current-build fight record.
 
 ## The core idea: one person, one dog
 
@@ -28,7 +29,7 @@ In practice that means two things to manage at once:
 - **Emma's real-time positioning** — movement, attacks, and defensive timing against enemies and Bosses.
 - **The timing of Koo's commanded techniques** — a resource layer you deploy tactically rather than mash.
 
-Game Freak has **not** published frame data, stamina rules, or a full move list, so anyone posting parry windows or combo routes before launch is guessing. We keep our provisional [parry-timing notes](/guides/emma-parry-flower-beast/) clearly labelled as pre-release.
+Game Freak's official overview does **not** publish frame data, stamina rules, or a full move list. This page therefore does not turn a trailer observation into a precise parry window or combo route; use the published-build [parry guide](/guides/emma-parry-flower-beast/) for practical coverage.
 
 ## Built to answer players' questions
 
@@ -38,12 +39,12 @@ Fictions were explicit that the trailer was made to answer common questions aske
 
 The week before the trailer, the team invited games writers and creators to **Los Angeles** to play an extended chunk of the game and interview director **Kota Furushima**. The resulting previews were broadly positive — IGN called it "a stunning action-RPG with a tactical twist," GameSpot said it "could be something really special," and Easy Allies framed it as "Game Freak levels up to AAA animal combat." Polygon's writer, less flatteringly for themselves, admitted they "got obliterated" and still could not wait to play more.
 
-Those are press impressions of pre-launch builds, not our verdict — but the consistency of the "tactical twist" read lines up with the hybrid framing above.
+Those are press impressions of dated preview builds, not our verdict — but the consistency of the "tactical twist" read lines up with the hybrid framing above.
 
-## What to verify at launch
+## What this official overview does not specify
 
 - Exact defensive mechanics (parry vs dodge windows).
 - Koo's command list and any cooldown or resource system.
 - How the turn-based layer is triggered in the flow of a fight.
 
-We rewrite our combat pages from hands-on play after the **4 August 2026** launch. For how you grow Emma and Koo between fights, see [progression and builds](/guides/progression-and-builds/); for the confirmed overview, see [game info](/game-info/).
+The full game released on **4 August 2026**. Any current-build combat result should carry its version, platform, and reproducible context. For how you grow Emma and Koo between fights, see [progression and builds](/guides/progression-and-builds/); for the official overview, see [game info](/game-info/).

@@ -6,7 +6,7 @@ import { SITE, GAME_FACTS } from '../data/site';
 const path = '/disclaimer/';
 const title = 'Disclaimer & Editorial Policy';
 const description =
-  'How Beast of Reincarnation Wiki handles official facts, hands-on coverage of the shipped game, pages written before launch, affiliate independence, and corrections.';
+  'How Beast of Reincarnation Wiki handles official facts, shipped-game coverage, historical material, affiliate independence, and corrections.';
 
 const schema = [
   {
@@ -44,8 +44,7 @@ const schema = [
     </h1>
     <p class="mt-4 text-lg leading-relaxed text-ash-300">
       Beast of Reincarnation released on {GAME_FACTS.releaseDate}. This page explains how we separate
-      confirmed store information from guides written against the shipped build, and from pages that
-      still predate launch.
+      confirmed store information, shipped-game coverage, and historical material.
     </p>
 
     <div class="prose mt-10 max-w-none">
@@ -62,9 +61,9 @@ const schema = [
         Steam listing and first-party announcements, and are labeled <strong>Official</strong>. Guides
         describing the shipped game are labeled <strong>Hands-on</strong> and name the post-launch
         coverage each detail came from at the bottom of the page — that label means sourced and
-        attributed, not that we personally cleared every fight. Pages written before the
-        {' '}{GAME_FACTS.releaseDateShort} release remain labeled <strong>Speculation</strong> and keep
-        a notice saying so until they are rewritten; we do not silently promote them.
+        attributed, not that we personally cleared every fight. Historical trailer and launch-period
+        material is kept as context only; it is never silently promoted to a current combat or route
+        result.
       </p>
 
       <h2>What we will not claim</h2>
@@ -75,14 +74,13 @@ const schema = [
         <li>Tier lists or "best build" rankings, which no published source supports yet</li>
       </ul>
 
-      <h2>Rewriting pre-launch pages</h2>
+      <h2>Keeping released-game pages current</h2>
       <p>
-        The game is out, so preview outlines are being rewritten against the final build one at a
-        time, with source labels and dates updated as each is done. Until a page is rewritten it says
-        plainly at the top that it predates launch. The
+        The game is out, so current pages use their latest checked date and retain a clear boundary
+        around official facts, post-launch coverage, player reports, and historical material. The
         {' '}<a href="/guides/launch-day-beginner-guide/">beginner's guide</a> and the
         {' '}<a href="/guides/nushi-boss-fight/">Rangifer Nushi guide</a> are the pages currently
-        written from the released game.
+        written around the released combat loop.
       </p>
 
       <h2>Corrections</h2>
