@@ -9,6 +9,7 @@
     "verify:guides": "node scripts/verify-guide-expansion.mjs",
     "verify:guide-listing": "node scripts/verify-guide-listing.mjs",
     "preview": "astro preview",
+    "test": "npm run verify:guides && npm run verify:guide-listing",
     "astro": "astro"
   },
   "dependencies": {

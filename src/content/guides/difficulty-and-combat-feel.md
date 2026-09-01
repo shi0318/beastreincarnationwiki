@@ -1,6 +1,6 @@
 ---
 title: "Is Beast of Reincarnation a Soulslike? Difficulty & Parry, Explained"
-description: "Players are split on whether Beast of Reincarnation is a Soulslike. Here is what launch-week players actually say about the difficulty, the forgiving parry window, and how the combat really feels."
+description: "Players split on whether Beast of Reincarnation is a Soulslike. What launch players say about difficulty, parry timing, and how combat actually feels."
 heading: "Difficulty & Combat Feel: Is It Really a Soulslike?"
 category: combat
 keyword: "beast of reincarnation soulslike difficulty"

@@ -1,6 +1,6 @@
 ---
 title: "Should You Buy Beast of Reincarnation? Launch Reception & Refunds"
-description: "Beast of Reincarnation sits at Mixed on Steam at launch. Here is what players love, what makes them refund, and who should buy now versus wait — straight from launch-week discussion."
+description: "Beast of Reincarnation sits Mixed on Steam at launch. What players love, what makes them refund, who should buy now versus wait—from launch discussion."
 heading: "Should You Buy It Now? Launch Reception, Honestly"
 category: beginner
 keyword: "should you buy beast of reincarnation"

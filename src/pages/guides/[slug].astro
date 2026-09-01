@@ -33,6 +33,22 @@ const publishDate = data.publishDate;
 const updateDate = data.updateDate ?? data.publishDate;
 const isPreview = data.preview;
 
+// 可索引状态：凡是有真实来源的都索引 —— official / handson / third-party-tested /
+// community / reviews / analysis / lore 都算有据可依。
+// 只有 speculation 与 trailer 不索引：前者是猜测，后者是预告片推断，都不该进搜索结果。
+// schema 里 source 的默认值就是 'speculation'，所以漏填来源的新页面会自动被挡住 —— 这是有意的。
+// 与 MS2、PTL 两站的 INDEXABLE_STATUS 做法一致。
+const INDEXABLE_SOURCE = [
+  'official',
+  'handson',
+  'third-party-tested',
+  'community',
+  'reviews',
+  'analysis',
+  'lore',
+];
+const noindex = !INDEXABLE_SOURCE.includes(data.source);
+
 // 每篇攻略的 <title> 都含游戏名（frontmatter 自带，或 BaseLayout 补品牌后缀），
 // 但 heading 一条都没有 —— title 与 H1 语义不一致，肉眼可见。
 // 修法：把游戏名做成 H1 *内部* 的 block span。视觉上是标题上方的 eyebrow 小字，
@@ -133,6 +149,7 @@ const fmt = (d: Date) =>
   ogType={isPreview ? 'website' : 'article'}
   publishDate={isPreview ? undefined : publishDate}
   updateDate={updateDate}
+  noindex={noindex}
 >
   <JsonLd slot="head" schema={schema} />
 

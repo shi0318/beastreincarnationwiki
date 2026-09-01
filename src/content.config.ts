@@ -5,7 +5,7 @@ const guides = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/guides' }),
   schema: z.object({
     title: z.string(),
-    description: z.string(),
+    description: z.string().min(50).max(170),
     // 用于 <h1> 与卡片标题，可与 SEO title 不同
     heading: z.string().optional(),
     category: z.enum(['boss', 'enemies', 'exploration', 'combat', 'beginner']),
