@@ -88,7 +88,7 @@ Kotaku's launch tips describe several reasons to return to the Walker even when 
 
 Kotaku also notes that the campsite menu's bottom-right area indicates when companions have new dialogue. That turns a material-deposit trip into a general reset point: deposit progression, restock, check research and crops, then leave with the next enhancement target in mind.
 
-The official Steam page describes customizable skill trees, gear, and spirit stones, but it does not publish the Walker material counts. Keep the distinction clear between official high-level progression and the specific hands-on observations above.
+The official Steam page describes customizable skill trees, gear, and spirit stones, but it does not publish the Walker material counts. Keep the distinction clear between official high-level progression and the specific observations above, which come from Kotaku's launch-week play rather than from this site.
 
 ## Upgrade priority without invented values
 

@@ -295,7 +295,8 @@ export const SOURCES: Record<
   },
   'third-party-tested': {
     // Keep the provenance key for editorial tracking, but use the visitor-facing
-    // wording requested for shipped-game guide pages.
+    // wording requested for shipped-game guide pages. The blurb and the per-page
+    // source list must keep naming the outlet that actually did the testing.
     label: 'Hands-on',
     icon: '🎮',
     tone: 'green',

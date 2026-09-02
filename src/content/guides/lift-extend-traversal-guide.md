@@ -72,7 +72,7 @@ That changes two decisions:
 - Do not use deep water as an escape plan during a difficult fight.
 - When a route appears to continue across water, look for a permitted shallow path, an Extend crossing, or another traversal line instead of assuming a swim input exists.
 
-This is a hands-on observation from the shipped game, not an official promise that every body of water behaves identically after future patches.
+This comes from Kotaku's play of the shipped game, not from an official statement that every body of water behaves identically after future patches.
 
 ## Sweep regions for Walker materials
 
