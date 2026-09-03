@@ -1,22 +1,33 @@
 ---
-title: "Beast of Reincarnation PC Fixes and v1.0.7 Update"
-description: "Source-backed PC fixes for Beast of Reincarnation, plus the official v1.0.7 result for upscaling reset, V-Sync, input, camera, and text issues."
+title: "Beast of Reincarnation PC Performance Fix Guide (v1.0.10)"
+description: "Source-backed PC fixes for Beast of Reincarnation: what v1.0.7 to v1.0.10 solved, and which problems are still player workarounds."
 heading: "PC Performance & Settings: The Fixes Players Actually Found"
 category: beginner
 keyword: "beast of reincarnation pc performance fix"
 image: "beast-of-reincarnation-machine-swarm-combat.webp"
 imageAlt: "Emma surrounded by spindly machine enemies with glowing red markings in a ruined overgrown clearing in Beast of Reincarnation"
 publishDate: 2026-08-04
-updateDate: 2026-08-10T08:10:00.000Z
+updateDate: 2026-09-03
 order: 8
 featured: true
 preview: false
 source: community
 ---
 
-Beast of Reincarnation shipped on **August 4, 2026** at **version 1.0.6**, and the launch-week Steam forums focused heavily on the PC port. Version **1.0.7**, published on August 9, now officially fixes the upscaling-setting reset and the V-Sync resolution interaction. Other reports below remain player reports rather than developer-confirmed fixes. Checked August 10, 2026.
+Beast of Reincarnation shipped on **August 4, 2026** at **version 1.0.6**, and the launch-week Steam forums focused heavily on the PC port. **Four official patches have landed since**, and they resolved the three biggest complaints on this page: film grain and chromatic aberration now have menu toggles, ultrawide monitors are supported, and frame generation is a built-in option. Rechecked **September 3, 2026** against the current build, v1.0.10.
 
-Everything below comes from players discussing the shipped game in the [official Steam forums](https://steamcommunity.com/app/2001760/discussions/) unless it is explicitly attributed to the [official v1.0.7 patch notes](/guides/patch-notes/). Where a fix is one player's report rather than something confirmed by the developer, that is stated. Treat the store page and pinned developer threads as the live source of truth.
+| Launch-week complaint | Status now |
+| --- | --- |
+| Film grain / chromatic aberration cannot be turned off | **Fixed in v1.0.10** — separate toggles, plus one for cutscenes |
+| No ultrawide support | **Fixed in v1.0.9** |
+| No frame generation | **Added in v1.0.9** (DLSS/FSR) |
+| Outdated upscaling models | **DLSS 4/4.5 and FSR 4 added in v1.0.8** |
+| Upscaling settings reset on restart | **Fixed in v1.0.7** |
+| Missing 4K resolution option | Still a player workaround |
+| Intel 13th/14th-gen launch crash | Still a player workaround |
+| Steam Deck not Verified | Still not Verified; developers said they are resubmitting |
+
+The version-by-version record is in the [patch notes index](/guides/patch-notes/). Everything else below comes from players discussing the shipped game in the [official Steam forums](https://steamcommunity.com/app/2001760/discussions/) unless it is explicitly attributed to an official patch. Where a fix is one player's report rather than something confirmed by the developer, that is stated. Treat the store page and pinned developer threads as the live source of truth.
 
 ## Quick triage: which problem do you have?
 
@@ -29,14 +40,16 @@ Everything below comes from players discussing the shipped game in the [official
 | Playing on Steam Deck | [Steam Deck](#steam-deck-not-verified-yet) |
 | Ultrawide (21:9 / 32:9) | [Ultrawide](#ultrawide-219--329) |
 
-## Film grain and upscaling after v1.0.7
+## Film grain and upscaling: use the menu now
 
-Two complaints dominate every performance thread, and they have the same root cause — the post-processing pipeline.
+Two complaints dominated every performance thread, and both have official answers today. Update the game before doing anything else in this section.
 
-**1. Film grain and chromatic aberration make the image look noisy.** Multiple players describe native 4K still looking soft and grainy. There is no in-menu toggle for film grain specifically, but two workarounds circulate:
+**1. Film grain and chromatic aberration.** **v1.0.10, published August 31, 2026, added in-menu toggles for both**, plus a separate toggle for post-processing in cutscenes. That is the correct fix and it replaces every workaround below. Details on the [v1.0.10 notes page](/guides/beast-of-reincarnation-update-1-0-10/).
 
-- **Set Post Processing to Low.** Players report this disables both film grain and chromatic aberration in one move. The catch, per one commenter, is that Low "will disable other settings as well," so you lose some effects you might want to keep.
-- **Edit an `engine.ini` file** to kill only grain and aberration and nothing else. This is the cleaner option. Player "Seibzehn" posted the exact file — create it at:
+The workarounds are kept here for one reason: they still apply if you are running an older build, and the `engine.ini` route survives as a way to disable grain without touching anything else.
+
+- **Set Post Processing to Low.** Players reported this disabled both film grain and chromatic aberration in one move. The catch, per one commenter, is that Low "will disable other settings as well," so you lose effects you might want to keep. On a current build the dedicated toggles are strictly better than this.
+- **Edit an `engine.ini` file** to kill only grain and aberration. Player "Seibzehn" posted the exact file — create it at:
 
 ```
 C:\Users\<YOURNAME>\AppData\Local\BeastOfReincarnation\Saved\engine.ini
@@ -54,9 +67,11 @@ r.Tonemapper.GrainQuantization=0
 r.SceneColorFringeQuality=0
 ```
 
-These are standard Unreal Engine console variables, which is consistent with this being a UE5 title. Back the file up — a game update can overwrite or ignore custom `engine.ini` settings.
+These are standard Unreal Engine console variables, which is consistent with this being a UE5 title. Back the file up — a game update can overwrite or ignore custom `engine.ini` settings. On PS5 neither route is available, and the console status is covered on the [PS5 film grain page](/guides/beast-of-reincarnation-ps5-film-grain-guide/).
 
 **2. Upscaling settings resetting after a restart.** This was a repeated launch-week player report, but it is no longer accurate to say there is no confirmed fix. The official v1.0.7 notes say: **"Fixed a bug causing upscaling settings to reset upon restarting the game."** After Steam updates the game, set your preferred option once, restart, and check the setting before applying other workarounds. If it still resets, record the version you see and report that reproducible case through the official route.
+
+One related regression to know about: v1.0.8 broke upscaling on the **Microsoft Store / Xbox PC version**, and v1.0.9 fixed it. If your upscaling options vanished in mid-August on Game Pass, that was the cause.
 
 <figure>
   <img src="/images/beast-of-reincarnation-machine-swarm-combat.webp" alt="Emma surrounded by eight or more spindly machine enemies with glowing red markings in a ruined overgrown clearing in Beast of Reincarnation" width="1600" height="900" loading="lazy" decoding="async" />
@@ -70,7 +85,7 @@ The game ships with an older DLSS build (players identified **3.7**) and, by def
 - **Force a newer DLSS preset.** Players say the default is **Preset E**, and that forcing **Preset K** "resolves the noise in this game" better than the alternatives; **Preset L** and **M** are also suggested for RTX 40/50-series cards. You can do this through the **Nvidia App** (which can force the latest DLSS model without any file swapping) or DLSS Swapper.
 - **DLSS Swapper / newer DLL.** Some players swap in DLSS **310.7** for cleaner reconstruction and less shimmering. Note two caveats from the threads: one player got **crashes after swapping to 310.6/310.7**, and the game's tendency to fall back to FSR can undo the swap anyway. Your mileage varies — if it crashes, roll back.
 
-The official v1.0.7 post says **DLSS 4/4.5 (L/M)** and **FSR4** are planned for future patches. It does not say either has shipped in v1.0.7. Third-party frame-generation tools are not a publisher-supported replacement; the [mod support status guide](/guides/mod-support-status/) explains why this site does not treat unverified tools as universal fixes.
+**Both of the upscaling features promised in the v1.0.7 post have shipped, and native frame generation has too.** **DLSS 4/4.5 (L/M)** and **FSR 4** arrived in **v1.0.8** (August 15, 2026), and **frame generation (DLSS/FSR)** arrived in **v1.0.9** (August 24, 2026) as a settings-menu option. So the DLSS-swapping advice above is now a fallback for a specific preference, not the only route to a modern model — check the menu first. Third-party frame-generation tools are no longer necessary and were never a publisher-supported replacement; the [mod support status guide](/guides/mod-support-status/) explains why this site does not treat unverified tools as universal fixes.
 
 ## The missing 4K option
 
@@ -121,13 +136,15 @@ Playable on a Deck today if you accept 30 FPS and low settings; wait for the pro
 
 ## Ultrawide (21:9 / 32:9)
 
-The launch forums contain ultrawide concerns, but the official v1.0.7 notes do not announce a native ultrawide change. A community project has published camera-distance, FOV, and ultrawide work, but it is not official support and its author has reported different version labels across its Steam and GitHub pages. See the [mod support status guide](/guides/mod-support-status/) for the source boundary; do not assume a third-party tool works after every patch.
+**This is fixed officially.** **v1.0.9, published August 24, 2026, added ultrawide monitor support**, and the note says most ultrawide and super ultrawide monitors should now work, asking players to report any that still do not. That wording is the developer's, so treat it as broad support rather than a guarantee for every aspect ratio.
+
+Before that patch there was no native support, and a community project covering camera distance, FOV and ultrawide was the only route — its author had also published inconsistent version labels across Steam and GitHub. On a current build you should not need it. See the [mod support status guide](/guides/mod-support-status/) for the source boundary, and do not assume a third-party tool still works after a patch.
 
 ## What the developers have said
 
 Two useful signals from the official threads, both worth weighting more than random comments:
 
-- On performance generally, the team acknowledged the lack of frame generation and, per a player relaying a dev statement, said **they "are on it."**
+- On performance generally, the team acknowledged the lack of frame generation and, per a player relaying a dev statement, said **they "are on it."** They delivered: **frame generation (DLSS/FSR) shipped in v1.0.9.**
 - On Steam Deck, the team confirmed they're **working toward Verified status** and a re-submission (quoted above).
 
 Beyond that, route bugs and requests through the **pinned official threads** in the Steam forums — that's where Fictions and Game Freak asked players to consolidate reports so they reach the team together.

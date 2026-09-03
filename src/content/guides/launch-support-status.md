@@ -1,22 +1,22 @@
 ---
 title: "Beast of Reincarnation Launch Support and Fixes"
-description: "Official Beast of Reincarnation support status: launch build 1.0.6, v1.0.7 patch notes, the resolved Deluxe entitlement issue, and reports."
+description: "Official Beast of Reincarnation support status: launch build 1.0.6, the four PC patches through v1.0.10, the resolved Deluxe entitlement issue, and reports."
 heading: "Official Launch Support: Version, Fixes and Feedback"
 category: beginner
 keyword: "beast of reincarnation launch support"
 image: "beast-of-reincarnation-header-banner.webp"
 imageAlt: "Official Beast of Reincarnation banner art showing Emma and Koo in the blighted wasteland"
 publishDate: 2026-08-08T06:59:00.000Z
-updateDate: 2026-08-10T08:20:00.000Z
+updateDate: 2026-09-03
 order: 1
 featured: true
 preview: false
 source: official
 ---
 
-This is a status page for facts that Fictions and Game Freak have published after launch. It separates an official statement from a player report, and it does not turn a request for feedback into a promise that a particular feature or performance problem will be changed. Details were checked on **August 10, 2026**.
+This is a status page for facts that Fictions and Game Freak have published after launch. It separates an official statement from a player report, and it does not turn a request for feedback into a promise that a particular feature or performance problem will be changed. Rechecked on **September 3, 2026**.
 
-The short version is straightforward: the official launch announcement identifies **version 1.0.6** as the launch build, official **v1.0.7** patch notes are now published, the reported pre-order Deluxe entitlement issue has an official Steam resolution, and the team directs feedback and technical reports to its pinned Steam discussion threads.
+The short version: the launch announcement identifies **version 1.0.6** as the launch build, **four PC patches have been published since** — v1.0.7 through **v1.0.10, the current version** — the pre-order Deluxe entitlement issue has an official Steam resolution, and the team directs feedback and technical reports to its pinned Steam discussion threads.
 
 <figure>
   <img src="/images/beast-of-reincarnation-header-banner.webp" alt="Official Beast of Reincarnation banner art showing Emma and Koo in the blighted wasteland" width="1600" height="900" loading="lazy" decoding="async" />
@@ -31,9 +31,20 @@ To identify the build on your own installation, let Steam finish updating first,
 
 The same announcement says feedback and technical issues should go to the pinned threads in the official Steam discussions. Use the official route before copying a report into unrelated community posts, because a useful report needs enough context for the team to reproduce it.
 
-## Official v1.0.7 patch notes are now available
+## The published patches, and which platform they name
 
-On **August 9, 2026**, Fictions and Game Freak published **v1.0.7**. It includes camera and text-size adjustments, cutscene and control changes, balance changes, several bug fixes, and an official fix for the upscaling settings resetting after a restart. Read the complete, version-specific [official v1.0.7 patch notes](/guides/patch-notes/) before assuming a community report has or has not been addressed.
+Four official patch posts exist. Every one of them is titled **PC Patch Notes**, and this is the detail that matters most on a support page: **no post states a PlayStation 5 or Xbox rollout date.**
+
+| Version | Date | Announcement title |
+| --- | --- | --- |
+| [v1.0.10](/guides/beast-of-reincarnation-update-1-0-10/) | Aug 31, 2026 | PC Patch Notes: v1.0.10 — called "Patch 4" |
+| [v1.0.9](/guides/beast-of-reincarnation-update-1-0-9/) | Aug 24, 2026 | PC Patch Notes: v1.0.9 — called "the game's third patch" |
+| [v1.0.8](/guides/beast-of-reincarnation-update-1-0-8/) | Aug 15, 2026 | PC Patch Notes: v1.0.8 |
+| [v1.0.7](/guides/patch-notes/) | Aug 9, 2026 | PC Patch Notes: v1.0.7 |
+
+Two console-specific lines do appear inside those PC posts — v1.0.9 adjusted **PS5 controller vibration intensity**, and v1.0.10 says console builds gained frame time from reduced background work. Neither is a rollout schedule. If you are on a console and a fix listed here is not present, the correct conclusion is that the notes do not cover your platform, not that the fix failed.
+
+So: **confirm your own installed version before reporting anything**, and read the [patch notes index](/guides/patch-notes/) for the full version-by-version record. Do not assume a community report is unaddressed without checking all four.
 
 ## The Deluxe pre-order entitlement issue is marked fixed
 
@@ -55,7 +66,9 @@ This does not guarantee a fix. It makes the difference between "the game is brok
 
 ## What has not been officially promised here
 
-The v1.0.7 post gives a detailed change list and says more patches are planned. It does not give a date or complete scope for the next update, and it does not establish a universal fix for every community report. Do not treat a popular discussion thread as a patch note. Compare future claims with the live Steam news page before changing settings or buying DLC.
+Each patch post carries a change list and a list of planned work, and the team has a good record of delivering that list — v1.0.8's roadmap arrived in full in v1.0.9. But a roadmap is not a schedule: **no post gives a date for the next update**, and six items are still listed as planned as of v1.0.10, including auto-pickup for enemy drops and the remaining skippable cutscenes. Nothing establishes a universal fix for every community report.
+
+Do not treat a popular discussion thread as a patch note. Compare future claims with the live Steam news page before changing settings or buying DLC.
 
 For a dated read of player sentiment rather than a support statement, see [Steam reception and issues](/guides/steam-reception-and-issues/). For the confirmed PC requirements that the publisher says superseded the earlier erroneous list, see [PC system requirements](/guides/pc-system-requirements/).
 
@@ -63,5 +76,6 @@ For a dated read of player sentiment rather than a support statement, see [Steam
 
 - [Official Steam announcement: Beast of Reincarnation is Available Now](https://store.steampowered.com/news/app/2001760/view/1839676055896142) - launch version 1.0.6, Deluxe upgrade availability, and the official feedback route. Checked August 10, 2026.
 - [Official Steam announcement: Beast of Reincarnation PC Patch Notes: v1.0.7](https://store.steampowered.com/news/app/2001760/view/1840310314349621) - confirmed changes, future-patch wording, and the upscaling-reset fix. Checked August 10, 2026.
+- [Official Steam news feed for App 2001760](https://api.steampowered.com/ISteamNews/GetNewsForApp/v2/?appid=2001760&count=20&maxlength=0&format=json) - first-party feed containing the v1.0.8 (Aug 15), v1.0.9 (Aug 24) and v1.0.10 (Aug 31) announcements used for the version table above, including the "PC Patch Notes" titling. Checked September 3, 2026.
 - [Official Steam announcement: FIXED - Pre-Order DLC Entitlement Issue](https://store.steampowered.com/news/app/2001760/view/1840310314340073) - Valve's entitlement update, scope for Steam and key-site purchases, restart-Steam instruction, and notice that more fixes are in progress. Checked August 10, 2026.
 - [Beast of Reincarnation Steam Discussions](https://steamcommunity.com/app/2001760/discussions/) - official community hub containing the pinned discussion routes referenced at launch. Checked August 10, 2026.

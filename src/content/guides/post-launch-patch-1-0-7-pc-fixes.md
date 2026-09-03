@@ -55,6 +55,8 @@ The [PC performance and settings guide](/guides/pc-performance-settings-fixes/) 
 
 The same official announcement mentions further story-pacing and cutscene improvements, plus planned DLSS 4/4.5 (L/M) and FSR4 support. Those are future plans in the developer post. They are not features that v1.0.7 is confirmed to have delivered, so do not treat them as current PC settings.
 
+**They have since shipped, in later patches.** DLSS 4/4.5 and FSR 4 arrived in **v1.0.8**; skippable cutscenes and frame generation arrived in **v1.0.9**; the post-processing toggles arrived in **v1.0.10**, which is the current version. If you are troubleshooting today rather than reading a record of the first patch, start from the [patch notes index](/guides/patch-notes/) or the [v1.0.10 notes](/guides/beast-of-reincarnation-update-1-0-10/).
+
 ## Sources
 
 - [Official Steam announcement: Beast of Reincarnation PC Patch Notes: v1.0.7](https://store.steampowered.com/news/app/2001760/view/1840310314349621) — complete official change list, published August 9, 2026.

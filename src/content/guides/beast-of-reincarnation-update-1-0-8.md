@@ -7,7 +7,7 @@ keyword: "beast of reincarnation update"
 image: "beast-of-reincarnation-key-art.webp"
 imageAlt: "Emma and Koo traveling through the blighted world in official Beast of Reincarnation key art"
 publishDate: 2026-08-15
-updateDate: 2026-08-17
+updateDate: 2026-09-03
 order: 0
 featured: true
 preview: false
@@ -45,9 +45,13 @@ The developer adjusted some boss behavior, enemy positions, and **Bloom Arts** d
 
 The patch also fixes a performance issue that could occur when **Kiku: Bloom Strike** activated **End of the Line**. Another fix addresses cloud streaming when delayed enemy spawning could block progression. If either issue was affecting your run, record the location, settings, and build before and after the update so a remaining problem can be reported clearly.
 
-## What is still planned, not included in v1.0.8
+## What v1.0.8 listed as planned — and where it landed
 
-The same official post lists future work including skippable events and cutscenes, ultrawide support, frame generation, faster healing after taking damage, less movement slowdown while healing, and more fixes for boss cameras, collision, cutscenes, and Koo obscuring the view. These are plans, not v1.0.8 features.
+The official post listed future work: skippable events and cutscenes, ultrawide support, frame generation, faster healing after taking damage, less movement slowdown while healing, and more fixes for boss cameras, collision, cutscenes, and Koo obscuring the view. None of those were v1.0.8 features.
+
+**All of them appear in v1.0.9**, published nine days later on August 24, 2026 — ultrawide support, DLSS/FSR frame generation, skippable cutscenes (in batches), healing usable immediately upon taking damage, reduced movement slowdown while healing, boss camera presentation, invisible wall collision, and the Koo field-of-view fix. Collision and the Koo fix were revisited again in **v1.0.10**. That is an unusually clean delivery record for a roadmap, and it is the reason this page no longer describes the current build.
+
+See the [v1.0.9 notes](/guides/beast-of-reincarnation-update-1-0-9/) and the current [v1.0.10 notes](/guides/beast-of-reincarnation-update-1-0-10/), or the [full patch index](/guides/patch-notes/) for every version at once.
 
 ## Safe post-update checklist
 

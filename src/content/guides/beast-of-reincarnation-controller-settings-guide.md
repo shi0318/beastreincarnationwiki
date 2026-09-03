@@ -7,14 +7,14 @@ keyword: "beast of reincarnation controller settings"
 image: "beast-of-reincarnation-emma-parry-flower-beast.webp"
 imageAlt: "Emma holding her sword ready against a flower-covered Malefect in Beast of Reincarnation"
 publishDate: 2026-08-31
-updateDate: 2026-08-31
+updateDate: 2026-09-03
 order: 2
 featured: false
 preview: false
 source: official
 ---
 
-**Beast of Reincarnation** released on **August 4, 2026**. If your inputs feel different after updating, this controller settings guide shows where to look, what the v1.0.8 settings record confirms, and how to test one change at a time. When a button layout is not confirmed here, use the exact prompt shown by your current game menu.
+**Beast of Reincarnation** released on **August 4, 2026** and is now on **v1.0.10**. If your inputs feel different after updating, this guide shows where to look, which settings and input behaviours each patch actually changed, and how to test one change at a time. When a button layout is not confirmed here, use the exact prompt shown by your current game menu.
 
 <figure>
   <img src="/images/beast-of-reincarnation-emma-parry-flower-beast.webp" alt="Emma holding her sword ready against a flower-covered Malefect in Beast of Reincarnation" width="1600" height="900" loading="lazy" decoding="async" />
@@ -38,6 +38,25 @@ Version **v1.0.8** changes the default state of these three settings to **off**:
 Check all three after the update instead of assuming an older profile still represents your preferred targeting behaviour. Change one toggle at a time, return to the same menu, and use the value currently shown there as the confirmation of what the game accepted.
 
 The names above describe the settings that are recorded for the shipped game. They do not establish a universal controller layout or a platform-specific button. For any Parry, Guard, or Switch action that the menu lets you map, use the prompt displayed in that menu as the current answer.
+
+## Input changes in v1.0.9 and v1.0.10
+
+Two later patches changed how inputs behave rather than what the menu contains, so a settings check alone will not reveal them. The current version is **v1.0.10**, published August 31, 2026.
+
+**v1.0.10 — four input behaviour changes:**
+
+- **Knockback recovery can also be triggered with D-Pad Up**, in addition to the existing input. The original input still works; this is an alternative, not a remap.
+- **Aiming a ranged weapon is now a hold input.** The aim stays active while you hold the button instead of toggling on and off. If your ranged aim "stopped sticking" after updating, this is why, and it is intended.
+- **Input buffering was added for ranged aiming** during Sliding, Rolling Evasion, and standard Slash attacks. You can queue the aim during those animations instead of waiting them out.
+- **Interaction inputs now take priority over the Resupply screen** where both share a button.
+
+**v1.0.9 — vibration and input bug fixes:**
+
+- **PS5 controller vibration intensity was adjusted**, and **vibration was added to Execution Kills and Assassinations.**
+- **Counterattack execution timing was adjusted.** No direction and no frame data are published, so re-test the timing rather than assuming it got easier.
+- Three PC input bugs were fixed: the **New Game Plus data transfer soft lock** when confirming with keyboard or mouse and then moving the cursor with a controller, the **Return Results screen ignoring the keyboard confirm key**, and the **Bed Menu** triggering "Rest Until Morning" when you clicked "Save Game" or "Special Content" immediately after opening it.
+
+The mixed keyboard-and-controller soft lock is the one worth knowing about: if you play with both devices, being on v1.0.9 or later matters more than any setting on this page. Version-by-version detail is on the [v1.0.9 notes](/guides/beast-of-reincarnation-update-1-0-9/) and [v1.0.10 notes](/guides/beast-of-reincarnation-update-1-0-10/) pages.
 
 ## Parry and controller input remapping
 
@@ -73,18 +92,22 @@ Do not turn subtitle size into a claim about audio languages, display resolution
 
 Use this order when a controller or input setup feels unfamiliar:
 
-1. Confirm that the game has finished updating to the v1.0.8 build you intend to test.
+1. Confirm that the game has finished updating, and note the version — the input behaviour changes above only exist on **v1.0.9 and v1.0.10**.
 2. Open Settings and note the displayed values for Auto-Target Attack, Auto-Target Parry, and Auto-Target Switch.
 3. Check the Parry and Switch action labels without copying a button from memory; use the current menu display as the authority.
 4. Verify the Interact binding, then test it in a safe area.
 5. Test a mouse side button separately if it is part of the setup.
 6. Check subtitle size using the displayed Extra Small-to-Extra Large range.
-7. If one input still fails, change one setting at a time and record the exact menu text, device, platform, and repeatable steps.
+7. **Test ranged aim as a hold**, and try knockback recovery on D-Pad Up, so you are not diagnosing an intended v1.0.10 change as a fault.
+8. If one input still fails, change one setting at a time and record the exact menu text, device, platform, and repeatable steps.
 
 This sequence is designed to answer whether the menu accepted your change. It does not claim a universal best controller preset, a fixed button table, or a frame-perfect input result.
 
 ## Related Beast of Reincarnation guides
 
+- [Beast of Reincarnation patch notes index](/guides/patch-notes/) — every version from 1.0.7 to 1.0.10
+- [Beast of Reincarnation v1.0.10 patch notes](/guides/beast-of-reincarnation-update-1-0-10/)
+- [Beast of Reincarnation v1.0.9 patch notes](/guides/beast-of-reincarnation-update-1-0-9/)
 - [Beast of Reincarnation v1.0.8 patch notes](/guides/beast-of-reincarnation-update-1-0-8/)
 - [Beast of Reincarnation Parry, Guard, Dodge & Controls guide](/guides/parry-guard-dodge-controls-guide/)
 - [Beast of Reincarnation PC performance and settings guide](/guides/pc-performance-settings-fixes/)
