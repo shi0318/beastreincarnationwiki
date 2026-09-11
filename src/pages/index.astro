@@ -351,8 +351,8 @@ const schema = [
         </h2>
         <p class="mt-2 text-ash-400">
           These are the nine most recently published or materially updated guides, newest first.
-          Each card carries a source badge. <strong class="text-ash-200">Hands-on</strong> pages are
-          written from the shipped game with their sources cited; pages still marked
+          Each card carries a source badge. <strong class="text-ash-200">Cited playthrough</strong> pages use
+          named post-launch coverage of the shipped game; pages still marked
           <strong class="text-ash-200">Speculation</strong> remain historical context until a current
           build record supports a stronger claim.
         </p>
@@ -377,6 +377,23 @@ const schema = [
           />
         ))
       }
+    </div>
+  </section>
+
+  <!-- Existing-answer cluster: strengthen post-launch intent without creating thin URLs. -->
+  <section class="border-y border-ash-800 bg-ash-900/20">
+    <div class="mx-auto max-w-6xl px-4 py-16">
+      <div class="mb-8 max-w-3xl">
+        <p class="text-sm font-semibold uppercase tracking-wide text-ash-500">Post-launch answers</p>
+        <h2 class="mt-2 font-display text-2xl font-bold text-ash-50 md:text-3xl">Beast of Reincarnation questions players ask after starting</h2>
+        <p class="mt-3 text-ash-300">Start with a focused answer instead of a generic index. These links use existing guides and keep official facts, player evidence, and hands-on coverage separated.</p>
+      </div>
+      <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+        <a href="/guides/first-hours-build-and-combat/" class="rounded-xl border border-ash-800 bg-ash-950/40 p-5 transition hover:border-ember-500"><h3 class="font-display text-lg font-semibold text-ash-50">What should I do first?</h3><p class="mt-2 text-sm leading-relaxed text-ash-400">Use the first-hours route for early combat, exploration and upgrade priorities.</p></a>
+        <a href="/guides/nushi-boss-fight/" class="rounded-xl border border-ash-800 bg-ash-950/40 p-5 transition hover:border-ember-500"><h3 class="font-display text-lg font-semibold text-ash-50">How do Nushi fights work?</h3><p class="mt-2 text-sm leading-relaxed text-ash-400">Open the Rangifer Nushi fight page for the encounter details currently documented.</p></a>
+        <a href="/guides/achievements-guide/" class="rounded-xl border border-ash-800 bg-ash-950/40 p-5 transition hover:border-ember-500"><h3 class="font-display text-lg font-semibold text-ash-50">Where are the achievements?</h3><p class="mt-2 text-sm leading-relaxed text-ash-400">The achievement table separates published objectives from hidden conditions.</p></a>
+        <a href="/weapons/" class="rounded-xl border border-ash-800 bg-ash-950/40 p-5 transition hover:border-ember-500"><h3 class="font-display text-lg font-semibold text-ash-50">Which weapons are listed?</h3><p class="mt-2 text-sm leading-relaxed text-ash-400">Compare named blades, the crossbow and ammunition without an invented tier list.</p></a>
+      </div>
     </div>
   </section>
 </BaseLayout>

@@ -20,6 +20,7 @@ function frontmatterDate(file) {
 
 // Sitemap dates are content metadata, never the deployment timestamp.
 const STATIC_LASTMOD = {
+  '/': '2026-09-07',
   '/weapons/': '2026-08-17',
   '/walkthrough/': '2026-08-17',
   '/skills/': '2026-08-17',

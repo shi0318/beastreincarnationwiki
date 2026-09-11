@@ -294,14 +294,14 @@ export const SOURCES: Record<
       'Reserved for original playtest notes recorded by this site, including the build, platform and reproducible steps.',
   },
   'third-party-tested': {
-    // Keep the provenance key for editorial tracking, but use the visitor-facing
-    // wording requested for shipped-game guide pages. The blurb and the per-page
-    // source list must keep naming the outlet that actually did the testing.
-    label: 'Hands-on',
-    icon: '🎮',
+    // Keep the provenance key for editorial tracking, but do not imply that this
+    // site personally cleared the encounter. The cited outlet remains named on
+    // each page's source list.
+    label: 'Cited playthrough',
+    icon: '↗',
     tone: 'green',
     blurb:
-      'Hands-on coverage from cited post-launch gameplay sources; the source list identifies the coverage behind each detail.',
+      'Post-launch gameplay details reported by cited outlets; this site has not independently reproduced every step.',
   },
   community: {
     label: 'Player reports',
