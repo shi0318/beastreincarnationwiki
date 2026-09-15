@@ -1,0 +1,151 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import JsonLd from '../components/JsonLd.astro';
+import SourceBadge from '../components/SourceBadge.astro';
+import WikiSectionNav from '../components/WikiSectionNav.astro';
+import { GAME_FACTS, SITE } from '../data/site';
+
+const path = '/bosses/';
+const title = 'Beast of Reincarnation Bosses: All Steam-Confirmed Bosses';
+const description =
+  'Beast of Reincarnation boss list from official Steam achievement data: the six Nushi, Koo de Grace, Shidou & Nue and Kunai & Kirin, with global unlock rates and fight guides.';
+const image = '/images/beast-of-reincarnation-nushi-boss-fight.webp';
+const canonical = new URL(path, SITE.url).href;
+
+// 全部名字与解锁率来自 Steam 官方成就页（App 2001760）快照 2026-09-08。
+const nushi = [
+  { name: 'Rangifer', achievement: "Rangifer's End", rate: '53.5%', guide: '/guides/nushi-boss-fight/', note: 'Fought twice: crater fight (level 9, one stage) and sealed-lair rematch (level 12, two stages). Weak to fire in both.' },
+  { name: 'Lacerta', achievement: "Lacerta's End", rate: '43.8%', guide: '/weapons/thunderwave-sword/', note: 'The biggest attrition step in the game: roughly one in five players who beat Rangifer stop before Lacerta. The Thunderwave Sword note covers its Steam-reported electric weakness.' },
+  { name: 'Taurus', achievement: "Taurus's End", rate: '34.8%', guide: null, note: 'Named in Steam achievement data. No verified route published on this site yet.' },
+  { name: 'Corvus', achievement: "Corvus's End", rate: '28.3%', guide: null, note: 'Named in Steam achievement data. No verified route published on this site yet.' },
+  { name: 'Ursa', achievement: "Ursa's End", rate: '25.0%', guide: null, note: 'Within half a point of Erymanth, which suggests the two are available in either order rather than strictly sequential.' },
+  { name: 'Erymanth', achievement: "Erymanth's End", rate: '24.6%', guide: null, note: 'The least-unlocked of the six Nushi in the Steam global snapshot.' },
+] as const;
+
+const otherBosses = [
+  { name: 'Koo de Grace', achievement: 'Koo de Grace', rate: '25.6%', note: 'A co-op finisher achievement listed among the combat entries; the site does not claim it is a conventional boss fight.' },
+  { name: 'Shidou & Nue', achievement: 'Shidou & Nue', rate: '24.8%', note: 'Paired boss achievement naming two encounters in one entry.' },
+  { name: 'Kunai & Kirin', achievement: 'Kunai & Kirin', rate: '24.5%', note: 'Paired boss achievement naming two encounters in one entry.' },
+  { name: 'Horror in the Sky', achievement: 'Horror in the Sky', rate: '18.3%', note: 'Non-Nushi combat achievement; tracked on the Wasteland Colossal page.' },
+  { name: 'The Sealer', achievement: 'The Sealer', rate: '21.5%', note: 'Non-Nushi combat achievement outside the Nushi set.' },
+] as const;
+
+const schema = [
+  {
+    '@context': 'https://schema.org', '@type': 'CollectionPage', name: title, description, url: canonical,
+    about: { '@type': 'VideoGame', name: GAME_FACTS.name, url: GAME_FACTS.source },
+    isPartOf: { '@type': 'WebSite', name: SITE.name, url: SITE.url },
+    mainEntity: {
+      '@type': 'ItemList', numberOfItems: nushi.length + otherBosses.length,
+      itemListElement: [...nushi, ...otherBosses].map((b, index) => ({
+        '@type': 'ListItem', position: index + 1, name: b.name,
+      })),
+    },
+  },
+  {
+    '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.url },
+      { '@type': 'ListItem', position: 2, name: 'Bosses', item: canonical },
+    ],
+  },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} image={image} imageAlt="A large Nushi creature facing Emma in Beast of Reincarnation">
+  <JsonLd slot="head" schema={schema} />
+  <section class="border-b border-ash-800 bg-ash-900/30">
+    <div class="mx-auto max-w-6xl px-4 py-12">
+      <nav aria-label="Breadcrumb" class="mb-5 text-xs text-ash-400">
+        <a href="/" class="hover:text-ember-400">Home</a><span aria-hidden="true"> / </span>
+        <span class="text-ash-300">Bosses</span>
+      </nav>
+      <div class="grid items-center gap-8 md:grid-cols-[1.1fr_.9fr]">
+        <div>
+          <SourceBadge source="official" showBlurb />
+          <h1 class="mt-4 font-display text-3xl font-bold leading-tight text-ash-50 md:text-5xl">
+            Beast of Reincarnation Bosses: The Steam-Confirmed Roster
+          </h1>
+          <p class="mt-4 max-w-3xl text-lg leading-relaxed text-ash-300">
+            Every boss name below comes from official Steam achievement data for App 2001760, with the
+            global unlock rate recorded on 8 September 2026. The six Nushi regional bosses form a clear
+            progression ladder; three paired or co-op combat entries sit alongside them. Fight tactics
+            are only published for encounters this site has verified against the released build.
+          </p>
+        </div>
+        <img src={image} alt="A large Nushi creature facing Emma in Beast of Reincarnation" width="1600" height="900" loading="eager" fetchpriority="high" class="rounded-xl border border-ash-800" />
+      </div>
+    </div>
+  </section>
+
+  <main class="mx-auto max-w-6xl px-4 py-12">
+    <WikiSectionNav active={path} />
+
+    <section class="mt-10">
+      <h2 class="font-display text-2xl font-bold text-ash-50">The six Nushi regional bosses</h2>
+      <p class="mt-2 max-w-3xl leading-relaxed text-ash-400">
+        Nushi are the major regional boss encounters. The unlock-rate ladder is the only population data
+        Valve publishes: it shows how many players beat each Nushi, not its health or difficulty.
+      </p>
+      <div class="mt-6 overflow-x-auto rounded-xl border border-ash-800">
+        <table class="w-full min-w-[680px] text-left text-sm">
+          <thead class="bg-ash-900 text-ash-200">
+            <tr><th class="px-4 py-3">Boss</th><th class="px-4 py-3">Achievement</th><th class="px-4 py-3">Global unlock</th><th class="px-4 py-3">What is verified</th></tr>
+          </thead>
+          <tbody>
+            {nushi.map((b) => (
+              <tr class="border-t border-ash-800">
+                <th scope="row" class="px-4 py-3 font-medium text-ash-100">
+                  {b.guide ? <a href={b.guide} class="text-ember-400 hover:underline">{b.name}</a> : b.name}
+                </th>
+                <td class="px-4 py-3 text-ash-300">{b.achievement}</td>
+                <td class="px-4 py-3 tabular-nums text-ash-300">{b.rate}</td>
+                <td class="px-4 py-3 text-ash-400">{b.note}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="mt-12">
+      <h2 class="font-display text-2xl font-bold text-ash-50">Other combat achievements naming encounters</h2>
+      <div class="mt-5 overflow-x-auto rounded-xl border border-ash-800">
+        <table class="w-full min-w-[680px] text-left text-sm">
+          <thead class="bg-ash-900 text-ash-200">
+            <tr><th class="px-4 py-3">Entry</th><th class="px-4 py-3">Achievement</th><th class="px-4 py-3">Global unlock</th><th class="px-4 py-3">Boundary</th></tr>
+          </thead>
+          <tbody>
+            {otherBosses.map((b) => (
+              <tr class="border-t border-ash-800">
+                <th scope="row" class="px-4 py-3 font-medium text-ash-100">{b.name}</th>
+                <td class="px-4 py-3 text-ash-300">{b.achievement}</td>
+                <td class="px-4 py-3 tabular-nums text-ash-300">{b.rate}</td>
+                <td class="px-4 py-3 text-ash-400">{b.note}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="mt-12">
+      <h2 class="font-display text-2xl font-bold text-ash-50">Verified boss guides</h2>
+      <div class="mt-5 grid gap-4 md:grid-cols-3">
+        <a href="/guides/nushi-boss-fight/" class="rounded-xl border border-ash-800 bg-ash-900/40 p-5 transition hover:border-ember-500"><h3 class="font-display text-lg font-bold text-ash-50">Rangifer fight guide</h3><p class="mt-2 text-sm leading-relaxed text-ash-400">Both encounters: fire weakness, hair-bridge opener, parry window, red-glow escape.</p></a>
+        <a href="/guides/wasteland-colossal-boss/" class="rounded-xl border border-ash-800 bg-ash-900/40 p-5 transition hover:border-ember-500"><h3 class="font-display text-lg font-bold text-ash-50">Wasteland Colossal</h3><p class="mt-2 text-sm leading-relaxed text-ash-400">The large-creature search phrase mapped to the verified Rangifer record.</p></a>
+        <a href="/guides/boss-achievements-guide/" class="rounded-xl border border-ash-800 bg-ash-900/40 p-5 transition hover:border-ember-500"><h3 class="font-display text-lg font-bold text-ash-50">Boss achievement roadmap</h3><p class="mt-2 text-sm leading-relaxed text-ash-400">The spoiler-light checklist built from Steam achievement names.</p></a>
+      </div>
+    </section>
+
+    <section class="mt-12 rounded-xl border border-ash-800 bg-ash-900/40 p-6">
+      <h2 class="font-display text-xl font-bold text-ash-50">What this page does not claim</h2>
+      <p class="mt-3 leading-relaxed text-ash-300">
+        A complete public roster, exact health values, universal level recommendations and full reward
+        tables are not established for the unnamed Nushi. This site publishes tactics for an encounter
+        only after its name, location, weakness and attack behaviour can be checked against the released
+        build — so Lacerta, Taurus, Corvus, Ursa and Erymanth appear here as official names with official
+        unlock rates, and nothing more.
+      </p>
+    </section>
+  </main>
+</BaseLayout>

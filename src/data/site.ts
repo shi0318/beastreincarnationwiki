@@ -73,6 +73,18 @@ export const WIKI_SECTIONS = [
     title: 'Beast of Reincarnation Characters',
     description: 'Emma and Koo character pages, combat roles, abilities and links to practical guides.',
   },
+  {
+    label: 'Bosses',
+    href: '/bosses/',
+    title: 'Beast of Reincarnation Bosses',
+    description: 'The Steam-confirmed boss roster: six Nushi, paired encounters, unlock rates and verified fight guides.',
+  },
+  {
+    label: 'Collectibles',
+    href: '/collectibles/',
+    title: 'Beast of Reincarnation Collectibles',
+    description: 'Valuables, Locked Treasures, Spirit Stones, seedlings and Cleanse Walker materials, tracked by map filter.',
+  },
 ] as const;
 
 export const NAV = [
@@ -81,7 +93,8 @@ export const NAV = [
   { label: 'Release Date', href: '/release-date/' },
   { label: 'Download', href: '/download/' },
   { label: 'Guides', href: '/guides/' },
-  { label: 'Bosses', href: '/guides/category/boss/' },
+  { label: 'Bosses', href: '/bosses/' },
+  { label: 'Collectibles', href: '/collectibles/' },
   { label: 'Combat', href: '/guides/category/combat/' },
 ] as const;
 
