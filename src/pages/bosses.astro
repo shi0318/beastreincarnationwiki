@@ -14,12 +14,12 @@ const canonical = new URL(path, SITE.url).href;
 
 // 全部名字与解锁率来自 Steam 官方成就页（App 2001760）快照 2026-09-08。
 const nushi = [
-  { name: 'Rangifer', achievement: "Rangifer's End", rate: '53.5%', guide: '/guides/nushi-boss-fight/', note: 'Fought twice: crater fight (level 9, one stage) and sealed-lair rematch (level 12, two stages). Weak to fire in both.' },
-  { name: 'Lacerta', achievement: "Lacerta's End", rate: '43.8%', guide: '/weapons/thunderwave-sword/', note: 'The biggest attrition step in the game: roughly one in five players who beat Rangifer stop before Lacerta. The Thunderwave Sword note covers its Steam-reported electric weakness.' },
-  { name: 'Taurus', achievement: "Taurus's End", rate: '34.8%', guide: null, note: 'Named in Steam achievement data. No verified route published on this site yet.' },
-  { name: 'Corvus', achievement: "Corvus's End", rate: '28.3%', guide: null, note: 'Named in Steam achievement data. No verified route published on this site yet.' },
-  { name: 'Ursa', achievement: "Ursa's End", rate: '25.0%', guide: null, note: 'Within half a point of Erymanth, which suggests the two are available in either order rather than strictly sequential.' },
-  { name: 'Erymanth', achievement: "Erymanth's End", rate: '24.6%', guide: null, note: 'The least-unlocked of the six Nushi in the Steam global snapshot.' },
+  { name: 'Rangifer', slug: 'rangifer', achievement: "Rangifer's End", rate: '53.5%', guide: '/bosses/rangifer/', note: 'Fought twice: crater fight (level 9, one stage) and sealed-lair rematch (level 12, two stages). Weak to fire in both.' },
+  { name: 'Lacerta', slug: 'lacerta', achievement: "Lacerta's End", rate: '43.8%', guide: '/bosses/lacerta/', note: 'The biggest attrition step in the game: roughly one in five players who beat Rangifer stop before Lacerta. The Thunderwave Sword note covers its Steam-reported electric weakness.' },
+  { name: 'Taurus', slug: 'taurus', achievement: "Taurus's End", rate: '34.8%', guide: '/bosses/taurus/', note: 'Named in Steam achievement data. No verified route published on this site yet.' },
+  { name: 'Corvus', slug: 'corvus', achievement: "Corvus's End", rate: '28.3%', guide: '/bosses/corvus/', note: 'Named in Steam achievement data. No verified route published on this site yet.' },
+  { name: 'Ursa', slug: 'ursa', achievement: "Ursa's End", rate: '25.0%', guide: '/bosses/ursa/', note: 'Within half a point of Erymanth, which suggests the two are available in either order rather than strictly sequential.' },
+  { name: 'Erymanth', slug: 'erymanth', achievement: "Erymanth's End", rate: '24.6%', guide: '/bosses/erymanth/', note: 'The least-unlocked of the six Nushi in the Steam global snapshot.' },
 ] as const;
 
 const otherBosses = [

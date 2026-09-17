@@ -199,3 +199,291 @@ export const SKILL_DETAILS: SkillDetail[] = [
       'The official Steam listing confirms Koo commands techniques in the hybrid combat system. Achievement names and the roots/tree/NG+ boundaries come from Steam Community guide ID 3777472649, with Bloom Art timing covered separately in the site’s sourced combat guide.',
   },
 ];
+
+export type BossDetail = {
+  slug: string;
+  name: string;
+  title: string;
+  description: string;
+  image: string;
+  imageAlt: string;
+  intro: string;
+  facts: SectionFact[];
+  steps: string[];
+  evidence: string;
+};
+
+export const BOSS_DETAILS: BossDetail[] = [
+  {
+    slug: 'rangifer',
+    name: 'Rangifer',
+    title: 'Beast of Reincarnation Rangifer Boss Guide',
+    description:
+      'Rangifer in Beast of Reincarnation: two encounters, fire weakness, campsite opener, and the 53.5% Steam unlock rate for Rangifer’s End.',
+    image: '/images/beast-of-reincarnation-nushi-boss-fight.webp',
+    imageAlt: 'A large Nushi creature facing Emma in Beast of Reincarnation',
+    intro:
+      'Rangifer is the first Nushi most players beat. Steam lists Rangifer’s End at 53.5% of owners. The released-game fight record on this site covers two encounters: a crater fight around boss level 9, and a sealed-lair rematch around level 12 with two stages. Both are weak to fire.',
+    facts: [
+      { label: 'Achievement', value: "Rangifer's End — 53.5% global unlock" },
+      { label: 'First fight', value: 'Prowling Nushi crater, boss level 9, one stage' },
+      { label: 'Rematch', value: 'Sealed lair, boss level 12, two stages, more resistant to Burn' },
+      { label: 'Weakness', value: 'Fire in both encounters' },
+      { label: 'Suggested player level', value: '6–7 for the crater; 10+ for the lair' },
+    ],
+    steps: [
+      'Activate the nearby campsite before committing to the crater fight.',
+      'Use Extend to reach the high ground and open with an air assassination.',
+      'Parry the normal antler swing and punish the lowered head; leave space when the body glows red for the four-sweep combo.',
+      'Bring Higanbana: Seeds on Koo and Fire Arrows on Emma. The rematch keeps the fire weakness but resists Burn, so raw fire damage matters more than waiting for ticks.',
+      'The full move-by-move sequence is on the Rangifer fight guide; this page is the named-boss entry.',
+    ],
+    evidence:
+      'Unlock rate from Steam achievements for App 2001760, snapshot 8 September 2026. Encounter details from the site’s post-launch Rangifer fight record.',
+  },
+  {
+    slug: 'lacerta',
+    name: 'Lacerta',
+    title: 'Beast of Reincarnation Lacerta Boss Guide',
+    description:
+      'Lacerta in Beast of Reincarnation: Lacerta’s End at 43.8%, the largest drop after Rangifer, and the Thunderwave Sword electric note.',
+    image: '/images/beast-of-reincarnation-nushi-boss-fight.webp',
+    imageAlt: 'Emma facing a Nushi encounter in Beast of Reincarnation',
+    intro:
+      'Lacerta is the second Nushi on the Steam achievement ladder. Lacerta’s End sits at 43.8%. That is the single biggest attrition step in the game: roughly one in five players who beat Rangifer stop before Lacerta.',
+    facts: [
+      { label: 'Achievement', value: "Lacerta's End — 43.8% global unlock" },
+      { label: 'Place in the ladder', value: 'Second of six Nushi by unlock rate' },
+      { label: 'Drop from Rangifer', value: '53.5% to 43.8% — the largest single step' },
+      { label: 'Reported elemental note', value: 'Thunderwave Sword / electric damage is the site’s current Lacerta-adjacent weapon note' },
+      { label: 'Verified moveset', value: 'Not published on this site yet' },
+    ],
+    steps: [
+      'Treat Lacerta as the first real wall after Rangifer, not as a tutorial rematch.',
+      'If you are stuck here, check the elements, weakness and stagger guide before repeating an under-levelled run.',
+      'The Thunderwave Sword page is the current electric-damage note tied to this fight; it is not a complete Lacerta strategy.',
+      'Do not copy Rangifer’s fire weakness onto Lacerta. That weakness is verified only for Rangifer.',
+    ],
+    evidence:
+      'Unlock rate from Steam achievements for App 2001760, snapshot 8 September 2026. No official moveset, health, or location is published.',
+  },
+  {
+    slug: 'taurus',
+    name: 'Taurus',
+    title: 'Beast of Reincarnation Taurus Boss Guide',
+    description:
+      'Taurus in Beast of Reincarnation: Taurus’s End at 34.8% on Steam. Named Nushi with no verified fight route on this site yet.',
+    image: '/images/beast-of-reincarnation-wasteland-colossal-boss.webp',
+    imageAlt: 'Emma and Koo facing a colossal creature in Beast of Reincarnation',
+    intro:
+      'Taurus is the third Nushi on the Steam ladder. Taurus’s End is at 34.8% of owners. The name is official; a complete fight route is not on this site yet.',
+    facts: [
+      { label: 'Achievement', value: "Taurus's End — 34.8% global unlock" },
+      { label: 'Place in the ladder', value: 'Third of six Nushi by unlock rate' },
+      { label: 'Verified location', value: 'Not published' },
+      { label: 'Verified weakness', value: 'Not published' },
+    ],
+    steps: [
+      'Use the achievement as a progress check, not as a strategy page.',
+      'Do not invent a health value, phase chart, or elemental weakness for Taurus.',
+      'Come back to this page after a versioned fight record exists; until then the Steam rate is the only population fact.',
+    ],
+    evidence: 'Unlock rate from Steam achievements for App 2001760, snapshot 8 September 2026.',
+  },
+  {
+    slug: 'corvus',
+    name: 'Corvus',
+    title: 'Beast of Reincarnation Corvus Boss Guide',
+    description:
+      'Corvus in Beast of Reincarnation: Corvus’s End at 28.3% on Steam. Named Nushi; no verified location or moveset on this site.',
+    image: '/images/beast-of-reincarnation-machine-swarm-combat.webp',
+    imageAlt: 'Beast of Reincarnation combat in a ruined area',
+    intro:
+      'Corvus is the fourth Nushi by Steam unlock rate. Corvus’s End sits at 28.3%. After Taurus the curve flattens into a cluster with Ursa and Erymanth.',
+    facts: [
+      { label: 'Achievement', value: "Corvus's End — 28.3% global unlock" },
+      { label: 'Place in the ladder', value: 'Fourth of six Nushi by unlock rate' },
+      { label: 'Verified location', value: 'Not published' },
+      { label: 'Verified weakness', value: 'Not published' },
+    ],
+    steps: [
+      'Read 28.3% as late-game progress, not as a difficulty rating.',
+      'Do not assign Corvus a region or element without a fight record.',
+    ],
+    evidence: 'Unlock rate from Steam achievements for App 2001760, snapshot 8 September 2026.',
+  },
+  {
+    slug: 'ursa',
+    name: 'Ursa',
+    title: 'Beast of Reincarnation Ursa Boss Guide',
+    description:
+      'Ursa in Beast of Reincarnation: Ursa’s End at 25.0% on Steam, within half a point of Erymanth, which suggests either-order availability.',
+    image: '/images/beast-of-reincarnation-koo-blighted-wolf.webp',
+    imageAlt: 'Koo facing blighted wildlife in Beast of Reincarnation',
+    intro:
+      'Ursa’s End is at 25.0%. Erymanth’s End is at 24.6%. Those two rates sit within half a point, which is what you would see if the two fights are available in either order rather than strictly sequential.',
+    facts: [
+      { label: 'Achievement', value: "Ursa's End — 25.0% global unlock" },
+      { label: 'Place in the ladder', value: 'Fifth of six Nushi by unlock rate' },
+      { label: 'Adjacent fight', value: 'Erymanth at 24.6% — not a strict next-step gap' },
+      { label: 'Verified location', value: 'Not published' },
+    ],
+    steps: [
+      'Do not assume Ursa must be beaten before Erymanth based on the 0.4 point gap.',
+      'Treat both as late-cluster Nushi until a location record exists.',
+    ],
+    evidence: 'Unlock rate from Steam achievements for App 2001760, snapshot 8 September 2026.',
+  },
+  {
+    slug: 'erymanth',
+    name: 'Erymanth',
+    title: 'Beast of Reincarnation Erymanth Boss Guide',
+    description:
+      'Erymanth in Beast of Reincarnation: Erymanth’s End at 24.6%, the least-unlocked of the six Nushi in the Steam snapshot.',
+    image: '/images/beast-of-reincarnation-forest-hero-wide.webp',
+    imageAlt: 'Beast of Reincarnation blighted forest',
+    intro:
+      'Erymanth is the least-unlocked of the six named Nushi, at 24.6%. That is still about one owner in four, so it is a late story fight, not a secret optional.',
+    facts: [
+      { label: 'Achievement', value: "Erymanth's End — 24.6% global unlock" },
+      { label: 'Place in the ladder', value: 'Sixth of six Nushi by unlock rate' },
+      { label: 'Verified location', value: 'Not published' },
+      { label: 'Verified weakness', value: 'Not published' },
+    ],
+    steps: [
+      'Use the rate as a completion check after Corvus and Ursa, not as a strategy.',
+      'No health, phase, or drop table is published for Erymanth on this site.',
+    ],
+    evidence: 'Unlock rate from Steam achievements for App 2001760, snapshot 8 September 2026.',
+  },
+];
+
+export type CollectibleDetail = {
+  slug: string;
+  name: string;
+  title: string;
+  description: string;
+  image: string;
+  imageAlt: string;
+  intro: string;
+  facts: SectionFact[];
+  steps: string[];
+  evidence: string;
+  guideHref: string;
+};
+
+export const COLLECTIBLE_DETAILS: CollectibleDetail[] = [
+  {
+    slug: 'valuables',
+    name: 'Valuables',
+    title: 'Beast of Reincarnation Valuables Guide',
+    description:
+      'Beast of Reincarnation valuables: Steam map filter names Facility Modules, Electronic Brains, Generator Devices, Fertilized Eggs and Walker decorations.',
+    image: '/images/beast-of-reincarnation-waterfall-grotto.webp',
+    imageAlt: 'Emma exploring a grotto in Beast of Reincarnation',
+    intro:
+      'Valuable is its own filter on the Steam Community interactive map. The map FAQ names objects that matter to completion or the Cleanse Walker, including Facility Modules, Electronic Brains, Generator Devices, Fertilized Eggs and Walker decorations.',
+    facts: [
+      { label: 'Map filter', value: 'Valuable' },
+      { label: 'Named examples', value: 'Facility Modules, Electronic Brains, Generator Devices, Fertilized Eggs, Walker decorations' },
+      { label: 'Region count example', value: '21 valuables reported in the Ancient Civilization Zone — a dated community count' },
+      { label: 'Official total', value: 'Not published' },
+    ],
+    steps: [
+      'Turn on Valuable only, one region at a time.',
+      'Record the landmark when you pick something up so a map pin is not counted twice.',
+      'Use the dedicated valuables guide for the filter workflow; this page is the named-category entry.',
+    ],
+    evidence: 'Steam Community interactive map filter names and FAQ, checked with the site valuables guide.',
+    guideHref: '/guides/valuables-collectibles-guide/',
+  },
+  {
+    slug: 'locked-treasures',
+    name: 'Locked Treasures',
+    title: 'Beast of Reincarnation Locked Treasures Guide',
+    description:
+      'Beast of Reincarnation Locked Treasure is a separate Steam map filter from Treasure Box, Bulkhead and Control Panel.',
+    image: '/images/beast-of-reincarnation-waterfall-grotto.webp',
+    imageAlt: 'Emma on a rocky ledge above a waterfall grotto',
+    intro:
+      'Locked Treasure is its own filter. Ordinary Treasure Box, Bulkhead and Control Panel are separate layers. The official store page does not publish a locked-treasure count or reward table.',
+    facts: [
+      { label: 'Map filter', value: 'Locked Treasure' },
+      { label: 'Related filters', value: 'Treasure Box, Bulkhead, Control Panel' },
+      { label: 'Official count', value: 'Not published' },
+    ],
+    steps: [
+      'Select one region, enable Locked Treasure only, then add Bulkhead and Control Panel if a marker sits behind a gate.',
+      'For cave or vertical markers, use Lift and Extend before assuming the container is inaccessible.',
+      'Mark complete only after the in-game object is gone, not when the map pin is clicked.',
+    ],
+    evidence: 'Steam Community interactive map filter names, checked with the site locked-treasures guide.',
+    guideHref: '/guides/locked-treasures-guide/',
+  },
+  {
+    slug: 'spirit-stones',
+    name: 'Spirit Stones',
+    title: 'Beast of Reincarnation Spirit Stones Guide',
+    description:
+      'Beast of Reincarnation Spirit Stones: build customization around parry/counter, ranged/control, or stealth/exploration. Effect wording is version-sensitive.',
+    image: '/images/beast-of-reincarnation-key-art.webp',
+    imageAlt: 'Emma and Koo walking through the blighted forest',
+    intro:
+      'Spirit Stones sit alongside skill trees, gear and weapons as build customization. This site tracks three tested directions: parry and counter, ranged and control, stealth and exploration. Exact percentages are not published.',
+    facts: [
+      { label: 'Role', value: 'Build customization, not a collect-them-all achievement by itself' },
+      { label: 'Tested directions', value: 'Parry/counter, ranged/control, stealth/exploration' },
+      { label: 'Version note', value: 'Patch notes can change effect wording and costs' },
+    ],
+    steps: [
+      'Change one stone at a time and keep the enemy, difficulty and attack input constant.',
+      'Record whether the result changed damage, stagger, FP, entanglement recovery or survivability.',
+      'Save the patch number with every comparison.',
+    ],
+    evidence: 'Site Spirit Stones guide based on the released combat loop; no official stone list is published.',
+    guideHref: '/guides/beast-of-reincarnation-spirit-stones/',
+  },
+  {
+    slug: 'seedlings',
+    name: 'Seedlings',
+    title: 'Beast of Reincarnation Seedlings and Crops Guide',
+    description:
+      'Beast of Reincarnation seedlings use their own Steam map filter and feed the Green Thumb achievement at 26.7% global unlock.',
+    image: '/images/beast-of-reincarnation-forest-hero-wide.webp',
+    imageAlt: 'Beast of Reincarnation forest environment',
+    intro:
+      'Seedlings are not valuables and not locked treasures. They have their own map filter and feed Green Thumb — Obtain every type of seedling — at 26.7% of owners.',
+    facts: [
+      { label: 'Map filter', value: 'Seedling' },
+      { label: 'Achievement', value: 'Green Thumb — 26.7% global unlock' },
+      { label: 'Official type count', value: 'Not published as a number on the store page' },
+    ],
+    steps: [
+      'Keep seedling progress separate from treasure counts.',
+      'Use the seedlings and crops guide for the checklist workflow.',
+    ],
+    evidence: 'Green Thumb unlock rate from Steam achievements, App 2001760, snapshot used on the achievements guide. Filter name from the Steam map.',
+    guideHref: '/guides/seedlings-crops-guide/',
+  },
+  {
+    slug: 'cleanse-walker',
+    name: 'Cleanse Walker materials',
+    title: 'Beast of Reincarnation Cleanse Walker Materials Guide',
+    description:
+      'Beast of Reincarnation Cleanse Walker upgrades use Generator Device, Electronic Brain and Memory Chip map notes as three named material categories.',
+    image: '/images/beast-of-reincarnation-amber-farm-map.webp',
+    imageAlt: 'Map image used for a Beast of Reincarnation upgrade route',
+    intro:
+      'The Steam map tracks Generator Device, Electronic Brain and Memory Chip notes for the Cleanse Walker upgrade route. Those three named categories are the ones this site uses; it does not invent a full parts list.',
+    facts: [
+      { label: 'Named categories', value: 'Generator Device, Electronic Brain, Memory Chip' },
+      { label: 'Official complete list', value: 'Not published' },
+    ],
+    steps: [
+      'Run the three material filters separately from Valuable so Walker parts are not mixed into lore pickups.',
+      'Use the Cleanse Walker materials guide for the upgrade route.',
+    ],
+    evidence: 'Steam map filter names and the site Cleanse Walker upgrade materials guide.',
+    guideHref: '/guides/cleanse-walker-upgrade-materials-guide/',
+  },
+];
