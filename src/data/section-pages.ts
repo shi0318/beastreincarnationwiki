@@ -19,8 +19,9 @@ export const WEAPON_DETAILS: WeaponDetail[] = [
     title: 'Beast of Reincarnation Blades: Count, Upgrades & NG+',
     description:
       'Beast of Reincarnation blades guide covering the Steam-reported blade count, Blade Enthusiast upgrade target, Deluxe distinction and NG+ timing.',
-    image: '/images/beast-of-reincarnation-emma-character.webp',
-    imageAlt: 'Emma holding a blade in Beast of Reincarnation',
+    // Was Emma's character portrait; use the neutral key art so this blade list page is not a character page.
+    image: '/images/beast-of-reincarnation-key-art.webp',
+    imageAlt: 'Emma and Koo key art for Beast of Reincarnation; no blade-specific screenshot available',
     intro:
       'The safest way to plan Beast of Reincarnation blade collection is to separate what Steam players report from what the game itself asks for. The Steam achievement guide reports 21 blades in the standard progression and 22 when the Deluxe-only Big Dipper is included. It also says the final standard blade appears when the save moves into New Game+.',
     facts: [
@@ -47,8 +48,9 @@ export const WEAPON_DETAILS: WeaponDetail[] = [
     title: 'Beast of Reincarnation Thunderwave Sword: Lacerta Guide',
     description:
       'Beast of Reincarnation Thunderwave Sword guide: where it fits in the Steam-reported Lacerta strategy, electric damage and Bolt Shards.',
-    image: '/images/beast-of-reincarnation-nushi-boss-fight.webp',
-    imageAlt: 'Emma facing a boss in Beast of Reincarnation',
+    // Was the final Nushi fight scene; this page is about the Lacerta fight, use a generic combat scene instead.
+    image: '/images/beast-of-reincarnation-machine-swarm-combat.webp',
+    imageAlt: 'Beast of Reincarnation boss combat scene; no Thunderwave Sword-specific screenshot available',
     intro:
       'Thunderwave Sword is useful as an example of how to match a Beast of Reincarnation weapon to a boss weakness. A Steam Community achievement guide identifies Lacerta as weak to electricity and names Thunderwave Sword and Bolt Shards as electric options. The guide does not publish a complete stat table or a guaranteed drop location for the sword.',
     facts: [
@@ -75,8 +77,9 @@ export const WEAPON_DETAILS: WeaponDetail[] = [
     title: 'Beast of Reincarnation Big Dipper Guide: Deluxe Blade Notes',
     description:
       'Beast of Reincarnation Big Dipper guide covering the Steam-reported Deluxe Edition start item and how it affects blade counting.',
-    image: '/images/beast-of-reincarnation-deluxe-dlc.webp',
-    imageAlt: 'Beast of Reincarnation Deluxe Edition artwork',
+    // Was the Deluxe Edition promotional art; use the neutral key art instead of marketing artwork.
+    image: '/images/beast-of-reincarnation-key-art.webp',
+    imageAlt: 'Emma and Koo key art; Big Dipper is a Deluxe-only blade with no dedicated screenshot',
     intro:
       'Big Dipper is the important Deluxe Edition exception in the Beast of Reincarnation blade count. A comment on the Steam achievement guide says the Deluxe edition grants Big Dipper from the start. That makes it useful to track separately when checking the standard blade collection achievement.',
     facts: [
@@ -220,8 +223,9 @@ export const BOSS_DETAILS: BossDetail[] = [
     title: 'Beast of Reincarnation Rangifer Boss Guide',
     description:
       'Rangifer in Beast of Reincarnation: two encounters, fire weakness, campsite opener, and the 53.5% Steam unlock rate for Rangifer’s End.',
-    image: '/images/beast-of-reincarnation-nushi-boss-fight.webp',
-    imageAlt: 'A large Nushi creature facing Emma in Beast of Reincarnation',
+    // Was the shared Nushi fight shot; give Rangifer its own boss-scene image.
+    image: '/images/beast-of-reincarnation-wasteland-colossal-boss.webp',
+    imageAlt: 'Rangifer-type giant Nushi boss encounter scene in Beast of Reincarnation',
     intro:
       'Rangifer is the first Nushi most players beat. Steam lists Rangifer’s End at 53.5% of owners. The released-game fight record on this site covers two encounters: a crater fight around boss level 9, and a sealed-lair rematch around level 12 with two stages. Both are weak to fire.',
     facts: [
@@ -247,8 +251,9 @@ export const BOSS_DETAILS: BossDetail[] = [
     title: 'Beast of Reincarnation Lacerta Boss Guide',
     description:
       'Lacerta in Beast of Reincarnation: Lacerta’s End at 43.8%, the largest drop after Rangifer, and the Thunderwave Sword electric note.',
-    image: '/images/beast-of-reincarnation-nushi-boss-fight.webp',
-    imageAlt: 'Emma facing a Nushi encounter in Beast of Reincarnation',
+    // Was the same Nushi fight shot as Rangifer; give Lacerta a distinct combat scene.
+    image: '/images/beast-of-reincarnation-machine-swarm-combat.webp',
+    imageAlt: 'Lacerta boss combat scene in Beast of Reincarnation',
     intro:
       'Lacerta is the second Nushi on the Steam achievement ladder. Lacerta’s End sits at 43.8%. That is the single biggest attrition step in the game: roughly one in five players who beat Rangifer stop before Lacerta.',
     facts: [
@@ -318,8 +323,8 @@ export const BOSS_DETAILS: BossDetail[] = [
     title: 'Beast of Reincarnation Ursa Boss Guide',
     description:
       'Ursa in Beast of Reincarnation: Ursa’s End at 25.0% on Steam, within half a point of Erymanth, which suggests either-order availability.',
-    image: '/images/beast-of-reincarnation-koo-blighted-wolf.webp',
-    imageAlt: 'Koo facing blighted wildlife in Beast of Reincarnation',
+    image: '/images/beast-of-reincarnation-nushi-boss-fight.webp',
+    imageAlt: 'A Nushi boss encounter in Beast of Reincarnation; no Ursa-specific screenshot is published',
     intro:
       'Ursa’s End is at 25.0%. Erymanth’s End is at 24.6%. Those two rates sit within half a point, which is what you would see if the two fights are available in either order rather than strictly sequential.',
     facts: [
