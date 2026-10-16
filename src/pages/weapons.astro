@@ -26,6 +26,13 @@ const swords = [
   ['Shark Cutter', 'Slash', 'Spiral Critical'],
   ['First Moon', 'Slash', 'Ravenous Eclipse'],
   ['Camellia', 'Impact', 'Spring Thunder'],
+  ['Resonance Sword', 'Puppet', 'Chance to turn an enemy into a puppet'],
+  ['Fall Thunder', 'Electric', 'Shocking current'],
+  ['Winterwake', 'Electric', 'Lightning toward nearby foes'],
+  ['Spring Storm', 'Water', 'Water damage'],
+  ['Silverlight', 'Slash', 'Slash damage'],
+  ['Black Blossom', 'Poison', 'Poison Storm'],
+  ['Kanzashi', 'Light', 'Rejuvenating light barrier (NG+)'],
   ['Big Dipper', 'Slash', 'Lucky'],
 ] as const;
 
@@ -124,9 +131,12 @@ const schema = [
     <section class="mt-12">
       <h2 class="font-display text-2xl font-bold text-ash-50">Detailed Beast of Reincarnation weapon pages</h2>
       <div class="mt-5 grid gap-4 md:grid-cols-3">
-        <a href="/weapons/blades/" class="rounded-xl border border-ash-800 bg-ash-900/40 p-5 transition hover:border-ember-500"><h3 class="font-display text-lg font-bold text-ash-50">Blade count and NG+</h3><p class="mt-2 text-sm leading-relaxed text-ash-400">Steam-reported standard, Deluxe and upgrade milestones.</p></a>
+        <a href="/weapons/blades/" class="rounded-xl border border-ash-800 bg-ash-900/40 p-5 transition hover:border-ember-500"><h3 class="font-display text-lg font-bold text-ash-50">All 21 blade locations</h3><p class="mt-2 text-sm leading-relaxed text-ash-400">Every blade by region with its effect, plus Deluxe and NG+ notes.</p></a>
         <a href="/weapons/thunderwave-sword/" class="rounded-xl border border-ash-800 bg-ash-900/40 p-5 transition hover:border-ember-500"><h3 class="font-display text-lg font-bold text-ash-50">Thunderwave Sword</h3><p class="mt-2 text-sm leading-relaxed text-ash-400">The electric weapon note for the Steam-reported Lacerta weakness.</p></a>
         <a href="/weapons/big-dipper/" class="rounded-xl border border-ash-800 bg-ash-900/40 p-5 transition hover:border-ember-500"><h3 class="font-display text-lg font-bold text-ash-50">Big Dipper</h3><p class="mt-2 text-sm leading-relaxed text-ash-400">Deluxe Edition entitlement and blade-count boundary.</p></a>
+        <a href="/weapons/black-blossom/" class="rounded-xl border border-ash-800 bg-ash-900/40 p-5 transition hover:border-ember-500"><h3 class="font-display text-lg font-bold text-ash-50">Black Blossom</h3><p class="mt-2 text-sm leading-relaxed text-ash-400">Shidou and Nue reward with Poison Storm.</p></a>
+        <a href="/weapons/camellia/" class="rounded-xl border border-ash-800 bg-ash-900/40 p-5 transition hover:border-ember-500"><h3 class="font-display text-lg font-bold text-ash-50">Camellia</h3><p class="mt-2 text-sm leading-relaxed text-ash-400">Kunai's blade, found in the Cleanse Walker.</p></a>
+        <a href="/weapons/purity/" class="rounded-xl border border-ash-800 bg-ash-900/40 p-5 transition hover:border-ember-500"><h3 class="font-display text-lg font-bold text-ash-50">Purity</h3><p class="mt-2 text-sm leading-relaxed text-ash-400">The healing blade from the Ancient Golem vendor.</p></a>
       </div>
     </section>
 
@@ -158,7 +168,7 @@ const schema = [
 
     <section class="mt-12 border-t border-ash-800 pt-6 text-sm leading-relaxed text-ash-400">
       <h2 class="font-display text-xl font-bold text-ash-200">Sources and evidence boundary</h2>
-      <p class="mt-2">Checked August 17, 2026. Weapon names, displayed abilities and location structure are referenced from <a class="text-ember-400 hover:text-ember-300" href="https://game8.co/games/Beast-of-Reincarnation/archives/613125" rel="noopener" target="_blank">Game8's Beast of Reincarnation weapon list</a>. Big Dipper's Deluxe inclusion is confirmed by the <a class="text-ember-400 hover:text-ember-300" href={GAME_FACTS.source} rel="noopener" target="_blank">official Steam listing</a>. This index is not a claim that this site personally tested every weapon.</p>
+      <p class="mt-2">Weapon names and the August structure were checked on 17 August 2026 against <a class="text-ember-400 hover:text-ember-300" href="https://game8.co/games/Beast-of-Reincarnation/archives/613125" rel="noopener" target="_blank">Game8's Beast of Reincarnation weapon list</a>. Blade locations added on the detail pages were checked on 15 October 2026 and are not all from that August URL. Big Dipper's Deluxe inclusion is confirmed by the <a class="text-ember-400 hover:text-ember-300" href={GAME_FACTS.source} rel="noopener" target="_blank">official Steam listing</a>. This index is not a claim that this site personally tested every weapon.</p>
     </section>
   </main>
 </BaseLayout>

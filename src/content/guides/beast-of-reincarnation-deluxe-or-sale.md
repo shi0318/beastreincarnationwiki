@@ -1,31 +1,50 @@
 ---
 title: "Beast of Reincarnation Deluxe DLC or the Sale Price"
-description: "The Beast of Reincarnation Deluxe DLC does not add a difficulty or a chapter. Here is when the sale price is a different buy."
+description: "Beast of Reincarnation Deluxe vs base game: $59.99 price, what the Deluxe DLC adds (Big Dipper), what it does not, and when to buy or wait for a sale."
 heading: "Deluxe does not add the patch"
-category: beginner
+category: "beginner"
 keyword: "beast of reincarnation deluxe dlc"
 image: "bor-hot-6.webp"
 imageAlt: "Deluxe does not add the patch"
-publishDate: 2026-10-08T08:00:00.000Z
+publishDate: "2026-10-08T08:00:00.000Z"
 order: 2
 featured: false
 preview: false
-source: handson
+source: "handson"
+updateDate: "2026-10-15"
 ---
 
-<figure>
-  <img src="/images/bor-hot-6.webp" alt="Emma and Koo on a ridge" width="1400" height="788" loading="lazy" decoding="async" />
-</figure>
+Should you buy the Deluxe Edition of Beast of Reincarnation, or just the base game – and is now the time? Here is exactly what each option contains.
 
-Standard edition launched at $59.99. In October 2026 the Steam listing has been discounted, with the Deluxe DLC discounted beside it. Neither discount adds Very Hard. That mode is in patch 1.1.0, and 1.1.0 is free.
+## What you get
 
-## Buy Deluxe only for the extra entitlement
+| Option | Price (Steam, US) | Contents |
+|---|---|---|
+| Base game | $59.99 | Full game, all 13 chapters, all difficulty modes, free patches |
+| Deluxe DLC (app 4146830) | Separate purchase | The **Big Dipper** blade (Slash, "Lucky" – more Amber from enemies), Deluxe cosmetics |
 
-The Deluxe pack is DLC app 4146830, not a second campaign. It does not skip chapters, it does not widen the parry, and it does not remove the headbutt. If a store page implies the pack is the complete combat, it is selling a costume line as a system.
+On 15 October 2026 Steam shows **1,424 positive of 2,166 English reviews (Mixed, 66%)** and **3,767 of 6,375 across all languages (Mixed, 59%)**. The standard edition is **$59.99**; there are **46 achievements**.
 
-## Buy the base game on sale if
+## What Deluxe does not include
 
-You want the parry, you can live with a Mixed score, and you are fine skipping story after 1.0.11. Do not buy it to fix a complaint you already have about repetitive regions. The patches improved pace and difficulty. They did not add a new map.
+- No extra chapters or bosses.
+- No difficulty modes – **Very Hard** and **Ruthless** arrived free in v1.1.0.
+- **Big Dipper does not count** toward the 21-blade collection achievements.
 
-A PC sale is the same decision as any other storefront discount: play the combat, do not pay extra for a label.
+## When the base game is worth it
 
+- You enjoy parry-centric action (Sekiro, Stellar Blade) and a companion-driven story.
+- You plan to play on Hard or Very Hard – reviews say the higher difficulties fix the "too easy" complaint.
+- You can live with a slow middle section – or use **Hasten to the Capital** (v1.1.01) to skip three zones.
+
+## When to wait for a sale
+
+- The Mixed rating worries you.
+- You mainly care about story pacing.
+- You are on Xbox/PC Game Pass – check the [Game Pass guide](/guides/game-pass-guide/) first.
+
+## Related pages
+
+- [Big Dipper](/weapons/big-dipper/)
+- [Deluxe DLC entitlement fix](/guides/deluxe-dlc-entitlement-fix-guide/)
+- [Should you buy?](/guides/should-you-buy-player-reception/)

@@ -1,27 +1,48 @@
 ---
 title: "Beast of Reincarnation Sword or Spring Thunder Crossbow"
-description: "When to stay on Emma's sword in Beast of Reincarnation, and when the Spring Thunder Crossbow is the better opener."
+description: "Blade or crossbow in Beast of Reincarnation: when to parry and when to shoot, elemental ammo sources, the v1.1.0 ranged damage change and blade picks per boss."
 heading: "Sword for the parry, crossbow for the pack"
-category: beginner
+category: "beginner"
 keyword: "beast of reincarnation crossbow"
 image: "bor-hot-0.webp"
 imageAlt: "Sword for the parry, crossbow for the pack"
-publishDate: 2026-10-08T08:00:00.000Z
+publishDate: "2026-10-08T08:00:00.000Z"
 order: 2
 featured: false
 preview: false
-source: handson
+source: "handson"
+updateDate: "2026-10-15"
 ---
 
-<figure>
-  <img src="/images/bor-hot-0.webp" alt="Emma with a sword as a pack closes in" width="1400" height="788" loading="lazy" decoding="async" />
-</figure>
+Emma carries a blade and a ranged weapon at the same time. The question is not which is better but when to use each – and patch v1.1.0 changed the answer for bosses.
 
-The sword is the weapon the parry is built around. The Spring Thunder Crossbow is the weapon that stops a pack from becoming a parry check you cannot win.
+## Blade or ranged?
 
-Use the sword when one enemy is in front of you and the swing is readable. That is every Nushi phase that is not an overhead. Use the crossbow, or a bolt, to thin the red-eyed adds before you walk in. Koo can do the same job if his engage skill is up. If both are down, you are parrying three things. You will lose one.
+| Situation | Use |
+|---|---|
+| Readable single enemy or boss string | Blade – parry and punish |
+| Packs of small Malefacts | Ranged or Koo to thin the edges first |
+| Flying enemies (Corvus, Corvid Malefacts) | Ranged, then restrain with Rangifer |
+| Boss weakness you cannot get on a blade | Elemental ammo (Explosive for Erymanth, Acid for Taurus/Ursa) |
+| Shidou | Blade – he parries ranged attacks |
+| Submerged Lacerta | Neither – dodge until it surfaces |
 
-Upgrades do not change this split. A stronger sword is still a parry weapon. A stronger crossbow is still an opener. People asking for a tier list want one name. The fight wants both, swapped before the pack arrives, not during the headbutt.
+## Ranged options
 
-Names and locations for the rest of the kit stay on the [weapons page](/weapons/). This page is the swap.
+- **Spring Thunder Crossbow** and bows.
+- Ammo types: standard, **Fire, Lightning, Poison, Acid, Explosive** arrows and bolts.
+- Explosive Bolts from the Wandering Merchant south of Mountain Plaza: Forefront; Explosive Arrow manual (#6) in the Fuji Frontier Zone.
 
+## What v1.1.0 changed
+
+Patch v1.1.0 **adjusted ranged weapon damage against bosses**. Arrows are now for applying elements and status, not for winning fights from range. v1.0.10 made aiming a hold input and allowed buffering aim during slides and rolls; v1.0.12 added "switch ammo slot 1–3" bindings.
+
+## Blade picks
+
+Start with the Purifier Blade (stagger reduction), then swap per boss: Thunderwave Sword (Lacerta), Hunter's Sword (poison fights), Hazebringer (acid), Black Blossom (late poison). Full list: [all 21 blades](/weapons/blades/).
+
+## Related pages
+
+- [Weapons overview](/weapons/)
+- [Boss weakness chart](/guides/beast-of-reincarnation-boss-weakness-chart/)
+- [Ranged, stealth and aggressive builds](/guides/ranged-stealth-aggressive-builds/)

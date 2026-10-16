@@ -1,29 +1,51 @@
 ---
 title: "Beast of Reincarnation Ogouchi Buffer Zone — Chapter 1 Map"
+description: "Ogouchi Buffer Zone map checklist for Beast of Reincarnation: 18 campsites, 4 documents, 3 Keeper Golems, two blades, eight elites and Rangifer."
 heading: "Beast of Reincarnation Ogouchi Buffer Zone"
-description: "Chapter 1 Seedling is Ogouchi Buffer Zone: Steam map counts 18 campsites, 4 documents, 3 Keeper Golems, 0 wayside shrines."
-category: exploration
+category: "exploration"
 keyword: "beast of reincarnation ogouchi"
 image: "beast-of-reincarnation-amber-farm-map.webp"
 imageAlt: "Map image for an early Beast of Reincarnation route"
-publishDate: 2026-09-17
+publishDate: "2026-09-17"
 order: 12
 featured: false
 preview: false
-source: community
+source: "community"
+updateDate: "2026-10-15"
 ---
 
-**Ogouchi Buffer Zone** is Chapter 1 (**Seedling**) in the Steam regional table this site uses: **18** campsites, **0** shrines, **4** documents, **3** Keeper Golems.
+The **Ogouchi Buffer Zone** map covers Beast of Reincarnation's first chapter. Use this page as the checklist for everything on the Chapter 1 map before you leave for the Ancient Civilization Zone.
 
-<figure>
-  <img src="/images/beast-of-reincarnation-amber-farm-map.webp" alt="Map image for an early Beast of Reincarnation route" width="1600" height="900" loading="lazy" decoding="async" />
-</figure>
+## Chapter 1 map checklist
 
-Light campsites as you go so return routes stay open. Do not treat the count as an in-game GPS. If your numbers differ, record the missing pin before assuming a bug.
+| Category | Count | Notes |
+|---|---|---|
+| Campsites | 18 | The most of any region |
+| Wayside shrines | 0 | Shrines start in Chapter 2 |
+| Documents | 4 | Lore pickups |
+| Keeper Golems | 3 | Interact with each |
+| Blades | 2 | Cirrus Sword (Retired Gatekeeper), Mechblade (Light) (Ruined Tower) |
+| Elites | 8 | Heavy/Agile Golems and a Grizzly Malefact |
+| Boss | Rangifer | Crater (level 9) and lair (level 12) |
+
+## Key landmarks
+
+- **Cliff-Facing Tower** – campsite above the Rangifer crater.
+- **Ruined Tower** – vertical climb with an Elite Golem and a blade at the top.
+- **Subcity 01–03** – underground sections; Subcity 03 leads to Rangifer's sealed lair.
+- **Nushi's Lair: Gate Approach** – Retired Gatekeeper and the Yellow Key cave.
+- **Quarry** and **Disposal Site** – Heavy Golems for Amber.
+
+## Before you leave
+
+1. Collect both blades.
+2. Beat Rangifer twice – Koo learns the restraint skill you will need against Corvus.
+3. Light all 18 campsites so the region is easy to revisit.
+
+Nothing here is missable – you can return in free roam later.
 
 ## Related pages
 
+- [Ogouchi region guide](/guides/beast-of-reincarnation-ogouchi-region/)
 - [Chapter 1](/walkthrough/chapter-1/)
-- [Walkthrough](/walkthrough/)
-- [Campsites](/guides/campsite-locations/)
-- [Keeper Golems](/guides/keeper-golems-locations/)
+- [Campsite locations](/guides/campsite-locations/)

@@ -1,6 +1,6 @@
 ---
 title: "Beast of Reincarnation Spirit Stones Guide"
-description: "Beast of Reincarnation spirit stones guide: how to use the build system, compare effects, and avoid treating an unverified combination as a universal best build."
+description: "Beast of Reincarnation spirit stones: how to use the build system, compare effects, and avoid treating one combo as a universal best build."
 heading: "Beast of Reincarnation Spirit Stones: Build Planning Guide"
 category: combat
 keyword: "beast of reincarnation spirit stones"

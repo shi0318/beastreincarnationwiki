@@ -1,32 +1,53 @@
 ---
-title: "Beast of Reincarnation Update 1.1.0: Very Hard and Nightmare"
-description: "Beast of Reincarnation update 1.1.0 adds Very Hard and Nightmare, plus practical fixes nearly two months after the August 3, 2026 launch."
-heading: "Update 1.1.0: the difficulty patch people are installing"
-category: beginner
+title: "Beast of Reincarnation Update 1.1.0: Very Hard and Ruthless Modes"
+description: "Beast of Reincarnation update 1.1.0: Very Hard and Ruthless modes, NG+ difficulties, Nushi and Shidou attack changes, ranged damage nerf and auto-pickup."
+heading: "Beast of Reincarnation update 1.1.0"
+category: "beginner"
 keyword: "beast of reincarnation update 1.1.0"
 image: "bor-hot-0.webp"
 imageAlt: "Update 1.1.0: the difficulty patch people are installing"
-publishDate: 2026-10-08T08:00:00.000Z
+publishDate: "2026-10-08T08:00:00.000Z"
 order: 2
 featured: false
 preview: false
-source: handson
+source: "handson"
+updateDate: "2026-10-15"
 ---
 
-<figure>
-  <img src="/images/bor-hot-0.webp" alt="Emma fighting a pack of red-eyed enemies in a forest ruin" width="1400" height="788" loading="lazy" decoding="async" />
-</figure>
+Patch **v1.1.0** (1 October 2026) was the seventh update for Beast of Reincarnation and the biggest gameplay change since launch. It added two difficulty modes above Hard and reworked several bosses.
 
-Patch 1.1.0 is the first update that changes a second playthrough, not just the camera. It landed about two months after the August 3, 2026 launch and adds two steps above the launch set: **Very Hard** and **Nightmare**.
+## New difficulty modes
 
-Very Hard is the mode most people asking about the patch actually want. It is harder than launch Hard without turning every encounter into a one-hit puzzle. Nightmare is a run you start after you already know the Nushi order. Do not begin a first file there. The parry-window and boss-size complaints from launch reviews do not vanish because the menu has a new label.
+| Mode | What it does |
+|---|---|
+| **Very Hard** | Harder than Hard |
+| **Ruthless** | Emma dies in a single hit – a bonus challenge mode |
+| NG+ options | Hard, Very Hard and Ruthless for Reincarnation+ (default is Normal) |
 
-## After it installs
+You can switch difficulty at any time during play.
 
-- Recheck difficulty on an existing file before you assume the new modes are new-game only.
-- If a boss that used to be readable now kills you from above, that is the headbutt players have been reporting. Step out. Do not parry a downward strike you cannot see.
-- Cutscene skip was widened in 1.0.11. If a story scene still will not skip, update past 1.0.11 before you blame 1.1.0.
-- Late combat mapping is still the Mixed-review complaint. 1.1.0 does not add an input-buffer slider.
+## Gameplay changes
 
-The live Steam price has been under the $59.99 launch tag during sales. Difficulty is not a reason to buy the Deluxe DLC. That pack is an entitlement, not a Nightmare unlock.
+- Overhauled attack patterns for some **Nushi variants**.
+- Updated some of **Shidou's** attack patterns (more changes planned).
+- Raised the difficulty of bosses and enemies that were easier than intended.
+- Adjusted **ranged weapon damage against bosses**.
+- Adjusted attack power of some **Blade Arts Finishers and Bloom Arts**.
+- Added **auto-pickup** for enemy drops and field items (Gameplay settings).
+- Continued cutscene and event improvements.
 
+## What it means for you
+
+- If the launch game felt too easy, **Very Hard** is the mode reviewers mean.
+- Arrow-spam boss strategies are weaker now – apply elements, then parry.
+- Videos from before October may show older Nushi patterns.
+
+## What came next
+
+v1.1.01 (9 October) added **Hasten to the Capital**, an FOV slider and skip-prompt toggle. One more patch is planned around 19 October.
+
+## Related pages
+
+- [Highest difficulty explained](/guides/beast-of-reincarnation-highest-difficulty/)
+- [Update 1.1.01](/guides/beast-of-reincarnation-update-1-1-01/)
+- [Patch notes hub](/guides/patch-notes/)

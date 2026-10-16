@@ -1,42 +1,53 @@
 ---
-title: "Beast of Reincarnation Nushi Boss Guide"
-description: "Beast of Reincarnation Nushi boss guide covering Rangifer, fire weakness, the two encounters, campsite preparation, and how to read unknown bosses."
-heading: "Beast of Reincarnation Nushi Bosses: What Is Verified"
-category: boss
+title: "Beast of Reincarnation Nushi Bosses — Full List and Weaknesses"
+description: "Every Nushi boss in Beast of Reincarnation: Rangifer, Lacerta, Taurus, Corvus, Ursa, Erymanth plus Nue, Shidou, Kunai and Kirin, with weaknesses and rewards."
+heading: "Beast of Reincarnation Nushi boss list"
+category: "boss"
 keyword: "beast of reincarnation nushi bosses"
 image: "beast-of-reincarnation-nushi-boss-fight.webp"
 imageAlt: "A large Nushi creature facing Emma in Beast of Reincarnation"
-publishDate: 2026-09-08
+publishDate: "2026-09-08"
 order: 10
 featured: false
 preview: false
-source: third-party-tested
+source: "third-party-tested"
+updateDate: "2026-10-15"
 ---
 
-Nushi are the major regional boss encounters in **Beast of Reincarnation**. The most complete public fight record currently available is **Rangifer**, and it is important not to copy Rangifer's fire weakness or attack pattern onto every unnamed Nushi.
+**Nushi** are the regional guardian bosses of Beast of Reincarnation – blighted animals fused with plants and machines. There are six named Nushi achievements, plus duo boss fights and a final boss. This page is the full roster.
 
-<figure>
-  <img src="/images/beast-of-reincarnation-nushi-boss-fight.webp" alt="A large Nushi creature facing Emma in Beast of Reincarnation" width="1600" height="900" loading="lazy" decoding="async" />
-  <figcaption>Rangifer is the Nushi encounter with the clearest current strategy record.</figcaption>
-</figure>
+## All Nushi and major bosses
 
-## Rangifer is fought twice
+| Boss | Animal / type | Chapter | Weakness |
+|---|---|---|---|
+| [Rangifer](/bosses/rangifer/) | Reindeer | 1 | Fire |
+| [Lacerta](/bosses/lacerta/) | Newt / lizard | 2 | Shock |
+| [Nue Malefact](/bosses/nue-malefact/) | Yokai chimera (+ Male Purifier) | 3 | Poison |
+| [Taurus](/bosses/taurus/) | Bull | 4 | Acid |
+| [Corvus](/bosses/corvus/) | Crow (two) | 7 | Ranged, Restrain |
+| [Ursa](/bosses/ursa/) | Bear | 10 | Corrosives, Acid |
+| [Shidou and Nue](/bosses/shidou-and-nue/) | Samurai + lightning Nushi | 11 | Poison |
+| [Erymanth](/bosses/erymanth/) | Boar | 12 | Explosive |
+| [Kunai and Kirin](/bosses/kunai-and-kirin/) | Swordswoman + Kirin | 8 / 12 | Poison |
+| [Final boss](/bosses/final-boss/) | – | 13 | None |
 
-The first Rangifer encounter is the crater fight in the **Prowling Nushi** quest. The second is the sealed-lair rematch. The first is a one-stage encounter around level 9; the rematch is around level 12, longer, and adds a second health bar.
+## What beating a Nushi gives you
 
-Both encounters are weak to fire. Higanbana: Seeds is the key Koo option, while Fire Arrows give Emma a second fire tool after the relevant progression. The rematch is more resistant to Burn, so raw fire damage is more reliable than waiting for a damage-over-time effect.
+- **Nushi skills for Koo** – Rangifer's restraint, Taurus's Charging Botan, Lacerta's Dokuzeri Shower.
+- **Bloom Arts and Blade Arts** – Dokuzeri: Fang, Kiku: Bloom Strike II and Finisher (Erymanth), Erica: Strangle and Blade Art: Nue (Shidou and Nue), Blade Art: Thunder (Kunai and Kirin).
+- **Blades** – Black Blossom (Shidou and Nue), Camellia (after Kunai and Kirin), First Moon (via the box from the first Corvus).
 
-## The preparation that matters
+## Fighting any Nushi
 
-- Activate the nearby campsite before committing.
-- Use Extend to reach the high ground and open with an air assassination.
-- Keep ranged ammunition for moments when Rangifer is out of reach.
-- Parry the normal antler swing and punish the lowered head.
-- Leave space when the body glows red; the four-sweep combo is not a normal parry check.
+1. Activate the nearest campsite first – dying costs no materials or experience, but resting respawns minor enemies.
+2. Bring the element from the chart.
+3. Parry to build Flow; spend it when the boss is downed.
+4. Expect a second health bar in rematches and a red-glow aggression phase near half health.
 
-The [full Rangifer guide](/guides/nushi-boss-fight/) contains the encounter-by-encounter sequence. For a wider crowd-fight answer, use the [Malefact horde guide](/guides/malefact-horde-combat/).
+Patch v1.1.0 overhauled attack patterns for some Nushi variants, so pre-October videos may show older timings.
 
-## Do not invent the rest of the list
+## Related pages
 
-The game presents Nushi as regional bosses, but a complete public roster, exact health values, universal level recommendations and full reward table are not established in the current guide record. A new boss page should only be upgraded when its name, location, weakness and attack behaviour can be checked against a released build.
-
+- [Boss order](/guides/beast-of-reincarnation-nushi-order/)
+- [Boss weakness chart](/guides/beast-of-reincarnation-boss-weakness-chart/)
+- [Rangifer fight guide](/guides/nushi-boss-fight/)

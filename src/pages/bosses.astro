@@ -15,17 +15,19 @@ const canonical = new URL(path, SITE.url).href;
 // 全部名字与解锁率来自 Steam 官方成就页（App 2001760）快照 2026-09-08。
 const nushi = [
   { name: 'Rangifer', slug: 'rangifer', achievement: "Rangifer's End", rate: '53.5%', guide: '/bosses/rangifer/', note: 'Fought twice: crater fight (level 9, one stage) and sealed-lair rematch (level 12, two stages). Weak to fire in both.' },
-  { name: 'Lacerta', slug: 'lacerta', achievement: "Lacerta's End", rate: '43.8%', guide: '/bosses/lacerta/', note: 'The biggest attrition step in the game: roughly one in five players who beat Rangifer stop before Lacerta. The Thunderwave Sword note covers its Steam-reported electric weakness.' },
-  { name: 'Taurus', slug: 'taurus', achievement: "Taurus's End", rate: '34.8%', guide: '/bosses/taurus/', note: 'Named in Steam achievement data. No verified route published on this site yet.' },
-  { name: 'Corvus', slug: 'corvus', achievement: "Corvus's End", rate: '28.3%', guide: '/bosses/corvus/', note: 'Named in Steam achievement data. No verified route published on this site yet.' },
-  { name: 'Ursa', slug: 'ursa', achievement: "Ursa's End", rate: '25.0%', guide: '/bosses/ursa/', note: 'Within half a point of Erymanth, which suggests the two are available in either order rather than strictly sequential.' },
-  { name: 'Erymanth', slug: 'erymanth', achievement: "Erymanth's End", rate: '24.6%', guide: '/bosses/erymanth/', note: 'The least-unlocked of the six Nushi in the Steam global snapshot.' },
+  { name: 'Lacerta', slug: 'lacerta', achievement: "Lacerta's End", rate: '43.8%', guide: '/bosses/lacerta/', note: 'Chapter 2, Ancient Civilization Zone (levels 13 and 16). Weak to Shock; inflicts Poison and Slow. The biggest attrition step on Steam.' },
+  { name: 'Taurus', slug: 'taurus', achievement: "Taurus's End", rate: '34.8%', guide: '/bosses/taurus/', note: 'Chapter 4, Pilgrim\'s Zone. Fought twice (about level 26 and 29). Weak to acid; rewards the Charging Botan Nushi skill.' },
+  { name: 'Corvus', slug: 'corvus', achievement: "Corvus's End", rate: '28.3%', guide: '/bosses/corvus/', note: 'Chapter 7, Giant Tree Zone. Two airborne crows back to back; weak to ranged attacks and Rangifer\'s restraint.' },
+  { name: 'Ursa', slug: 'ursa', achievement: "Ursa's End", rate: '25.0%', guide: '/bosses/ursa/', note: 'Chapter 10 forest lair, level 46. Weak to corrosives, acid and Restrain; sheds its shell into a flower form for phase two.' },
+  { name: 'Erymanth', slug: 'erymanth', achievement: "Erymanth's End", rate: '24.6%', guide: '/bosses/erymanth/', note: 'Chapter 12, the Capital, level 47. Weak to explosives; never parry its red-flash charge.' },
 ] as const;
 
 const otherBosses = [
   { name: 'Koo de Grace', achievement: 'Koo de Grace', rate: '25.6%', note: 'A co-op finisher achievement listed among the combat entries; the site does not claim it is a conventional boss fight.' },
-  { name: 'Shidou & Nue', achievement: 'Shidou & Nue', rate: '24.8%', note: 'Paired boss achievement naming two encounters in one entry.' },
-  { name: 'Kunai & Kirin', achievement: 'Kunai & Kirin', rate: '24.5%', note: 'Paired boss achievement naming two encounters in one entry.' },
+  { name: 'Shidou & Nue', achievement: 'Shidou & Nue', rate: '24.8%', guide: '/bosses/shidou-and-nue/', note: 'Chapter 11 duo fight on Mount Hiei. Weak to poison; use the health-siphon trick. Rewards Black Blossom.' },
+  { name: 'Kunai & Kirin', achievement: 'Kunai & Kirin', rate: '24.5%', guide: '/bosses/kunai-and-kirin/', note: 'Scripted loss in Chapter 8, real fight in Chapter 12 (level 49). Weak to poison.' },
+  { name: 'Nue Malefact & Male Purifier', achievement: '—', rate: '—', guide: '/bosses/nue-malefact/', note: 'Chapter 3 pursuit across the Great Wall Terraces, ending in a level-20 duo fight. Weak to poison.' },
+  { name: 'Final boss (Chapter 13)', achievement: 'The End of Reincarnation', rate: '—', guide: '/bosses/final-boss/', note: 'Nanite Shield, then an enraged final phase. No elemental weakness.' },
   { name: 'Horror in the Sky', achievement: 'Horror in the Sky', rate: '18.3%', note: 'Non-Nushi combat achievement; tracked on the Wasteland Colossal page.' },
   { name: 'The Sealer', achievement: 'The Sealer', rate: '21.5%', note: 'Non-Nushi combat achievement outside the Nushi set.' },
 ] as const;
@@ -117,7 +119,7 @@ const schema = [
           <tbody>
             {otherBosses.map((b) => (
               <tr class="border-t border-ash-800">
-                <th scope="row" class="px-4 py-3 font-medium text-ash-100">{b.name}</th>
+                <th scope="row" class="px-4 py-3 font-medium text-ash-100">{'guide' in b && b.guide ? <a href={b.guide} class="text-ember-400 hover:underline">{b.name}</a> : b.name}</th>
                 <td class="px-4 py-3 text-ash-300">{b.achievement}</td>
                 <td class="px-4 py-3 tabular-nums text-ash-300">{b.rate}</td>
                 <td class="px-4 py-3 text-ash-400">{b.note}</td>
@@ -134,17 +136,17 @@ const schema = [
         <a href="/guides/nushi-boss-fight/" class="rounded-xl border border-ash-800 bg-ash-900/40 p-5 transition hover:border-ember-500"><h3 class="font-display text-lg font-bold text-ash-50">Rangifer fight guide</h3><p class="mt-2 text-sm leading-relaxed text-ash-400">Both encounters: fire weakness, hair-bridge opener, parry window, red-glow escape.</p></a>
         <a href="/guides/wasteland-colossal-boss/" class="rounded-xl border border-ash-800 bg-ash-900/40 p-5 transition hover:border-ember-500"><h3 class="font-display text-lg font-bold text-ash-50">Wasteland Colossal</h3><p class="mt-2 text-sm leading-relaxed text-ash-400">The large-creature search phrase mapped to the verified Rangifer record.</p></a>
         <a href="/guides/boss-achievements-guide/" class="rounded-xl border border-ash-800 bg-ash-900/40 p-5 transition hover:border-ember-500"><h3 class="font-display text-lg font-bold text-ash-50">Boss achievement roadmap</h3><p class="mt-2 text-sm leading-relaxed text-ash-400">The spoiler-light checklist built from Steam achievement names.</p></a>
+        <a href="/guides/beast-of-reincarnation-boss-weakness-chart/" class="rounded-xl border border-ash-800 bg-ash-900/40 p-5 transition hover:border-ember-500"><h3 class="font-display text-lg font-bold text-ash-50">Boss weakness chart</h3><p class="mt-2 text-sm leading-relaxed text-ash-400">Elemental weaknesses for the named Nushi, kept separate from unpublished HP and drop tables.</p></a>
       </div>
     </section>
 
     <section class="mt-12 rounded-xl border border-ash-800 bg-ash-900/40 p-6">
       <h2 class="font-display text-xl font-bold text-ash-50">What this page does not claim</h2>
       <p class="mt-3 leading-relaxed text-ash-300">
-        A complete public roster, exact health values, universal level recommendations and full reward
-        tables are not established for the unnamed Nushi. This site publishes tactics for an encounter
-        only after its name, location, weakness and attack behaviour can be checked against the released
-        build — so Lacerta, Taurus, Corvus, Ursa and Erymanth appear here as official names with official
-        unlock rates, and nothing more.
+        Exact health values, frame data and full drop tables are still not published. Named encounters
+        now have fight pages linked above. Those steps are player walkthrough notes checked against
+        patch v1.1.01 on 15 October 2026, not an official moveset. Steam achievement names and unlock
+        rates remain the official half of each record.
       </p>
     </section>
   </main>

@@ -1,31 +1,51 @@
 ---
 title: "Beast of Reincarnation Mixed Reviews in October 2026"
-description: "Why Beast of Reincarnation is still Mixed on Steam in October 2026, and which complaints the patches have not touched."
+description: "Beast of Reincarnation Steam reviews in October 2026: Mixed at 66% English and 59% overall, what players praise and criticise, and whether patches moved it."
 heading: "Why the Steam score is still Mixed"
-category: beginner
+category: "beginner"
 keyword: "beast of reincarnation mixed reviews october"
 image: "bor-hot-5.webp"
 imageAlt: "Why the Steam score is still Mixed"
-publishDate: 2026-10-08T08:00:00.000Z
+publishDate: "2026-10-08T08:00:00.000Z"
 order: 2
 featured: false
 preview: false
-source: handson
+source: "handson"
+updateDate: "2026-10-15"
 ---
 
-<figure>
-  <img src="/images/bor-hot-5.webp" alt="Emma exploring a misty ruin" width="1400" height="788" loading="lazy" decoding="async" />
-</figure>
+Two months after launch, Beast of Reincarnation's Steam rating is still **Mixed** – in English and across all languages. Here is the current breakdown and what reviewers praise and criticise.
 
-As of October 8, 2026 the recent English Steam sample is still Mixed: about 1,412 positive out of 2,151 reviews. That is not a launch-week number. The game has been out since August 3.
+## Current scores
 
-## What the positives praise
+| Filter | Positive | Total | Score |
+|---|---|---|---|
+| English | 1,424 | 2,166 | Mixed (66%) |
+| All languages | 3,767 | 6,375 | Mixed (59%) |
 
-The forest, the fused-creature look, and the parry. People who stay compare the animal-and-plant enemies to Wild Hearts more often than they compare the story to anything. Performance is not the main complaint. Several recent positives say the frame rate was fine.
+Snapshot: 15 October 2026. The game launched on 3–4 August 2026 and costs $59.99.
 
-## What the negatives still say
+## What positive reviews praise
 
-Bosses that are either too simple or too large. A headbutt from off camera. Combat mapping that feels a beat late. A story they skipped. Gear that does not change enough between chapters. Those notes are still in reviews posted after 1.0.11.
+- The forest-and-ruins art direction and the flower-fused creature designs.
+- The parry, and the way it feeds Koo's Bloom Arts.
+- Koo himself – the dog is the most-mentioned positive.
+- Frame rate is no longer a common complaint after the DLSS/FSR and frame-generation patches.
 
-1.1.0 answers the crowd that found Hard too easy. It does not answer the crowd that found the regions samey. If you are buying under the old $59.99 tag, buy it for the parry. Do not buy it for a story you have already decided to skip. The Deluxe pack does not fix either complaint.
+## What negative reviews say
 
+- Middle zones feel repetitive (addressed by v1.1.01's **Hasten to the Capital**).
+- Long, slow cutscenes (almost all skippable since v1.0.12).
+- Some bosses are too simple, others huge with off-camera headbutts.
+- Gear does not change enough between chapters.
+- The launch price.
+
+## Did the patches move the score?
+
+Not yet. Very Hard and Ruthless (v1.1.0) answer the "too easy" crowd; Hasten to the Capital answers the "too long" crowd. Neither changes the plot pacing complaints. Fictions has one more patch planned (around 19 October) before slowing updates.
+
+## Related pages
+
+- [Why Steam is split](/guides/beast-of-reincarnation-mixed-reviews/)
+- [Still $59.99 – worth it?](/guides/beast-of-reincarnation-full-price-october/)
+- [Steam reception and issues](/guides/steam-reception-and-issues/)

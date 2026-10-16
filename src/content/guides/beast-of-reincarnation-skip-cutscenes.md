@@ -1,31 +1,49 @@
 ---
-title: "Beast of Reincarnation Skip Cutscenes After Patch 1.0.11"
-description: "How cutscene skip works in Beast of Reincarnation after patch 1.0.11, and which story scenes a replay still will not skip."
+title: "Beast of Reincarnation Skip Cutscenes — How and Which Patch"
+description: "How to skip cutscenes in Beast of Reincarnation: hold interact, which patch made which scenes skippable, and the v1.1.01 prompt toggle."
 heading: "Skip more story scenes after patch 1.0.11"
-category: beginner
+category: "beginner"
 keyword: "beast of reincarnation skip cutscene"
 image: "bor-hot-3.webp"
 imageAlt: "Skip more story scenes after patch 1.0.11"
-publishDate: 2026-10-08T08:00:00.000Z
+publishDate: "2026-10-08T08:00:00.000Z"
 order: 2
 featured: false
 preview: false
-source: handson
+source: "handson"
+updateDate: "2026-10-15"
 ---
 
-<figure>
-  <img src="/images/bor-hot-3.webp" alt="Emma and Koo in a quiet story moment beside a stream" width="1400" height="788" loading="lazy" decoding="async" />
-</figure>
+Can you skip cutscenes in Beast of Reincarnation? **Yes – almost all of them, since patch v1.0.12.** Skipping arrived in stages because of technical problems, so older advice may be out of date.
 
-Patch 1.0.11 is the one that matters if you are replaying for a boss and not for the plot. It is the fifth post-launch patch, and its main change is pace: more story scenes can be skipped.
+## How skipping evolved
 
-Players who bounced in the first month often say the same thing. The forest looks expensive, the parry feels good, and the cutscenes are what they skipped anyway. 1.0.11 makes that playstyle less of a fight with the game.
+| Patch | Date | What became skippable |
+|---|---|---|
+| v1.0.8 | 15 Aug | Fewer back-to-back cutscenes between areas |
+| v1.0.9 | 24 Aug | First batch skippable by holding interact; "skip" indicator; some pre-final-boss scenes |
+| v1.0.11 | 8 Sept | Scenes up to the Great Wall Terraces |
+| v1.0.12 | 17 Sept | **Almost all** events and cutscenes; finishing animations; viewed Tips hidden in NG+ |
+| v1.1.01 | 9 Oct | Option to hide the skip prompt; fixes for skip soft locks, lingering subtitles and odd camera angles |
 
-## What skip does not do
+## How to skip
 
-- It does not skip a tutorial prompt that is also teaching a button. If the scene is a control lesson, expect to sit through the prompt.
-- It does not change boss balance. That work was already in 1.0.7, and again in 1.1.0.
-- It does not add a chapter select. You still walk the region. The 13-chapter structure did not become a menu.
+Hold the **interact** button during a skippable scene; the indicator appears bottom right. In v1.1.01 you can hide the prompt in Settings if it distracts you.
 
-If a scene the notes call skippable still locks, you are not on 1.0.11. Check the version string before you reinstall. The later 1.1.0 difficulty patch does not replace this one. You want both.
+## What you cannot skip
 
+- A very small number of scenes still lock (Fictions said these would be addressed).
+- Tutorial prompts that teach a button.
+- Boss fights themselves.
+
+## Tips for replays
+
+- Pair skipping with **Hasten to the Capital** to cut three zones in NG+.
+- Do not mash skip – rapid skipping caused soft locks before v1.1.01.
+- Set cinematic mode to **Performance** (default since v1.0.7) for smoother scenes you do watch.
+
+## Related pages
+
+- [Chapter 10 freeze](/guides/beast-of-reincarnation-chapter-10-freeze/)
+- [Update 1.1.01](/guides/beast-of-reincarnation-update-1-1-01/)
+- [All 13 chapters](/guides/beast-of-reincarnation-13-chapters/)

@@ -1,30 +1,45 @@
 ---
-title: "Beast of Reincarnation Still $59.99 in October 2026"
-description: "Beast of Reincarnation is still $59.99 on PC in October 2026, with Mixed reviews at 1,420 of 2,161. What the price actually buys."
+title: "Beast of Reincarnation Still $59.99 in October 2026 — Worth It?"
+description: "Beast of Reincarnation is still $59.99 in October 2026: current Steam scores, what the patches added, and whether it is worth full price."
 heading: "The $59.99 tag did not move with the eighth patch"
-category: beginner
+category: "beginner"
 keyword: "beast of reincarnation price october"
 image: "beast-of-reincarnation-key-art.webp"
 imageAlt: "Emma and Koo key art for Beast of Reincarnation at the current $59.99 listing"
-publishDate: 2026-10-12T08:00:00.000Z
+publishDate: "2026-10-12T08:00:00.000Z"
 order: 1
 featured: false
 preview: false
-source: reviews
+source: "reviews"
+updateDate: "2026-10-15"
 ---
 
-<figure>
-  <img src="/images/beast-of-reincarnation-key-art.webp" alt="Emma and Koo key art for Beast of Reincarnation at the current $59.99 listing" width="1600" height="900" loading="lazy" decoding="async" />
-</figure>
+Beast of Reincarnation is still **$59.99** on Steam in mid-October 2026, and the review score is still **Mixed**. Here is what that full price buys now, two months and eight patches after launch.
 
-Checked October 12, 2026: Beast of Reincarnation is still $59.99 on PC. There is no active discount on the live listing. Reviews are Mixed — 1,420 positive out of 2,161. Game Freak developed it. Fictions published it. Forty-six achievements. Single-player, full controller support, Steam Cloud, Family Sharing.
+## The numbers
 
-Players who recommend it often add a condition: wait for 10–20% off, or treat Game Pass as the try-before-you-pay route. Players who already like the story and the one-person, one-dog loop call the full tag fair after 14–20 hours. Those are two different purchases. The listing does not pick one for you.
+On 15 October 2026 Steam shows **1,424 positive of 2,166 English reviews (Mixed, 66%)** and **3,767 of 6,375 across all languages (Mixed, 59%)**. The standard edition is **$59.99**; there are **46 achievements**.
 
-## What $59.99 includes
+## What $59.99 includes now
 
-- The released game on PC, with Very Hard and Nightmare from 1.1.0 and the 1.1.01 stability pass.
-- Not Deluxe. Big Dipper and the Deluxe entitlement are a separate SKU. Difficulty modes are not locked behind it.
-- Not a promise that cutscenes will feel short. Skip exists after 1.0.11. The talky chapters are still the talky chapters.
+- All 13 chapters and the epilogue.
+- **Very Hard** and **Ruthless** modes plus NG+ difficulty options (v1.1.0).
+- Skippable cutscenes and finishers (v1.0.11–v1.0.12), FOV slider and **Hasten to the Capital** (v1.1.01).
+- DLSS 4/4.5, FSR 4, frame generation and ultrawide support.
+- Single-player, full controller support, Steam Cloud and Family Sharing.
 
-If the Mixed score is the hesitation, read the [October Mixed page](/guides/beast-of-reincarnation-mixed-reviews-october/) before you treat a sale rumor as a fact. The price on the listing is $59.99 until it is not.
+It does **not** include the Deluxe DLC (Big Dipper and cosmetics).
+
+## Is it worth full price?
+
+Players who like the parry combat and the one-girl-and-her-dog story call it fair after 14–20 hours, especially on Hard or Very Hard. Players who bounce cite repetitive middle zones and a slow plot – both partly addressed by Hasten to the Capital and skippable scenes. Many recommendations still add "wait for a sale".
+
+## What is next
+
+Fictions says the next patch (planned around **19 October**) is the last in the frequent post-launch cycle. After that, fewer changes are expected – so what you see now is close to the final shape of the game.
+
+## Related pages
+
+- [Deluxe or sale?](/guides/beast-of-reincarnation-deluxe-or-sale/)
+- [Mixed reviews explained](/guides/beast-of-reincarnation-mixed-reviews-october/)
+- [Hasten to the Capital](/guides/beast-of-reincarnation-hasten-to-the-capital/)

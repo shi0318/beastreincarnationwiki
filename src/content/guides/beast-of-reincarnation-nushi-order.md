@@ -1,36 +1,49 @@
 ---
-title: "Beast of Reincarnation Nushi Order — Rangifer to Erymanth"
+title: "Beast of Reincarnation Boss Order — Every Nushi from Rangifer to the End"
+description: "Beast of Reincarnation boss order: every Nushi and story boss from Rangifer to the final boss, with chapter, level and Steam achievement rate."
 heading: "Beast of Reincarnation Nushi Order"
-description: "Steam achievement rates order the six Nushi: Rangifer 53.5%, Lacerta 43.8%, Taurus 34.8%, Corvus 28.3%, Ursa 25.0%, Erymanth 24.6%."
-category: boss
+category: "boss"
 keyword: "beast of reincarnation nushi order"
 image: "beast-of-reincarnation-nushi-boss-fight.webp"
 imageAlt: "A Nushi facing Emma"
-publishDate: 2026-09-17
+publishDate: "2026-09-17"
 order: 11
 featured: false
 preview: false
-source: official
+source: "official"
+updateDate: "2026-10-15"
 ---
 
-The six named **Nushi** line up on Steam as a ladder. Snapshot **8 September 2026**:
+The Nushi are Beast of Reincarnation's regional bosses. Here is the order you meet them in the story, with chapter, level and the Steam achievement rate for each.
 
-- Rangifer's End **53.5%**
-- Lacerta's End **43.8%**
-- Taurus's End **34.8%**
-- Corvus's End **28.3%**
-- Ursa's End **25.0%**
-- Erymanth's End **24.6%**
+## Boss order
 
-<figure>
-  <img src="/images/beast-of-reincarnation-nushi-boss-fight.webp" alt="A Nushi facing Emma" width="1600" height="900" loading="lazy" decoding="async" />
-</figure>
+| # | Boss | Chapter | Level | Steam rate |
+|---|---|---|---|---|
+| 1 | [Rangifer](/bosses/rangifer/) | 1 – Ogouchi Buffer Zone | 9, rematch 12 | 53.5% |
+| 2 | [Lacerta](/bosses/lacerta/) | 2 – Ancient Civilization Zone | 13, rematch 16 | 43.8% |
+| 3 | [Nue Malefact + Male Purifier](/bosses/nue-malefact/) | 3 – Great Wall Terraces | 16–20 | – |
+| 4 | [Taurus](/bosses/taurus/) | 4 – Pilgrim's Zone | ~26, rematch ~29 | 34.8% |
+| 5 | [Corvus](/bosses/corvus/) | 7 – Giant Tree Zone | – | 28.3% |
+| 6 | [Kunai and Kirin](/bosses/kunai-and-kirin/) (scripted) | 8 – Crater Zone | 45 | – |
+| 7 | [Ursa](/bosses/ursa/) | 10 – forest lair | 46 | 25.0% |
+| 8 | [Shidou and Nue](/bosses/shidou-and-nue/) | 11 – Mount Hiei | – | 24.8% |
+| 9 | [Erymanth](/bosses/erymanth/) | 12 – The Capital | 47 | 24.6% |
+| 10 | [Kunai and Kirin](/bosses/kunai-and-kirin/) | 12 – The Capital | 49 | 24.5% |
+| 11 | [Final boss](/bosses/final-boss/) | 13 – Center of the Blight | – | – |
 
-The drop from Rangifer to Lacerta is the biggest step. Ursa and Erymanth sit within half a point, so they may not be strictly sequential. Only Rangifer has a full fight record on this site (fire weakness, two encounters).
+Koo's own Nushi form is also a mandatory late-game story encounter.
+
+## Reading the Steam ladder
+
+The biggest drop-off is **Rangifer → Lacerta** (53.5% → 43.8%): about one in five players who beat the first Nushi stop before the second. After Corvus the rates flatten around 25%, which is where most players who reach the late game finish it.
+
+## Skipping Taurus
+
+With **Hasten to the Capital** (v1.1.01) you can skip Chapters 4–6 and therefore Taurus on a New Game run – but Taurus's End then requires the Mountain Route on NG+.
 
 ## Related pages
 
+- [Boss weakness chart](/guides/beast-of-reincarnation-boss-weakness-chart/)
 - [All bosses](/bosses/)
-- [Rangifer](/bosses/rangifer/)
-- [Lacerta](/bosses/lacerta/)
-- [Nushi list](/guides/beast-of-reincarnation-nushi-boss-list/)
+- [Nushi boss list](/guides/beast-of-reincarnation-nushi-boss-list/)
