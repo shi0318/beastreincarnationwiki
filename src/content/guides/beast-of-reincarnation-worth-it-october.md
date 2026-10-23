@@ -6,8 +6,8 @@ category: beginner
 keyword: "beast of reincarnation worth it october 2026"
 image: "beast-of-reincarnation-key-art.webp"
 imageAlt: "Beast of Reincarnation key art of Emma and Koo"
-publishDate: 2026-10-20
-updateDate: 2026-10-20
+publishDate: 2026-10-23
+updateDate: 2026-10-23
 order: 2
 featured: false
 preview: false

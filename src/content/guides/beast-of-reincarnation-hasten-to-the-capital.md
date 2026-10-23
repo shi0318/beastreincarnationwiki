@@ -7,7 +7,7 @@ keyword: "beast of reincarnation hasten to the capital"
 image: "bor-clip-autumn-path.webp"
 imageAlt: "A large walking machine strides along an autumn mountain path"
 publishDate: "2026-10-15"
-updateDate: "2026-10-20"
+updateDate: "2026-10-23"
 order: 3
 featured: true
 preview: false

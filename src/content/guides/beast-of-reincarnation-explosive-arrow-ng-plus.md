@@ -6,8 +6,8 @@ category: exploration
 keyword: "beast of reincarnation explosive arrow new game plus"
 image: "beast-of-reincarnation-machine-swarm-combat.webp"
 imageAlt: "Emma fighting a machine swarm in Beast of Reincarnation"
-publishDate: 2026-10-21
-updateDate: 2026-10-21
+publishDate: 2026-10-23
+updateDate: 2026-10-23
 order: 7
 featured: false
 preview: false

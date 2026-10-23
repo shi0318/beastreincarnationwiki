@@ -6,8 +6,8 @@ category: beginner
 keyword: "beast of reincarnation fov skip prompts"
 image: "beast-of-reincarnation-emma-parry-flower-beast.webp"
 imageAlt: "Emma preparing a parry in Beast of Reincarnation"
-publishDate: 2026-10-20
-updateDate: 2026-10-20
+publishDate: 2026-10-23
+updateDate: 2026-10-23
 order: 5
 featured: false
 preview: false

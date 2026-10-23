@@ -6,8 +6,8 @@ category: combat
 keyword: "beast of reincarnation story mode camera"
 image: "bor-hot-0.webp"
 imageAlt: "Emma and Koo in a forest fight in Beast of Reincarnation"
-publishDate: 2026-10-21
-updateDate: 2026-10-21
+publishDate: 2026-10-23
+updateDate: 2026-10-23
 order: 8
 featured: false
 preview: false

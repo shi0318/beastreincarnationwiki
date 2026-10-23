@@ -6,8 +6,8 @@ category: beginner
 keyword: "beast of reincarnation family sharing"
 image: "beast-of-reincarnation-emma-koo-river-exploration.webp"
 imageAlt: "Emma and Koo beside a river in Beast of Reincarnation"
-publishDate: 2026-10-21
-updateDate: 2026-10-21
+publishDate: 2026-10-23
+updateDate: 2026-10-23
 order: 6
 featured: false
 preview: false

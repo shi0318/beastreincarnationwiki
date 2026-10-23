@@ -6,8 +6,8 @@ category: beginner
 keyword: "beast of reincarnation support ending"
 image: "beast-of-reincarnation-nushi-boss-fight.webp"
 imageAlt: "A Nushi boss fight in Beast of Reincarnation"
-publishDate: 2026-10-20
-updateDate: 2026-10-20
+publishDate: 2026-10-23
+updateDate: 2026-10-23
 order: 3
 featured: false
 preview: false
