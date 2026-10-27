@@ -6,8 +6,8 @@ category: combat
 keyword: "beast of reincarnation strongbox camera koo"
 image: "beast-of-reincarnation-machine-swarm-combat.webp"
 imageAlt: "Emma and Koo in a machine fight"
-publishDate: 2026-10-25
-updateDate: 2026-10-25
+publishDate: 2026-10-26
+updateDate: 2026-10-26
 order: 6
 featured: false
 preview: false
@@ -16,7 +16,7 @@ source: official
 
 A camera that snaps to Koo while you open a strongbox is not Field of View, and it is not Story mode. v1.1.01 named it. Canceling a strongbox unlock while Koo's Bloom Art was activating locked the camera onto Koo. The same patch marked that lock fixed. If you are still seeing it, check the version before you rewrite your controls.
 
-Beast of Reincarnation has been out since **August 4, 2026**. On **October 25, 2026** the US page was **$59.99**, Mixed, **1,585** English reviews, and **67%** of **101** in 30 days. A small recent month includes people on the patch and people describing August. The chest test takes one minute. The percentage does not open the chest.
+Beast of Reincarnation has been out since **August 4, 2026**. On **October 26, 2026** the US page was **$59.99**, Mixed, **1,585** English reviews, and **67%** of **101** in 30 days. A small recent month includes people on the patch and people describing August. The chest test takes one minute. The percentage does not open the chest.
 
 <figure>
   <img src="/images/beast-of-reincarnation-machine-swarm-combat.webp" alt="Emma and Koo fighting machines" width="1600" height="900" loading="lazy" decoding="async" />
@@ -45,22 +45,22 @@ Fight one beast with the slider set, so you know the combat camera and the chest
 
 **46** achievements are not locked behind a perfect chest camera. Early pops are common. A stuck lens at a strongbox only wastes the minute you spend arguing with it. Update, do not cancel, open the chest, leave. The Mixed label on **1,585** English reviews will still be there. The dog will be in the fight, which is where he belongs, not glued to the unlock animation.
 
-October 25's Mixed page, $59.99, 1,585 English reviews, 67% of 101 in 30 days, includes people describing August cameras. The strongbox lock was a cancel during Koo's Bloom Art, marked fixed in v1.1.01. Overdrive cancel flipping lock-on is the other line. Koo spending items on staggered enemies is the third. Update once. Open one chest without canceling. Then set Field of View and parry one beast so the fight camera and the chest camera stay separate tools. Story mode will not fix a chest. Hasten will not. Deluxe will not. A ticket is for a lock that still happens when you do not cancel, on the current patch. The dog belongs in the fight.
+October 26's Mixed page, $59.99, 1,585 English reviews, 67% of 101 in 30 days, includes people describing August cameras. The strongbox lock was a cancel during Koo's Bloom Art, marked fixed in v1.1.01. Overdrive cancel flipping lock-on is the other line. Koo spending items on staggered enemies is the third. Update once. Open one chest without canceling. Then set Field of View and parry one beast so the fight camera and the chest camera stay separate tools. Story mode will not fix a chest. Hasten will not. Deluxe will not. A ticket is for a lock that still happens when you do not cancel, on the current patch. The dog belongs in the fight.
 
 
-October 25, 2026 is the check date for the US Steam sticker and English count in this page. Do not blend it with another filter. Update if you own the game. Do the one test named above. Then stop.
+October 26, 2026 is the check date for the US Steam sticker and English count in this page. Do not blend it with another filter. Update if you own the game. Do the one test named above. Then stop.
 
 
-October 25, 2026 is the check date for the US Steam sticker and English count in this page. Do not blend it with another filter. Update if you own the game. Do the one test named above. Then stop.
+October 26, 2026 is the check date for the US Steam sticker and English count in this page. Do not blend it with another filter. Update if you own the game. Do the one test named above. Then stop.
 
 
-October 25, 2026 is the check date for the US Steam sticker and English count in this page. Do not blend it with another filter. Update if you own the game. Do the one test named above. Then stop.
+October 26, 2026 is the check date for the US Steam sticker and English count in this page. Do not blend it with another filter. Update if you own the game. Do the one test named above. Then stop.
 
 
-October 25, 2026 is the check date for the US Steam sticker and English count in this page. Do not blend it with another filter. Update if you own the game. Do the one test named above. Then stop.
+October 26, 2026 is the check date for the US Steam sticker and English count in this page. Do not blend it with another filter. Update if you own the game. Do the one test named above. Then stop.
 
 
-October 25, 2026 is the check date for the US Steam sticker and English count in this page. Do not blend it with another filter. Update if you own the game. Do the one test named above. Then stop.
+October 26, 2026 is the check date for the US Steam sticker and English count in this page. Do not blend it with another filter. Update if you own the game. Do the one test named above. Then stop.
 
 
-October 25, 2026 is the check date for the US Steam sticker and English count in this page. Do not blend it with another filter. Update if you own the game. Do the one test named above. Then stop.
+October 26, 2026 is the check date for the US Steam sticker and English count in this page. Do not blend it with another filter. Update if you own the game. Do the one test named above. Then stop.
