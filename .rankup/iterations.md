@@ -15,3 +15,8 @@
 - Validation: Astro build generated 108 pages; guide verification tests passed; `git diff --check` passed.
 - Boundary: no additional boss data or weapon tier list was invented; pages that rely on community or dated evidence remain labelled accordingly.
 - Next improvement: use GSC queries to choose the next page-level update rather than bulk publishing.
+
+
+## 2026-11-01 — gameplay content batch A
+
+Added two original English gameplay articles, each over 1,000 body words, with local game images, guide-hub discovery, accurate canonical and sitemap dates. Main navigation does not link individual new articles. Official Steam announcement raw evidence, article manifest and output checks are recorded in _hot-research/2026-11-01/a/. Production build and relevant test suite both pass; November Phantom schema dates are explicitly checked. No deployment executed. No measured search-volume or recent popularity claim is made.
