@@ -42,7 +42,7 @@ The guard input now uses a continuous trigger: press and hold for the guard acti
 
 Ranged weapons can now be switched during regular attacks and while in **Iaido stance**. Use the flexibility to respond when an enemy creates distance, but do not let the option turn every combo into a menu exercise. Establish a simple loop: begin with the weapon or Blade Art that fits the opening, continue the attack string while the target is exposed, and switch only when the enemy's position or recovery makes the ranged option useful. If your input appears ignored, reproduce it once in a calm encounter and confirm the stance state before concluding that the control is broken.
 
-Slash targeting has also been improved for vertical direction. When testing a change, aim deliberately at the target's height and compare the same attack from the same distance. Camera angle, elevation, and enemy movement can make a hit appear inconsistent, so record a short sequence rather than judging from one swing. For broader loadout planning, use the [Blade Arts guide](/guides/beast-of-reincarnation-blade-arts/) and [Bloom Arts guide](/guides/beast-of-reincarnation-bloom-arts/).
+Slash targeting has also been improved for vertical direction. When testing a change, aim deliberately at the target's height and compare the same attack from the same distance. Camera angle, elevation, and enemy movement can make a hit appear inconsistent, so record a short sequence rather than judging from one swing. For broader loadout planning, use the [skills hub](/skills/) and [Koo Bloom Arts guide](/guides/koo-bloom-arts-qte-guide/).
 
 ## Prepare New Game Plus without overplanning
 
