@@ -14,7 +14,7 @@ preview: false
 source: "community"
 ---
 
-**Lacerta** is the Chapter 2 Nushi, and it is where more players stop than at Rangifer. Steam lists **Lacerta's End** at 43.8%. The full record is the [Lacerta page](/bosses/lacerta/). This page is only the clear order.
+**Lacerta** is the Chapter 2 Nushi, and it is where more players stop than at Rangifer. Steam lists **Lacerta's End** at 43.8%. The full record is the [Lacerta page](/bosses/#lacerta). This page is only the clear order.
 
 It fights with Poison and Slow, and it leaves the water to do it. **Shock** is the weakness: Thunderwave Sword, Koo's Sakura: Javelin, or Bolt Shards. Fire from the Rangifer fight will not do this job.
 

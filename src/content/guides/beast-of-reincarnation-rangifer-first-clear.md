@@ -14,7 +14,7 @@ preview: false
 source: "community"
 ---
 
-**Rangifer** is the Chapter 1 Nushi in the Ogouchi Buffer Zone, and you fight it twice. The crater is one health bar, around level 9. The sealed lair near Subcity 03 is two bars, around level 12, and it adds a jump. Steam lists **Rangifer's End** at 53.5% of owners. The full record is the [Rangifer page](/bosses/rangifer/).
+**Rangifer** is the Chapter 1 Nushi in the Ogouchi Buffer Zone, and you fight it twice. The crater is one health bar, around level 9. The sealed lair near Subcity 03 is two bars, around level 12, and it adds a jump. Steam lists **Rangifer's End** at 53.5% of owners. The full record is the [Rangifer page](/bosses/#rangifer).
 
 Fire is the weakness. On the rematch, Burn resists, so use raw fire damage rather than a burn proc you already saw fail.
 

@@ -37,10 +37,10 @@ Patch v1.1.0 (1 October 2026) updated some of Shidou's attack patterns, with fur
 
 ## Rewards
 
-The **[Black Blossom](/weapons/black-blossom/)** blade (Poison Storm), Bloom Art **Erica: Strangle** and **Blade Art: Nue**. Full fight: [Shidou and Nue boss guide](/bosses/shidou-and-nue/).
+The **[Black Blossom](/weapons/blades/#black-blossom)** blade (Poison Storm), Bloom Art **Erica: Strangle** and **Blade Art: Nue**. Full fight: [Shidou and Nue boss guide](/bosses/#shidou-and-nue).
 
 ## Related pages
 
 - [All characters](/characters/)
-- [Emma](/characters/emma/) and [Koo](/characters/koo/)
+- [Emma](/characters/#emma) and [Koo](/characters/#koo)
 - [Voice cast](/guides/voice-cast-and-previews/)

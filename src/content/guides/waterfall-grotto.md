@@ -24,7 +24,7 @@ This **Beast of Reincarnation waterfall grotto guide** is an exploration and com
 4. Return after unlocking a movement upgrade; a blocked ledge is not proof that the area is empty.
 5. Compare the chapter total before leaving so a beautiful landmark does not become a false “100% complete” signal.
 
-The early Steam map checklist reports **9 campsites, 3 Wayside shrines, 1 document and 2 Keeper Golems** for the Ancient Civilization Zone in Chapter 2. It reports **18 campsites, 0 shrines, 4 documents and 3 Keeper Golems** for the Ogouchi Buffer Zone in Chapter 1. Use the region names shown in [Chapter 1](/walkthrough/chapter-1/) and [Chapter 2](/walkthrough/chapter-2/) when comparing your map.
+The early Steam map checklist reports **9 campsites, 3 Wayside shrines, 1 document and 2 Keeper Golems** for the Ancient Civilization Zone in Chapter 2. It reports **18 campsites, 0 shrines, 4 documents and 3 Keeper Golems** for the Ogouchi Buffer Zone in Chapter 1. Use the region names shown in [Chapter 1](/walkthrough/#chapter-1) and [Chapter 2](/walkthrough/#chapter-2) when comparing your map.
 
 <figure>
   <img src="/images/beast-of-reincarnation-waterfall-grotto.webp" alt="Emma looking across a mossy waterfall grotto in Beast of Reincarnation" width="1600" height="900" loading="lazy" decoding="async" />

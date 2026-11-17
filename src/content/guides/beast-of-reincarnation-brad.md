@@ -38,5 +38,5 @@ After the Chapter 12 fight against Kunai and Kirin, Kunai's blade **Camellia** a
 ## Related pages
 
 - [All characters](/characters/)
-- [Emma](/characters/emma/) and [Koo](/characters/koo/)
+- [Emma](/characters/#emma) and [Koo](/characters/#koo)
 - [Voice cast](/guides/voice-cast-and-previews/)

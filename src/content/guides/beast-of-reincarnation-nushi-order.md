@@ -20,17 +20,17 @@ The Nushi are Beast of Reincarnation's regional bosses. Here is the order you me
 
 | # | Boss | Chapter | Level | Steam rate |
 |---|---|---|---|---|
-| 1 | [Rangifer](/bosses/rangifer/) | 1 – Ogouchi Buffer Zone | 9, rematch 12 | 53.5% |
-| 2 | [Lacerta](/bosses/lacerta/) | 2 – Ancient Civilization Zone | 13, rematch 16 | 43.8% |
-| 3 | [Nue Malefact + Male Purifier](/bosses/nue-malefact/) | 3 – Great Wall Terraces | 16–20 | – |
-| 4 | [Taurus](/bosses/taurus/) | 4 – Pilgrim's Zone | ~26, rematch ~29 | 34.8% |
-| 5 | [Corvus](/bosses/corvus/) | 7 – Giant Tree Zone | – | 28.3% |
-| 6 | [Kunai and Kirin](/bosses/kunai-and-kirin/) (scripted) | 8 – Crater Zone | 45 | – |
-| 7 | [Ursa](/bosses/ursa/) | 10 – forest lair | 46 | 25.0% |
-| 8 | [Shidou and Nue](/bosses/shidou-and-nue/) | 11 – Mount Hiei | – | 24.8% |
-| 9 | [Erymanth](/bosses/erymanth/) | 12 – The Capital | 47 | 24.6% |
-| 10 | [Kunai and Kirin](/bosses/kunai-and-kirin/) | 12 – The Capital | 49 | 24.5% |
-| 11 | [Final boss](/bosses/final-boss/) | 13 – Center of the Blight | – | – |
+| 1 | [Rangifer](/bosses/#rangifer) | 1 – Ogouchi Buffer Zone | 9, rematch 12 | 53.5% |
+| 2 | [Lacerta](/bosses/#lacerta) | 2 – Ancient Civilization Zone | 13, rematch 16 | 43.8% |
+| 3 | [Nue Malefact + Male Purifier](/bosses/#nue-malefact) | 3 – Great Wall Terraces | 16–20 | – |
+| 4 | [Taurus](/bosses/#taurus) | 4 – Pilgrim's Zone | ~26, rematch ~29 | 34.8% |
+| 5 | [Corvus](/bosses/#corvus) | 7 – Giant Tree Zone | – | 28.3% |
+| 6 | [Kunai and Kirin](/bosses/#kunai-and-kirin) (scripted) | 8 – Crater Zone | 45 | – |
+| 7 | [Ursa](/bosses/#ursa) | 10 – forest lair | 46 | 25.0% |
+| 8 | [Shidou and Nue](/bosses/#shidou-and-nue) | 11 – Mount Hiei | – | 24.8% |
+| 9 | [Erymanth](/bosses/#erymanth) | 12 – The Capital | 47 | 24.6% |
+| 10 | [Kunai and Kirin](/bosses/#kunai-and-kirin) | 12 – The Capital | 49 | 24.5% |
+| 11 | [Final boss](/bosses/#final-boss) | 13 – Center of the Blight | – | – |
 
 Koo's own Nushi form is also a mandatory late-game story encounter.
 

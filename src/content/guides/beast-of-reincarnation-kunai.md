@@ -28,14 +28,14 @@ source: "community"
 
 ## Her fights
 
-The **Chapter 8** meeting is a scripted loss that ends after her health drops by roughly a fifth to a third. The **Chapter 12** fight is real: Kunai and Kirin share an encounter with two health bars. Parry Kunai's swordwork, dodge Kirin's one-hit missiles. Full strategy: [Kunai and Kirin boss guide](/bosses/kunai-and-kirin/).
+The **Chapter 8** meeting is a scripted loss that ends after her health drops by roughly a fifth to a third. The **Chapter 12** fight is real: Kunai and Kirin share an encounter with two health bars. Parry Kunai's swordwork, dodge Kirin's one-hit missiles. Full strategy: [Kunai and Kirin boss guide](/bosses/#kunai-and-kirin).
 
 ## Rewards
 
-Kirin Memories, **Blade Art: Thunder** and the Bloom Art **Numasugi: Skewer**. Afterwards her blade **[Camellia](/weapons/camellia/)** waits inside the Cleanse Walker with a document.
+Kirin Memories, **Blade Art: Thunder** and the Bloom Art **Numasugi: Skewer**. Afterwards her blade **[Camellia](/weapons/blades/#camellia)** waits inside the Cleanse Walker with a document.
 
 ## Related pages
 
 - [All characters](/characters/)
-- [Emma](/characters/emma/) and [Koo](/characters/koo/)
+- [Emma](/characters/#emma) and [Koo](/characters/#koo)
 - [Voice cast](/guides/voice-cast-and-previews/)

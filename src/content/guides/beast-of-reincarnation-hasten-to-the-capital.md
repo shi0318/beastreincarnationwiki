@@ -81,6 +81,6 @@ Fictions also said the next patch, planned for around **19 October**, would be t
 
 - [Update 1.1.01](/guides/beast-of-reincarnation-update-1-1-01/)
 - [All 13 chapters](/guides/beast-of-reincarnation-13-chapters/)
-- [Taurus boss guide](/bosses/taurus/)
+- [Taurus boss guide](/bosses/#taurus)
 
 The store page still calls this a one-person, one-dog action RPG from Game Freak and Fictions, out since **August 4, 2026**. The dog does not care which route you pick. The achievement list does. Walk the mountain if the table above is still unchecked. Hasten if it is already done.

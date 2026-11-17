@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import JsonLd from '../components/JsonLd.astro';
-import { SITE, GAME_FACTS } from '../data/site';
+import { SITE, GAME_FACTS, SOURCES } from '../data/site';
 
 const path = '/disclaimer/';
 const title = 'Disclaimer & Editorial Policy';
@@ -58,12 +58,30 @@ const schema = [
       <h2>How we label sources</h2>
       <p>
         Confirmed release, systems, pricing, language, and hardware details come from the official
-        Steam listing and first-party announcements, and are labeled <strong>Official</strong>. Guides
+        Steam listing and first-party announcements, and are labeled <strong>Official source</strong>. Guides
         describing the shipped game from named external playthroughs are labeled <strong>Cited playthrough</strong>
         and name the post-launch coverage each detail came from at the bottom of the page. That label
         means sourced and attributed, not that we personally cleared every fight. Historical trailer and launch-period
         material is kept as context only; it is never silently promoted to a current combat or route
         result.
+      </p>
+
+      <h2>What each source label means</h2>
+      <p>
+        Pages carry a small badge naming where their information comes from. The badge describes the
+        source of the content, not the identity of this site: an <strong>Official source</strong> badge
+        means the facts on that page come from {GAME_FACTS.developer}, {GAME_FACTS.publisher} or the
+        Steam listing, not that this wiki is an official website. The full set of labels:
+      </p>
+      <ul>
+        {Object.values(SOURCES).map((s) => (
+          <li><strong>{s.label}</strong> - {s.blurb}</li>
+        ))}
+      </ul>
+      <p>
+        This site has not published original playtesting. Collection counts, routes and fight notes
+        come from the named player guides, outlets and patch notes cited on each page, and we do not
+        present them as personally cleared walkthroughs.
       </p>
 
       <h2>What we will not claim</h2>

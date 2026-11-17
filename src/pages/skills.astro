@@ -3,7 +3,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import JsonLd from '../components/JsonLd.astro';
 import SourceBadge from '../components/SourceBadge.astro';
 import WikiSectionNav from '../components/WikiSectionNav.astro';
+import DetailEntry from '../components/DetailEntry.astro';
 import { GAME_FACTS, SITE } from '../data/site';
+import { SKILL_DETAILS } from '../data/section-pages';
+// The Emma and Koo skill-tree pages were merged into this page on
+// 2026-11-16; their URLs 301 here and keep #emma-skill-tree / #koo-skill-tree anchors.
 
 const path = '/skills/';
 const title = 'Beast of Reincarnation Skills & Builds: Emma and Koo Skill Trees';
@@ -34,7 +38,7 @@ const schema = [
   <JsonLd slot="head" schema={schema} />
   <section class="border-b border-ash-800 bg-ash-900/30"><div class="mx-auto max-w-6xl px-4 py-12">
     <nav aria-label="Breadcrumb" class="mb-5 text-xs text-ash-400"><a href="/" class="hover:text-ember-400">Home</a><span aria-hidden="true"> / </span><a href="/guides/" class="hover:text-ember-400">Guides</a><span aria-hidden="true"> / </span><span class="text-ash-300">Skills &amp; Builds</span></nav>
-    <SourceBadge source="third-party-tested" showBlurb />
+    <SourceBadge source="third-party-tested" />
     <h1 class="mt-4 font-display text-3xl font-bold leading-tight text-ash-50 md:text-5xl">Beast of Reincarnation Skills &amp; Builds: Emma and Koo Skill Trees</h1>
     <p class="mt-4 max-w-3xl text-lg leading-relaxed text-ash-300">This Beast of Reincarnation skills guide maps the two playable sides of the combat system. Emma's skill trees shape her movement and entanglement loop; Koo's trees supply attacks, healing, status effects and Bloom Art support.</p>
   </div></section>
@@ -44,7 +48,7 @@ const schema = [
     <section class="mt-10 grid gap-6 md:grid-cols-2">
       <div class="rounded-xl border border-ash-800 bg-ash-900/40 p-6">
         <h2 class="font-display text-2xl font-bold text-ash-50">Beast of Reincarnation Emma skills</h2>
-        <p class="mt-3 leading-relaxed text-ash-300">Current hands-on progression coverage recommends starting with Entanglement Overdrive, then using Hair and Track Shot for survival and mobility. The names below are an index, not a universal tier list.</p>
+        <p class="mt-3 leading-relaxed text-ash-300">Game8's skill-tree guide recommends starting with Entanglement Overdrive, then using Hair and Track Shot for survival and mobility. The names below are an index, not a universal tier list.</p>
         <ul class="mt-5 grid gap-2 sm:grid-cols-2">{emmaSkills.map((skill) => <li class="rounded-lg border border-ash-800 px-3 py-2 text-sm text-ash-200">{skill}</li>)}</ul>
       </div>
       <div class="rounded-xl border border-ash-800 bg-ash-900/40 p-6">
@@ -54,12 +58,18 @@ const schema = [
       </div>
     </section>
 
-    <section class="mt-12">
-      <h2 class="font-display text-2xl font-bold text-ash-50">Detailed Beast of Reincarnation skill-tree pages</h2>
-      <div class="mt-5 grid gap-4 md:grid-cols-2">
-        <a href="/skills/emma-skill-tree/" class="rounded-xl border border-ash-800 bg-ash-900/40 p-5 transition hover:border-ember-500"><h3 class="font-display text-lg font-bold text-ash-50">Emma skill tree</h3><p class="mt-2 text-sm leading-relaxed text-ash-400">Blade Arts, Finishers, level 100, resets and NG+ boundaries.</p></a>
-        <a href="/skills/koo-skill-tree/" class="rounded-xl border border-ash-800 bg-ash-900/40 p-5 transition hover:border-ember-500"><h3 class="font-display text-lg font-bold text-ash-50">Koo skill tree</h3><p class="mt-2 text-sm leading-relaxed text-ash-400">Floral Profusion, Bloom Arts, full-tree goals and NG+ notes.</p></a>
-      </div>
+    <section class="mt-12 space-y-6">
+      {SKILL_DETAILS.map((skill) => (
+        <DetailEntry
+          id={skill.slug}
+          title={`${skill.character} skill tree: completion goals and NG+`}
+          intro={skill.intro}
+          facts={skill.facts}
+          steps={skill.checklist}
+          stepsTitle={`How to plan ${skill.character}'s tree`}
+          note={skill.evidence}
+        />
+      ))}
     </section>
 
     <section class="mt-12">
@@ -73,7 +83,7 @@ const schema = [
 
     <section class="mt-12 grid gap-6 md:grid-cols-2">
       <div class="rounded-xl border border-ash-800 bg-ash-900/40 p-6"><h2 class="font-display text-xl font-bold text-ash-50">Related Beast of Reincarnation build guides</h2><ul class="mt-4 space-y-2 text-ash-300"><li><a class="text-ember-400 hover:text-ember-300" href="/guides/progression-and-builds/">Progression, gear and Spirit Stones</a></li><li><a class="text-ember-400 hover:text-ember-300" href="/guides/first-hours-build-and-combat/">First-hours build and combat priorities</a></li><li><a class="text-ember-400 hover:text-ember-300" href="/guides/koo-bloom-arts-qte-guide/">Koo Bloom Arts, FP and QTEs</a></li></ul></div>
-      <div class="rounded-xl border border-ash-800 bg-ash-900/40 p-6"><h2 class="font-display text-xl font-bold text-ash-50">Skills evidence boundary</h2><p class="mt-3 text-sm leading-relaxed text-ash-400">Skill names and progression recommendations are referenced from <a class="text-ember-400 hover:text-ember-300" href="https://game8.co/games/Beast-of-Reincarnation/archives/614096" rel="noopener" target="_blank">Game8's skill-tree guide</a>, checked August 17, 2026. This page does not claim that the site personally tested every node or that one build is best on every difficulty.</p></div>
+      <div class="rounded-xl border border-ash-800 bg-ash-900/40 p-6"><h2 class="font-display text-xl font-bold text-ash-50">Skills evidence boundary</h2><p class="mt-3 text-sm leading-relaxed text-ash-400">Skill names and progression recommendations are referenced from <a class="text-ember-400 hover:text-ember-300" href="https://game8.co/games/Beast-of-Reincarnation/archives/614096" rel="noopener" target="_blank">Game8's skill-tree guide</a>, checked August 17, 2026. Achievement names, the NG+ boundary and the Mikoto reset come from <a class="text-ember-400 hover:text-ember-300" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3777472649" rel="noopener" target="_blank">Steam Community guide 3777472649</a>. No source publishes a single best build for every difficulty.</p></div>
     </section>
   </main>
 </BaseLayout>

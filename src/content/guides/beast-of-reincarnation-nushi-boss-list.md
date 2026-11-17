@@ -20,16 +20,16 @@ updateDate: "2026-10-15"
 
 | Boss | Animal / type | Chapter | Weakness |
 |---|---|---|---|
-| [Rangifer](/bosses/rangifer/) | Reindeer | 1 | Fire |
-| [Lacerta](/bosses/lacerta/) | Newt / lizard | 2 | Shock |
-| [Nue Malefact](/bosses/nue-malefact/) | Yokai chimera (+ Male Purifier) | 3 | Poison |
-| [Taurus](/bosses/taurus/) | Bull | 4 | Acid |
-| [Corvus](/bosses/corvus/) | Crow (two) | 7 | Ranged, Restrain |
-| [Ursa](/bosses/ursa/) | Bear | 10 | Corrosives, Acid |
-| [Shidou and Nue](/bosses/shidou-and-nue/) | Samurai + lightning Nushi | 11 | Poison |
-| [Erymanth](/bosses/erymanth/) | Boar | 12 | Explosive |
-| [Kunai and Kirin](/bosses/kunai-and-kirin/) | Swordswoman + Kirin | 8 / 12 | Poison |
-| [Final boss](/bosses/final-boss/) | – | 13 | None |
+| [Rangifer](/bosses/#rangifer) | Reindeer | 1 | Fire |
+| [Lacerta](/bosses/#lacerta) | Newt / lizard | 2 | Shock |
+| [Nue Malefact](/bosses/#nue-malefact) | Yokai chimera (+ Male Purifier) | 3 | Poison |
+| [Taurus](/bosses/#taurus) | Bull | 4 | Acid |
+| [Corvus](/bosses/#corvus) | Crow (two) | 7 | Ranged, Restrain |
+| [Ursa](/bosses/#ursa) | Bear | 10 | Corrosives, Acid |
+| [Shidou and Nue](/bosses/#shidou-and-nue) | Samurai + lightning Nushi | 11 | Poison |
+| [Erymanth](/bosses/#erymanth) | Boar | 12 | Explosive |
+| [Kunai and Kirin](/bosses/#kunai-and-kirin) | Swordswoman + Kirin | 8 / 12 | Poison |
+| [Final boss](/bosses/#final-boss) | – | 13 | None |
 
 ## What beating a Nushi gives you
 

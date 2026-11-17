@@ -20,16 +20,16 @@ Matching the element is the single biggest damage boost in Beast of Reincarnatio
 
 | Boss | Chapter | Level | Weakness | Best tools |
 |---|---|---|---|---|
-| [Rangifer](/bosses/rangifer/) | 1 | 9 / 12 | Fire (rematch resists Burn) | Fire Arrows, Koo's Higanbana: Seeds, Sunrise Sword later |
-| [Lacerta](/bosses/lacerta/) | 2 | 13 / 16 | Shock | Thunderwave Sword, Bolt Shards, Sakura: Javelin |
-| [Nue Malefact + Male Purifier](/bosses/nue-malefact/) | 3 | 16–20 | Poison | Hunter's Sword, Poison Arrows |
-| [Taurus](/bosses/taurus/) | 4 | ~26 / ~29 | Acid | Acid Arrows, Bottle of Acid, Hazebringer |
-| [Corvus](/bosses/corvus/) | 7 | – | Ranged attacks, Restrain | Crossbow/arrows, Koo's Rangifer restraint |
-| [Kunai and Kirin](/bosses/kunai-and-kirin/) | 8 / 12 | 45 / 49 | Poison | Black Blossom, Poison Bolts |
-| [Ursa](/bosses/ursa/) | 10 | 46 | Corrosives, Acid, Restrain | Acid Arrows, Hazebringer |
-| [Shidou and Nue](/bosses/shidou-and-nue/) | 11 | – | Poison | Hunter's Sword, poison Koo skills |
-| [Erymanth](/bosses/erymanth/) | 12 | 47 | Explosive | Explosive Bolts or Arrows |
-| [Final boss](/bosses/final-boss/) | 13 | – | None | Healing stock, parry rhythm |
+| [Rangifer](/bosses/#rangifer) | 1 | 9 / 12 | Fire (rematch resists Burn) | Fire Arrows, Koo's Higanbana: Seeds, Sunrise Sword later |
+| [Lacerta](/bosses/#lacerta) | 2 | 13 / 16 | Shock | Thunderwave Sword, Bolt Shards, Sakura: Javelin |
+| [Nue Malefact + Male Purifier](/bosses/#nue-malefact) | 3 | 16–20 | Poison | Hunter's Sword, Poison Arrows |
+| [Taurus](/bosses/#taurus) | 4 | ~26 / ~29 | Acid | Acid Arrows, Bottle of Acid, Hazebringer |
+| [Corvus](/bosses/#corvus) | 7 | – | Ranged attacks, Restrain | Crossbow/arrows, Koo's Rangifer restraint |
+| [Kunai and Kirin](/bosses/#kunai-and-kirin) | 8 / 12 | 45 / 49 | Poison | Black Blossom, Poison Bolts |
+| [Ursa](/bosses/#ursa) | 10 | 46 | Corrosives, Acid, Restrain | Acid Arrows, Hazebringer |
+| [Shidou and Nue](/bosses/#shidou-and-nue) | 11 | – | Poison | Hunter's Sword, poison Koo skills |
+| [Erymanth](/bosses/#erymanth) | 12 | 47 | Explosive | Explosive Bolts or Arrows |
+| [Final boss](/bosses/#final-boss) | 13 | – | None | Healing stock, parry rhythm |
 
 ## Where to get the element tools
 

@@ -74,7 +74,7 @@ That matters practically: if you are on a GTX 1070 or RX 580, plan on **FSR1 Per
 
 ## If you are buying on console instead
 
-The PC specs above apply only to the Steam version. The game also ships **4 August 2026** on **PlayStation 5** and **Xbox Series X|S**, and is included with **Xbox Game Pass Ultimate** and **PC Game Pass** on day one. The full platform and subscription breakdown is on our [download page](/download/) and [release date page](/release-date/).
+The PC specs above apply only to the Steam version. The game also ships **4 August 2026** on **PlayStation 5** and **Xbox Series X|S**, and is included with **Xbox Game Pass Ultimate** and **PC Game Pass** on day one. The full platform and subscription breakdown is on our [where-to-buy page](/download/) and [release date page](/release-date/).
 
 ## What the published specifications still do not answer
 

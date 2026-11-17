@@ -49,5 +49,5 @@ Heavy Golems in Ogouchi (levels 6–9) are slow and readable – ideal for timin
 ## Related pages
 
 - [Parry, guard and dodge controls](/guides/parry-guard-dodge-controls-guide/)
-- [Emma skill tree](/skills/emma-skill-tree/)
+- [Emma skill tree](/skills/#emma-skill-tree)
 - [Boss headbutt tells](/guides/beast-of-reincarnation-nushi-headbutt/)

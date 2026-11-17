@@ -1,0 +1,121 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import JsonLd from '../components/JsonLd.astro';
+import { SITE, GAME_FACTS } from '../data/site';
+
+const path = '/terms/';
+const title = 'Terms of Use';
+const description = `Terms of Use for ${SITE.name}: an unofficial fan guide, content provided as-is, game details that can change with patches, trademarks, ads and third-party links.`;
+const effective = 'November 16, 2026';
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: `${title} - ${SITE.name}`,
+    url: new URL(path, SITE.url).href,
+    description,
+    dateModified: '2026-11-16',
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.url },
+      { '@type': 'ListItem', position: 2, name: 'Terms of Use', item: new URL(path, SITE.url).href },
+    ],
+  },
+];
+---
+
+<BaseLayout title={title} description={description} path={path}>
+  <JsonLd slot="head" schema={schema} />
+
+  <section class="mx-auto max-w-3xl px-4 py-16">
+    <nav aria-label="Breadcrumb" class="mb-6 text-xs text-ash-400">
+      <ol class="flex flex-wrap items-center gap-1.5">
+        <li><a href="/" class="hover:text-ember-400">Home</a></li>
+        <li aria-hidden="true">/</li>
+        <li class="text-ash-300">Terms of Use</li>
+      </ol>
+    </nav>
+
+    <h1 class="font-display text-3xl font-bold leading-tight text-ash-50 md:text-4xl">
+      Terms of Use
+    </h1>
+    <p class="mt-4 text-lg leading-relaxed text-ash-300">
+      These terms apply to your use of {SITE.name}. By using the site you agree to them. Effective
+      date: {effective}.
+    </p>
+
+    <div class="prose mt-10 max-w-none">
+      <h2>An unofficial fan guide</h2>
+      <p>
+        {SITE.name} is an unofficial, fan-made guide to {GAME_FACTS.name}. It is not affiliated with,
+        sponsored by or endorsed by {GAME_FACTS.developer}, {GAME_FACTS.publisher}, Valve, Sony,
+        Microsoft or any other rights holder. Nothing on the site is an official statement from the
+        developer or publisher. Account, purchase and technical support questions about the game itself
+        belong with the official support channels.
+      </p>
+
+      <h2>Content is provided as-is</h2>
+      <p>
+        We work to keep guides accurate and to name the source behind each fact, but all content is
+        provided "as is" and "as available", without warranties of any kind, express or implied,
+        including accuracy, completeness or fitness for a particular purpose. You use the information
+        at your own discretion. To the fullest extent permitted by law, {SITE.name} is not liable for
+        any loss or damage arising from your use of the site, including lost save progress, missed
+        achievements or purchasing decisions.
+      </p>
+
+      <h2>Game information can change</h2>
+      <p>
+        {GAME_FACTS.name} receives patches that can change balance, quests, prices, platform features
+        and fixes. A guide that was correct when it was written may stop matching your version of the
+        game. Pages show when they were published or updated and which source they rely on; check those
+        dates, and the official patch notes, before relying on a detail. Prices and store availability
+        come from the official stores and can change at any time.
+      </p>
+
+      <h2>Trademarks and copyright</h2>
+      <p>
+        {GAME_FACTS.name}, its characters, names, artwork and logos are trademarks or copyrighted
+        material of their respective owners, including {GAME_FACTS.developer} and {GAME_FACTS.publisher}.
+        Official images appear on this site for identification, commentary and guide purposes. If you
+        are a rights holder and want an image or passage removed, contact us and we will respond
+        promptly. The site's own original text may not be republished in bulk without permission;
+        quoting short passages with a link back is fine.
+      </p>
+
+      <h2>Advertising and third-party links</h2>
+      <p>
+        The site may display advertising, including ads served by Google AdSense, to cover running
+        costs. Advertisers do not decide what our guides say. The site also links to third-party
+        websites such as Steam, console stores, official announcements and community guides. We do not
+        control those sites and are not responsible for their content, availability or privacy
+        practices. How advertising cookies work is explained in our
+        {' '}<a href="/privacy-policy/">Privacy Policy</a>.
+      </p>
+
+      <h2>Acceptable use</h2>
+      <p>
+        Please do not attempt to disrupt the site, scrape it in a way that degrades service for other
+        visitors, or use it for unlawful purposes. This site never hosts game files and does not link to
+        unofficial copies of the game.
+      </p>
+
+      <h2>Changes to these terms</h2>
+      <p>
+        We may update these terms. The effective date at the top of the page shows when they last
+        changed, and continuing to use the site after a change means you accept the updated terms.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        Questions about these terms can be sent to <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
+        {' '}or through the <a href="/contact/">contact page</a>. Editorial standards are described on
+        the <a href="/disclaimer/">Disclaimer</a> page.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

@@ -34,7 +34,7 @@ A cluster of Steam reviews names the same wall: a **cutscene transition in Chapt
 
 ## About Chapter 10
 
-Chapter 10 (Malefact) takes place around **Starfall Tower** in the Wasteland and ends with **Ursa** at level 46. If you get past the freeze, bring Acid Arrows – see the [Ursa guide](/bosses/ursa/).
+Chapter 10 (Malefact) takes place around **Starfall Tower** in the Wasteland and ends with **Ursa** at level 46. If you get past the freeze, bring Acid Arrows – see the [Ursa guide](/bosses/#ursa).
 
 ## Related pages
 

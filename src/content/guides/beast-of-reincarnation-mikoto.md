@@ -30,10 +30,10 @@ Mikoto is the reported reset point for Amber spent on skills. Patch 1.0.11 also 
 
 ## Story role (spoiler)
 
-Player guides to Chapter 13 identify the final boss as a transformed Mikoto, fought in the Center of the Blight. The fight has no elemental weakness and opens with a regenerating Nanite Shield – see the [final boss guide](/bosses/final-boss/).
+Player guides to Chapter 13 identify the final boss as a transformed Mikoto, fought in the Center of the Blight. The fight has no elemental weakness and opens with a regenerating Nanite Shield – see the [final boss guide](/bosses/#final-boss).
 
 ## Related pages
 
 - [All characters](/characters/)
-- [Emma](/characters/emma/) and [Koo](/characters/koo/)
+- [Emma](/characters/#emma) and [Koo](/characters/#koo)
 - [Voice cast](/guides/voice-cast-and-previews/)

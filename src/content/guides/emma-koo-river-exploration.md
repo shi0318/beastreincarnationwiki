@@ -35,7 +35,7 @@ These counts cover the listed categories only. A zero in the table does not mean
 4. **Return after traversal upgrades.** Lift and Extend open vertical and gap-crossing routes; revisit a river edge after the required movement option appears instead of forcing a jump.
 5. **Leave one marker for the way back.** A campsite, shrine or distinctive ruin is more reliable than a vague note such as “left side of the river.”
 
-The full early-region totals and chapter context are collected in [Beast of Reincarnation Chapter 1](/walkthrough/chapter-1/) and [Beast of Reincarnation Chapter 2](/walkthrough/chapter-2/). For upgrade-gated movement, see the [Lift and Extend traversal guide](/guides/lift-extend-traversal-guide/).
+The full early-region totals and chapter context are collected in [Beast of Reincarnation Chapter 1](/walkthrough/#chapter-1) and [Beast of Reincarnation Chapter 2](/walkthrough/#chapter-2). For upgrade-gated movement, see the [Lift and Extend traversal guide](/guides/lift-extend-traversal-guide/).
 
 <figure>
   <img src="/images/beast-of-reincarnation-emma-koo-river-exploration.webp" alt="Emma and Koo moving through a river route in Beast of Reincarnation" width="1600" height="900" loading="lazy" decoding="async" />

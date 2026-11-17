@@ -36,5 +36,5 @@ Kagura contrasts with Emma: Emma has lost her memories and emotions to the bligh
 ## Related pages
 
 - [All characters](/characters/)
-- [Emma](/characters/emma/) and [Koo](/characters/koo/)
+- [Emma](/characters/#emma) and [Koo](/characters/#koo)
 - [Voice cast](/guides/voice-cast-and-previews/)

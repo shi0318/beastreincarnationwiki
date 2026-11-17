@@ -67,13 +67,14 @@ export const WEAPON_DETAILS: WeaponDetail[] = [
     image: '/images/beast-of-reincarnation-machine-swarm-combat.webp',
     imageAlt: 'Beast of Reincarnation boss combat scene; no Thunderwave Sword-specific screenshot available',
     intro:
-      'Thunderwave Sword is useful as an example of how to match a Beast of Reincarnation weapon to a boss weakness. A Steam Community achievement guide identifies Lacerta as weak to electricity and names Thunderwave Sword and Bolt Shards as electric options. The guide does not publish a complete stat table or a guaranteed drop location for the sword.',
+      'Thunderwave Sword is useful as an example of how to match a Beast of Reincarnation weapon to a boss weakness. A Steam Community achievement guide identifies Lacerta as weak to electricity and names Thunderwave Sword and Bolt Shards as electric options. The Steam guide does not publish a complete stat table for the sword; where to get it is listed in the blade table above.',
     facts: [
       { label: 'Named encounter', value: 'Lacerta' },
       { label: 'Weakness reported by Steam guide', value: 'Electricity' },
       { label: 'Named melee option', value: 'Thunderwave Sword' },
       { label: 'Named ranged option', value: 'Bolt Shards' },
-      { label: 'Not established here', value: 'Exact damage, upgrade cost and universal acquisition location' },
+      { label: 'Where to get it', value: 'Ancient Civilization Zone – Elite Golem guarding the Lightning Stone (see the blade table)' },
+      { label: 'Not established here', value: 'Exact damage and upgrade cost' },
     ],
     steps: [
       'Confirm the target is Lacerta before copying the electric setup; the source note is encounter-specific.',
@@ -624,7 +625,7 @@ export const COLLECTIBLE_DETAILS: CollectibleDetail[] = [
     steps: [
       'Turn on Valuable only, one region at a time.',
       'Record the landmark when you pick something up so a map pin is not counted twice.',
-      'Use the dedicated valuables guide for the filter workflow; this page is the named-category entry.',
+      'Use the full valuables guide for the region-by-region filter workflow.',
     ],
     evidence: 'Steam Community interactive map filter names and FAQ, checked with the site valuables guide.',
     guideHref: '/guides/valuables-collectibles-guide/',

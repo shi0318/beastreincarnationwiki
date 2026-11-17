@@ -39,6 +39,6 @@ updateDate: "2026-10-15"
 
 ## Related pages
 
-- [Koo character page](/characters/koo/)
-- [Koo skill tree](/skills/koo-skill-tree/)
+- [Koo character page](/characters/#koo)
+- [Koo skill tree](/skills/#koo-skill-tree)
 - [Bloom Arts QTE guide](/guides/koo-bloom-arts-qte-guide/)

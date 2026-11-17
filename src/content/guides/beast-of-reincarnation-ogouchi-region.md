@@ -11,7 +11,7 @@ order: 2
 featured: false
 preview: false
 source: "handson"
-updateDate: "2026-10-15"
+updateDate: "2026-11-16"
 ---
 
 **Ogouchi Buffer Zone** (Kanto Region) is where Beast of Reincarnation begins. Chapter 1, Seedling, teaches traversal, campsites, the parry and Koo – and ends with two Rangifer fights.
@@ -46,8 +46,16 @@ Heavy Golems at Cliffside Village (8), the far north-west rock (6), North Ruined
 - Light every campsite you pass – 18 is the most in any region and they are your fast-travel network.
 - The Amber farm map spots in this zone are good for early levels – see the [Amber farming guide](/guides/beast-of-reincarnation-amber-farming/).
 
+## Before you leave Ogouchi
+
+1. Collect both blades – the Cirrus Sword from the Retired Gatekeeper and the Mechblade (Light) at the top of the Ruined Tower.
+2. Beat Rangifer twice. After the win Koo can use Rangifer's Nushi skill to restrain enemies, which becomes the key tool against Corvus later.
+3. Light all 18 campsites so the region is easy to revisit.
+
+Nothing in Ogouchi is missable – you can return in free roam later.
+
 ## Related pages
 
-- [Chapter 1 walkthrough](/walkthrough/chapter-1/)
-- [Rangifer boss guide](/bosses/rangifer/)
+- [Chapter 1 walkthrough](/walkthrough/#chapter-1)
+- [Rangifer boss guide](/bosses/#rangifer)
 - [Keeper Golem locations](/guides/keeper-golems-locations/)

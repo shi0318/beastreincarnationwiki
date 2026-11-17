@@ -91,7 +91,7 @@ export const NAV = [
   { label: 'Home', href: '/' },
   { label: 'Game Info', href: '/game-info/' },
   { label: 'Release Date', href: '/release-date/' },
-  { label: 'Download', href: '/download/' },
+  { label: 'Where to Buy', href: '/download/' },
   { label: 'Guides', href: '/guides/' },
   { label: 'Bosses', href: '/bosses/' },
   { label: 'Collectibles', href: '/collectibles/' },
@@ -294,17 +294,20 @@ export const SOURCES: Record<
   { label: string; icon: string; tone: 'green' | 'violet' | 'sky' | 'amber' | 'ash'; blurb: string }
 > = {
   official: {
-    label: 'Official',
+    label: 'Official source',
     icon: '✅',
     tone: 'green',
     blurb: 'Confirmed by the developer, publisher, or official Steam listing.',
   },
   handson: {
-    label: 'Hands-on',
-    icon: '🎮',
+    // This site has not published original playtesting. Pages carrying this key are
+    // written from patch notes, cited coverage and player reports of the released game,
+    // so the label must not read as a first-hand test claim.
+    label: 'Released-game notes',
+    icon: '📝',
     tone: 'green',
     blurb:
-      'Reserved for original playtest notes recorded by this site, including the build, platform and reproducible steps.',
+      'Practical notes on the released game compiled from patch notes, cited coverage and player reports; not original playtesting by this site.',
   },
   'third-party-tested': {
     // Keep the provenance key for editorial tracking, but do not imply that this
@@ -359,5 +362,7 @@ export const SOURCES: Record<
 export const FOOTER_LINKS = [
   { label: 'About Us', href: '/about/' },
   { label: 'Contact', href: '/contact/' },
+  { label: 'Privacy Policy', href: '/privacy-policy/' },
+  { label: 'Terms of Use', href: '/terms/' },
   { label: 'Disclaimer', href: '/disclaimer/' },
 ] as const;

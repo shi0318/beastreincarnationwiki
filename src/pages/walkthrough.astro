@@ -3,12 +3,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import JsonLd from '../components/JsonLd.astro';
 import SourceBadge from '../components/SourceBadge.astro';
 import WikiSectionNav from '../components/WikiSectionNav.astro';
+import DetailEntry from '../components/DetailEntry.astro';
 import { GAME_FACTS, SITE } from '../data/site';
+import { CHAPTER_DETAILS } from '../data/section-pages';
 
 const path = '/walkthrough/';
 const title = 'Beast of Reincarnation Walkthrough: All 13 Chapters & Epilogue';
 const description =
-  'Beast of Reincarnation walkthrough and chapter list: all 13 main chapters, the Bearing Fruit epilogue, story order, chapter length and source boundaries.';
+  'Beast of Reincarnation walkthrough: all 13 chapters and the epilogue in order, with regions, campsite, shrine, document and Keeper Golem counts, and a checklist per chapter.';
 const image = '/images/beast-of-reincarnation-header-banner.webp';
 const chapters = [
   ['Chapter 1', 'Seedling'], ['Chapter 2', 'Creeping Tendrils'], ['Chapter 3', 'The Vessel'],
@@ -18,6 +20,10 @@ const chapters = [
   ['Chapter 13', 'To Bloom, Then Fall'],
 ] as const;
 const canonical = new URL(path, SITE.url).href;
+// The per-chapter pages (/walkthrough/chapter-N/) were merged into this hub on 2026-11-16;
+// their URLs 301 here and each chapter keeps an #chapter-N anchor.
+const count = (facts: readonly { label: string; value: string }[], label: string) =>
+  facts.find((f) => f.label === label)?.value.replace(/ reported$/, '') ?? '—';
 const schema = [
   {
     '@context': 'https://schema.org', '@type': 'CollectionPage', name: title, description, url: canonical,
@@ -40,9 +46,9 @@ const schema = [
   <section class="border-b border-ash-800 bg-ash-900/30">
     <div class="mx-auto max-w-6xl px-4 py-12">
       <nav aria-label="Breadcrumb" class="mb-5 text-xs text-ash-400"><a href="/" class="hover:text-ember-400">Home</a><span aria-hidden="true"> / </span><a href="/guides/" class="hover:text-ember-400">Guides</a><span aria-hidden="true"> / </span><span class="text-ash-300">Walkthrough</span></nav>
-      <SourceBadge source="third-party-tested" showBlurb />
+      <SourceBadge source="third-party-tested" />
       <h1 class="mt-4 font-display text-3xl font-bold leading-tight text-ash-50 md:text-5xl">Beast of Reincarnation Walkthrough: All 13 Chapters &amp; Epilogue</h1>
-      <p class="mt-4 max-w-3xl text-lg leading-relaxed text-ash-300">This Beast of Reincarnation walkthrough answers the chapter-list search first: the released game has 13 main chapters followed by the Bearing Fruit epilogue. Use the order below as the spoiler-aware roadmap while deeper chapter pages are verified.</p>
+      <p class="mt-4 max-w-3xl text-lg leading-relaxed text-ash-300">The released game has 13 main chapters followed by the Bearing Fruit epilogue. Below: the chapter order, the region each chapter takes place in, the campsite, shrine, document and Keeper Golem counts reported by a Steam player collection guide, and a cleanup checklist for every chapter.</p>
     </div>
   </section>
 
@@ -51,22 +57,46 @@ const schema = [
     <section class="mt-10">
       <h2 class="font-display text-2xl font-bold text-ash-50">Beast of Reincarnation chapter list</h2>
       <div class="mt-6 overflow-x-auto rounded-xl border border-ash-800">
-        <table class="w-full min-w-[480px] text-left text-sm">
-          <thead class="bg-ash-900 text-ash-200"><tr><th class="px-4 py-3">Order</th><th class="px-4 py-3">Chapter title</th><th class="px-4 py-3">Guide status</th></tr></thead>
+        <table class="w-full min-w-[720px] text-left text-sm">
+          <thead class="bg-ash-900 text-ash-200"><tr><th class="px-4 py-3">Order</th><th class="px-4 py-3">Chapter title</th><th class="px-4 py-3">Region</th><th class="px-4 py-3">Campsites</th><th class="px-4 py-3">Shrines</th><th class="px-4 py-3">Documents</th><th class="px-4 py-3">Keeper Golems</th></tr></thead>
           <tbody>
-            {chapters.map(([chapter, name], index) => (
-              <tr class="border-t border-ash-800"><th scope="row" class="px-4 py-3 font-medium text-ash-100"><a class="text-ember-400 hover:text-ember-300" href={`/walkthrough/chapter-${index + 1}/`}>{chapter}</a></th><td class="px-4 py-3 text-ash-300">{name}</td><td class="px-4 py-3 text-ash-500">Steam-sourced chapter checklist</td></tr>
+            {CHAPTER_DETAILS.map((c) => (
+              <tr class="border-t border-ash-800"><th scope="row" class="px-4 py-3 font-medium text-ash-100"><a class="text-ember-400 hover:text-ember-300" href={`#${c.slug}`}>Chapter {c.number}</a></th><td class="px-4 py-3 text-ash-300">{c.chapterName}</td><td class="px-4 py-3 text-ash-300">{c.region}</td><td class="px-4 py-3 tabular-nums text-ash-300">{count(c.facts, 'Campsites')}</td><td class="px-4 py-3 tabular-nums text-ash-300">{count(c.facts, 'Wayside shrines')}</td><td class="px-4 py-3 tabular-nums text-ash-300">{count(c.facts, 'Documents')}</td><td class="px-4 py-3 tabular-nums text-ash-300">{count(c.facts, 'Keeper Golems')}</td></tr>
             ))}
-            <tr class="border-t border-ash-800"><th scope="row" class="px-4 py-3 font-medium text-ash-100">Epilogue</th><td class="px-4 py-3 text-ash-300">Bearing Fruit</td><td class="px-4 py-3 text-ash-500">Post-game reference</td></tr>
+            <tr class="border-t border-ash-800"><th scope="row" class="px-4 py-3 font-medium text-ash-100">Epilogue</th><td class="px-4 py-3 text-ash-300">Bearing Fruit</td><td class="px-4 py-3 text-ash-500" colspan="5">Post-game</td></tr>
           </tbody>
         </table>
+      </div>
+    </section>
+
+    <section class="mt-12">
+      <h2 class="font-display text-2xl font-bold text-ash-50">Chapter-by-chapter checklists</h2>
+      <p class="mt-2 max-w-3xl leading-relaxed text-ash-400">
+        Counts come from Steam Community guide
+        {' '}<a class="text-ember-400 hover:text-ember-300" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3781175670" rel="noopener" target="_blank">3781175670</a>,
+        a player-maintained Simplified Chinese collection guide updated August 11, 2026. Region names are
+        English renderings of that guide's labels, matched to the
+        {' '}<a class="text-ember-400 hover:text-ember-300" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3778455109" rel="noopener" target="_blank">Steam interactive-map guide</a>
+        {' '}where it names the same region. They are player counts, not an official collectible total.
+      </p>
+      <div class="mt-6 space-y-6">
+        {CHAPTER_DETAILS.map((c) => (
+          <DetailEntry
+            id={c.slug}
+            title={`Chapter ${c.number}: ${c.chapterName} (${c.region})`}
+            facts={c.facts}
+            steps={c.checklist}
+            stepsTitle={`Chapter ${c.number} checklist`}
+            note={c.number === 13 ? c.evidence : undefined}
+          />
+        ))}
       </div>
     </section>
 
     <section class="mt-12 grid gap-6 md:grid-cols-2">
       <div class="rounded-xl border border-ash-800 bg-ash-900/40 p-6">
         <h2 class="font-display text-xl font-bold text-ash-50">How long is the Beast of Reincarnation story?</h2>
-        <p class="mt-3 leading-relaxed text-ash-300">Current hands-on chapter coverage estimates roughly 20–30 hours for the main story and around 30–40 hours for a more completionist run. Treat those as editorial estimates that can change with difficulty, exploration and update patches, not a developer-published timer.</p>
+        <p class="mt-3 leading-relaxed text-ash-300">Game8's chapter coverage estimates roughly 20–30 hours for the main story and around 30–40 hours for a more completionist run. Treat those as editorial estimates that can change with difficulty, exploration and update patches, not a developer-published timer.</p>
       </div>
       <div class="rounded-xl border border-ash-800 bg-ash-900/40 p-6">
         <h2 class="font-display text-xl font-bold text-ash-50">Useful Beast of Reincarnation route guides</h2>
@@ -80,7 +110,7 @@ const schema = [
 
     <section class="mt-12 border-t border-ash-800 pt-6 text-sm leading-relaxed text-ash-400">
       <h2 class="font-display text-xl font-bold text-ash-200">Sources and spoiler policy</h2>
-      <p class="mt-2">Checked August 17, 2026. Chapter names, the 13-chapter count, epilogue name and time estimates are referenced from <a class="text-ember-400 hover:text-ember-300" href="https://game8.co/games/Beast-of-Reincarnation/archives/613632" rel="noopener" target="_blank">Game8's chapter list</a>. The official <a class="text-ember-400 hover:text-ember-300" href={GAME_FACTS.source} rel="noopener" target="_blank">Steam page</a> confirms the game's setting and story premise, but does not publish a complete chapter guide. This page does not claim that every chapter route has been personally cleared by this site.</p>
+      <p class="mt-2">Checked August 17, 2026. Chapter names, the 13-chapter count, epilogue name and time estimates are referenced from <a class="text-ember-400 hover:text-ember-300" href="https://game8.co/games/Beast-of-Reincarnation/archives/613632" rel="noopener" target="_blank">Game8's chapter list</a>. The official <a class="text-ember-400 hover:text-ember-300" href={GAME_FACTS.source} rel="noopener" target="_blank">Steam page</a> confirms the game's setting and story premise, but does not publish a complete chapter guide.</p>
     </section>
   </main>
 </BaseLayout>

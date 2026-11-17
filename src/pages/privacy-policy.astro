@@ -1,0 +1,163 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import JsonLd from '../components/JsonLd.astro';
+import { SITE, GAME_FACTS } from '../data/site';
+
+const path = '/privacy-policy/';
+const title = 'Privacy Policy';
+const description = `How ${SITE.name} handles data: server logs, Google Analytics, cookies, Google AdSense advertising, your opt-out choices, and how to contact us.`;
+const lastUpdated = 'November 16, 2026';
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: `${title} - ${SITE.name}`,
+    url: new URL(path, SITE.url).href,
+    description,
+    dateModified: '2026-11-16',
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.url },
+      { '@type': 'ListItem', position: 2, name: 'Privacy Policy', item: new URL(path, SITE.url).href },
+    ],
+  },
+];
+---
+
+<BaseLayout title={title} description={description} path={path}>
+  <JsonLd slot="head" schema={schema} />
+
+  <section class="mx-auto max-w-3xl px-4 py-16">
+    <nav aria-label="Breadcrumb" class="mb-6 text-xs text-ash-400">
+      <ol class="flex flex-wrap items-center gap-1.5">
+        <li><a href="/" class="hover:text-ember-400">Home</a></li>
+        <li aria-hidden="true">/</li>
+        <li class="text-ash-300">Privacy Policy</li>
+      </ol>
+    </nav>
+
+    <h1 class="font-display text-3xl font-bold leading-tight text-ash-50 md:text-4xl">
+      Privacy Policy
+    </h1>
+    <p class="mt-4 text-lg leading-relaxed text-ash-300">
+      This policy explains what information {SITE.name} ({SITE.url.replace('https://', '')}) collects
+      when you visit, how it is used, and the choices you have. Last updated: {lastUpdated}.
+    </p>
+
+    <div class="prose mt-10 max-w-none">
+      <h2>Who we are</h2>
+      <p>
+        {SITE.name} is an unofficial, fan-made guide website about the video game {GAME_FACTS.name}.
+        It is not affiliated with {GAME_FACTS.developer} or {GAME_FACTS.publisher}. You can read the
+        site without creating an account, and we do not ask you to submit personal information to use
+        any page.
+      </p>
+
+      <h2>Information we collect</h2>
+      <h3>Server and hosting logs</h3>
+      <p>
+        The site is a static website served through Cloudflare. Like most web hosts, Cloudflare
+        processes technical request data when your browser loads a page: your IP address, the page
+        requested, the date and time, your browser's user agent, and the referring page. This data is
+        used to deliver the site, keep it secure and protect it against abuse. We do not combine it
+        with other information to identify you.
+      </p>
+      <h3>Analytics</h3>
+      <p>
+        We use Google Analytics 4 to understand how visitors use the site, for example which guides
+        are read most and which pages people arrive from. Google Analytics uses cookies and similar
+        technologies to collect information such as pages viewed, approximate location derived from
+        your IP address, device and browser type, and time spent on the site. We use this information
+        only in aggregate to decide which guides to write and update. Google's handling of this data is
+        described in
+        {' '}<a href="https://policies.google.com/technologies/partner-sites" rel="noopener" target="_blank">How Google uses information from sites or apps that use its services</a>.
+        You can opt out of Google Analytics with the
+        {' '}<a href="https://tools.google.com/dlpage/gaoptout" rel="noopener" target="_blank">Google Analytics opt-out browser add-on</a>.
+      </p>
+      <h3>Information you send us</h3>
+      <p>
+        If you email us, we receive your email address and whatever you include in the message. We use
+        it only to reply and to act on corrections or suggestions, and we do not sell it or add it to a
+        mailing list.
+      </p>
+
+      <h2>Cookies</h2>
+      <p>
+        Cookies are small text files stored by your browser. This site does not set cookies for logins
+        or accounts, because there are none. Cookies on this site are set by the third-party services
+        described on this page: Google Analytics for measurement and Google AdSense for advertising.
+        You can block or delete cookies in your browser settings; the guides will still work if you do.
+      </p>
+
+      <h2>Advertising and Google AdSense</h2>
+      <p>
+        We use, or may use, Google AdSense to show advertisements that help pay for running the site.
+      </p>
+      <ul>
+        <li>
+          Third-party vendors, including Google, use cookies to serve ads based on a user's prior visits
+          to this website or other websites.
+        </li>
+        <li>
+          Google's use of advertising cookies enables it and its partners to serve ads to users based on
+          their visit to this site and/or other sites on the Internet.
+        </li>
+        <li>
+          Users may opt out of personalized advertising by visiting
+          {' '}<a href="https://adssettings.google.com/" rel="noopener" target="_blank">Google Ads Settings</a>.
+          You can also opt out of some third-party vendors' use of cookies for personalized advertising
+          by visiting <a href="https://www.aboutads.info/choices/" rel="noopener" target="_blank">www.aboutads.info/choices</a>.
+        </li>
+      </ul>
+      <p>
+        If you opt out, you will still see ads, but they will not be personalized based on your
+        browsing. More detail is available in Google's
+        {' '}<a href="https://policies.google.com/technologies/ads" rel="noopener" target="_blank">advertising policy</a>.
+        We do not control the cookies third-party ad vendors set, and we do not receive personal
+        information from them that identifies you.
+      </p>
+
+      <h2>Visitors in the EEA, UK and Switzerland</h2>
+      <p>
+        If you visit from the European Economic Area, the United Kingdom or Switzerland, Google requires
+        sites that show its ads to obtain your consent before personalized advertising cookies are used.
+        Where that applies, a consent message from a Google-certified consent management platform is
+        shown, and you can accept, refuse or manage your choices. If you refuse, only non-personalized
+        or limited ads may be shown. You also have rights under the GDPR and UK GDPR to access, correct
+        or delete personal data and to object to its processing; contact us at the address below and we
+        will help with anything we hold, and point you to Google for data held by Google.
+      </p>
+
+      <h2>Children</h2>
+      <p>
+        This site is a general-audience game guide and is not directed at children under 13. We do not
+        knowingly collect personal information from children. If you believe a child has sent us
+        personal information, contact us and we will delete it.
+      </p>
+
+      <h2>Third-party links</h2>
+      <p>
+        Guides link to Steam, console stores, official announcements and community sources so you can
+        check facts yourself. Those sites have their own privacy policies, and we are not responsible
+        for how they handle your data.
+      </p>
+
+      <h2>Changes to this policy</h2>
+      <p>
+        If we change how the site collects or uses data, we will update this page and the "last
+        updated" date at the top.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        Questions about this policy or your data can be sent to
+        {' '}<a href={`mailto:${SITE.email}`}>{SITE.email}</a>. See also our
+        {' '}<a href="/terms/">Terms of Use</a> and <a href="/disclaimer/">Disclaimer</a>.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

@@ -39,7 +39,7 @@ The useful rule is to read the weakness indicator beside the target's health bar
 3. Koo applies the matching art or Bind while Emma takes the safe punish window.
 4. Emma returns to spacing instead of extending a combo into a red attack.
 
-The [first-hours build guide](/guides/first-hours-build-and-combat/) explains this loop in a practical order. For skill priorities, use the [Emma skill tree](/skills/emma-skill-tree/) and [Koo Bloom Arts guide](/guides/koo-bloom-arts-qte-guide/).
+The [first-hours build guide](/guides/first-hours-build-and-combat/) explains this loop in a practical order. For skill priorities, use the [Emma skill tree](/skills/#emma-skill-tree) and [Koo Bloom Arts guide](/guides/koo-bloom-arts-qte-guide/).
 
 ## What is not a character roster
 

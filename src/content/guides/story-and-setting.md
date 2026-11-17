@@ -72,7 +72,7 @@ The narrative framing in official copy is deliberately withholding, and worth qu
 |---|---|---|
 | 22 Jan 2026 | **Xbox Developer Direct** | 10+ minutes of gameplay, plus developer interviews with the Game Freak team; director **Kota Furushima** also gave interviews to IGN and Famitsu the same day |
 | 12 Feb 2026 | **PlayStation State of Play** | New trailer and the **4 August 2026** release date for Steam, PS5 and Xbox Series X\|S |
-| 20 Apr 2026 | **Pre-order trailer** | Standard and Deluxe bonus contents (see [download](/download/)) |
+| 20 Apr 2026 | **Pre-order trailer** | Standard and Deluxe bonus contents (see [where to buy](/download/)) |
 | 14 Jul 2026 | **Combat Overview Trailer** | The hybrid real-time / turn-based system in detail |
 
 ## Confirmed vs not confirmed

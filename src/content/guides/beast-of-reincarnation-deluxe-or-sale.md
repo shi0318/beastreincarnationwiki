@@ -45,6 +45,6 @@ On 15 October 2026 Steam shows **1,424 positive of 2,166 English reviews (Mixed,
 
 ## Related pages
 
-- [Big Dipper](/weapons/big-dipper/)
+- [Big Dipper](/weapons/blades/#big-dipper)
 - [Deluxe DLC entitlement fix](/guides/deluxe-dlc-entitlement-fix-guide/)
 - [Should you buy?](/guides/should-you-buy-player-reception/)

@@ -19,14 +19,25 @@ function frontmatterDate(file) {
 }
 
 // Sitemap dates are content metadata, never the deployment timestamp.
+// 2026-11-16: thin single-entry pages were merged into their hubs (see public/_redirects),
+// trust pages were added, and the download page became "Where to Buy".
 const STATIC_LASTMOD = {
-  '/': '2026-09-07',
-  '/weapons/': '2026-08-17',
-  '/walkthrough/': '2026-08-17',
-  '/skills/': '2026-08-17',
-  '/characters/': '2026-08-17',
-  '/characters/emma/': '2026-08-17',
-  '/characters/koo/': '2026-08-17',
+  '/': '2026-11-16',
+  '/weapons/': '2026-11-16',
+  '/weapons/blades/': '2026-11-16',
+  '/walkthrough/': '2026-11-16',
+  '/skills/': '2026-11-16',
+  '/characters/': '2026-11-16',
+  '/bosses/': '2026-11-16',
+  '/collectibles/': '2026-11-16',
+  '/guides/': '2026-11-16',
+  '/game-info/': '2026-11-16',
+  '/release-date/': '2026-11-16',
+  '/download/': '2026-11-16',
+  '/about/': '2026-11-16',
+  '/disclaimer/': '2026-11-16',
+  '/privacy-policy/': '2026-11-16',
+  '/terms/': '2026-11-16',
 };
 
 function lastmodFor(url) {

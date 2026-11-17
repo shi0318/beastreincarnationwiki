@@ -33,7 +33,7 @@ The version-by-version record is in the [patch notes index](/guides/patch-notes/
 
 | Symptom | Jump to |
 | --- | --- |
-| Game looks soft/noisy even at high settings | [Film grain and upscaling](#film-grain-and-upscaling-after-v107) |
+| Game looks soft/noisy even at high settings | [Film grain and upscaling](#film-grain-and-upscaling-use-the-menu-now) |
 | No 4K option in the menu | [The missing 4K option](#the-missing-4k-option) |
 | Low FPS but GPU **and** CPU sit at 50–60% | [Low GPU usage fix](#low-fps-with-gpu-and-cpu-both-under-60) |
 | Game won't launch (Intel 13th/14th-gen) | [Intel launch crash](#the-game-refuses-to-launch-intel-13th14th-gen) |

@@ -14,7 +14,7 @@ preview: false
 source: "community"
 ---
 
-A locked chest is not a main-path pickup. The [locked treasures](/collectibles/locked-treasures/) page is the category. This page is the habit that stops you leaving the key behind.
+A locked chest is not a main-path pickup. The [locked treasures](/collectibles/#locked-treasures) page is the category. This page is the habit that stops you leaving the key behind.
 
 Hasten to the Capital can skip regions. A skipped region is a skipped key. If the achievement list matters, open the chest before you take the skip. [Hasten rules](/guides/beast-of-reincarnation-hasten-to-the-capital/).
 
@@ -23,6 +23,6 @@ Hasten to the Capital can skip regions. A skipped region is a skipped key. If th
 1. When the prompt says locked, mark the landmark. Do not mash the chest.
 2. Clear the side room or the Keeper Golem the chapter page names for that zone. The key is a detour, not a shop item from Brad.
 3. Return before the Walker leaves the region. A later chapter does not mail the key back.
-4. If the chest is a valuable, log it on [valuables](/collectibles/valuables/). Do not mix it with spirit stones.
+4. If the chest is a valuable, log it on [valuables](/collectibles/#valuables). Do not mix it with spirit stones.
 
 No page on this site publishes a master key. If a guide elsewhere says one key opens every chest, it is not this game's rule.

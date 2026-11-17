@@ -78,7 +78,7 @@ Do not delete a save or install an unofficial file replacement based on a forum 
 
 Fuji Frontier is also represented in the site’s chapter checklist. The current Chapter 6 page reports **9 campsites, 5 Wayside Shrines, 0 documents, and 4 Keeper Golems**. Those are collection targets, not proof that a quest target will spawn in a bugged save.
 
-Use the [Beast of Reincarnation Chapter 6 guide](/walkthrough/chapter-6/) for normal route planning, but do not mark the quest complete merely because the region’s general Golem count looks correct. A quest-specific headless target and a generic Keeper Golem are different claims.
+Use the [Beast of Reincarnation Chapter 6 guide](/walkthrough/#chapter-6) for normal route planning, but do not mark the quest complete merely because the region’s general Golem count looks correct. A quest-specific headless target and a generic Keeper Golem are different claims.
 
 ## Current status
 

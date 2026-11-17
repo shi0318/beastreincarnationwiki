@@ -4,6 +4,11 @@ import JsonLd from '../components/JsonLd.astro';
 import SourceBadge from '../components/SourceBadge.astro';
 import WikiSectionNav from '../components/WikiSectionNav.astro';
 import { GAME_FACTS, SITE } from '../data/site';
+import { COLLECTIBLE_DETAILS } from '../data/section-pages';
+
+// The per-category pages (/collectibles/<slug>/) were merged into this hub on 2026-11-16.
+// Their URLs 301 here; each category keeps an #<slug> anchor and links to its full guide.
+const detail = (slug: string) => COLLECTIBLE_DETAILS.find((d) => d.slug === slug);
 
 const path = '/collectibles/';
 const title = 'Beast of Reincarnation Collectibles: Valuables, Locked Treasures & Spirit Stones';
@@ -17,7 +22,8 @@ const categories = [
   {
     name: 'Valuables',
     filter: 'Valuable',
-    guide: '/collectibles/valuables/',
+    slug: 'valuables',
+    guide: detail('valuables')!.guideHref,
     facts: [
       'The Steam map FAQ names Facility Modules, Electronic Brains, Generator Devices, Fertilized Eggs and Walker decorations as valuable objects that matter to completion or the Cleanse Walker.',
       'The map author counts 21 valuables in the Ancient Civilization Zone alone — a dated community count, not an official requirement.',
@@ -26,7 +32,8 @@ const categories = [
   {
     name: 'Locked Treasures',
     filter: 'Locked Treasure',
-    guide: '/collectibles/locked-treasures/',
+    slug: 'locked-treasures',
+    guide: detail('locked-treasures')!.guideHref,
     facts: [
       'A separate map filter from ordinary Treasure Box containers.',
       'Markers behind gates pair with the Bulkhead and Control Panel filters; vertical or cave markers pair with Lift and Extend traversal.',
@@ -36,16 +43,18 @@ const categories = [
   {
     name: 'Spirit Stones',
     filter: '—',
-    guide: '/collectibles/spirit-stones/',
+    slug: 'spirit-stones',
+    guide: detail('spirit-stones')!.guideHref,
     facts: [
-      'Build customization alongside skill trees, gear and weapon choices; three tested directions are parry/counter, ranged/control and stealth/exploration.',
+      'Build customization alongside skill trees, gear and weapon choices; three common directions are parry/counter, ranged/control and stealth/exploration.',
       'Effect wording and costs are version-sensitive — save the patch number with every comparison.',
     ],
   },
   {
     name: 'Seedlings & Crops',
     filter: 'Seedling',
-    guide: '/collectibles/seedlings/',
+    slug: 'seedlings',
+    guide: detail('seedlings')!.guideHref,
     facts: [
       'Their own map filters, feeding the Green Thumb achievement (26.7% global unlock).',
       'Keep seedling progress separate from treasure counts — they serve different completion goals.',
@@ -54,7 +63,8 @@ const categories = [
   {
     name: 'Cleanse Walker Materials',
     filter: 'Generator Device / Electronic Brain / Memory Chip',
-    guide: '/collectibles/cleanse-walker/',
+    slug: 'cleanse-walker',
+    guide: detail('cleanse-walker')!.guideHref,
     facts: [
       'Three named upgrade-material categories tracked on the Steam map.',
       'Use the dedicated upgrade route page rather than mixing them into the general valuable sweep.',
@@ -63,6 +73,7 @@ const categories = [
   {
     name: 'Documents & Books',
     filter: 'Document / Book',
+    slug: 'documents',
     guide: '/walkthrough/',
     facts: [
       'Lore and information pickups tracked per chapter on the walkthrough pages — e.g. the Steam chapter table reports 10 documents in Matsukawa Zone, the highest count.',
@@ -102,14 +113,14 @@ const schema = [
       </nav>
       <div class="grid items-center gap-8 md:grid-cols-[1.1fr_.9fr]">
         <div>
-          <SourceBadge source="community" showBlurb />
+          <SourceBadge source="community" />
           <h1 class="mt-4 font-display text-3xl font-bold leading-tight text-ash-50 md:text-5xl">
             Beast of Reincarnation Collectibles: The Filter System
           </h1>
           <p class="mt-4 max-w-3xl text-lg leading-relaxed text-ash-300">
             The Steam Community interactive map separates collectibles into distinct filters — Valuable,
             Document, Book, Treasure Box, Locked Treasure, Seedling and the Cleanse Walker material types.
-            This hub links one verified guide per category. The method that works: one filter at a time,
+            This hub summarizes each category and links to its full guide. The method that works: one filter at a time,
             recorded against region and landmark, never mixing a map pin with a picked-up item.
           </p>
         </div>
@@ -125,7 +136,7 @@ const schema = [
       <h2 class="font-display text-2xl font-bold text-ash-50">Collectible categories</h2>
       <div class="mt-6 space-y-6">
         {categories.map((c) => (
-          <article class="rounded-xl border border-ash-800 bg-ash-900/40 p-6">
+          <article id={c.slug} class="scroll-mt-24 rounded-xl border border-ash-800 bg-ash-900/40 p-6">
             <div class="flex flex-wrap items-baseline justify-between gap-2">
               <h3 class="font-display text-xl font-bold text-ash-50">{c.name}</h3>
               <p class="text-xs uppercase tracking-[0.16em] text-ash-500">Map filter: {c.filter}</p>
@@ -133,8 +144,18 @@ const schema = [
             <ul class="mt-3 space-y-2 text-sm leading-relaxed text-ash-300">
               {c.facts.map((f) => <li class="flex gap-2"><span aria-hidden="true" class="text-ember-400">•</span><span>{f}</span></li>)}
             </ul>
+            {detail(c.slug) && (
+              <>
+                <p class="mt-4 text-xs font-semibold uppercase tracking-wide text-ash-400">How to track it</p>
+                <ol class="mt-2 space-y-1.5 text-sm leading-relaxed text-ash-300">
+                  {detail(c.slug)!.steps.map((step, i) => (
+                    <li class="flex gap-2"><span class="font-semibold text-ember-400">{i + 1}.</span><span>{step}</span></li>
+                  ))}
+                </ol>
+              </>
+            )}
             <a href={c.guide} class="mt-3 inline-block text-sm font-medium text-ember-400 hover:underline">
-              {c.name} guide →
+              {c.slug === 'documents' ? 'Per-chapter document counts' : `Full ${c.name.toLowerCase()} guide`} →
             </a>
           </article>
         ))}
