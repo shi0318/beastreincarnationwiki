@@ -46,4 +46,4 @@ Other games reviewers mention: Stellar Blade (parry flow), Black Myth: Wukong (c
 
 - [Parry guide](/guides/beast-of-reincarnation-emma-parry-guide/)
 - [Koo combat role](/guides/beast-of-reincarnation-koo-combat-role/)
-- [Difficulty modes](/guides/beast-of-reincarnation-highest-difficulty/)
+- [Difficulty modes](/guides/difficulty-modes-guide/)

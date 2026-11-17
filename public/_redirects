@@ -83,8 +83,8 @@
 # Dated or duplicate guide snapshots merged into the page that supersedes them (2026-11-16)
 /guides/support-winding-down /guides/beast-of-reincarnation-support-is-ending/ 301
 /guides/support-winding-down/ /guides/beast-of-reincarnation-support-is-ending/ 301
-/guides/beast-of-reincarnation-patch-1-1-01-still-current /guides/beast-of-reincarnation-update-1-1-01/ 301
-/guides/beast-of-reincarnation-patch-1-1-01-still-current/ /guides/beast-of-reincarnation-update-1-1-01/ 301
+/guides/beast-of-reincarnation-patch-1-1-01-still-current /guides/beast-reincarnation-v1-1-02-update-guide/ 301
+/guides/beast-of-reincarnation-patch-1-1-01-still-current/ /guides/beast-reincarnation-v1-1-02-update-guide/ 301
 /guides/beast-of-reincarnation-price-october-16 /guides/beast-of-reincarnation-price-october-25/ 301
 /guides/beast-of-reincarnation-price-october-16/ /guides/beast-of-reincarnation-price-october-25/ 301
 /guides/beast-of-reincarnation-reviews-october-16 /guides/beast-of-reincarnation-reviews-october-25/ 301
@@ -97,3 +97,41 @@
 /guides/beast-of-reincarnation-emma/ /characters/ 301
 /guides/beast-of-reincarnation-koo /characters/ 301
 /guides/beast-of-reincarnation-koo/ /characters/ 301
+
+# Overlapping short guides folded into the stronger page (2026-11-16, second pass)
+/guides/beast-of-reincarnation-nushi-order /bosses/ 301
+/guides/beast-of-reincarnation-nushi-order/ /bosses/ 301
+/guides/beast-of-reincarnation-nushi-boss-list /bosses/ 301
+/guides/beast-of-reincarnation-nushi-boss-list/ /bosses/ 301
+/guides/beast-of-reincarnation-element-before-boss /guides/beast-of-reincarnation-boss-weakness-chart/ 301
+/guides/beast-of-reincarnation-element-before-boss/ /guides/beast-of-reincarnation-boss-weakness-chart/ 301
+/guides/beast-of-reincarnation-before-you-leave-the-walker /guides/beast-of-reincarnation-boss-weakness-chart/ 301
+/guides/beast-of-reincarnation-before-you-leave-the-walker/ /guides/beast-of-reincarnation-boss-weakness-chart/ 301
+/guides/how-to-respec-amber /guides/beast-of-reincarnation-mikoto/ 301
+/guides/how-to-respec-amber/ /guides/beast-of-reincarnation-mikoto/ 301
+/guides/open-a-locked-treasure /guides/locked-treasures-guide/ 301
+/guides/open-a-locked-treasure/ /guides/locked-treasures-guide/ 301
+/guides/beast-of-reincarnation-chapter-list /walkthrough/ 301
+/guides/beast-of-reincarnation-chapter-list/ /walkthrough/ 301
+/guides/beast-of-reincarnation-13-chapters /walkthrough/ 301
+/guides/beast-of-reincarnation-13-chapters/ /walkthrough/ 301
+/guides/beast-of-reincarnation-mixed-reviews-october /guides/beast-of-reincarnation-mixed-reviews/ 301
+/guides/beast-of-reincarnation-mixed-reviews-october/ /guides/beast-of-reincarnation-mixed-reviews/ 301
+/guides/beast-of-reincarnation-rangifer-first-clear /guides/nushi-boss-fight/ 301
+/guides/beast-of-reincarnation-rangifer-first-clear/ /guides/nushi-boss-fight/ 301
+/guides/how-to-beat-lacerta /bosses/ 301
+/guides/how-to-beat-lacerta/ /bosses/ 301
+/guides/beast-of-reincarnation-when-to-use-koo /guides/beast-of-reincarnation-koo-combat-role/ 301
+/guides/beast-of-reincarnation-when-to-use-koo/ /guides/beast-of-reincarnation-koo-combat-role/ 301
+/guides/beast-of-reincarnation-flow-window /guides/beast-of-reincarnation-koo-combat-role/ 301
+/guides/beast-of-reincarnation-flow-window/ /guides/beast-of-reincarnation-koo-combat-role/ 301
+/guides/beast-of-reincarnation-red-attacks /guides/parry-guard-dodge-controls-guide/ 301
+/guides/beast-of-reincarnation-red-attacks/ /guides/parry-guard-dodge-controls-guide/ 301
+/guides/beast-of-reincarnation-combat-first-hours /guides/first-hours-build-and-combat/ 301
+/guides/beast-of-reincarnation-combat-first-hours/ /guides/first-hours-build-and-combat/ 301
+/guides/beast-of-reincarnation-pc-settings /guides/pc-system-requirements/ 301
+/guides/beast-of-reincarnation-pc-settings/ /guides/pc-system-requirements/ 301
+/guides/beast-of-reincarnation-highest-difficulty /guides/difficulty-modes-guide/ 301
+/guides/beast-of-reincarnation-highest-difficulty/ /guides/difficulty-modes-guide/ 301
+/guides/beast-of-reincarnation-full-price-october /guides/beast-of-reincarnation-price/ 301
+/guides/beast-of-reincarnation-full-price-october/ /guides/beast-of-reincarnation-price/ 301

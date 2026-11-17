@@ -46,4 +46,4 @@ Hold the **interact** button during a skippable scene; the indicator appears bot
 
 - [Chapter 10 freeze](/guides/beast-of-reincarnation-chapter-10-freeze/)
 - [Update 1.1.01](/guides/beast-of-reincarnation-update-1-1-01/)
-- [All 13 chapters](/guides/beast-of-reincarnation-13-chapters/)
+- [All 13 chapters](/walkthrough/)

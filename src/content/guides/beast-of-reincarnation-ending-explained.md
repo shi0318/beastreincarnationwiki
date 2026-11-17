@@ -28,7 +28,7 @@ That makes the safest completion plan simple: keep a manual save before a major 
 
 ## Story order and optional content
 
-The main story has 13 chapters followed by the Bearing Fruit epilogue. Optional exploration, Nushi fights, shrines and upgrade materials can be handled around that progression. The [chapter list](/guides/beast-of-reincarnation-chapter-list/) gives the order without publishing every story beat.
+The main story has 13 chapters followed by the Bearing Fruit epilogue. Optional exploration, Nushi fights, shrines and upgrade materials can be handled around that progression. The [chapter list](/walkthrough/) gives the order without publishing every story beat.
 
 For a completion run, combine the [achievements guide](/guides/achievements-guide/) with the [valuables and collectibles guide](/guides/valuables-collectibles-guide/). Do not treat the two ending names as proof of two simple dialogue choices; the public list does not explain the trigger.
 

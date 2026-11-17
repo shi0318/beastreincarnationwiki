@@ -48,7 +48,7 @@ Slash targeting has also been improved for vertical direction. When testing a ch
 
 The update supports carrying equipment, outfits, and skins into a New Game Plus start. Before beginning that loop, finish any regional pickup you personally want in the current run, then note which gear and cosmetic options are already unlocked. Do not assume every collectible, quest flag, or story choice carries over: the announcement names equipment, outfits, and skins, not every category in the save. Make a separate checklist for anything else that matters to you and verify it after starting the new file.
 
-The optional story-progression shortcut introduced in an earlier update can make a repeat run faster, but it can also affect achievements associated with skipped zones. If completion matters, compare the current route with the [chapter guide](/guides/beast-of-reincarnation-13-chapters/) before choosing the shortcut. A strong New Game Plus plan is simply one that matches your goal: fast story replay, region cleanup, or combat practice.
+The optional story-progression shortcut introduced in an earlier update can make a repeat run faster, but it can also affect achievements associated with skipped zones. If completion matters, compare the current route with the [chapter guide](/walkthrough/) before choosing the shortcut. A strong New Game Plus plan is simply one that matches your goal: fast story replay, region cleanup, or combat practice.
 
 ## A safe first-session checklist
 

@@ -42,5 +42,5 @@ updateDate: "2026-10-15"
 ## Related pages
 
 - [Hasten to the Capital](/guides/beast-of-reincarnation-hasten-to-the-capital/)
-- [Highest difficulty](/guides/beast-of-reincarnation-highest-difficulty/)
+- [Highest difficulty](/guides/difficulty-modes-guide/)
 - [Elite enemies](/guides/beast-of-reincarnation-elite-golems-locations/)

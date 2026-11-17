@@ -11,6 +11,7 @@ order: 1
 featured: false
 preview: false
 source: third-party-tested
+updateDate: "2026-11-16"
 ---
 
 The opening hours of **Beast of Reincarnation** are easier once you understand what the game is rewarding. The most valuable early habit is not spending every resource on damage: it is learning to parry, then turning the resources that parry creates into Koo's bloom arts, Emma's blade arts, and safer upgrades.
@@ -89,6 +90,13 @@ Use the route back to the arena as a test run. If you spend all your FP and emer
 ## What this guide does not claim
 
 The complete skill tree, every mod effect, full boss list, and endgame differences between Story, Normal, and Hard are not reproduced here as if they were fully verified. Enemy-specific weaknesses should be checked against the HP-bar indicator in your current build. This page focuses on repeatable first-hours habits, not a finished-game tier list.
+
+
+## If the combat has not clicked yet
+
+Many Steam reviews written at 7–15 hours say the same thing: the story kept them playing and the fighting only made sense after a few arenas. Spend the first campsites on one parry you can repeat, one Koo art that matches the weakness shown next to the health bar, and a campsite before the next Nushi door – not on respeccing into a "best" tree. Story and Normal exist so you can learn that loop without treating every hit as a wipe.
+
+Two problems that are not combat problems: a Chapter 10 cutscene freeze is a patch check ([update 1.1.01](/guides/beast-of-reincarnation-update-1-1-01/)), and long dialogue can be skipped on v1.0.11 and later ([skip cutscenes](/guides/beast-of-reincarnation-skip-cutscenes/)).
 
 ## Sources
 

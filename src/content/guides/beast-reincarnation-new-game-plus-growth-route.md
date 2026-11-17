@@ -52,7 +52,7 @@ Ranged weapons can be changed during regular attacks and Iaido stance, which giv
 
 ## Do not lose optional content to a shortcut
 
-An earlier progression option can bypass several zones after the Great Wall Terraces. That can help a story-focused replay, but a skipped zone may close off achievements until a later run. Before taking the shortcut, check your own regional checklist and the [chapter list](/guides/beast-of-reincarnation-13-chapters/). If you are unsure whether a collectible or quest is complete, take the longer route; a few minutes of verification is cheaper than restarting the whole loop.
+An earlier progression option can bypass several zones after the Great Wall Terraces. That can help a story-focused replay, but a skipped zone may close off achievements until a later run. Before taking the shortcut, check your own regional checklist and the [chapter list](/walkthrough/). If you are unsure whether a collectible or quest is complete, take the longer route; a few minutes of verification is cheaper than restarting the whole loop.
 
 ## End the session with useful notes
 

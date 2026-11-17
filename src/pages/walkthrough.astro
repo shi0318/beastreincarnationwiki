@@ -22,6 +22,12 @@ const chapters = [
 const canonical = new URL(path, SITE.url).href;
 // The per-chapter pages (/walkthrough/chapter-N/) were merged into this hub on 2026-11-16;
 // their URLs 301 here and each chapter keeps an #chapter-N anchor.
+// Main boss per chapter, folded in from the former 13-chapters guide (2026-11-16).
+const MAIN_BOSS: Record<number, string> = {
+  1: 'Rangifer (x2)', 2: 'Lacerta (x2)', 3: 'Nue Malefact + Male Purifier', 4: 'Taurus (x2)', 5: '–', 6: '–',
+  7: 'Corvus (two crows)', 8: 'Kunai and Kirin (scripted)', 9: '–', 10: 'Ursa', 11: 'Shidou and Nue',
+  12: 'Erymanth, Kunai and Kirin', 13: 'Final boss',
+};
 const count = (facts: readonly { label: string; value: string }[], label: string) =>
   facts.find((f) => f.label === label)?.value.replace(/ reported$/, '') ?? '—';
 const schema = [
@@ -57,13 +63,13 @@ const schema = [
     <section class="mt-10">
       <h2 class="font-display text-2xl font-bold text-ash-50">Beast of Reincarnation chapter list</h2>
       <div class="mt-6 overflow-x-auto rounded-xl border border-ash-800">
-        <table class="w-full min-w-[720px] text-left text-sm">
-          <thead class="bg-ash-900 text-ash-200"><tr><th class="px-4 py-3">Order</th><th class="px-4 py-3">Chapter title</th><th class="px-4 py-3">Region</th><th class="px-4 py-3">Campsites</th><th class="px-4 py-3">Shrines</th><th class="px-4 py-3">Documents</th><th class="px-4 py-3">Keeper Golems</th></tr></thead>
+        <table class="w-full min-w-[860px] text-left text-sm">
+          <thead class="bg-ash-900 text-ash-200"><tr><th class="px-4 py-3">Order</th><th class="px-4 py-3">Chapter title</th><th class="px-4 py-3">Region</th><th class="px-4 py-3">Main boss</th><th class="px-4 py-3">Campsites</th><th class="px-4 py-3">Shrines</th><th class="px-4 py-3">Documents</th><th class="px-4 py-3">Keeper Golems</th></tr></thead>
           <tbody>
             {CHAPTER_DETAILS.map((c) => (
-              <tr class="border-t border-ash-800"><th scope="row" class="px-4 py-3 font-medium text-ash-100"><a class="text-ember-400 hover:text-ember-300" href={`#${c.slug}`}>Chapter {c.number}</a></th><td class="px-4 py-3 text-ash-300">{c.chapterName}</td><td class="px-4 py-3 text-ash-300">{c.region}</td><td class="px-4 py-3 tabular-nums text-ash-300">{count(c.facts, 'Campsites')}</td><td class="px-4 py-3 tabular-nums text-ash-300">{count(c.facts, 'Wayside shrines')}</td><td class="px-4 py-3 tabular-nums text-ash-300">{count(c.facts, 'Documents')}</td><td class="px-4 py-3 tabular-nums text-ash-300">{count(c.facts, 'Keeper Golems')}</td></tr>
+              <tr class="border-t border-ash-800"><th scope="row" class="px-4 py-3 font-medium text-ash-100"><a class="text-ember-400 hover:text-ember-300" href={`#${c.slug}`}>Chapter {c.number}</a></th><td class="px-4 py-3 text-ash-300">{c.chapterName}</td><td class="px-4 py-3 text-ash-300">{c.region}</td><td class="px-4 py-3 text-ash-300">{MAIN_BOSS[c.number]}</td><td class="px-4 py-3 tabular-nums text-ash-300">{count(c.facts, 'Campsites')}</td><td class="px-4 py-3 tabular-nums text-ash-300">{count(c.facts, 'Wayside shrines')}</td><td class="px-4 py-3 tabular-nums text-ash-300">{count(c.facts, 'Documents')}</td><td class="px-4 py-3 tabular-nums text-ash-300">{count(c.facts, 'Keeper Golems')}</td></tr>
             ))}
-            <tr class="border-t border-ash-800"><th scope="row" class="px-4 py-3 font-medium text-ash-100">Epilogue</th><td class="px-4 py-3 text-ash-300">Bearing Fruit</td><td class="px-4 py-3 text-ash-500" colspan="5">Post-game</td></tr>
+            <tr class="border-t border-ash-800"><th scope="row" class="px-4 py-3 font-medium text-ash-100">Epilogue</th><td class="px-4 py-3 text-ash-300">Bearing Fruit</td><td class="px-4 py-3 text-ash-500" colspan="6">Post-game</td></tr>
           </tbody>
         </table>
       </div>
@@ -93,6 +99,16 @@ const schema = [
       </div>
     </section>
 
+    <section id="replay" class="mt-12 scroll-mt-24 rounded-xl border border-ash-800 bg-ash-900/40 p-6">
+      <h2 class="font-display text-xl font-bold text-ash-50">What patches changed for a replay</h2>
+      <ul class="mt-3 space-y-2 leading-relaxed text-ash-300">
+        <li><strong class="text-ash-100">v1.0.11 / v1.0.12:</strong> almost every cutscene can be skipped, and so can finishers (<a class="text-ember-400 hover:text-ember-300" href="/guides/beast-of-reincarnation-skip-cutscenes/">skip cutscenes</a>).</li>
+        <li><strong class="text-ash-100">v1.1.0:</strong> Very Hard and Ruthless modes, plus Hard, Very Hard and Ruthless for New Game+ (Reincarnation+).</li>
+        <li><strong class="text-ash-100">v1.1.01:</strong> Hasten to the Capital lets you skip Chapters 4–6 after the Great Wall Terraces; achievements from those zones then need the Mountain Route on NG+ (<a class="text-ember-400 hover:text-ember-300" href="/guides/beast-of-reincarnation-hasten-to-the-capital/">Hasten rules</a>).</li>
+      </ul>
+      <p class="mt-3 leading-relaxed text-ash-300">There is still no chapter select – a replay runs the route in order. Use the end of each chapter to check whether Emma's next traversal ability is available, whether the Cleanse Walker has enough upgrade materials, and whether the next boss has a nearby campsite.</p>
+    </section>
+
     <section class="mt-12 grid gap-6 md:grid-cols-2">
       <div class="rounded-xl border border-ash-800 bg-ash-900/40 p-6">
         <h2 class="font-display text-xl font-bold text-ash-50">How long is the Beast of Reincarnation story?</h2>
@@ -101,6 +117,7 @@ const schema = [
       <div class="rounded-xl border border-ash-800 bg-ash-900/40 p-6">
         <h2 class="font-display text-xl font-bold text-ash-50">Useful Beast of Reincarnation route guides</h2>
         <ul class="mt-4 space-y-2 text-ash-300">
+          <li><a class="text-ember-400 hover:text-ember-300" href="/guides/beast-of-reincarnation-how-long-to-beat/">How long to beat</a></li>
           <li><a class="text-ember-400 hover:text-ember-300" href="/guides/interactive-map-guide/">Interactive map and region navigation</a></li>
           <li><a class="text-ember-400 hover:text-ember-300" href="/guides/wayside-shrines-guide/">Shrine locations and return points</a></li>
           <li><a class="text-ember-400 hover:text-ember-300" href="/guides/keeper-golems-locations/">Keeper Golem locations and upgrade materials</a></li>

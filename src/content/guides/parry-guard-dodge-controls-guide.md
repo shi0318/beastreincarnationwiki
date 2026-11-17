@@ -11,6 +11,7 @@ order: 1
 featured: true
 preview: false
 source: third-party-tested
+updateDate: "2026-11-16"
 ---
 
 Beast of Reincarnation uses one defensive input for both a perfect parry and an ordinary guard. The result depends on timing: press just before impact and Emma parries; press too early and she guards instead. That makes early mistakes survivable, but guard is powered by a limited gauge and cannot be treated like a permanent shield.
@@ -68,6 +69,8 @@ When an enemy flashes red as an attack begins, Polygon reports that the attack *
 - PlayStation: `Circle`
 
 A correctly timed dodge creates an opportunity to press attack for a counterattack. The red flash is therefore a rules cue: do not keep testing the parry button against it.
+
+After the red swing recovers, go back to parrying the next normal string – that is the damage window, not the glow itself. Do not mash the shared guard button through the glow. Each boss has its own red swings: Rangifer's red-glow escape is covered in the [Rangifer fight guide](/guides/nushi-boss-fight/), and it does not carry over to Lacerta or Kunai. Overhead slams that start above the camera are a related problem – see [overhead attacks](/guides/beast-of-reincarnation-nushi-headbutt/).
 
 This is different from saying Emma has universal dodge invulnerability against every attack. The cited guide confirms the red-attack response and counter; it does not provide a general invulnerability-frame table.
 

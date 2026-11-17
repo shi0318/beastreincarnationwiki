@@ -7,7 +7,7 @@ keyword: "beast of reincarnation boss weakness"
 image: "beast-of-reincarnation-nushi-boss-fight.webp"
 imageAlt: "A towering plant-covered Nushi swings at Emma in a ruined field"
 publishDate: "2026-10-15"
-updateDate: "2026-10-15"
+updateDate: "2026-11-16"
 order: 4
 featured: false
 preview: false
@@ -44,6 +44,19 @@ Matching the element is the single biggest damage boost in Beast of Reincarnatio
 - Bosses that resist a status (Rangifer's rematch resists Burn) still take bonus raw elemental damage – keep the element on.
 - Duo fights: keep the status ticking on the boss you are not currently fighting.
 - Patch v1.1.0 adjusted ranged weapon damage against bosses, so arrows are no longer the main damage plan – use them to apply the element, then parry.
+
+## Before you leave the Walker
+
+The Cleanse Walker is where the loadout gets decided. Swap the blade there and then enter the arena; swapping after the first phase wastes the opening parries.
+
+1. **Element.** Pick the blade passive the chart names (Shock, Poison, Acid or Flame) rather than a general favourite. The final fight is the exception: no elemental weakness, and it opens behind a regenerating Nanite Shield.
+2. **Missed merchant blades.** If a merchant blade such as the Bell Sword or Winterwake was missed, [Brad's](/guides/beast-of-reincarnation-brad/) stock on the Walker is the retry, not a chapter restart.
+3. **Dodge.** If the roll is still locked, unlock it before the next red glow – see the [controls guide](/guides/parry-guard-dodge-controls-guide/).
+4. **Koo.** Open crowds with Koo, then put Emma back in front for the parry string ([Koo's combat role](/guides/beast-of-reincarnation-koo-combat-role/)).
+5. **Campsite.** Rest at the last campsite before the arena so a retry does not start from the Walker door.
+6. **Duo fights.** Poison is for both health bars – apply it to the boss you are not currently fighting as well.
+
+Hasten to the Capital can skip regions. Do not use it on a first clear if you still want the Nushi achievements from those zones ([skip rules](/guides/beast-of-reincarnation-hasten-to-the-capital/)).
 
 ## Related pages
 

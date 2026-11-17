@@ -48,6 +48,6 @@ v1.1.01 (9 October) added **Hasten to the Capital**, an FOV slider and skip-prom
 
 ## Related pages
 
-- [Highest difficulty explained](/guides/beast-of-reincarnation-highest-difficulty/)
+- [Highest difficulty explained](/guides/difficulty-modes-guide/)
 - [Update 1.1.01](/guides/beast-of-reincarnation-update-1-1-01/)
 - [Patch notes hub](/guides/patch-notes/)

@@ -11,7 +11,7 @@ order: 9
 featured: false
 preview: false
 source: "reviews"
-updateDate: "2026-10-15"
+updateDate: "2026-11-16"
 ---
 
 How much is Beast of Reincarnation, and is it worth the price? Here are the current prices and what reviewers say about value.
@@ -36,7 +36,16 @@ Recurring value lines in reviews: "quite fun to play but not that price" and "I 
 - 13 chapters and an epilogue (about 20–35 hours).
 - 21 blades, crossbow and elemental ammo, two skill trees.
 - Story, Normal, Hard, Very Hard and Ruthless modes plus NG+.
-- Eight free patches so far, with one more planned around 19 October.
+- Eight free patches by mid-October: Very Hard and Ruthless (v1.1.0), skippable cutscenes and finishers (v1.0.11–v1.0.12), an FOV slider and **Hasten to the Capital** (v1.1.01), plus DLSS 4/4.5, FSR 4, frame generation and ultrawide support.
+- Single-player, full controller support, Steam Cloud and Family Sharing.
+
+It does **not** include the Deluxe DLC – that is a separate purchase.
+
+## Is it still worth full price?
+
+Players who like the parry combat and the one-girl-and-her-dog story call it fair after 14–20 hours, especially on Hard or Very Hard. Players who bounce cite repetitive middle zones and a slow plot – both partly addressed by Hasten to the Capital and skippable scenes. Many recommendations still add "wait for a sale".
+
+The v1.1.01 patch notes described the following patch as the last in the frequent post-launch update cycle, so what you see now is close to the final shape of the game. For a dated store-page reading, see the [October 25 price check](/guides/beast-of-reincarnation-price-october-25/).
 
 ## Verdict
 
@@ -45,5 +54,5 @@ Buy at full price if you love parry-heavy action and are happy to play on Hard o
 ## Related pages
 
 - [Deluxe or sale?](/guides/beast-of-reincarnation-deluxe-or-sale/)
-- [Still $59.99 in October](/guides/beast-of-reincarnation-full-price-october/)
+- [Price on October 25](/guides/beast-of-reincarnation-price-october-25/)
 - [Should you buy?](/guides/should-you-buy-player-reception/)

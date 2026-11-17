@@ -11,6 +11,7 @@ order: 8
 featured: false
 preview: false
 source: community
+updateDate: "2026-11-16"
 ---
 
 **Locked Treasure** is its own filter on the current Steam Community interactive map. The map also separates **Treasure Box**, **Bulkhead**, and **Control Panel**, which makes it possible to plan a cleanup route instead of treating every unopened object as the same puzzle. The official Steam store page does not publish a locked-treasure count, reward table, or universal unlock sequence, so this guide stays focused on reliable tracking.
@@ -27,6 +28,10 @@ source: community
 3. If a marker is behind a gate, enable **Bulkhead** and **Control Panel** in a second pass.
 4. If the marker appears in a cave or vertical route, use the [Lift and Extend guide](/guides/lift-extend-traversal-guide/) before assuming the container is inaccessible.
 5. Mark the treasure complete only after the item or container disappears from your in-game objective.
+
+## Clear a region before you skip it
+
+**Hasten to the Capital** (v1.1.01) can skip regions, and a skipped region means skipped chests. If the collection achievements matter, open the locked treasures in a region before you take the skip – see the [Hasten to the Capital guide](/guides/beast-of-reincarnation-hasten-to-the-capital/). When a chest prompt says it is locked, note the landmark so you can come back to it rather than relying on memory.
 
 ## Do not mix rewards with locations
 

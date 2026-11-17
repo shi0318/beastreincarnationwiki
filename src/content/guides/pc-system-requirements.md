@@ -7,7 +7,7 @@ keyword: "beast of reincarnation pc requirements"
 image: "beast-of-reincarnation-header-banner.webp"
 imageAlt: "Beast of Reincarnation official banner art showing Emma and Koo in the blighted wasteland"
 publishDate: 2026-08-03
-updateDate: 2026-08-08
+updateDate: "2026-11-16"
 order: 7
 featured: false
 preview: false
@@ -64,6 +64,10 @@ Four things stand out, and all four are read straight off the official notes rat
 The minimum note names **DLSS (RTX 20-50 Series)** in the same breath as a **GTX 1070**, and the GTX 1070 does not support DLSS — it predates the RTX tensor-core hardware DLSS needs. Read carefully, the note is listing two separate routes to the same target: DLSS if you have an RTX card, **FSR1** if you are on the GTX 1070 / RX 580 class of hardware. It is not claiming a GTX 1070 can run DLSS.
 
 That matters practically: if you are on a GTX 1070 or RX 580, plan on **FSR1 Performance at 1080p Low, targeting 40fps**. That is the official expectation for that hardware, and it is a modest one.
+
+## A sensible first settings pass
+
+Install on an SSD, start with the preset that matches your tier, then change one option at a time. Test upscaling in a busy combat scene rather than an empty campsite, and if frame generation is available in your patch, compare input feel as well as the displayed frame rate. Patch-by-patch graphics changes are tracked on the [PC performance fixes guide](/guides/pc-performance-settings-fixes/). If you try a handheld such as the Steam Deck, treat it as a personal compatibility test and record OS version, wattage, resolution and patch when you report a result.
 
 ## Storage, platform and features
 

@@ -1,7 +1,7 @@
 ---
 title: "Beast of Reincarnation Difficulty Modes Guide"
-description: "A real-data guide to Beast of Reincarnation difficulty: Steam confirms adjustable difficulty, while player coverage records the named settings."
-heading: "Story, Normal, and Hard: Difficulty Facts and Limits"
+description: "Beast of Reincarnation difficulty modes from Story to Very Hard and Ruthless (v1.1.0): what each does, which to pick, and what is still unpublished."
+heading: "Story to Ruthless: Difficulty Facts and Limits"
 category: combat
 keyword: "beast of reincarnation difficulty modes"
 image: "beast-of-reincarnation-emma-parry-flower-beast.webp"
@@ -11,20 +11,35 @@ order: 17
 featured: false
 preview: false
 source: community
+updateDate: "2026-11-16"
 ---
 
-Steam officially lists **Adjustable Difficulty** for *Beast of Reincarnation*. Post-launch player coverage checked by this site records the three menu names as **Story, Normal, and Hard**, with Normal described as the default. The official store page does not publish an enemy-stat table or exact multiplier for each setting, so this guide explains what can be stated safely and what still needs a versioned in-game test.
+Steam officially lists **Adjustable Difficulty** for *Beast of Reincarnation*. The game launched with **Story, Normal, and Hard**, with Normal as the default, and patch **v1.1.0** (1 October 2026) added **Very Hard** and **Ruthless** above Hard. The official store page does not publish an enemy-stat table or exact multiplier for each setting, so this guide explains what can be stated safely and what still needs a versioned in-game test.
 
 <figure>
   <img src="/images/beast-of-reincarnation-emma-parry-flower-beast.webp" alt="Emma holding her sword ready against a flower-covered Malefact in Beast of Reincarnation" width="1600" height="900" loading="lazy" decoding="async" />
   <figcaption>Difficulty changes the context in which you learn the shipped combat loop. The image is official artwork, not a measurement of the parry window.</figcaption>
 </figure>
 
+## The full difficulty ladder
+
+| Mode | What it means |
+|---|---|
+| Story | Wider parry window, for players who want the story |
+| Normal | The default; Reincarnation+ (NG+) also defaults to Normal |
+| Hard | The top setting at launch |
+| **Very Hard** | Added in v1.1.0 – harder than Hard |
+| **Ruthless** | Added in v1.1.0 – Emma dies in a single hit; a bonus challenge mode |
+
+Difficulty can be switched at any time during play, and NG+ (Reincarnation+) can be played on Hard, Very Hard or Ruthless. v1.1.0 also overhauled attack patterns for some Nushi variants, raised bosses and enemies that were easier than intended, and reduced ranged damage against bosses – details are on the [update 1.1.0 page](/guides/beast-of-reincarnation-update-1-1-0/).
+
 ## Which setting should you choose?
 
 - **Story** is the sensible starting point if you want to prioritize the story, exploration, or learning Emma and Koo's commands.
 - **Normal** is the default reference point used by most general guides and player comparisons.
 - **Hard** is the option to test after you understand parry, guard, dodge, Bloom Arts, and elemental weakness interactions.
+- **Very Hard** is the mode reviewers usually mean when they say "play on the highest difficulty" because the combat felt repetitive.
+- **Ruthless** only makes sense once you know each boss's tells: being hit at all is fatal, so healing blades matter less than avoiding damage (the Purifier Blade's stagger reduction, for example).
 
 Those recommendations describe the purpose of the settings, not a claim about exact damage or health values. If you switch modes, record the setting in your notes before comparing a farm route or boss attempt.
 

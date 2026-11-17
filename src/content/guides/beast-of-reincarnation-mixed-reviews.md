@@ -11,7 +11,7 @@ order: 3
 featured: false
 preview: false
 source: "reviews"
-updateDate: "2026-10-15"
+updateDate: "2026-11-16"
 ---
 
 Beast of Reincarnation has been **Mixed** on Steam since launch. That is a real split, not a review bomb: the same reviews often praise the combat and criticise everything around it.
@@ -29,6 +29,17 @@ On 15 October 2026 Steam shows **1,424 positive of 2,166 English reviews (Mixed,
 | Distinctive flower-and-machine creature design | Bosses that are either simple or huge with off-camera attacks |
 | Higher difficulties feel great | Launch price of $59.99 and early crash reports |
 
+## What October reviews added
+
+Two months after launch, the 15 October snapshot above was still Mixed in English and across all languages. Recurring points in that month's reviews:
+
+- **Koo** is the most-mentioned positive.
+- Frame rate is no longer a common complaint after the DLSS/FSR and frame-generation patches.
+- **Gear** does not change enough between chapters.
+- Some bosses are too simple, others huge with off-camera headbutts – see [overhead attacks](/guides/beast-of-reincarnation-nushi-headbutt/).
+
+By mid-October the patches had not moved the score: Very Hard and Ruthless answer the "too easy" crowd and Hasten to the Capital answers the "too long" crowd, but neither changes the plot-pacing complaints. For a later store-page reading, see the [October 25 review snapshot](/guides/beast-of-reincarnation-reviews-october-25/).
+
 ## How patches responded
 
 - **Cutscenes:** v1.0.9 to v1.0.12 made almost every scene skippable.
@@ -42,6 +53,6 @@ If you want a parry-and-companion action RPG and you enjoy higher difficulties, 
 
 ## Related pages
 
-- [October review update](/guides/beast-of-reincarnation-mixed-reviews-october/)
+- [October 25 review snapshot](/guides/beast-of-reincarnation-reviews-october-25/)
 - [Should you buy?](/guides/should-you-buy-player-reception/)
 - [Is the loop repetitive?](/guides/beast-of-reincarnation-repetitive-loop/)
